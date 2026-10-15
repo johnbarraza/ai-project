@@ -1,0 +1,123 @@
+{
+  "_note": "Data targets and thesis-run values as reported in the thesis document (local, not published), table 'Targets y validaciones'. model_repo marks the values that code/verify.py recomputes from baseline.csv; the others are reported by the MATLAB closing run test_AI098_cierre and are NOT recomputed here.",
+  "moments": [
+    {
+      "code": "M1",
+      "name": "Horas informales / horas totales",
+      "unit": "%",
+      "data": 50.9,
+      "source": "ENAHO 2015-2019, promedio",
+      "model_thesis": 51.7,
+      "role": "Calibra psi_F, psi_I",
+      "model_repo": "M1"
+    },
+    {
+      "code": "M2",
+      "name": "PBI informal / PBI total",
+      "unit": "%",
+      "data": 19.0,
+      "source": "INEI, Cuenta Satelite de la Economia Informal",
+      "model_thesis": 18.8,
+      "role": "Calibra A_I",
+      "model_repo": null
+    },
+    {
+      "code": "M3",
+      "name": "Formalidad: z alto menos z bajo",
+      "unit": "pp",
+      "data": 38.6,
+      "source": "EPEN 2025: superior (no universitaria y universitaria) menos secundaria o menos, horas del empleo principal",
+      "model_thesis": 37.8,
+      "role": "Calibra kappa_z1",
+      "model_repo": "M3"
+    },
+    {
+      "code": "V1",
+      "name": "Ratio salarial neto formal / informal",
+      "unit": "",
+      "data": 2.3,
+      "source": "BCRP",
+      "model_thesis": 2.33,
+      "role": "Validacion",
+      "model_repo": null
+    },
+    {
+      "code": "V2",
+      "name": "Ratio gasto hogar formal / informal",
+      "unit": "",
+      "data": 1.913,
+      "source": "ENAHO 2015-2019",
+      "model_thesis": 1.465,
+      "role": "Validacion",
+      "model_repo": null
+    },
+    {
+      "code": "V3",
+      "name": "Informalidad Q1 menos Q5",
+      "unit": "pp",
+      "data": 53.0,
+      "source": "INEI (2018), Cuadro 7.5, ano 2017",
+      "model_thesis": 4.4,
+      "role": "No se replica",
+      "model_repo": "V3_matlab"
+    },
+    {
+      "code": "V4",
+      "name": "Gini de riqueza (activos netos)",
+      "unit": "",
+      "data": 0.68,
+      "source": "WID / Credit Suisse, referencia aproximada",
+      "model_thesis": 0.52,
+      "role": "Contexto",
+      "model_repo": "gini_assets"
+    },
+    {
+      "code": "V5",
+      "name": "Gini de consumo (modelo) / ingreso o consumo (dato)",
+      "unit": "",
+      "data": 0.4,
+      "source": "Banco Mundial, SI.POV.GINI 2024",
+      "model_thesis": 0.22,
+      "role": "Contexto, no homogéneo",
+      "model_repo": null
+    }
+  ],
+  "epen_2025_edu4": {
+    "_note": "EPEN 2025, employed workers by education (4 groups), weighted totals; hours of the main job. Aggregates computed in the thesis (data/enaho/output/epen_kappa_moments_edu4_2025.csv); no microdata here. M3 data = formal hours share of the two upper groups minus that of the two lower groups.",
+    "groups": [
+      {"name": "primaria o menos", "workers": 8152347.075584572, "hours_main": 297302995.6666631, "formal_hours_main": 25108702.12177214},
+      {"name": "secundaria", "workers": 18084696.43625889, "hours_main": 717519018.4334105, "formal_hours_main": 166679452.3021158},
+      {"name": "superior no universitaria", "workers": 8560730.399398349, "hours_main": 352031955.3765733, "formal_hours_main": 168631856.0511979},
+      {"name": "universitaria o más", "workers": 10775418.10585578, "hours_main": 410254501.8634351, "formal_hours_main": 269510659.2427236}
+    ]
+  },
+  "enaho_own_quintiles": {
+    "_note": "Own computation with ENAHO annual microdata (code/data/build_enaho_quintiles.py; microdata not in the repo). Employed ocu500==1, weight fac500a, informal ocupinf==1; quintiles of household expenditure per capita (gashog2d/mieperho) on the population distribution. Reproduces INEI (2022) Cuadro 7.5 for 2021 within 0.2 pp and the 2022 national rate (75.7). ocupinf is not published after 2023.",
+    "years": {
+      "2021": {"total": 76.8, "quintiles": [96.0, 88.9, 81.9, 72.0, 51.7], "n_workers": 59935},
+      "2022": {"total": 75.7, "quintiles": [95.4, 88.1, 81.0, 70.3, 51.0], "n_workers": 61181},
+      "2023": {"total": 73.9, "quintiles": [94.0, 86.2, 78.6, 69.0, 49.3], "n_workers": 59447}
+    }
+  },
+  "inei_2022_cuadro_7_5": {
+    "_note": "Tasa de empleo informal (%) de la poblacion ocupada por quintil, Peru. INEI (2022), Peru: Evolucion de los Indicadores de Empleo e Ingresos por Departamento, 2007-2021, Cuadro 7.5 (p. 120 impresa, p. 131 del PDF Lib1870), con ENAHO. Ultima edicion con el corte por quintil encontrada (15 oct 2026). 2020-2021: pandemia.",
+    "years": {
+      "2018": {"total": 72.4, "quintiles": [97.1, 88.0, 77.7, 62.5, 43.9]},
+      "2019": {"total": 72.7, "quintiles": [97.1, 88.3, 76.1, 64.9, 44.5]},
+      "2020": {"total": 75.3, "quintiles": [96.9, 89.8, 79.3, 69.5, 49.3]},
+      "2021": {"total": 76.8, "quintiles": [95.9, 88.9, 81.9, 72.2, 51.8]}
+    }
+  },
+  "inei_2018_cuadro_7_5": {
+    "_note": "Tasa de empleo informal (%) de la poblacion ocupada por quintil, Peru 2017. INEI (2018), Peru: Evolucion de los indicadores de empleo e ingresos por departamento, 2007-2017, Cuadro 7.5, con ENAHO. Quintiles of household expenditure per capita (resolved by replicating the 2021 edition with ENAHO; not wealth).",
+    "year": 2017,
+    "total": 72.5,
+    "quintiles": [
+      97.1,
+      88.3,
+      76.2,
+      64.2,
+      44.1
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 300" width="880" height="300" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Mecanismo: la riqueza mueve el reparto de horas solo si las horas informales son más flexibles</title>
+  <desc id="d">Menos activos implican un valor más alto de un sol adicional, V_a. Eso sube las horas formales con elasticidad phi_F y las informales con elasticidad phi_I. Si phi_I es mayor que phi_F, la fracción informal cae con los activos.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#172033"/>
+    </marker>
+  </defs>
+  <rect x="1" y="1" width="878" height="298" rx="14" fill="#FFFFFF" stroke="#CCD4E2" stroke-width="2"/>
+  <text x="28" y="38" font-size="17" font-weight="700" fill="#172033">La riqueza mueve el reparto de horas solo si <tspan fill="#008A92">φ<tspan dy="5" font-size="12">I</tspan><tspan dy="-5"> &gt; φ</tspan><tspan dy="5" font-size="12">F</tspan></tspan></text>
+
+  <!-- 1. Activos -->
+  <rect x="24" y="118" width="150" height="74" rx="8" fill="#F3F5FA" stroke="#172033" stroke-width="1.5"/>
+  <text x="99" y="149" font-size="16" font-weight="700" fill="#172033" text-anchor="middle">Activos a</text>
+  <text x="99" y="172" font-size="13" fill="#5F6B7A" text-anchor="middle">estado del hogar</text>
+
+  <!-- 2. V_a -->
+  <rect x="226" y="118" width="170" height="74" rx="8" fill="#EAF5F5" stroke="#008A92" stroke-width="1.5"/>
+  <text x="311" y="149" font-size="16" font-weight="700" fill="#172033" text-anchor="middle">V<tspan dy="5" font-size="12">a</tspan><tspan dy="-5"> = ∂v/∂a</tspan></text>
+  <text x="311" y="172" font-size="13" fill="#5F6B7A" text-anchor="middle">valor de un sol más</text>
+  <text x="200" y="108" font-size="12" fill="#5F6B7A" text-anchor="middle">menos activos:</text>
+  <text x="200" y="210" font-size="12" fill="#5F6B7A" text-anchor="middle">V<tspan dy="4" font-size="10">a</tspan><tspan dy="-4"> más alto</tspan></text>
+
+  <!-- 3. Horas -->
+  <rect x="452" y="64" width="190" height="74" rx="8" fill="#FFFFFF" stroke="#223F91" stroke-width="1.5"/>
+  <text x="547" y="95" font-size="16" font-weight="700" fill="#223F91" text-anchor="middle">Horas formales ℓ<tspan dy="5" font-size="12">F</tspan></text>
+  <text x="547" y="118" font-size="13" fill="#5F6B7A" text-anchor="middle">responden con φ<tspan dy="4" font-size="10">F</tspan><tspan dy="-4"> = 0.38</tspan></text>
+
+  <rect x="452" y="172" width="190" height="74" rx="8" fill="#FFFFFF" stroke="#D45D00" stroke-width="1.5"/>
+  <text x="547" y="203" font-size="16" font-weight="700" fill="#D45D00" text-anchor="middle">Horas informales ℓ<tspan dy="5" font-size="12">I</tspan></text>
+  <text x="547" y="226" font-size="13" fill="#5F6B7A" text-anchor="middle">responden con φ<tspan dy="4" font-size="10">I</tspan><tspan dy="-4"> ∈ [0.38, 0.70]</tspan></text>
+
+  <!-- 4. Fracción informal -->
+  <rect x="698" y="112" width="158" height="86" rx="8" fill="#EAF5F5" stroke="#008A92" stroke-width="1.5"/>
+  <text x="777" y="140" font-size="15" font-weight="700" fill="#172033" text-anchor="middle">Fracción informal</text>
+  <text x="777" y="162" font-size="15" font-weight="700" fill="#172033" text-anchor="middle">s<tspan dy="5" font-size="11">I</tspan><tspan dy="-5"> = ℓ</tspan><tspan dy="5" font-size="11">I</tspan><tspan dy="-5">/(ℓ</tspan><tspan dy="5" font-size="11">F</tspan><tspan dy="-5">+ℓ</tspan><tspan dy="5" font-size="11">I</tspan><tspan dy="-5">)</tspan></text>
+  <text x="777" y="185" font-size="12" fill="#008A92" text-anchor="middle">cae con a si φ<tspan dy="4" font-size="10">I</tspan><tspan dy="-4"> &gt; φ</tspan><tspan dy="4" font-size="10">F</tspan></text>
+
+  <!-- Flechas -->
+  <g stroke="#172033" stroke-width="1.6" fill="none" marker-end="url(#arrow)">
+    <path d="M176 155 H222"/>
+    <path d="M398 145 C 420 120, 428 104, 448 101"/>
+    <path d="M398 165 C 420 190, 428 206, 448 209"/>
+    <path d="M644 101 C 668 104, 676 125, 694 135"/>
+    <path d="M644 209 C 668 206, 676 185, 694 176"/>
+  </g>
+
+  <text x="28" y="282" font-size="13" fill="#5F6B7A">FOC de cada sector: V<tspan dy="4" font-size="10">a</tspan><tspan dy="-4"> R</tspan><tspan dy="4" font-size="10">s</tspan><tspan dy="-4">(z) = ψ</tspan><tspan dy="4" font-size="10">s</tspan><tspan dy="-4"> ℓ</tspan><tspan dy="4" font-size="10">s</tspan><tspan dy="-9" font-size="10">1/φs</tspan><tspan dy="5">. Con φ</tspan><tspan dy="4" font-size="10">I</tspan><tspan dy="-4"> = φ</tspan><tspan dy="4" font-size="10">F</tspan><tspan dy="-4">, V</tspan><tspan dy="4" font-size="10">a</tspan><tspan dy="-4"> se cancela en ℓ</tspan><tspan dy="4" font-size="10">I</tspan><tspan dy="-4">/ℓ</tspan><tspan dy="4" font-size="10">F</tspan><tspan dy="-4"> y la riqueza no cambia el reparto (mi tesis).</tspan></text>
+</svg>
