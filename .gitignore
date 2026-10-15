@@ -26,3 +26,6 @@ __pycache__/
 # Never commit personal documents to a public repository
 DNI*
 *_DNI*
+
+# Contexto local del proyecto de tesis (copias de HA-IE2025): no se sube
+_contexto/
