@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="206" height="48" viewBox="0 0 206 48" role="img" aria-labelledby="title">
+  <title id="title">Chequeos en Python</title>
+  <rect width="206" height="48" rx="8" fill="#172033"/>
+  <path d="M22 17l-6 7 6 7 M32 17l6 7-6 7 M29 14l-4 20" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="50" y="30" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Chequeos · Python</text>
+</svg>

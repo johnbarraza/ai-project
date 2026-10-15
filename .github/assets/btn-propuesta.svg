@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="196" height="48" viewBox="0 0 196 48" role="img" aria-labelledby="title">
+  <title id="title">Propuesta en PDF</title>
+  <rect width="196" height="48" rx="8" fill="#008A92"/>
+  <path d="M18 12h13l6 6v18H18z M31 12v6h6 M22 23h11 M22 28h11" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/>
+  <text x="50" y="30" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Propuesta · PDF</text>
+</svg>
