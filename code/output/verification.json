@@ -1,0 +1,543 @@
+{
+  "kappa_shapes": [
+    {
+      "shape": 0.5,
+      "phi_I": 0.38,
+      "psi_I": 34.99130884296027,
+      "kappa_z1": 0.3997645813347663,
+      "V3_matlab": 0.044293648554719955
+    },
+    {
+      "shape": 0.5,
+      "phi_I": 0.7,
+      "psi_I": 6.777472693428974,
+      "kappa_z1": 0.40266940272516555,
+      "V3_matlab": 0.10616735709054392
+    },
+    {
+      "shape": 1.0,
+      "phi_I": 0.38,
+      "psi_I": 33.9970182274622,
+      "kappa_z1": 0.4,
+      "V3_matlab": 0.044079449954260275
+    },
+    {
+      "shape": 1.0,
+      "phi_I": 0.7,
+      "psi_I": 6.671130185447886,
+      "kappa_z1": 0.40288444107763516,
+      "V3_matlab": 0.10594416467443951
+    },
+    {
+      "shape": 2.0,
+      "phi_I": 0.38,
+      "psi_I": 32.519990012523934,
+      "kappa_z1": 0.40036887414837297,
+      "V3_matlab": 0.04303992588771621
+    },
+    {
+      "shape": 2.0,
+      "phi_I": 0.7,
+      "psi_I": 6.510582302956739,
+      "kappa_z1": 0.40321966531628994,
+      "V3_matlab": 0.10489118622825444
+    }
+  ],
+  "kappa_percentile": [
+    {
+      "phi_I": 0.38,
+      "psi_I": 31.856079836019322,
+      "kappa_0": 0.4010840086631124,
+      "V3_matlab": 0.044117564346470184
+    },
+    {
+      "phi_I": 0.7,
+      "psi_I": 6.437529230852408,
+      "kappa_0": 0.40392139718578296,
+      "V3_matlab": 0.10596701448398166
+    }
+  ],
+  "gini_assets": 0.5213525388265038,
+  "ge_runs": [
+    {
+      "tag": "ge_k05_phi038",
+      "Frisch_I": 0.38,
+      "kappa_shape": 0.5,
+      "nu_I": 0.6,
+      "debt_eta": 1.0,
+      "psi_I": 34.991309,
+      "kappa_z1": 0.3997646,
+      "r_star": 0.06615286568,
+      "p_I_star": 0.9256013848,
+      "w_F_star": 2.24857331,
+      "M1": 0.5168897126,
+      "M2": 0.1874896532,
+      "M3": 0.3792660022,
+      "V3": 0.04393524508,
+      "Q1": 0.5426505339,
+      "Q5": 0.4987152889,
+      "gini_assets": 0.521174248,
+      "z_nodes_with_negative_slope": 0.0,
+      "max_hours": 0.7502151678,
+      "mass_at_cap": 0.0,
+      "walras_err": 0.0001299154344,
+      "converged": true
+    },
+    {
+      "tag": "ge_k2_phi038",
+      "Frisch_I": 0.38,
+      "kappa_shape": 2.0,
+      "nu_I": 0.6,
+      "debt_eta": 1.0,
+      "psi_I": 32.51999,
+      "kappa_z1": 0.4003689,
+      "r_star": 0.06596073052,
+      "p_I_star": 0.9313414673,
+      "w_F_star": 2.252067297,
+      "M1": 0.5172436055,
+      "M2": 0.1886765837,
+      "M3": 0.3763009019,
+      "V3": 0.0437388555,
+      "Q1": 0.5430624648,
+      "Q5": 0.4993236093,
+      "gini_assets": 0.5200222219,
+      "z_nodes_with_negative_slope": 0.0,
+      "max_hours": 0.747647141,
+      "mass_at_cap": 0.0,
+      "walras_err": 0.0001051965068,
+      "converged": true
+    },
+    {
+      "tag": "ge_phi050",
+      "Frisch_I": 0.5,
+      "kappa_shape": 1.0,
+      "nu_I": 0.6,
+      "debt_eta": 1.0,
+      "psi_I": 14.424016,
+      "kappa_z1": 0.4012983,
+      "r_star": 0.05098914654,
+      "p_I_star": 0.8942957666,
+      "w_F_star": 2.556701863,
+      "M1": 0.5029590281,
+      "M2": 0.159703718,
+      "M3": 0.2771465746,
+      "V3": null,
+      "Q1": null,
+      "Q5": 0.5029590281,
+      "gini_assets": 0.8010646622,
+      "z_nodes_with_negative_slope": 0.0,
+      "max_hours": 0.698357079,
+      "mass_at_cap": 0.0,
+      "walras_err": 0.2317651236,
+      "converged": false
+    },
+    {
+      "tag": "ge_reg_phi038",
+      "Frisch_I": 0.38,
+      "kappa_shape": 1.0,
+      "nu_I": 0.6,
+      "debt_eta": 1.0,
+      "psi_I": 34.0,
+      "kappa_z1": 0.4,
+      "r_star": 0.06603665849,
+      "p_I_star": 0.9280827331,
+      "w_F_star": 2.250685412,
+      "M1": 0.5170289046,
+      "M2": 0.1879049246,
+      "M3": 0.3775037484,
+      "V3": 0.04408269408,
+      "Q1": 0.5429272698,
+      "Q5": 0.4988445758,
+      "gini_assets": 0.5214173826,
+      "z_nodes_with_negative_slope": 0.0,
+      "max_hours": 0.7484732931,
+      "mass_at_cap": 0.0,
+      "walras_err": 8.598352198e-05,
+      "converged": true
+    }
+  ],
+  "education": {
+    "groups": [
+      "primaria o menos",
+      "secundaria",
+      "superior no universitaria",
+      "universitaria o más"
+    ],
+    "workers_share": [
+      0.17888470644158685,
+      0.39682751275078765,
+      0.1878457492331597,
+      0.23644203157446575
+    ],
+    "data": [
+      0.08445492473249103,
+      0.23229969940871262,
+      0.4790242859367983,
+      0.6569352877751915
+    ],
+    "model_base": [
+      0.4057056128848228,
+      0.4731205472797751,
+      0.5018393728492877,
+      0.5273791162942545
+    ],
+    "broad_data": 0.38578711715020103,
+    "broad_model_base": 0.06247060172838059,
+    "model_M3_extreme_nodes": 0.3775177819344121,
+    "extreme_node_mass": [
+      0.0026911187015234506,
+      0.0026911187015234263
+    ],
+    "odds_ratio_data": 20.758754556048828,
+    "odds_ratio_model": 1.6345591182492134,
+    "required_wage_ratio_change": 2926.302340830436,
+    "fits": {
+      "grid": {
+        "shape": 0.43088693800637673,
+        "level": 0.41243721628994395,
+        "level_fraction_of_max": 0.9999999700466811,
+        "groups": [
+          0.40188604531222866,
+          0.4731163204480152,
+          0.5024752146552952,
+          0.5286661013519167
+        ],
+        "broad_gap": 0.06448091374596127,
+        "kappa_over_gross": [
+          0.9999999699466809,
+          0.2420770920275256,
+          0.0
+        ],
+        "psi_I": 35.64424233953719,
+        "V3_matlab": 0.04576830920594338,
+        "sse": 0.17575809152474386
+      },
+      "percentile": {
+        "shape": 0.4821259505828494,
+        "level": 0.4127050433995495,
+        "level_fraction_of_max": 0.9999999700466811,
+        "groups": [
+          0.39877881917515084,
+          0.4731757428142973,
+          0.503894012735133,
+          0.5289792748087695
+        ],
+        "broad_gap": 0.06600207188115892,
+        "kappa_over_gross": [
+          0.9999999699466809,
+          0.19513847181581512,
+          0.0027212628126392783
+        ],
+        "psi_I": 33.83789516679417,
+        "V3_matlab": 0.046574311637449906,
+        "sse": 0.17381202346961647
+      },
+      "ad_valorem": {
+        "shape": 0.1,
+        "level": 1.000134625550749,
+        "level_fraction_of_max": 0.9999999700466811,
+        "groups": [
+          0.2614354725243186,
+          0.4289474153502878,
+          0.5224700558405655,
+          0.6037323682376576
+        ],
+        "broad_gap": 0.18575059940351218,
+        "kappa_over_gross": [
+          0.9999999699466809,
+          0.9379355141126937,
+          0.5163554307569447
+        ],
+        "psi_I": 344.07930542259754,
+        "V3_matlab": 0.129933761088946,
+        "sse": 0.0747105240515822
+      }
+    }
+  },
+  "frisch_evidence": {
+    "formal": 0.39,
+    "informal": 0.37,
+    "formal_se": 0.02,
+    "gap": -0.020000000000000018,
+    "phi_I": 0.36,
+    "V3_matlab": 0.040160612426125564,
+    "psi_I": 41.47677702236167
+  },
+  "nu_one": {
+    "psi_I": 32.86197219282716,
+    "kappa_z1": 0.40981373401631555,
+    "V3_matlab": 0.023172157203496635,
+    "high_phi_interior": false
+  },
+  "scope": "A2 conditional labor proposition; illustrative partial equilibrium, not a new GE",
+  "inputs_sha256": {
+    "baseline.csv": "bb1855b43bd2c46767d3edb4471b3c5d7360b1223faac08c6f575adefc6de289",
+    "parameters.json": "7137b81cb3530b60ac1c4acba301b9e3db056ec61b27726a517ff7ada17b7995"
+  },
+  "parameters": {
+    "tau": 0.18,
+    "w_F_star": 2.250628370432035,
+    "w_I_household_star": 0.9984644530454803,
+    "nu_I": 0.6,
+    "Frisch": 0.38,
+    "psi_F": 55.0,
+    "psi_I": 34.0,
+    "kappa_z1": 0.4,
+    "H_bar": 1.0,
+    "r_star": 0.066039794375994,
+    "p_I_star": 0.9281154534494901
+  },
+  "symbolic": {
+    "FOC": true,
+    "strict_concavity": true,
+    "log_ratio_elasticity": true,
+    "share_derivative": true,
+    "common_phi_cancellation": true,
+    "reversed_sign_case": true
+  },
+  "structure": {
+    "firm_FOCs": true,
+    "time_KKT": true,
+    "linear_barrier": true,
+    "hours_cost_not_fixed_entry": true,
+    "formal_resource_accounting": true
+  },
+  "baseline": {
+    "M1": 0.5171101322177919,
+    "M3": 0.3775177819344121,
+    "V3": 0.04308558094022913,
+    "V3_matlab": 0.04407944995426022,
+    "Q1": 0.542017455753272,
+    "Q1_matlab": 0.5430113247673031,
+    "Q5": 0.49893187481304285,
+    "formal_z_min": 0.18128581467331173,
+    "formal_z_max": 0.5588035966077238,
+    "mass_at_cap": 0.0,
+    "max_hours": 0.7485141127544774
+  },
+  "va_relative_gap": 8.770688411105039e-05,
+  "common_phi_share_range": 2.220446049250313e-16,
+  "max_dVa_da_step": -0.0011493505861149278,
+  "optimizer": {
+    "sectoral_optimizations": 36,
+    "max_hours_error": 7.283557590387346e-09
+  },
+  "quintiles": {
+    "primary": "D17: include first node reaching 20%",
+    "alternative": "MATLAB: last node at or below 20%",
+    "Q1_last_index_zero_based": 16,
+    "Q1_matlab_last_index_zero_based": 15,
+    "Q5_first_index_zero_based": 97,
+    "Q1_mass": 0.2084291645957077,
+    "Q1_matlab_mass": 0.1967206229366203,
+    "Q5_mass": 0.20323950650479597
+  },
+  "scenarios": [
+    {
+      "phi_I": 0.38,
+      "psi_I": 33.9970182274622,
+      "kappa_z1": 0.4,
+      "shape": 1.0,
+      "M1": 0.517110132217792,
+      "M3": 0.3775177819344122,
+      "V3": 0.043085580940229184,
+      "V3_matlab": 0.044079449954260275,
+      "Q1": 0.5420174557532722,
+      "Q1_matlab": 0.5430113247673033,
+      "Q5": 0.498931874813043,
+      "formal_z_min": 0.1812858146733114,
+      "formal_z_max": 0.5588035966077236,
+      "mass_at_cap": 0.0,
+      "max_hours": 0.7485141127544774
+    },
+    {
+      "phi_I": 0.45,
+      "psi_I": 19.49525460919802,
+      "kappa_z1": 0.40079360974486106,
+      "shape": 1.0,
+      "M1": 0.5171101322177918,
+      "M3": 0.3775177819343962,
+      "V3": 0.056597586035694036,
+      "V3_matlab": 0.05774898481968599,
+      "Q1": 0.5484861748598598,
+      "Q1_matlab": 0.5496375736438518,
+      "Q5": 0.4918885888241658,
+      "formal_z_min": 0.1781905230383195,
+      "formal_z_max": 0.5557083049727157,
+      "mass_at_cap": 0.0,
+      "max_hours": 0.7641130774639746
+    },
+    {
+      "phi_I": 0.5,
+      "psi_I": 14.424015881699455,
+      "kappa_z1": 0.40129825343718356,
+      "shape": 1.0,
+      "M1": 0.517110132217792,
+      "M3": 0.37751778193441043,
+      "V3": 0.06620524628571095,
+      "V3_matlab": 0.06746767037835494,
+      "Q1": 0.5530312162526755,
+      "Q1_matlab": 0.5542936403453195,
+      "Q5": 0.48682596996696453,
+      "formal_z_min": 0.17602125000241564,
+      "formal_z_max": 0.5535390319368261,
+      "mass_at_cap": 0.0,
+      "max_hours": 0.7755957895988366
+    },
+    {
+      "phi_I": 0.6,
+      "psi_I": 9.191170792034791,
+      "kappa_z1": 0.4021706882516811,
+      "shape": 1.0,
+      "M1": 0.5171101322177919,
+      "M3": 0.3775177819344122,
+      "V3": 0.08530693255159422,
+      "V3_matlab": 0.08678756083829603,
+      "Q1": 0.5619336835510979,
+      "Q1_matlab": 0.5634143118377997,
+      "Q5": 0.47662675099950363,
+      "formal_z_min": 0.1717885207963401,
+      "formal_z_max": 0.5493063027307523,
+      "mass_at_cap": 0.0,
+      "max_hours": 0.799428570025118
+    },
+    {
+      "phi_I": 0.7,
+      "psi_I": 6.671130185447886,
+      "kappa_z1": 0.40288444107763516,
+      "shape": 1.0,
+      "M1": 0.517110132217792,
+      "M3": 0.3775177819344119,
+      "V3": 0.10425059658964791,
+      "V3_matlab": 0.10594416467443951,
+      "Q1": 0.5705879355918863,
+      "Q1_matlab": 0.5722815036766778,
+      "Q5": 0.46633733900223834,
+      "formal_z_min": 0.16769896313033483,
+      "formal_z_max": 0.5452167450647467,
+      "mass_at_cap": 0.0,
+      "max_hours": 0.8244414059197072
+    }
+  ],
+  "psi_only_calibration": {
+    "phi_I": 0.7,
+    "psi_I": 6.661708510875124,
+    "kappa_z1": 0.4,
+    "M1": 0.5171101322177919,
+    "M3": 0.3629550650144333,
+    "V3": 0.10398995066220773,
+    "V3_matlab": 0.10567568369535885,
+    "Q1": 0.5704237798782347,
+    "Q1_matlab": 0.5721095129113858,
+    "Q5": 0.46643382921602694,
+    "formal_z_min": 0.18201636362569662,
+    "formal_z_max": 0.5449714286401299,
+    "mass_at_cap": 0.0,
+    "max_hours": 0.8248434329279002
+  },
+  "sensitivities": {
+    "relative_step": 0.01,
+    "rows": [
+      "M1",
+      "M3",
+      "V3"
+    ],
+    "columns": [
+      "psi_I",
+      "kappa_z1",
+      "phi_I"
+    ],
+    "delta_pp": [
+      [
+        -0.09442344442549544,
+        0.03437083911126404,
+        -0.34000351110831106
+      ],
+      [
+        0.03701225608647718,
+        2.08670439575781,
+        0.11142943355172408
+      ],
+      [
+        0.0006518168895186527,
+        0.03649351576952564,
+        0.0753573083382475
+      ]
+    ]
+  },
+  "effective_labor": {
+    "baseline_L_F": 0.2594377311548324,
+    "baseline_L_I": 0.24746947727455915,
+    "columns": [
+      "L_F_change_percent",
+      "L_I_change_percent"
+    ],
+    "changes_percent": [
+      [
+        0.0,
+        2.220446049250313e-14
+      ],
+      [
+        -0.01554086630862761,
+        0.055367738413147904
+      ],
+      [
+        -0.02543637654909281,
+        0.0920806452596512
+      ],
+      [
+        -0.04256976799028589,
+        0.1578614050020022
+      ],
+      [
+        -0.05661284468980732,
+        0.2127481946765153
+      ]
+    ],
+    "interpretation": "Small changes here do not bound GE price responses."
+  },
+  "quintile_shares_base": [
+    0.5430113247673031,
+    0.5197828526461399,
+    0.5124816055761982,
+    0.5069382234961413,
+    0.49893187481304285
+  ],
+  "foc_example": {
+    "z_index": 19,
+    "a_poor": -0.15577889447236182,
+    "a_rich": 12.296482412060302,
+    "va_poor": 1.5290909250576854,
+    "va_rich": 0.6313144743892137,
+    "R_F": 1.2297938632024896,
+    "R_I": 0.8998585747330611,
+    "psi_I_base": 33.9970182274622,
+    "psi_I_high": 6.671130185447886,
+    "phi_I_high": 0.7,
+    "pct_formal": 39.9559203074441,
+    "pct_informal_high": 85.75105749550245,
+    "share_base": 0.5160206466591157,
+    "share_high_poor": 0.5445028820697916,
+    "share_high_rich": 0.47387481068048865
+  },
+  "figure_a": {
+    "z_index_zero_based": 19,
+    "z_node": 0.8408839939151906,
+    "grid_median": 0.8712538708284499,
+    "convention": "lower of the two central productivity nodes"
+  },
+  "tolerances": {
+    "baseline_moments": 5e-05,
+    "fixed_M1_M3": 1e-10,
+    "rounded_psi_I": 0.005,
+    "rounded_kappa_z1": 5e-05,
+    "rounded_V3_pp": 0.005,
+    "va_relative_gap": 0.001
+  },
+  "limitations": [
+    "V_a, g and prices are fixed; no modified HJB/KFE/market-clearing check or GE solution.",
+    "phi_I range is illustrative, not identified or supported by a literature search yet (D15).",
+    "Wealth quintiles of hours are not directly comparable with INEI worker classifications; source check pending.",
+    "Stored baseline psi_I=34; FOC reconstruction gives 33.9970182275, which rounds to 34.00."
+  ]
+}
