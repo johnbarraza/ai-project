@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="172" height="48" viewBox="0 0 172 48" role="img" aria-labelledby="title">
+  <title id="title">Slides en PDF</title>
+  <rect width="172" height="48" rx="8" fill="#223F91"/>
+  <path d="M15 13h24v16H15z M27 29v5 M21 36h12 M19 24l5-5 4 4 6-6" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="50" y="30" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Slides · PDF</text>
+</svg>

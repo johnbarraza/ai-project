@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420" role="img" aria-labelledby="title desc">
+  <title id="title">Ahorro, flexibilidad de horas e informalidad en el Perú</title>
+  <desc id="desc">Banner del repositorio. A la derecha, la fracción informal de las horas de un hogar pobre (56 %) y uno rico (45 %) con la misma productividad cuando las horas informales son más flexibles.</desc>
+  <rect width="1600" height="420" fill="#172033"/>
+  <rect x="0" y="0" width="14" height="420" fill="#008A92"/>
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <text x="90" y="118" fill="#9FB3D9" font-size="24" font-weight="600" letter-spacing="3">AI AND ECONOMIC MODELING · TRACK B · TEMA</text>
+    <text x="90" y="200" fill="#FFFFFF" font-size="56" font-weight="700">Ahorro, flexibilidad de horas</text>
+    <text x="90" y="268" fill="#3FC1C9" font-size="56" font-weight="700">e informalidad en el Perú</text>
+    <line x1="90" y1="304" x2="880" y2="304" stroke="#D45D00" stroke-width="5"/>
+    <text x="90" y="350" fill="#DDE3EE" font-size="25">Riqueza y reparto de horas entre el sector formal y el informal</text>
+
+    <!-- Reparto de horas: pobre frente a rico, mismo z, phi_I = 0.70 -->
+    <text x="1060" y="128" fill="#DDE3EE" font-size="20" font-weight="600">Horas de un hogar, misma productividad</text>
+    <text x="1000" y="190" fill="#FFFFFF" font-size="20" text-anchor="end">pobre</text>
+    <rect x="1020" y="166" width="231" height="36" fill="#5C7BD9"/>
+    <rect x="1251" y="166" width="294" height="36" fill="#D45D00"/>
+    <text x="1534" y="191" fill="#FFFFFF" font-size="18" font-weight="700" text-anchor="end">56 %</text>
+    <text x="1000" y="252" fill="#FFFFFF" font-size="20" text-anchor="end">rico</text>
+    <rect x="1020" y="228" width="289" height="36" fill="#5C7BD9"/>
+    <rect x="1309" y="228" width="236" height="36" fill="#D45D00"/>
+    <text x="1534" y="253" fill="#FFFFFF" font-size="18" font-weight="700" text-anchor="end">45 %</text>
+    <rect x="1020" y="292" width="16" height="16" fill="#5C7BD9"/>
+    <text x="1044" y="306" fill="#DDE3EE" font-size="17">formales</text>
+    <rect x="1140" y="292" width="16" height="16" fill="#D45D00"/>
+    <text x="1164" y="306" fill="#DDE3EE" font-size="17">informales</text>
+    <text x="1020" y="346" fill="#9FB3D9" font-size="16">Con φ<tspan dy="5" font-size="12">I</tspan><tspan dy="-5"> = 0.70 &gt; φ</tspan><tspan dy="5" font-size="12">F</tspan><tspan dy="-5">; con φ común, ambos 52 %.</tspan></text>
+  </g>
+</svg>

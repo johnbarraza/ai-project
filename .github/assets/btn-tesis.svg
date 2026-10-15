@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="232" height="48" viewBox="0 0 232 48" role="img" aria-labelledby="title">
+  <title id="title">Modelo de la tesis: paquete de replicación</title>
+  <rect width="232" height="48" rx="8" fill="#D45D00"/>
+  <path d="M16 14h9c2 0 3 1 3 3v18c0-2-1-3-3-3h-9z M40 14h-9c-2 0-3 1-3 3v18c0-2 1-3 3-3h9z" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linejoin="round"/>
+  <text x="52" y="30" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Modelo de la tesis</text>
+</svg>
