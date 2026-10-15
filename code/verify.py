@@ -138,6 +138,12 @@ def check():
     share_base = baseline["ell_i"] / (baseline["ell_f"] + baseline["ell_i"])
     common_phi_range = float(np.ptp(share_base, axis=0).max())
     require(common_phi_range < 1e-12, "common-phi share is independent of a at fixed z")
+    formal_by_z = np.sum(baseline["mass"] * baseline["ell_f"], axis=0)
+    informal_by_z = np.sum(baseline["mass"] * baseline["ell_i"], axis=0)
+    share_by_z = informal_by_z / (formal_by_z + informal_by_z)
+    require(np.all(np.diff(share_by_z) < 0),
+            "thesis informal hours share strictly decreases across productivity nodes")
+    np.testing.assert_allclose(share_by_z, share_base[0], atol=1e-12, rtol=0)
     wf, _ = wages(baseline["z"], p, p["kappa_z1"])
     np.testing.assert_allclose((1 - p["tau"]) * p["w_F_star"] * baseline["z"] - baseline["kappa"],
                                np.broadcast_to(wf, baseline["va"].shape), atol=1e-14, rtol=0)
@@ -333,6 +339,10 @@ def check():
         inputs_sha256={name: hashlib.sha256((HERE / "data" / name).read_bytes()).hexdigest()
                        for name in ("baseline.csv", "parameters.json")},
         parameters=p, symbolic=symbolic, structure=structure, baseline=base,
+        productivity_profile=dict(z=baseline["z"].tolist(), s_I=share_by_z.tolist(),
+                                  s_F=(1-share_by_z).tolist(),
+                                  definition="Informal hours divided by total hours within each z, weighted by g*da",
+                                  interpretation="Stationary comparison across productivity states; not a time path or shock response"),
         va_relative_gap=baseline["va_relative_gap"], common_phi_share_range=common_phi_range,
         max_dVa_da_step=float(np.diff(baseline["va"], axis=0).max()), optimizer=optimizer_check,
         quintiles=dict(primary="D17: include first node reaching 20%", alternative="MATLAB: last node at or below 20%",
@@ -398,6 +408,10 @@ def write_outputs(baseline, scenarios, sensitivity, summary, moments_data):
     np.savetxt(out / "share_curves.csv", curves, delimiter=",", comments="", fmt="%.17g",
                header="a," + ",".join(f"s_I_phi_{row['phi_I']:g}" for row in selected))
     np.savetxt(out / "sensitivity_pp.csv", sensitivity, delimiter=",", comments="", fmt="%.17g", header="psi_I,kappa_z1,phi_I")
+    profile = summary["productivity_profile"]
+    np.savetxt(out / "share_by_productivity.csv",
+               np.column_stack([profile["z"], profile["s_I"], profile["s_F"]]),
+               delimiter=",", comments="", fmt="%.17g", header="z,s_I,s_F")
     # All reported model values in the proposal/deck are consumed through these macros.
     p, base, high = summary["parameters"], summary["baseline"], scenarios[-1]
     numbers = {
@@ -488,7 +502,7 @@ def main():
     print("phi_I   psi_I       kappa_z1    V3 D17 (pp)   V3 MATLAB (pp)")
     for row in scenarios:
         print(f"{row['phi_I']:.2f}    {row['psi_I']:.6f}   {row['kappa_z1']:.7f}   {100*row['V3']:.6f}      {100*row['V3_matlab']:.6f}")
-    print("OK: wrote code/output/verification.json, topic_numbers.tex and five figures (PDF/PNG)")
+    print("OK: wrote code/output/verification.json, topic_numbers.tex and figures (PDF/PNG/SVG)")
 
 
 if __name__ == "__main__":

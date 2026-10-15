@@ -86,7 +86,7 @@
 \end{tikzpicture}
 \vspace{6mm}
 {\small\bfseries\color{Blue}Universidad del Pacífico}\par
-{\small AI and Economic Modeling · Track B: el modelo detrás de mi tesis}\par
+{\small AI and Economic Modeling · Track B: modelo económico de este trabajo}\par
 \vspace{11mm}
 {\LARGE\bfseries Ahorro, flexibilidad de horas\par\vspace{1.5mm}\teal{e informalidad en el Perú}\par}
 \vspace{4mm}
@@ -119,31 +119,29 @@
 
 % ===== 1. Dato (1:00) =====
 \renewcommand{\partid}{1}
-\begin{frame}{1. En el Perú los más pobres son \teal{mucho más informales}, y la brecha persiste}
+\begin{frame}{1. El empleo informal es mayor \teal{en los quintiles de menor gasto}}
 \centering
-\includegraphics[width=\linewidth,height=6.3cm,keepaspectratio]{../code/figures/motivation_quintiles.pdf}
+\includegraphics[width=\linewidth,height=5.5cm,keepaspectratio]{../code/figures/motivation_quintiles.pdf}
+\takeaway{\small Este patrón motiva distinguir el papel de los activos del de la productividad laboral.}
 \figurenote{Tasa de empleo informal de la población ocupada (empleo principal) por quintil de gasto per cápita del hogar, ENAHO.
-\IneiYear: INEI (2018), Cuadro 7.5. 2019: INEI (2022), Cuadro 7.5. 2023: cálculo propio con la definición que reproduce el Cuadro 7.5 de 2021 ($\pm$0.2 pp).}
+Fuentes: INEI (2018, 2022); ENAHO 2023, elaboración propia.}
 \end{frame}
 
 % ===== 1. Pregunta (1:00) =====
-\begin{frame}{1. La pregunta: \teal{cuándo la informalidad protege más al que ahorra menos}}
+\begin{frame}{1. La pregunta: \teal{riqueza y reparto de horas}}
 \vfill
 \panel{PaleTeal}{\linewidth}{\centering\vspace{3mm}
-{\Large\bfseries ¿Bajo qué condición la informalidad amortigua más\par\vspace{1.5mm}
-a los hogares con menos ahorro, a igual productividad?}\par\vspace{3mm}}
+{\Large\bfseries ¿Cuándo influye la riqueza en el reparto de horas\par\vspace{1.5mm}
+entre formal e informal, para una misma productividad?}\par\vspace{3mm}}
 \vspace{8mm}
 \begin{columns}[T,onlytextwidth]
 \column{.47\textwidth}
-\labeltext{Amortiguar}
-Ajustar horas hacia el sector informal cuando cae la productividad propia, $z$. Es un shock individual, no una crisis agregada.
+\labeltext{Comparación}
+El dato compara quintiles de gasto. El modelo compara activos para una misma productividad laboral individual, $z$.
 \column{.47\textwidth}
 \labeltext{Track B}
-El modelo económico detrás de mi tesis, \textit{Informalidad y distribución de riqueza en el Perú}.
+Modelo económico de \textit{Informalidad y distribución de riqueza en el Perú}.
 \end{columns}
-\vspace{5mm}
-\labeltext{Una respuesta no obvia}
-En el modelo, el hogar con menos ahorro trabaja más horas en \emph{ambos} sectores. La pregunta es por el reparto entre ellos.
 \vfill
 \end{frame}
 
@@ -157,7 +155,7 @@ En el modelo, el hogar con menos ahorro trabaja más horas en \emph{ambos} secto
 \node[card] (ai) at (0,0) {{\small\textbf{Aiyagari (1994)}}\\[1mm]Hogares que ahorran por precaución ante shocks de productividad. Una firma, un bien.};
 \node[card] (ac) at (4.55,0) {{\small\textbf{Achdou et al. (2022)}}\\[1mm]El mismo modelo en tiempo continuo: decisiones (HJB) y distribución (KF).};
 \node[card] (ga) at (9.1,0) {{\small\textbf{Galindo et al. (2024)}}\\[1mm]Aplicación al Perú: formales e informales como tipos exógenos; nadie elige.};
-\node[card,draw=Teal,fill=PaleTeal] (me) at (13.65,0) {{\small\textbf{Mi modelo (tesis)}}\\[1mm]Cada hogar reparte sus horas entre los dos sectores. Dos firmas y dos bienes.};
+\node[card,draw=Teal,fill=PaleTeal] (me) at (13.65,0) {{\small\textbf{Modelo de dos sectores}}\\[1mm]Cada hogar reparte sus horas entre los dos sectores. Dos firmas y dos bienes.};
 \draw[flow=Gray] (ai) -- (ac); \draw[flow=Gray] (ac) -- (ga); \draw[flow=Teal] (ga) -- (me);
 \end{tikzpicture}
 \vspace{5mm}
@@ -171,7 +169,7 @@ En el modelo, el hogar con menos ahorro trabaja más horas en \emph{ambos} secto
 {\footnotesize\gray{$u$: utilidad; $\rho$: descuento; $w$: salario; límite de deuda $a\ge\underline a$.}}\par\vspace{1.5mm}
 \textbf{Equilibrio:} ahorro $=$ capital ($A=K$) fija $r$.}
 \column{.47\textwidth}
-\panel{PaleTeal}{\linewidth}{\labeltext{Supuesto que cambio: mi modelo (tesis)}
+\panel{PaleTeal}{\linewidth}{\labeltext{Modelo de dos sectores}
 Horas endógenas en dos sectores: $\ell_F$ y $\ell_I$.\par
 Dos firmas y dos bienes: precios $r$ y $p_I$.\par
 Barrera $\kappa(z)$ y prima de deuda $\chi(z)$.\par
@@ -180,7 +178,7 @@ Barrera $\kappa(z)$ y prima de deuda $\chi(z)$.\par
 \end{frame}
 
 % ===== 2. Agentes (0:45) =====
-\begin{frame}{2. Mi modelo: \teal{hogares, dos firmas y un gobierno}}
+\begin{frame}{2. Modelo de dos sectores: \teal{hogares, dos firmas y un gobierno}}
 \centering
 \vspace{2mm}
 \begin{tikzpicture}[x=1cm,y=1cm]
@@ -205,15 +203,16 @@ Barrera $\kappa(z)$ y prima de deuda $\chi(z)$.\par
 \begin{tikzpicture}[node distance=7mm,every node/.append style={minimum height=19mm}]
 \node[step=31mm] (s1) {\textbf{1. Observa}\\ activos $a$ y\\ productividad $z$};
 \node[step=31mm,right=of s1] (s2) {\textbf{2. Decide}\\ consumo $c_F,c_I$\\ horas $\ell_F,\ell_I$};
-\node[step=31mm,right=of s2] (s3) {\textbf{3. Ahorra}\\ $\dot a$ = ingreso $-$ gasto};
-\node[step=31mm,right=of s3,fill=PaleOrange] (s4) {\textbf{4. Shock}\\ $z$ cambia: conoce\\ el proceso, no\\ el valor futuro};
+\node[step=31mm,right=of s2,fill=PaleOrange] (s3) {\textbf{3. Evolucionan}\\ $a$: ahorro\\ $z$: azar exógeno};
+\node[step=31mm,right=of s3] (s4) {\textbf{4. Reoptimiza}\\ observa el nuevo\\ estado $(a,z)$};
 \draw[flow=Ink] (s1) -- (s2); \draw[flow=Ink] (s2) -- (s3); \draw[flow=Ink] (s3) -- (s4);
-\draw[flow=Teal] (s4.south) -- ++(0,-6mm) -| node[flowlabel,pos=0.25]{\teal{nuevo $(a,z)$: el ciclo se repite en el instante siguiente}} (s1.south);
+\draw[flow=Teal] (s4.south) -- ++(0,-6mm) -| node[flowlabel,minimum height=0pt,pos=0.25]{\teal{decisiones que se actualizan en tiempo continuo}} (s1.south);
 \end{tikzpicture}
 \vspace{6mm}
 \begin{columns}[T,onlytextwidth]
 \column{.47\textwidth}
-\panel{Pale}{\linewidth}{\textbf{Tiempo continuo:} el hogar reoptimiza en cada instante. Sus decisiones dependen solo de $(a,z)$.}
+\panel{PaleOrange}{\linewidth}{\textbf{Sabe:} su $z$ actual y cómo puede cambiar.\par\vspace{1mm}
+\textbf{No sabe:} la realización futura del choque. La persistencia no elimina la incertidumbre.}
 \column{.47\textwidth}
 \panel{Pale}{\linewidth}{\textbf{Estado estacionario:} la distribución $g(a,z)$ no cambia, aunque cada hogar sigue moviéndose dentro de ella.}
 \end{columns}
@@ -264,35 +263,46 @@ w(z)=\frac{z_{\max}-z}{z_{\max}-z_{\min}}\in[0,1]
 \]}
 \end{columns}
 \vspace{3mm}
-\footnotesize
-\renewcommand{\arraystretch}{1.25}
+\small
+\renewcommand{\arraystretch}{1.35}
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{24mm}>{\raggedright\arraybackslash}p{58mm}@{\hspace{8mm}}>{\raggedright\arraybackslash}p{24mm}>{\raggedright\arraybackslash}p{58mm}@{}}
-$\tau=\TaxFormal$ & impuesto al salario formal; lo paga el hogar & $w(z)$ & 1 el menos productivo, 0 el más productivo\\
-$\widetilde w_I$ & pago informal por unidad efectiva & $\kappa_{z1}=\KappaBase$ & barrera máxima (calibrada a M3)\\
-$\nu_I=\NuInformal$ & la productividad rinde menos en lo informal & $\chi=0.02,\ \eta=1$ & prima de deuda máxima y su curvatura\\
+$\tau$ & impuesto al ingreso laboral formal & $w(z)$ & índice que disminuye con la productividad\\
+$\widetilde w_I$ & pago informal por trabajo efectivo & $\kappa_{z1}$ & barrera formal máxima por hora\\
+$\nu_I$ & cómo influye $z$ en el ingreso informal por hora & $\chi,\ \eta$ & escala y forma de la prima de deuda\\
 \end{tabular}\par
 \vspace{2mm}
-{\color{Gray}Forma de las cuñas y alternativas: \hyperlink{aforms}{anexo A12}.}
+{\footnotesize\color{Gray}Valores y fuentes: \hyperlink{a5}{anexo A8}. Formas alternativas: \hyperlink{aforms}{anexo A12}.}
+\end{frame}
+
+% ===== 2. Informalidad por productividad (0:50) =====
+\begin{frame}{2. En el modelo de dos sectores, \teal{la informalidad cae con la productividad}}
+\centering
+\includegraphics[width=.98\linewidth,height=5.7cm,keepaspectratio]{../code/figures/informal_share_by_productivity.pdf}
+\takeaway{\small La productividad es exógena; el hogar elige cómo repartir sus horas.}
+\figurenote{Solución estacionaria del modelo de dos sectores, $\phi_F=\phi_I=\PhiBase$. Mercado de activos: \hyperlink{aasset}{anexo A16}.}
 \end{frame}
 
 % ===== 2. Supuesto que cambio (1:15) =====
-\begin{frame}{2. Sensibilidad: \teal{horas informales más flexibles}}
+\begin{frame}{2. Sensibilidad: \teal{elasticidades distintas}}
 \vfill
 \begin{columns}[T,onlytextwidth]
 \column{.47\textwidth}
-\panel{Pale}{\linewidth}{\labeltext{\color{Gray}Mi tesis}
+\panelh{Pale}{\linewidth}{40mm}{\labeltext{\color{Gray}Modelo de dos sectores}
 \[
 \phi_F=\phi_I=\PhiBase
 \]
-Las horas de ambos sectores responden igual a un mismo incentivo.}
+Ambas horas responden igual a $V_a$.\par\vspace{2mm}
+A igual productividad, la riqueza no mueve la proporción informal.}
 \column{.47\textwidth}
-\panel{PaleTeal}{\linewidth}{\labeltext{\color{Teal}Sensibilidad en este proyecto}
+\panelh{PaleTeal}{\linewidth}{40mm}{\labeltext{\color{Teal}Sensibilidad}
 \[
 \phi_I\in[\PhiBase,\PhiHigh],\qquad\phi_F=\PhiBase
 \]
-Si las horas informales (cuenta propia, sin jornada fija) se ajustan más, $\phi_I>\phi_F$.}
+Permito una mayor respuesta de las horas informales.\par\vspace{2mm}
+Examino cuánto depende el reparto de horas de haber impuesto elasticidades iguales.}
 \end{columns}
-\vfill
+\takeaway{\small Comparación parcial: precios, $V_a$ y distribución fijos. Recalibro para conservar M1 y M3. El rango es una sensibilidad, no una estimación.}
+\vspace{2mm}
 {\color{Line}\rule{0.35\linewidth}{0.4pt}}\par\vspace{1mm}
 {\footnotesize\color{Gray}$\phi_s$: elasticidad de Frisch, cuánto suben (\%) las horas en $s$ si el beneficio de una hora más sube 1\,\%.\par}
 \end{frame}
@@ -307,8 +317,7 @@ Si las horas informales (cuenta propia, sin jornada fija) se ajustan más, $\phi
 \vspace{-2mm}\[
 \rho v(a,z)=\max_{c_F,c_I,\ell_F,\ell_I}\Big\{\ln C-\sum_{s}\frac{\psi_s\ell_s^{1+1/\phi_s}}{1+1/\phi_s}+V_a\,\dot a\Big\}+\sum_{z'}\lambda_{zz'}\big[v(a,z')-v(a,z)\big]
 \]
-\vspace{-1mm}\footnotesize $V_a=\partial v/\partial a$: valor de un sol más. Último término: cambio esperado del valor si $z$ salta a $z'$ (intensidad $\lambda_{zz'}$); no depende de las decisiones.
-$\dot a$ incluye $R_F\ell_F+R_I\ell_I$ (slide 10): $\ell_s$ solo aparece en la desutilidad y en $V_aR_s\ell_s$, separado del consumo.}
+\vspace{1mm}{\small $V_a=\partial v/\partial a$: valor marginal de los activos.}}
 \vspace{2mm}
 \begin{columns}[T,onlytextwidth]
 \column{.315\textwidth}
@@ -330,9 +339,9 @@ V_aR_s(z)-\psi_s\ell_s^{1/\phi_s}
 \]
 \footnotesize BMg $=$ CMg $\Rightarrow\ \ell_s=(V_aR_s/\psi_s)^{\phi_s}$}
 \end{columns}
-\takeaway{\small\textbf{A precios dados:} con pocos activos, $V_a$ es alto y el hogar trabaja más en \emph{ambos} sectores.
-\textbf{En equilibrio general:} más horas informales bajan $\widetilde w_I$ (rendimientos decrecientes) y mueven $p_I$.}
-\figurenote{Vale con solución interior, $\ell_F+\ell_I<\bar H$: en la tesis el máximo es $\MaxHoursBase$ con $\bar H=\TimeCap$. Con tope de tiempo: \hyperlink{a4}{anexo A7}.}
+\takeaway{\small\textbf{A igual productividad y retornos dados:} mayor $V_a$ implica más horas en \emph{ambos} sectores.
+En equilibrio general cambian retornos, $V_a$ y distribución; estas FOC no fijan el efecto final.}
+\figurenote{Vale con solución interior, $\ell_F+\ell_I<\bar H$: en el modelo de dos sectores el máximo es $\MaxHoursBase$ con $\bar H=\TimeCap$. Con tope de tiempo: \hyperlink{a4}{anexo A7}.}
 \end{frame}
 
 % ===== 3. FOC gráfica (1:00) =====
@@ -344,36 +353,25 @@ Rectas: BMg $=V_aR_s(z)$, una por hogar. Curvas: CMg $=\psi_s\ell^{1/\phi_s}$. C
 \end{frame}
 
 % ===== 3. Conjetura (2:00) =====
-\begin{frame}{3. Conjetura: si $\phi_I>\phi_F$, a igual $z$, \teal{menos activos implica más informalidad}}
-\labeltext{Divido las dos FOC}
+\begin{frame}{3. Conjetura: \teal{la riqueza cambia la composición de horas}}
+\vfill
 \[
-\frac{\ell_I}{\ell_F}=\frac{(R_I/\psi_I)^{\phi_I}}{(R_F/\psi_F)^{\phi_F}}\;V_a^{\,\phi_I-\phi_F}
-\quad\Longrightarrow\quad
-\frac{\partial\ln(\ell_I/\ell_F)}{\partial\ln V_a}=\phi_I-\phi_F
+\frac{\ell_I}{\ell_F}\;\propto\;V_a^{\,\phi_I-\phi_F}
 \]
-\begin{columns}[T,onlytextwidth]
-\column{.47\textwidth}
-\panel{Pale}{\linewidth}{\labeltext{\color{Gray}Mi tesis: $\phi_I=\phi_F$}
-$V_a$ se cancela: la fracción informal $s_I=\ell_I/(\ell_F+\ell_I)$ no depende de $a$ a igual $z$.
-La brecha V3 sale solo de que los pobres tienen, en promedio, menor $z$.}
-\column{.47\textwidth}
-\panel{PaleTeal}{\linewidth}{\labeltext{\color{Teal}Este proyecto: $\phi_I>\phi_F$}
-\[
-\frac{\partial s_I}{\partial V_a}=s_I(1-s_I)\,\frac{\phi_I-\phi_F}{V_a}>0
-\]
-Si $V_a$ baja con $a$: más pobre $\Rightarrow$ más informal.}
-\end{columns}
-\vspace{3mm}
-{\footnotesize\textbf{Condiciones:} (i) solución interior; (ii) $R_F(z),R_I(z)>0$; (iii) $V_a$ decreciente en $a$ (valor cóncavo), que se cumple en toda la grilla pero no está demostrada.
-\textbf{Cambio frente al modelo base:} V3 sube (\hyperlink{av3}{anexo A11}); M1 y M3 se mantienen recalibrando $\psi_I$ y $\kappa_{z1}$.}
+\vspace{8mm}
+\panel{PaleTeal}{\linewidth}{\large
+Si $\phi_I>\phi_F$ y $V_a$ disminuye con los activos, menos activos implican una mayor fracción de horas informales, a igual productividad.}
+\par\vspace{5mm}
+{\small Resultado condicionado: \hyperlink{aresult}{definiciones y condiciones completas en el anexo A17}.}
+\vfill
 \end{frame}
 
 % ===== 3. Gráfico por activos (1:00) =====
 \begin{frame}{3. Con $\phi_I>\phi_F$ la fracción informal \teal{cae con los activos}}
 \centering
 \includegraphics[width=\linewidth,height=6.4cm,keepaspectratio]{../code/figures/informal_share_by_assets.pdf}
-\figurenote{Calibrado, equilibrio parcial: $V_a$, $g$ y precios de la tesis. Mismo $z=\CentralProductivity$.
-Línea gris: mi modelo ($\phi_I=\phi_F=\PhiBase$), plana porque $V_a$ se cancela. Cada curva recalibra $\psi_I$ y $\kappa_{z1}$ para mantener M1 y M3.}
+\figurenote{Calibrado, equilibrio parcial: $V_a$, $g$ y precios del modelo de dos sectores. Mismo $z=\CentralProductivity$.
+Línea gris: modelo de dos sectores ($\phi_I=\phi_F=\PhiBase$), plana porque $V_a$ se cancela. Cada curva recalibra $\psi_I$ y $\kappa_{z1}$ para mantener M1 y M3.}
 \end{frame}
 
 % =====================================================================
@@ -381,7 +379,7 @@ Línea gris: mi modelo ($\phi_I=\phi_F=\PhiBase$), plana porque $V_a$ se cancela
 
 % ===== 4. Literatura (1:30) =====
 \renewcommand{\partid}{4}
-\begin{frame}{4. Ningún trabajo conecta la riqueza \teal{con el reparto de horas entre sectores}}
+\begin{frame}{4. Mi pregunta: \teal{riqueza y reparto elegido de horas}}
 \footnotesize
 \renewcommand{\arraystretch}{1.18}
 \begin{tabular}{@{}>{\raggedright\arraybackslash}p{44mm}>{\raggedright\arraybackslash}p{60mm}>{\raggedright\arraybackslash}p{56mm}@{}}
@@ -411,7 +409,7 @@ Línea gris: mi modelo ($\phi_I=\phi_F=\PhiBase$), plana porque $V_a$ se cancela
 La pendiente de $s_I$ en $V_a$ con sus tres condiciones, a mano y con verificación simbólica.}
 \column{.31\textwidth}
 \panel{Pale}{\linewidth}{\labeltext{Simular}
-Equilibrio general con $\phi_I\neq\phi_F$ en el solver de la tesis: ¿sobrevive la pendiente cuando cambian $r$, $p_I$ y $V_a$?}
+Equilibrio general con $\phi_I\neq\phi_F$ en el solver del modelo de dos sectores: ¿sobrevive la pendiente cuando cambian $r$, $p_I$ y $V_a$?}
 \column{.31\textwidth}
 \panel{Pale}{\linewidth}{\labeltext{Formalizar en Lean}
 La proposición condicional, con AppliedModelingLib sobre el paper final.}
@@ -423,7 +421,7 @@ $\ \mathrm{sd}(\ln\ell_I\mid z)\,/\,\mathrm{sd}(\ln\ell_F\mid z)=\phi_I/\phi_F$.
 \vspace{2mm}
 \panel{PaleOrange}{\linewidth}{\labeltext{\color{Orange}Paso más riesgoso}
 En equilibrio general cambian $r$, $p_I$ y la distribución: la brecha podría ser menor.
-Primer intento: el solver reproduce mi tesis, pero con $\phi_I=\PhiMid$ y $\PhiHigh$ aún no converge.
+Primer intento: el solver reproduce el modelo de dos sectores, pero con $\phi_I=\PhiMid$ y $\PhiHigh$ aún no converge.
 \textbf{Plan B:} el resultado condicional y el experimento parcial como cota.}
 \end{frame}
 
@@ -431,33 +429,51 @@ Primer intento: el solver reproduce mi tesis, pero con $\phi_I=\PhiMid$ y $\PhiH
 \begin{frame}{5. La respuesta \teal{que busco}}
 \vfill
 \panel{PaleTeal}{\linewidth}{\large
-En el modelo, a igual productividad, la informalidad amortigua más a los hogares con menos ahorro \emph{si y solo si} las horas informales son más flexibles ($\phi_I>\phi_F$).
-Con elasticidad común, la riqueza no cambia el reparto de horas.}
+Bajo las condiciones de la conjetura, la riqueza influye en el reparto cuando las elasticidades son distintas.\par\vspace{4mm}
+$\phi_I=\phi_F$: la riqueza no cambia la fracción informal.\par\vspace{3mm}
+$\phi_I>\phi_F$: menos activos, mayor fracción informal.\par\vspace{3mm}
+$\phi_I<\phi_F$: menos activos, menor fracción informal.}\par
 \vfill
 \end{frame}
 
 % =====================================================================
 \renewcommand{\partid}{6}
-\begin{frame}[label=anexos]{\orange{Anexos}}
-\vspace{2mm}
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{@{}ll@{}}
-\textcolor{Orange}{\textbf{A1}} & \hyperlink{a1}{Decisiones de cada agente y precios dados}\\
-\textcolor{Orange}{\textbf{A2}} & \hyperlink{avar}{Variables: estado, decisiones y precios}\\
-\textcolor{Orange}{\textbf{A3}} & \hyperlink{a2}{Problema dinámico del hogar (HJB), distribución (KF) y proceso de $z$}\\
-\textcolor{Orange}{\textbf{A4}} & \hyperlink{afirm}{Firmas: FOC de capital y trabajo}\\
-\textcolor{Orange}{\textbf{A5}} & \hyperlink{aeq}{Equilibrio: cierre de los mercados}\\
-\textcolor{Orange}{\textbf{A6}} & \hyperlink{a3}{Agregación y vaciado de mercados}\\
-\textcolor{Orange}{\textbf{A7}} & \hyperlink{a4}{Tope de tiempo: el hogar usa todas sus horas}\\
-\textcolor{Orange}{\textbf{A8}} & \hyperlink{a5}{Parámetros: valor, rol y fuente}\\
-\textcolor{Orange}{\textbf{A9}} & \hyperlink{amom}{Momentos: metas de calibración y validaciones}\\
-\textcolor{Orange}{\textbf{A10}} & \hyperlink{a6}{Recalibración de $\psi_I$ y $\kappa_{z1}$}\\
-\textcolor{Orange}{\textbf{A11}} & \hyperlink{av3}{Brecha Q1$-$Q5 según la elasticidad informal $\phi_I$}\\
-\textcolor{Orange}{\textbf{A12}} & \hyperlink{aforms}{Formas de la barrera y de la prima de deuda}\\
-\textcolor{Orange}{\textbf{A13}} & \hyperlink{a7}{Robustez: forma de las cuñas y rendimiento informal de $z$}\\
-\textcolor{Orange}{\textbf{A14}} & \hyperlink{a8}{Formalidad por educación: límite del margen de horas}\\
-\textcolor{Orange}{\textbf{A15}} & \hyperlink{a9}{Referencias y fuentes de datos}\\
+\begin{frame}[plain,label=anexos]
+\centering
+\vfill
+{\fontsize{38}{44}\selectfont\bfseries\color{Teal}ANEXOS\par}
+\vfill
+\end{frame}
+
+\begin{frame}[label=anexosindice]{\orange{Índice de anexos}}
+\vfill
+\renewcommand{\arraystretch}{1.65}
+\begin{columns}[T,onlytextwidth]
+\column{.48\textwidth}
+\begin{tabular}{@{}l@{\hspace{2mm}}p{67mm}@{}}
+\textcolor{Orange}{\textbf{A1}} & \hyperlink{a1}{Decisiones y precios dados}\\
+\textcolor{Orange}{\textbf{A2}} & \hyperlink{avar}{Variables y estados}\\
+\textcolor{Orange}{\textbf{A3}} & \hyperlink{a2}{Dinámica del hogar y distribución}\\
+\textcolor{Orange}{\textbf{A4}} & \hyperlink{afirm}{Firmas y demanda de factores}\\
+\textcolor{Orange}{\textbf{A5}} & \hyperlink{aeq}{Bucle de equilibrio}\\
+\textcolor{Orange}{\textbf{A6}} & \hyperlink{a3}{Agregación y mercados}\\
+\textcolor{Orange}{\textbf{A7}} & \hyperlink{a4}{Restricción de tiempo}\\
+\textcolor{Orange}{\textbf{A8}} & \hyperlink{a5}{Parámetros y fuentes}\\
+\textcolor{Orange}{\textbf{A9}} & \hyperlink{amom}{Metas y validaciones}\\
 \end{tabular}
+\column{.48\textwidth}
+\begin{tabular}{@{}l@{\hspace{2mm}}p{67mm}@{}}
+\textcolor{Orange}{\textbf{A10}} & \hyperlink{a6}{Recalibración de momentos}\\
+\textcolor{Orange}{\textbf{A11}} & \hyperlink{av3}{Brecha Q1$-$Q5 y elasticidad}\\
+\textcolor{Orange}{\textbf{A12}} & \hyperlink{aforms}{Formas de barrera y deuda}\\
+\textcolor{Orange}{\textbf{A13}} & \hyperlink{a7}{Robustez de los resultados}\\
+\textcolor{Orange}{\textbf{A14}} & \hyperlink{a8}{Formalidad por educación}\\
+\textcolor{Orange}{\textbf{A15}} & \hyperlink{a9}{Referencias y datos}\\
+\textcolor{Orange}{\textbf{A16}} & \hyperlink{aasset}{Mercado de activos}\\
+\textcolor{Orange}{\textbf{A17}} & \hyperlink{aresult}{Conjetura: definiciones y condiciones}\\
+\end{tabular}
+\end{columns}
+\vfill
 \end{frame}
 
 % ===== A1 =====
@@ -568,7 +584,7 @@ El beneficio informal se reparte por hora efectiva: $\widetilde w_I=w_I+\Pi_I/L_
 \textbf{Bien informal} $\to p_I$: el consumo iguala la producción informal. El bien formal cierra por Walras (\hyperlink{a3}{anexo A6}).}
 \column{.47\textwidth}
 \panel{PaleOrange}{\linewidth}{\textbf{En este proyecto, por ahora:} equilibrio \emph{parcial}.
-Fijo precios, $V_a$ y $g$ en los de la tesis y cambio solo el bloque de horas.}
+Fijo precios, $V_a$ y $g$ en los del modelo de dos sectores y cambio solo el bloque de horas.}
 \end{columns}
 \end{frame}
 
@@ -620,7 +636,7 @@ V_aR_F=\psi_F\ell_F^{1/\phi_F}+\lambda_H,\qquad V_aR_I=\psi_I\ell_I^{1/\phi_I}+\
 \panel{PaleOrange}{\linewidth}{\textbf{Tope} ($\ell_F+\ell_I=\bar H$): más horas en un sector implican menos en el otro; el reparto se resuelve con $\lambda_H$.}
 \end{columns}
 \vspace{4mm}
-\textbf{En la calibración:} masa de hogares en el tope: \CapMassPercent\,\%; máximo de horas $\MaxHoursBase$ en la tesis y $\MaxHoursHigh$ con $\phi_I=\PhiHigh$; $\bar H=\TimeCap$.
+\textbf{En la calibración:} masa de hogares en el tope: \CapMassPercent\,\%; máximo de horas $\MaxHoursBase$ en el modelo de dos sectores y $\MaxHoursHigh$ con $\phi_I=\PhiHigh$; $\bar H=\TimeCap$.
 \end{frame}
 
 % ===== A5 =====
@@ -637,16 +653,16 @@ $\psi_F,\ \psi_I$ & \PsiFormal,\ \PsiInformalBase & desutilidad de cada sector &
 $\kappa_{z1}$ & \KappaBase & barrera formal máxima & calibrado a M3\\
 $\chi,\ \eta$ & 0.02,\ 1 & prima de deuda y su curvatura & $\chi$: Galindo et al. (2024); $\eta=1$: supuesto (lineal)\\
 $\tau$ & \TaxFormal & impuesto al ingreso laboral formal (hogar) & Galindo et al. (2024)\\
-$\nu_I$ & \NuInformal & rendimiento de $z$ en lo informal & calibración de la tesis\\
+$\nu_I$ & \NuInformal & rendimiento de $z$ en lo informal & calibración del modelo de dos sectores\\
 $\bar H$ & \TimeCap & tiempo disponible & normalización\\
 \bottomrule
 \end{tabular}\par
 \vspace{3mm}
-{\footnotesize Valores de la solución de cierre de la tesis.}
+{\footnotesize Valores de la solución de cierre del modelo de dos sectores.}
 \end{frame}
 
 % ===== Anexo: momentos =====
-\begin{frame}[label=amom]{A9. Mi modelo replica sus metas, \orange{pero no los gradientes por riqueza y educación}}
+\begin{frame}[label=amom]{A9. El modelo replica sus metas, \orange{pero no los gradientes por riqueza y educación}}
 \footnotesize
 \renewcommand{\arraystretch}{1.0}
 \begin{tabular}{@{}p{7mm}p{70mm}rp{39mm}rl@{}}
@@ -669,7 +685,7 @@ V6 & Formalidad: superior menos hasta secundaria (pp) & \VSixData & INEI, EPEN 2
 \vspace{1mm}
 {\color{Gray}M: metas de calibración. V: validaciones, no usadas para calibrar. M3 y V6 usan el mismo dato: M3 lo compara con los dos nodos extremos de $z$ (\ExtremeNodeMassPercent\,\% de la masa cada uno); V6, con grupos de igual tamaño que en la EPEN.}\par
 \vspace{1mm}
-\panel{PaleOrange}{\linewidth}{\small\textbf{En este proyecto, por ahora:} equilibrio \emph{parcial}. Fijo precios, $V_a$ y $g$ en los de la tesis y cambio solo el bloque de horas (equilibrio: \hyperlink{aeq}{anexo A5}).}
+\panel{PaleOrange}{\linewidth}{\small\textbf{En este proyecto, por ahora:} equilibrio \emph{parcial}. Fijo precios, $V_a$ y $g$ en los del modelo de dos sectores y cambio solo el bloque de horas (equilibrio: \hyperlink{aeq}{anexo A5}).}
 \end{frame}
 
 % ===== A6 =====
@@ -738,12 +754,12 @@ $\kappa(z)$ en raíz o cuadrática & recalibrada a M1 y M3 & \VThreeKappaRangeBa
 $\kappa(z)$ en raíz o cuadrática & equilibrio general, $\phi$ común & \GeKappaVThreeRange{} pp (lineal: \GeVThreeBaseTwoPP)\\
 \fi
 $\kappa(z)$ por percentil, $\kappa_0[1-F(z)]$ & recalibrada a M1 y M3 & \VThreePctBasePP{} pp con $\phi$ común; \VThreePctHighPP{} pp con $\phi_I=\PhiHigh$\\
-$\nu_I=1$: la productividad rinde igual en lo informal & recalibrado a M1 y M3 & \VThreeNuOnePP{} pp con $\phi$ común ($\kappa_{z1}=\KappaNuOne$); con $\phi_I=\PhiHigh$ se toca el tope de horas\\
+$\nu_I=1$: ingreso informal proporcional a $z$ & recalibrado a M1 y M3 & \VThreeNuOnePP{} pp con $\phi$ común ($\kappa_{z1}=\KappaNuOne$); con $\phi_I=\PhiHigh$ se toca el tope de horas\\
 Forma de $\chi(z)$: constante o cuadrática & no entra en la FOC de horas & solo cambia $V_a$: requiere equilibrio general\\
 \bottomrule
 \end{tabular}\par
 \vspace{4mm}
-{\footnotesize Salvo la fila de equilibrio general: equilibrio parcial con $V_a$, $g$ y precios de la tesis. En equilibrio general, con el solver de la tesis: $\phi_I=\PhiMid$ y $\PhiHigh$ aún no convergen; $\nu_I=1$ y otras formas de $\chi$, pendientes.}
+{\footnotesize Salvo la fila de equilibrio general: equilibrio parcial con $V_a$, $g$ y precios del modelo de dos sectores. En equilibrio general, con el solver del modelo de dos sectores: $\phi_I=\PhiMid$ y $\PhiHigh$ aún no convergen; $\nu_I=1$ y otras formas de $\chi$, pendientes.}
 \end{frame}
 
 % ===== A8 =====
@@ -793,8 +809,47 @@ INEI (2022). \textit{Perú: evolución de los indicadores de empleo e ingresos p
 
 \href{https://doi.org/10.1016/j.red.2005.11.002}{Pijoan-Mas, J. (2006)}. Precautionary savings or working longer hours? \textit{Review of Economic Dynamics}, 9(2), 326--352.
 
-\textbf{Fuentes de datos.} INEI: Encuesta Nacional de Hogares (ENAHO) 2015--2019 y Encuesta Permanente de Empleo Nacional (EPEN) 2025, microdatos procesados en la tesis; ENAHO 2021--2023, cálculo propio; Cuenta Satélite de la Economía Informal.
+\textbf{Fuentes de datos.} INEI: Encuesta Nacional de Hogares (ENAHO) 2015--2019 y Encuesta Permanente de Empleo Nacional (EPEN) 2025, microdatos de procesamiento propio; ENAHO 2021--2023, cálculo propio; Cuenta Satélite de la Economía Informal.
 Banco Mundial: World Development Indicators, índice de Gini (SI.POV.GINI), Perú 2024.
+\end{frame}
+
+\begin{frame}[label=aasset]{A16. El interés \teal{equilibra ahorro y demanda de capital}}
+\begin{columns}[T,onlytextwidth]
+\column{.62\textwidth}
+\centering
+\includegraphics[width=\linewidth,height=6.2cm,keepaspectratio]{figures/base_model/moll_equilibrium_asset_market_matlab.png}
+\column{.34\textwidth}
+\labeltext{Dos decisiones agregadas}
+$S(r)$: activos de los hogares.\par\vspace{3mm}
+$K^D(r)=K_F+K_I$: capital de las firmas.\par\vspace{3mm}
+En equilibrio coinciden.\par\vspace{3mm}
+La línea une puntos calculados con distintas tasas de interés. No es tiempo.
+\end{columns}
+\figurenote{Figura histórica del modelo de dos sectores en MATLAB; procedencia en \texttt{figures/base\_model/PROCEDENCIA.md}. El tramo plano refleja el límite superior de la grilla de activos. Cierre de todos los mercados: \hyperlink{aeq}{anexo A5}.}
+\end{frame}
+
+\begin{frame}[label=aresult]{A17. Composición de horas: \teal{definiciones y condiciones}}
+\labeltext{A una misma productividad laboral individual $z$}
+\[
+\frac{\ell_I}{\ell_F}=\frac{(R_I/\psi_I)^{\phi_I}}{(R_F/\psi_F)^{\phi_F}}\;V_a^{\,\phi_I-\phi_F}
+\quad\Longrightarrow\quad
+\frac{\partial\ln(\ell_I/\ell_F)}{\partial\ln V_a}=\phi_I-\phi_F
+\]
+\begin{columns}[T,onlytextwidth]
+\column{.47\textwidth}
+\panel{Pale}{\linewidth}{\labeltext{\color{Gray}Modelo de dos sectores: $\phi_I=\phi_F$}
+$V_a$ se cancela: la fracción informal $s_I=\ell_I/(\ell_F+\ell_I)$ no depende de $a$ a igual $z$.
+La barrera $\kappa(z)$ permanece en $R_F$: cambia el nivel del reparto, pero no depende directamente de $a$.}
+\column{.47\textwidth}
+\panel{PaleTeal}{\linewidth}{\labeltext{\color{Teal}Sensibilidad: $\phi_I>\phi_F$}
+\[
+\frac{\partial s_I}{\partial V_a}=s_I(1-s_I)\,\frac{\phi_I-\phi_F}{V_a}>0
+\]
+Si $V_a$ baja con $a$: más pobre $\Rightarrow$ más informal.}
+\end{columns}
+\vspace{3mm}
+{\footnotesize\textbf{Condiciones:} (i) horas positivas y $\ell_F+\ell_I<\bar H$; (ii) $R_F(z),R_I(z)>0$, independientes de $a$, y $V_a,\phi_s,\psi_s>0$; (iii) $V_a$ decreciente en $a$: verificado en la grilla, no demostrado.
+\par\vspace{2mm}\textbf{Comparación con el modelo de dos sectores:} recalibración en \hyperlink{a6}{A10}; aumento de V3 en \hyperlink{av3}{A11}.}
 \end{frame}
 
 \end{document}
