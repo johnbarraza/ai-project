@@ -2,6 +2,7 @@
 
 Curso **AI and Economic Modeling** (UP 2026-II, prof. Alexander Quispe). Responde en español.
 Estilo solicitado por John: no usar rayas largas para incisos. Usar comas, paréntesis o frases separadas.
+Nombres elegidos por John (D29, actualizados en D30): en la presentación, propuesta, figuras y guion usar **Modelo de dos sectores** y **Sensibilidad**, evitando “mi tesis”. Mantener **Baseline: Aiyagari**. En la slide de barrera y prima de deuda, solo definiciones breves; valores y fuentes en A8. Conservar la procedencia original en registros y archivos de datos.
 Reglas oficiales: [issue #7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7). Si algo de este archivo lo contradice, gana el issue.
 
 > **Lee primero:**
@@ -13,7 +14,7 @@ Reglas oficiales: [issue #7](https://github.com/alexanderquispe/AI-Econ-Modeling
 
 **Track B: el modelo económico detrás de mi tesis**, *Informalidad y distribución de riqueza en Perú*. Solo se pone mi nombre y "Track B": no se mencionan coautores ni asesor.
 
-- **Pregunta:** ¿bajo qué condición la informalidad amortigua más a los hogares con menos ahorro, a igual productividad? Título: *Ahorro, flexibilidad de horas e informalidad en el Perú*. Es un shock **idiosincrático** de $z$, no agregado: no usar "crisis" ni shock MIT.
+- **Pregunta elegida por John (D26):** ¿cuándo influye la riqueza en el reparto de horas entre formal e informal, para una misma productividad? Título: *Ahorro, flexibilidad de horas e informalidad en el Perú*. Es una comparación condicional por activos a $z$ fijo. El riesgo de productividad del modelo sigue siendo idiosincrático; no se presenta una respuesta a un choque ni una comparación de bienestar.
 - **Genealogía:** Aiyagari/Huggett en tiempo continuo (Achdou et al., 2022), de un sector, está anidado en el modelo de tesis. Extenderlo a dos sectores no equivale a introducir estados laborales discretos.
 - **Terminología corregida por John:** reservar **baseline** para Aiyagari, una firma y un bien; incluirlo al inicio del deck. A2 se compara con **mi modelo de dos sectores**, con elasticidad común $\phi_F=\phi_I=0.38$. Hogares con riqueza $a$ y productividad $z$ (OU exógena) reparten horas formales e informales, con $\ell_F+\ell_I\le\bar H$. Hay dos firmas y bienes (CES), barrera formal $\kappa(z)$ y prima de deuda $\chi(z)$. Los nombres históricos de archivos y variables de código pueden conservar `baseline` para mantener trazabilidad.
 - **Supuesto que cambia (D14):** $\phi_I>\phi_F$: las horas informales responden más a $V_a\equiv\partial_a v$. El rango de $\phi_I$ es ilustrativo, no una estimación; su justificación en fuentes sigue pendiente (D15).
@@ -24,6 +25,7 @@ Reglas oficiales: [issue #7](https://github.com/alexanderquispe/AI-Econ-Modeling
 - **Supuesto a declarar:** "más pobre ⇔ $\partial_a v$ más alto" requiere $v$ cóncava en $a$. Se verifica numéricamente, no se demuestra.
 - **No crea tipos ex ante:** todos los hogares tienen los mismos $\phi_F,\phi_I$ (propiedades de la actividad, como $\psi_F\neq\psi_I$); la heterogeneidad sigue viniendo solo de $(a,z)$. En Galindo et al. (2024) formal e informal son tipos exógenos que cambian al azar (Poisson de dos estados), cada uno con su aversión al riesgo; nadie elige.
 - **En las slides no se usa la etiqueta "A2"** (choca con "Anexo A2" y el público no la entiende): se dice "horas informales más flexibles, $\phi_I>\phi_F$". En el código y en las decisiones se conserva A2.
+- **Interpretación aclarada con John (15 oct):** el hogar conoce su $z$ actual y la ley de evolución, no la realización futura. La figura por $z$ compara productividades dentro de una misma solución estacionaria, no fechas. La conjetura a $z$ fijo describe composición de horas por riqueza; no demuestra una mayor respuesta amortiguadora a una caída de $z$. La sensibilidad pregunta cuánto depende el resultado de la igualdad de elasticidades, sin atribuir ese orden a Galindo ni a una estimación sectorial.
 - **Forma de $\kappa(z)$:** lineal en la tesis; `verify.py` prueba cuadrática y raíz recalibradas (V3 casi igual; $\kappa$ depende solo de $z$, no crea pendiente por riqueza). Un costo fijo de entrada es margen extensivo: fuera del alcance.
 - **GE con $\phi_I\neq\phi_F$ (en curso, 15 oct):** copia parcheada del solver en `_contexto/matlab_ge/` (local; `model_main.m` con `HA_IE_FRISCH_I`). Corridas en `_contexto/matlab_ge/outputs/stationary/ge_*`, logs en `logs/`. La primera (`ge_reg_phi038`) debe reproducir `test_AI098_cierre`. `HA-IE2025` no se toca.
 - **Fuera del alcance actual:** margen extensivo F/I/N y shock MIT. Los quintiles del INEI (Cuadro 7.5) son probablemente de ingreso (el Cuadro 6.41 del mismo informe dice "Quintiles de ingreso"); no son de riqueza.

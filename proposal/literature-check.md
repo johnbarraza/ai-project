@@ -35,6 +35,27 @@ Enlaces directos:
 
 ## Por leer antes de la presentación final
 
+### Relectura dirigida del 15 de octubre: proceso de riesgo y diseño de la comparación
+
+Codex consultó los dos archivos locales indicados por John. El manuscrito de 40 páginas no muestra fecha en la portada; se identifica aquí por su ruta, sin certificar que sea idéntico a la versión publicada como DT 2024-005.
+
+| Archivo | Páginas efectivamente revisadas en esta relectura | Evidencia y aplicación |
+|---|---|---|
+| `E:\github\modeling_jb\Paper5_HAInformality.pdf` | Portada; pp. 4 a 9 (secciones 2, 2.1, 2.2 y comienzo de 2.3); p. 30 (sección 6) | Economía de dotación, ingreso/estado laboral exógeno de dos estados y elección de consumo/ahorro. Los hogares afrontan incertidumbre individual; el modelo no convierte el estado futuro en información conocida. El cierre financiero es con un bono en oferta neta cero, distinto del capital productivo de la tesis. La conclusión menciona cambios endógenos de estado como extensión. No demuestra una elasticidad informal de horas mayor. |
+| `E:\github\modeling_jb\ee-2023-s04-p8-galindo-ledesma-yepez-salinas_2023_ppt.pdf` | Texto de las 21 páginas; inspección visual de las páginas PDF 8, 9, 12, 15 y 16 | La página 8 distingue incertidumbre individual de choques agregados; la 9 explica qué características se cambian frente a la referencia; la 12 separa decisiones y procesos exógenos; la 15 muestra el bucle numérico; la 16 organiza funciones de decisión y equilibrio. Se toma esa secuencia para aclarar la tesis y su sensibilidad, sin copiar parámetros ni trasladar resultados de 2023 a la versión de 2024. |
+
+La nueva figura compara niveles de productividad dentro de una misma solución estacionaria de la tesis, no fechas. El ejercicio de elasticidades mantiene los objetos del equilibrio original y modifica el bloque de horas: tampoco representa nuevos equilibrios estacionarios completos ni una trayectoria ante un choque de z. La conjetura compara la composición de horas por riqueza a z fijo; no basta para establecer una mayor amortiguación de una caída de productividad.
+
+### Aclaración posterior: qué significan ingreso y productividad
+
+Se releyeron en el PDF publicado de Achdou, Han, Lasry, Lions y Moll (2022) la sección 2.1, pp. 50 a 51, y la sección 7, p. 81. En la formulación básica tipo Huggett, la variable y es un ingreso recibido como dotación y sigue un proceso de dos estados. La sección 7 presenta extensiones a productividad continua y a ahorro en capital productivo. No se leyó íntegramente el apéndice G ni se atribuye a todos los códigos de Moll una única convención de símbolos.
+
+En Galindo, manuscrito local pp. 6 a 8, y es ingreso exógeno de dos estados asociados a los estados informal y formal. En la tesis, sección 3.2.1 y presupuesto del hogar, z es productividad laboral individual: escala trabajo efectivo e ingreso por hora, mientras las horas se eligen. No se equiparan z, salario, ingreso total ni estado laboral.
+
+El dato por quintiles de gasto motiva la pregunta por composición de horas y activos, pero no identifica directamente un efecto de riqueza a productividad fija. La conexión en slides y guion es una motivación de mecanismo, manteniendo explícitas las diferencias de variables y unidades.
+
+### Pendientes que se mantienen
+
 - **Barrera a la formalidad en la literatura macro.** Varios trabajos la modelan como un costo fijo de entrada o como impuestos que dependen del tamaño de la firma. Candidatos: Ulyssea (2018, *AER*), D'Erasmo y Moscoso Boedo (2012, *JEDC*) y Leal Ordóñez (2014, *RED*). No se han leído; **no citarlos en las slides** hasta verificarlos.
 - **Evidencia de elasticidades de horas** de cuenta propia frente a asalariadas (D15).
 - **Trabajos que citan a Galindo et al. (2024)** y versiones de trabajo de Achdou et al.
@@ -47,7 +68,7 @@ La tesis local se consultó como contexto, sección 1, párrafos que distinguen 
 | Tarea | Estado |
 |---|---|
 | D15: evidencia de elasticidad de horas informales o de cuenta propia frente a formales | Pendiente; no se infiere de los enfoques anteriores |
-| Achdou et al. (2022), citas con versión, sección y página | Parcial: introducción y sección 2.1 |
+| Achdou et al. (2022), citas con versión, sección y página | Parcial: introducción, sección 2.1 (pp. 50 a 51) y sección 7 (p. 81); no se revisó íntegramente el apéndice G |
 | Galindo et al. (2024), citas con versión, sección y página | Hecho con el manuscrito (secciones 2 y 6); falta cotejar la paginación de la versión DT 2024-005 |
 | Apéndices, working papers y citantes más cercanos al mecanismo A2 | Pendiente; no afirmar novedad |
 | INEI, Cuadro 7.5: quintiles de ingreso o gasto | Resuelto: gasto per cápita (réplica con ENAHO 2021); no son de riqueza |

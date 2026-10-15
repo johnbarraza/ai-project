@@ -125,6 +125,27 @@ def build_figures(baseline, scenarios, sensitivity, summary, moments_data):
     fig.subplots_adjust(wspace=0.08)
     save(fig, "foc_hours")
 
+    # Stationary cross-section by productivity; no time axis or simulated shock path.
+    profile = summary["productivity_profile"]
+    z = np.asarray(profile["z"])
+    share_z = 100 * np.asarray(profile["s_I"])
+    fig, ax = plt.subplots(figsize=(9.6, 3.7))
+    ax.plot(z, share_z, color=BASE, ls="--", lw=2.8,
+            label="Modelo de dos sectores, elasticidad común")
+    ax.plot(z[[0, -1]], share_z[[0, -1]], "o", color=BASE, ms=7)
+    for index, offset, alignment in ((0, (12, 6), "left"), (-1, (-12, -20), "right")):
+        ax.annotate(f"{share_z[index]:.1f} %", (z[index], share_z[index]),
+                    xytext=offset, textcoords="offset points", ha=alignment,
+                    fontsize=15, color=INK)
+    ax.set_xlabel(r"Productividad laboral $z$ (índice)")
+    ax.set_ylabel("Fracción de horas informales (%)")
+    ax.set_xlim(0, 1.03*z[-1])
+    ax.set_ylim(0, 100)
+    ax.set_yticks([0, 25, 50, 75, 100])
+    ax.grid(axis="y", color=GRID)
+    ax.legend(frameon=False, loc="upper right", fontsize=14)
+    save(fig, "informal_share_by_productivity")
+
     # 3. Informal share by assets at a fixed productivity node: base vs. extension.
     iz = summary["figure_a"]["z_index_zero_based"]
     fig, ax = plt.subplots(figsize=(9.6, 3.7))
@@ -135,7 +156,7 @@ def build_figures(baseline, scenarios, sensitivity, summary, moments_data):
         is_base = row["phi_I"] == p["Frisch"]
         color = BASE if is_base else (BLUE if row["phi_I"] == 0.50 else TEAL)
         ax.plot(baseline["a"], share, color=color, ls="--" if is_base else "-", lw=2.4)
-        label = rf"$\phi_I=\phi_F={p['Frisch']:.2f}$ (mi modelo)" if is_base else rf"$\phi_I={row['phi_I']:.2f}$"
+        label = (rf"$\phi_I=\phi_F={p['Frisch']:.2f}$" + "\nModelo de dos sectores") if is_base else rf"$\phi_I={row['phi_I']:.2f}$"
         ax.text(baseline["a"][-1] + 0.3, share[-1], label, color=color, va="center", fontsize=14)
     ax.set_xlabel(r"Activos del hogar $a$ (unidades del modelo)")
     ax.set_ylabel(r"Horas informales $s_I$ (%)")
@@ -149,7 +170,7 @@ def build_figures(baseline, scenarios, sensitivity, summary, moments_data):
     phi = [row["phi_I"] for row in scenarios]
     v3 = [100 * row["V3_matlab"] for row in scenarios]
     ax.axhline(v3[0], color=BASE, ls="--", lw=2)
-    ax.text(phi[-1], v3[0] - 0.35, rf"mi modelo, $\phi_I=\phi_F$: {v3[0]:.1f} pp", color=BASE,
+    ax.text(phi[-1], v3[0] - 0.35, rf"Modelo de dos sectores, $\phi_I=\phi_F$: {v3[0]:.1f} pp", color=BASE,
             ha="right", va="top", fontsize=14)
     ax.plot(phi, v3, "o-", color=TEAL, lw=2.4, ms=7, label="equilibrio parcial")
     for x, y in zip(phi, v3):
@@ -193,7 +214,7 @@ def build_figures(baseline, scenarios, sensitivity, summary, moments_data):
     z = baseline["z"]
     weight = (z[-1] - z) / (z[-1] - z[0])
     fig, (left, right) = plt.subplots(1, 2, figsize=(9.6, 3.4))
-    styles = {0.5: (BASE, ":", "raíz"), 1.0: (TEAL, "-", "lineal (tesis)"), 2.0: (BASE, "--", "cuadrática")}
+    styles = {0.5: (BASE, ":", "raíz"), 1.0: (TEAL, "-", "lineal (dos sectores)"), 2.0: (BASE, "--", "cuadrática")}
     for row in summary["kappa_shapes"]:
         if row["phi_I"] != p["Frisch"]:
             continue
@@ -203,7 +224,7 @@ def build_figures(baseline, scenarios, sensitivity, summary, moments_data):
     left.plot(z, summary["kappa_percentile"][0]["kappa_0"] * percentile_weight(baseline), color=BLUE, ls="-.",
               lw=2.4, label=r"percentil, $1-F(z)$")
     left.set_title(r"Barrera por hora $\kappa(z)$ (recalibrada a M3)")
-    for eta, (color, ls, label) in {0.0: (BASE, ":", r"constante ($\eta=0$)"), 1.0: (ORANGE, "-", r"lineal ($\eta=1$, tesis)"),
+    for eta, (color, ls, label) in {0.0: (BASE, ":", r"constante ($\eta=0$)"), 1.0: (ORANGE, "-", r"lineal ($\eta=1$)"),
                                     2.0: (BASE, "--", r"cuadrática ($\eta=2$)")}.items():
         right.plot(z, DEBT_PREMIUM["chi"] * weight ** eta, color=color, ls=ls, lw=2.4, label=label)
     right.set_title(r"Prima de deuda $\chi(z)$")
@@ -223,7 +244,7 @@ def build_figures(baseline, scenarios, sensitivity, summary, moments_data):
     fig, ax = plt.subplots(figsize=(12.5, 3.4))
     x = np.arange(len(edu["groups"]))
     series = [("Dato EPEN 2025", edu["data"], ORANGE, None),
-              ("Mi modelo (tesis)", edu["model_base"], BASE, None),
+              ("Modelo de dos sectores", edu["model_base"], BASE, None),
               ("Barrera por percentil, mejor ajuste", edu["fits"]["percentile"]["groups"], TEAL, None),
               ("Barrera proporcional al salario, mejor ajuste", edu["fits"]["ad_valorem"]["groups"], BLUE, "//")]
     width = 0.2
