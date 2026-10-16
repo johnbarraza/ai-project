@@ -79,12 +79,12 @@ Galindo et al. (2024) ya conectan informalidad y distribución de riqueza en el 
 | Material | Leer | Estado |
 |:--|:--|:--|
 | **Propuesta del tema** | [PDF](proposal/proposal.pdf) · [LaTeX](proposal/proposal.tex) | Cuatro páginas, con los cinco puntos del issue |
-| **Slides del tema** | [PDF](slides/topic.pdf) · [LaTeX](slides/topic.tex) | 23 páginas principales, separador ANEXOS, índice y 17 anexos; informalidad por productividad regenerada en Python y mercado de activos en A16 |
+| **Slides del tema** | [PDF](slides/topic.pdf) · [LaTeX](slides/topic.tex) | 22 páginas principales, separador ANEXOS, índice y 17 anexos; informalidad por productividad regenerada en Python y mercado de activos en A16 |
 | **Chequeos** | [Código](code/README.md) · [Datos](code/data/README.md) | `python code/verify.py` regenera números y figuras, y falla si una afirmación no se cumple |
 | **Equilibrio general** | Solver MATLAB del modelo de dos sectores | Reproduce el caso de $`\phi`$ común; con $`\phi_I>\phi_F`$ aún no converge |
 | **Derivaciones a mano** | [hand/](hand/README.md) | Pendiente |
 | **Paper, slides finales y Lean** | [paper/](paper/paper.pdf) · [slides/final.tex](slides/final.tex) · [lean/](lean/README.md) | Pendientes; aún con material de la plantilla |
-| **Colaboración con IA** | [prompts.md](prompts.md) | Registro crudo en preparación; se sube antes de la presentación final |
+| **Colaboración con IA** | [prompts.md](prompts.md) | Registro crudo actualizado; enlace compartido de la conversación pendiente |
 
 ```bash
 python -m pip install -r code/requirements.txt

@@ -4,7 +4,7 @@
 
 | Archivo | Qué muestra | Dónde se usa |
 |---|---|---|
-| `moll_equilibrium_asset_market_matlab.png` | Oferta de activos de los hogares S(r) y demanda de capital de las dos firmas K^D(r) = K_F + K_I; se cortan en r* = 0.066 y K* = 5.14 (Figura 7 de la tesis) | Anexo A16, página PDF 41 |
+| `moll_equilibrium_asset_market_matlab.png` | Oferta de activos de los hogares S(r) y demanda de capital de las dos firmas K^D(r) = K_F + K_I; se cortan en r* = 0.066 y K* = 5.14 (Figura 7 de la tesis) | Anexo A16, página PDF 40 |
 | `moll_informality_by_z_matlab.png` | Fracción de horas informales y formales por nodo de productividad z, promediada sobre la distribución de riqueza: 0.82 informal en z_min y 0.44 en z_max (Figura 5 de la tesis) | Referencia histórica; la slide 12 usa ahora el perfil regenerado por verify.py |
 
 Son resultados del **modelo base calibrado** (la tesis), no de la sensibilidad φ_I > φ_F; las figuras de este proyecto las genera `code/verify.py`.
