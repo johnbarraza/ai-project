@@ -63,6 +63,16 @@ El dato por quintiles de gasto motiva la pregunta por composición de horas y ac
 No se usaron las estadísticas históricas de estas lecturas en slides.
 La tesis local se consultó como contexto, sección 1, párrafos que distinguen ambos paradigmas. Esa consulta no verifica por sí sola las citas de terceros incluidas en la tesis.
 
+## Justificación del método y comparación con Galindo (15 de octubre, D32)
+
+Para responder por qué usar el modelo y qué aporta frente a Galindo, se releyeron del manuscrito local `E:\github\modeling_jb\Paper5_HAInformality.pdf` la portada, pp. 4 a 9 (sección 2, incluidas 2.2 y 2.3) y p. 30 (sección 6). La economía es de dotación; los hogares eligen consumo y ahorro y afrontan ingreso/estado laboral exógeno. La tasa equilibra un bono en oferta neta cero. Por tanto, generar una distribución de riqueza o resolver equilibrio general no se presentan como novedades frente a ellos. Las horas elegidas en ambos sectores son una diferencia de diseño; no equivalen a transiciones endógenas entre empleos exclusivos.
+
+Se abrió la [ficha oficial BCRP del DT 2024-005](https://investigacion.bcrp.gob.pe/en/research/working-papers/dt-2024/dt-2024-005-en): título, autores, abril de 2024 y resumen sobre características de la informalidad y distribución de riqueza/consumo. El acceso directo al PDF oficial devolvió HTTP 403; no se certificó la identidad ni la paginación de esa versión respecto del manuscrito local. No se usó el podcast automático como evidencia del modelo.
+
+Del documento propio `_contexto/01_modelo_base/INFORMALIDAD_RIQUEZA_HA_PERU.md` se consultaron introducción, secciones 3.1 y 3.2, calibración y límites de la sección 6.1. Esto sirve para comparar diseños y alcance, no para verificar las citas de terceros que contiene. Las afirmaciones sobre utilidad del método son evaluación de nuestro proyecto: explicitar mecanismos no sustituye identificación causal, calibración no demuestra parámetros únicos y el ejercicio parcial actual no prueba un efecto de reforma ni una cota del equilibrio general.
+
+La explicación se añadió al guion personal HTML/MD. No se afirma primacía en la literatura ni superioridad empírica frente a Galindo. No se reabren D14/D17/D26; D15 y la búsqueda de citantes siguen pendientes.
+
 ## Pendientes del punto 4
 
 | Tarea | Estado |
