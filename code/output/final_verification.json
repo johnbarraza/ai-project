@@ -1,0 +1,61 @@
+{
+  "scope": "PE reproducido desde exportación histórica; D73 verifica diagnósticos exportados, sin rerun HJB/KFE.",
+  "export_sha256": "49269902fbdd276acc3fac11a873b222f887f3d2f83c18709068201544bb3a77",
+  "original_audit_sha256": "db449ae06135a6df95fe2d101482c4e901a4efe503c29ad689c913298196ad18",
+  "checks": {
+    "historical_PE": "passed",
+    "wealth_chain_rule": "passed",
+    "D73_export_diagnostics": "passed",
+    "refit_internal_targets": "passed"
+  },
+  "macro_aggregation": {
+    "mass": 1.0000000000000009,
+    "mean_assets_historical": 5.140700364893669,
+    "formal_hours_share": 0.48288986778220816,
+    "informal_hours_share": 0.5171101322177919,
+    "D73_interest_change_bp": {
+      "chi_constant": 0.03117132909943865,
+      "kappa_constant": 6.316623600578914,
+      "both_constant": 6.339550641636244,
+      "both_constant_refit": 4.215083986978812
+    },
+    "D73_capital_change_percent": {
+      "chi_constant": -0.0024178236190941504,
+      "kappa_constant": -0.63161398440712,
+      "both_constant": -0.6330891361224555,
+      "both_constant_refit": -1.6785649868795716
+    }
+  },
+  "numbers": {
+    "PEGapLow": "4.31",
+    "PEGapHigh": "10.43",
+    "PhiFormalFinal": "0.38",
+    "PhiHighFinal": "0.70",
+    "PEMOne": "51.71",
+    "PEMThree": "37.75",
+    "PENoCap": "0",
+    "PEMaxHours": "0.749",
+    "FixedZFinal": "1.037",
+    "WedgeMThreeRef": "37.36",
+    "WedgeMThreeConst": "20.96",
+    "WedgeMOneRef": "51.682",
+    "WedgeMThreeRefit": "37.364",
+    "WedgeVThreeRef": "4.399",
+    "WedgeVThreeRefit": "4.277",
+    "CountMATFinal": "17",
+    "CountGEFinal": "14",
+    "MotivationQOne": "94.0",
+    "MotivationQFive": "49.3",
+    "MeanAssetsFinal": "5.141",
+    "InterestRefFinal": "6.576",
+    "CapitalRefFinal": "5.165"
+  },
+  "precision_certified": false,
+  "ready_for_submission": false,
+  "local_lean_checked": true,
+  "official_applied_modeling_workflow": false,
+  "remaining_requirements": [
+    "Flujo oficial AppliedModelingLib sobre paper publicado en commit",
+    "Derivación manuscrita personal en pantalla"
+  ]
+}

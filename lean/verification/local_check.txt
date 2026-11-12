@@ -1,0 +1,2 @@
+'Barraza26LaborComposition.composition_hasDerivAt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Barraza26LaborComposition.composition_sign' depends on axioms: [propext, Classical.choice, Quot.sound]

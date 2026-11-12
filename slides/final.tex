@@ -1,107 +1,430 @@
-% Final presentation -- work in progress, presented for critique.
-% No animations and no screenshots of papers: equations are typeset in LaTeX.
+% Opción A elegida por John el 11nov2026. Cifras: python code/verify.py.
 \documentclass[aspectratio=169,11pt]{beamer}
+\geometry{paperwidth=20cm,paperheight=11.25cm}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[english]{babel}
-\usepackage{amsmath,amssymb}
-\usepackage{booktabs}
-\usepackage{graphicx}
-\usepackage{newunicodechar}
-% Lean code is full of Unicode that typewriter fonts do not have. Each line
-% maps one symbol to math mode, so Lean can be pasted into a verbatim block
-% as it is (inside a [fragile] frame). Add a line for any symbol you need.
-\newunicodechar{∀}{\ensuremath{\forall}}  \newunicodechar{∃}{\ensuremath{\exists}}
-\newunicodechar{→}{\ensuremath{\to}}      \newunicodechar{↔}{\ensuremath{\leftrightarrow}}
-\newunicodechar{∧}{\ensuremath{\land}}    \newunicodechar{∨}{\ensuremath{\lor}}
-\newunicodechar{¬}{\ensuremath{\lnot}}    \newunicodechar{×}{\ensuremath{\times}}
-\newunicodechar{∈}{\ensuremath{\in}}      \newunicodechar{∉}{\ensuremath{\notin}}
-\newunicodechar{≤}{\ensuremath{\le}}      \newunicodechar{≥}{\ensuremath{\ge}}
-\newunicodechar{≠}{\ensuremath{\ne}}      \newunicodechar{↦}{\ensuremath{\mapsto}}
-\newunicodechar{ℝ}{\ensuremath{\mathbb{R}}} \newunicodechar{ℕ}{\ensuremath{\mathbb{N}}}
-\newunicodechar{⟨}{\ensuremath{\langle}}  \newunicodechar{⟩}{\ensuremath{\rangle}}
-\newunicodechar{λ}{\ensuremath{\lambda}}  \newunicodechar{α}{\ensuremath{\alpha}}
-\newunicodechar{β}{\ensuremath{\beta}}    \newunicodechar{ε}{\ensuremath{\varepsilon}}
-\usetheme{default}
-\usecolortheme{seahorse}
+\usepackage[spanish,es-nodecimaldot,es-noquoting]{babel}
+\usepackage{lmodern,amsmath,amssymb,booktabs,array,tikz,listings}
+\lstset{basicstyle=\ttfamily\fontsize{7.6}{9}\selectfont,columns=fullflexible,breaklines=true,keepspaces=true,showstringspaces=false,literate={ℝ}{{$\mathbb R$}}1 {→}{{$\to$}}1}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\input{../code/output/final_numbers.tex}
+\usefonttheme{professionalfonts}
+\definecolor{Ink}{HTML}{172033}
+\definecolor{Blue}{HTML}{223F91}
+\definecolor{Teal}{HTML}{008A92}
+\definecolor{Orange}{HTML}{D45D00}
+\definecolor{Gray}{HTML}{5F6B7A}
+\definecolor{Base}{HTML}{8A94A3}
+\definecolor{Line}{HTML}{CCD4E2}
+\definecolor{Pale}{HTML}{F3F5FA}
+\setbeamercolor{normal text}{fg=Ink,bg=white}
+\setbeamercolor{structure}{fg=Blue}
+\setbeamercolor{frametitle}{fg=Ink}
+\setbeamercolor{alerted text}{fg=Orange}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamersize{text margin left=9mm,text margin right=9mm}
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}[frame number]
-\setbeamerfont{frametitle}{size=\large}
-
-\title{Your Title}
-\subtitle{Final presentation}
-\author{Your Name}
-\date{October--November 2026}
-
+\setbeamertemplate{frametitle}{\vspace{1.5mm}\insertframetitle\par\vspace{1.5mm}{\color{Line}\hrule}\vspace{1.5mm}}
+\setbeamertemplate{footline}{\hspace{9mm}\scriptsize\color{Gray}John Barraza\hfill Ahorro, horas e informalidad\hfill\insertframenumber\hspace{9mm}\vspace{2mm}}
+\setbeamertemplate{headline}{\vspace{1.5mm}\hspace{9mm}{\scriptsize\color{Gray}\hyperlink{pregunta}{Pregunta}\hspace{5mm}\hyperlink{modelo}{Modelo}\hspace{5mm}\hyperlink{resultado}{Resultado}\hspace{5mm}\hyperlink{simulaciones}{Simulaciones}\hspace{5mm}\hyperlink{lean}{Lean e IA}\hspace{5mm}\hyperlink{critica}{Discusión}\hspace{5mm}\hyperlink{anexos}{Anexos}}\vspace{1mm}}
+\hypersetup{pdftitle={Ahorro, flexibilidad de horas e informalidad en el Perú. Final},pdfauthor={John Svante Barraza Ratachi},colorlinks=true,linkcolor=Blue,urlcolor=Blue}
+\newcommand{\source}[1]{\par\vfill{\fontsize{8}{9.5}\selectfont\color{Gray}#1\par}}
+\newcommand{\takeaway}[1]{\par\vspace{2mm}\begingroup\setlength{\fboxsep}{2.2mm}\colorbox{Pale}{\begin{minipage}{\dimexpr\linewidth-4.4mm\relax}\small\raggedright #1\end{minipage}}\endgroup\par}
+\newcommand{\labeltext}[1]{\par{\small\bfseries\color{Teal}#1\par}\vspace{1.5mm}}
+\newcommand{\fig}[1]{\begin{center}\includegraphics[width=\linewidth,height=5.35cm,keepaspectratio]{../code/figures/final/#1.pdf}\end{center}}
+\newcommand{\back}[1]{\hfill\hyperlink{#1}{\beamerreturnbutton{Volver}}}
+\tikzset{agent/.style={draw=Teal,line width=1pt,fill=white,align=center,inner sep=7pt,font=\small},flow/.style={-{Stealth[length=2.2mm]},thick,color=Blue},decisionbox/.style={fill=Pale,draw=Line,align=center,text width=3.5cm,minimum height=1.8cm,font=\small}}
 \begin{document}
 
-% The title slide carries the repository link.
-\begin{frame}[plain]
-  \titlepage
-  \begin{center}\small
-    \texttt{github.com/your-user/ai-project}
-  \end{center}
+% 1
+\begin{frame}[plain,label=pregunta]
+{\small Universidad del Pacífico\hfill AI and Economic Modeling, Track B}\par
+\vspace{9mm}
+{\LARGE\bfseries Ahorro, flexibilidad de horas\par e informalidad en el Perú}\par
+\vspace{5mm}
+{\large ¿Cuándo influye la riqueza en el reparto de horas\par entre formal e informal, a igual productividad?}\par
+\vspace{7mm}
+{\large John Svante Barraza Ratachi}\par\vspace{2mm}
+{\small Presentación final, avance para discusión\hfill 13 de noviembre de 2026}\par
+\vspace{6mm}
+\href{https://github.com/johnbarraza/ai-project}{github.com/johnbarraza/ai-project}
 \end{frame}
 
-\begin{frame}{1 \textperiodcentered{} The question and the answer}
-  \textbf{Replace.} The question, and your result in one sentence --- with its
-  condition.
+% 2
+\begin{frame}{La informalidad es mayor en hogares de menor gasto}
+\fig{motivation}
+\takeaway{El patrón motiva separar recursos del hogar y productividad laboral.}
+\source{Perú, ENAHO 2023. Personas ocupadas, quintiles de gasto per cápita. Agregados recuperados de \path{code/data/moments.json}; no se reextrajeron microdatos. Gasto no equivale a activos.}
 \end{frame}
 
-\begin{frame}{2 \textperiodcentered{} The model}
-  \textbf{Replace.} Primitives, timing, and the agent's problem.
-  \[
-    \max_{e \ge 0}\; a e - \frac{c}{2}\, e^{2}, \qquad a > 0,\; c > 0
-  \]
+% 3
+\begin{frame}{La respuesta depende de la elasticidad relativa de las horas}
+\labeltext{Resultado condicional}
+\large A igual productividad, si el valor de un sol adicional disminuye con los activos, más riqueza reduce la fracción de horas informales cuando las horas informales son más elásticas.
+\vspace{4mm}
+\begin{center}\normalsize
+Elasticidades iguales: el canal directo se cancela.\par\vspace{2mm}
+Elasticidad informal mayor: aparece el canal de composición.
+\end{center}
+\takeaway{Se estudia una decisión de horas, con empleo simultáneo posible en ambos sectores.}
+\source{Condiciones: retornos positivos, horas interiores y límite de tiempo holgado. La proposición precisa estas condiciones; no es una afirmación causal sobre el dato.}
 \end{frame}
 
-\begin{frame}{3 \textperiodcentered{} The result, with all its conditions}
-  \textbf{Replace.} The proposition as it is stated in the paper.
-
-  \medskip
-  \textbf{Proposition 1.} If $a > 0$ and $c > 0$, the unique solution is
-  $e^{*} = a/c$, and $\partial e^{*}/\partial a = 1/c > 0$.
+% 4
+\begin{frame}[label=modelo]{De Aiyagari a dos sectores: qué cambia y qué se conserva}
+\begin{columns}[T,onlytextwidth]
+\column{.46\linewidth}\labeltext{Baseline: Aiyagari}
+Hogares con riesgo idiosincrático ahorran por precaución.\par\vspace{3mm}
+Una firma, un bien y mercado de activos.\par\vspace{3mm}
+La tasa de interés conecta ahorro y capital.
+\column{.48\linewidth}\labeltext{Modelo de dos sectores}
+El hogar reparte horas entre formal e informal.\par\vspace{3mm}
+Dos firmas y dos bienes; impuesto, barrera por hora y prima de deuda.\par\vspace{3mm}
+La sensibilidad permite elasticidades sectoriales distintas.
+\end{columns}
+\takeaway{Se conserva ahorro bajo riesgo. Se añade una decisión de composición de horas.}
+\source{Aiyagari (1994); formulación continua de Achdou et al. (2022). Galindo et al. es antecedente de informalidad y riqueza, con estado laboral exógeno. \hyperlink{literatura}{\beamergotobutton{Literatura}}}
 \end{frame}
 
-\begin{frame}{4 \textperiodcentered{} The proof: what is done and what is open}
-  \textbf{Replace.} The idea of the proof, the step that was hard, and what is
-  still open today. This is a progress report: say where you are.
+% 5
+\begin{frame}{El hogar trabaja, ahorra y compra bienes de dos sectores}
+\centering
+\begin{tikzpicture}[x=1cm,y=1cm]
+\node[agent,text width=4.1cm] (h) at (0,0) {\textbf{Hogares}\par Activos $a$, productividad $z$\par Consumo y horas $\ell_F,\ell_I$};
+\node[agent,text width=3.7cm] (f) at (8,1.7) {\textbf{Firma formal}\par Capital $K_F$, trabajo $L_F$};
+\node[agent,text width=3.7cm] (i) at (8,-1.7) {\textbf{Firma informal}\par Capital $K_I$, trabajo $L_I$};
+\node[agent,text width=3.6cm] (g) at (0,-3.2) {\textbf{Gobierno}\par Impuesto y transferencia};
+\draw[flow] (h.north east) -- node[above,sloped,font=\footnotesize] {Trabajo y ahorro} (f.west);
+\draw[flow] (h.south east) -- node[below,sloped,font=\footnotesize] {Trabajo y ahorro} (i.west);
+\draw[flow] (f.south west) -- node[below,sloped,font=\footnotesize] {Bienes e ingresos} ([yshift=2mm]h.east);
+\draw[flow] (i.north west) -- node[above,sloped,font=\footnotesize] {Bienes e ingresos} ([yshift=-2mm]h.east);
+\draw[flow,<->] (h.south) -- node[right,font=\footnotesize] {Impuesto / transferencia} (g.north);
+\end{tikzpicture}
+\source{$L_s$ es trabajo efectivo agregado, distinto de las horas de cada hogar. $z$ es exógeno; $a$ cambia mediante el ahorro. El detalle del cierre está en mercados.}
 \end{frame}
 
-\begin{frame}{5 \textperiodcentered{} Simulations}
-  \begin{columns}
-    \column{.56\linewidth}
-    \includegraphics[width=\linewidth]{../code/figures/effort_check.pdf}
-    \column{.40\linewidth}
-    \textbf{Replace.} What the script checks, on which parameter range, and
-    what a simulation cannot show.
-  \end{columns}
+% 6
+\begin{frame}{El hogar observa el estado y luego elige consumo y horas}
+\centering
+\begin{tikzpicture}[node distance=7mm]
+\node[decisionbox] (s) {\textbf{Estado}\par Activos $a$\par Productividad $z$};
+\node[decisionbox,right=of s] (d) {\textbf{Decisiones}\par Consumos $c_F,c_I$\par Horas $\ell_F,\ell_I$};
+\node[decisionbox,right=of d] (a) {\textbf{Evolución}\par Ahorro $\dot a$\par Riesgo de productividad};
+\draw[flow] (s)--(d);\draw[flow](d)--(a);
+\end{tikzpicture}
+\vspace{5mm}
+\begin{columns}[T,onlytextwidth]
+\column{.48\linewidth}\labeltext{El hogar toma precios dados}$r,p_I,w_F,w_I$ y transferencias.
+\column{.48\linewidth}\labeltext{El equilibrio los determina}Los precios hacen compatibles las decisiones agregadas.
+\end{columns}
+\takeaway{La secuencia explica dependencias dentro de un modelo en tiempo continuo.}
+\source{El hogar conoce su estado actual y la ley del riesgo, no la productividad futura. No se introduce aquí un choque agregado ni una transición entre estados estacionarios.}
 \end{frame}
 
-% Required: paper statement -> Lean statement -> what Lean verifies.
-\begin{frame}[fragile]{6 \textperiodcentered{} Lean: what is verified}
-  \textbf{In the paper.} $a > 0,\ c > 0 \;\Longrightarrow\; e^{*} = a/c$.
-
-  \medskip
-  \textbf{In Lean} (replace with your own statement and proof fragment):
-\begin{verbatim}
-theorem prop_effort (a c : ℝ) (ha : 0 < a) (hc : 0 < c) :
-    a / c ∈ Set.Ici (0 : ℝ) ∧
-    IsMaxOn (fun e => a * e - c / 2 * e ^ 2) (Set.Ici 0) (a / c)
-\end{verbatim}
-  \textbf{Replace.} How the objects and assumptions are represented, whether
-  Lean verifies the paper's claim exactly or under an added hypothesis, and the
-  result of the check.
+% 7
+\begin{frame}[label=hogar]{El hogar valora consumo y paga desutilidad por trabajar}
+\[
+\max_{c_F,c_I,\ell_F,\ell_I}\ \mathbb E_0\int_0^\infty e^{-\rho t}
+\left[\ln C-\sum_{s\in\{F,I\}}\frac{\psi_s\ell_s^{1+1/\phi_s}}{1+1/\phi_s}\right]dt
+\]
+\labeltext{Recursos}
+\[
+\dot a=R_F(z)\ell_F+R_I(z)\ell_I+ra-\chi(z)(-a)_++T-c_F-p_Ic_I.
+\]
+\labeltext{Factibilidad}
+\[
+a\geq\underline a,\qquad \ell_F,\ell_I\geq0,\qquad \ell_F+\ell_I\leq\bar H.
+\]
+\takeaway{$\phi_s$ determina la elasticidad de horas; $\psi_s$ fija su costo de nivel.}
+\source{$C$ agrega ambos bienes mediante CES; $\rho$ es descuento; $T$ es transferencia. $R_s$ es retorno neto o efectivo para el hogar. \hyperlink{hjb}{\beamergotobutton{HJB y CES}}}
 \end{frame}
 
-\begin{frame}{7 \textperiodcentered{} Where I did not believe the AI}
-  \textbf{Replace.} One claim of the model, your verdict with its reason, and
-  the hand derivation on screen.
+% 8
+\begin{frame}{Las dos tecnologías determinan salarios y demanda de capital}
+\begin{columns}[T,onlytextwidth]
+\column{.47\linewidth}\labeltext{Firma formal}
+\[Y_F=A_FK_F^\alpha L_F^{1-\alpha}.\]
+\[\max_{K_F,L_F}\ Y_F-w_FL_F-(r+\delta)K_F.\]
+\[\alpha Y_F/K_F=r+\delta,\]
+\[(1-\alpha)Y_F/L_F=w_F.\]
+Rendimientos constantes: beneficio cero.
+\column{.47\linewidth}\labeltext{Firma informal}
+\[Y_I=A_IK_I^{\alpha_I}L_I^{\beta_I}.\]
+\[\max_{K_I,L_I}\ p_IY_I-w_IL_I-(r+\delta)K_I.\]
+\[\alpha_Ip_IY_I/K_I=r+\delta,\]
+\[\beta_Ip_IY_I/L_I=w_I.\]
+Rendimientos decrecientes: $\Pi_I>0$.
+\end{columns}
+\takeaway{$\Pi_I=(1-\alpha_I-\beta_I)p_IY_I$ se reparte por trabajo efectivo: $\widetilde w_I=w_I+\Pi_I/L_I$.}
+\source{$\delta$: depreciación; $\alpha\in(0,1)$, $\alpha_I,\beta_I>0$, $\alpha_I+\beta_I<1$. Las firmas contratan trabajo efectivo, no las horas sin ponderar de un hogar.}
 \end{frame}
 
-\begin{frame}{8 \textperiodcentered{} What I want from you}
-  \textbf{Replace.} The two or three questions on which you want the class's
-  critique before writing the final version.
+% 9
+\begin{frame}{La distribución convierte decisiones individuales en agregados}
+\fig{macro_distribution}
+\takeaway{$S=\int a\,d\mu=\MeanAssetsFinal$ y $M1=\int\ell_I\,d\mu\,/\int(\ell_F+\ell_I)\,d\mu=\PEMOne\%$.}
+\source{Distribución y políticas estacionarias de la exportación histórica, $200\times40$. $S$ está en unidades del modelo. La fracción agregada pondera horas con $\mu$; no es un promedio simple de fracciones individuales.}
 \end{frame}
 
+% 10
+\begin{frame}[label=mercados]{Los precios conectan las decisiones con los mercados}
+\centering
+\begin{tikzpicture}[node distance=4mm]
+\node[decisionbox,text width=2.3cm,minimum height=1.7cm] (p) {\textbf{Precios}\par $r,p_I$};
+\node[decisionbox,text width=2.3cm,minimum height=1.7cm,right=of p] (h) {\textbf{HJB}\par Consumo, horas\par y ahorro};
+\node[decisionbox,text width=2.3cm,minimum height=1.7cm,right=of h] (d) {\textbf{KFE}\par Distribución\par $\mu(a,z)$};
+\node[decisionbox,text width=2.3cm,minimum height=1.7cm,right=of d] (a) {\textbf{Agregación}\par $S,L_F,L_I,C_I$};
+\node[decisionbox,text width=2.3cm,minimum height=1.7cm,right=of a] (f) {\textbf{Firmas}\par y mercados};
+\draw[flow](p)--(h);\draw[flow](h)--(d);\draw[flow](d)--(a);\draw[flow](a)--(f);
+\draw[flow](f.south)--++(0,-.6)-|node[pos=.25,below,font=\footnotesize]{Si los mercados no cierran, actualizar precios}(p.south);
+\end{tikzpicture}
+\vspace{7mm}
+\[\underbrace{S=K_F+K_I}_{\text{mercado de activos: }r},\qquad
+\underbrace{C_I=Y_I}_{\text{bien informal: }p_I}.\]
+\takeaway{En GE se vuelve a resolver todo el circuito. Un cambio de horas a precios fijos es un PE.}
+\source{Los salarios, el reparto de beneficios y transferencias también deben ser consistentes con firmas y gobierno. $\mu$ es distribución de estados, no una decisión adicional del hogar. \hyperlink{recursos}{\beamergotobutton{Agregados y recursos}}}
+\end{frame}
+
+% 11
+\begin{frame}{La barrera reduce el retorno formal; la prima encarece la deuda}
+\labeltext{Retornos por hora para el hogar}
+\[
+R_F(z)=(1-\tau)w_Fz-\kappa(z),\qquad R_I(z)=\widetilde w_Iz^{\nu_I}.
+\]
+\vspace{3mm}
+\begin{columns}[T,onlytextwidth]
+\column{.47\linewidth}\labeltext{Barrera formal}$\kappa(z)\ell_F$: pago por hora formal.\par\vspace{2mm}Su pendiente por $z$ influye en el gradiente de formalidad.
+\column{.47\linewidth}\labeltext{Prima crediticia}$\chi(z)(-a)_+$: pago cuando hay deuda.\par\vspace{2mm}Modifica el ahorro y el costo de endeudarse.
+\end{columns}
+\takeaway{Son cuñas reducidas. Una barrera por hora no es costo fijo de entrada al empleo.}
+\source{La forma compartida decreciente no se identifica por citar antecedentes. Se contrasta con formas constantes. \hyperlink{parametros}{\beamergotobutton{Parámetros y fuentes}}}
+\end{frame}
+
+% 12
+\begin{frame}[label=foc]{Una hora adicional iguala beneficio marginal y costo marginal}
+\labeltext{1. Valor de una unidad adicional de activos}
+\[V_a\equiv\partial_a v(a,z)>0.\]
+\labeltext{2. Bloque de horas de la HJB}
+\[\max_{\ell_F,\ell_I}\quad V_a(R_F\ell_F+R_I\ell_I)-\sum_s\frac{\psi_s\ell_s^{1+1/\phi_s}}{1+1/\phi_s}.\]
+\labeltext{3. FOC interiores, con tiempo holgado}
+\[\underbrace{V_aR_s}_{\text{beneficio de una hora}}=\underbrace{\psi_s\ell_s^{1/\phi_s}}_{\text{costo marginal}},
+\qquad \ell_s=\left(\frac{V_aR_s}{\psi_s}\right)^{\phi_s}.\]
+\source{$R_s,\psi_s,\phi_s>0$. La segunda derivada es negativa. Si se agota el tiempo, aparece un multiplicador y la fórmula cambia. \hyperlink{kkt}{\beamergotobutton{Restricción activa}}}
+\end{frame}
+
+% 13
+\begin{frame}[label=resultado]{Proposición: el signo depende de elasticidades y concavidad}
+\small En un entorno de $a_0>\underline a$, mantenga $z$ y precios fijos, $R_s(z)>0$, $\psi_s,\phi_s>0$, $V_a>0$ diferenciable, horas positivas y $\ell_F+\ell_I<\bar H$. Los retornos no dependen directamente de $a$.
+\[
+s_I\equiv\frac{\ell_I}{\ell_F+\ell_I},\qquad
+\boxed{\frac{\partial s_I}{\partial a}=s_I(1-s_I)(\phi_I-\phi_F)\frac{V_{aa}}{V_a}.}
+\]
+\vspace{2mm}
+\normalsize Si además $V_{aa}<0$:
+\[
+\phi_I>\phi_F\Rightarrow\partial_a s_I<0,\quad
+\phi_I=\phi_F\Rightarrow\partial_a s_I=0,\quad
+\phi_I<\phi_F\Rightarrow\partial_a s_I>0.
+\]
+\takeaway{La identidad se deriva del bloque laboral. La concavidad de la HJB completa sigue como condición.}
+\source{Resultado local y condicional. SymPy y una grilla no prueban existencia, unicidad o concavidad global del GE.}
+\end{frame}
+
+% 14
+\begin{frame}{La prueba divide las horas y aplica la regla de la cadena}
+\labeltext{1. Cociente de horas óptimas}
+\[q\equiv\frac{\ell_I}{\ell_F}=\frac{(R_I/\psi_I)^{\phi_I}}{(R_F/\psi_F)^{\phi_F}}\,V_a^{\phi_I-\phi_F}.\]
+\labeltext{2. Elasticidad del cociente}
+\[\frac{\partial\ln q}{\partial\ln V_a}=\phi_I-\phi_F.\]
+\labeltext{3. De cociente a fracción de horas}
+\[s_I=\frac{q}{1+q}\quad\Rightarrow\quad
+\partial_a s_I=s_I(1-s_I)(\phi_I-\phi_F)\frac{V_{aa}}{V_a}.\]
+\takeaway{El paso difícil pendiente es probar $V_{aa}<0$ para la solución completa, fuera de la grilla.}
+\source{Prueba algebraica del enunciado condicional, verificada por SymPy. No es una respuesta agregada ni una comparación de economías con distintos precios.}
+\end{frame}
+
+% 15
+\begin{frame}{La igualdad de elasticidades separa los dos signos}
+\fig{sign_map}
+\takeaway{Bajo $V_{aa}<0$, el orden de las elasticidades determina la pendiente por activos.}
+\source{Mapa analítico de la proposición, con sus condiciones de interioridad. Rangos ilustrativos, no estimación peruana. No son regiones de existencia de GE.}
+\end{frame}
+
+% 16
+\begin{frame}[label=simulaciones]{La elasticidad informal mayor genera pendiente por activos}
+\fig{assets}
+\takeaway{Gris discontinuo: modelo de dos sectores. Curvas sólidas: sensibilidad.}
+\source{PE recuperado y reproducido, $z=\FixedZFinal$, $\phi_F=\PhiFormalFinal$. Precios, $V_a$ y distribución fijos; reajuste de $\psi_I$ y nivel de barrera a M1/M3 internos. No es GE con elasticidades distintas.}
+\end{frame}
+
+% 17
+\begin{frame}{En el ejercicio parcial, la brecha por activos aumenta}
+\fig{phi_gap}
+\takeaway{La brecha pasa de \PEGapLow{} a \PEGapHigh{} pp al variar $\phi_I$ entre \PhiFormalFinal{} y \PhiHighFinal.}
+\source{M1 = \PEMOne\% y M3 = \PEMThree{} pp mantenidos por reajuste. V3: convención D17 de quintiles, distinta del corte fraccional D73. No se compara horas/activos con personas/gasto.}
+\end{frame}
+
+% 18
+\begin{frame}{En GE, la barrera influye en la brecha por productividad}
+\fig{wedges}
+\takeaway{La barrera constante reduce M3 de \WedgeMThreeRef{} a \WedgeMThreeConst{} pp. La prima constante cambia poco.}
+\source{D73, GE $400\times40$, activos de $-1$ a 40. Otros parámetros fijos; constantes iniciales igualan pagos de referencia. Precios, políticas y distribución se resuelven de nuevo. M3 compara extremos de $z$, no educación.}
+\end{frame}
+
+% 19
+\begin{frame}{Reajustar dos momentos no asegura mejorar las validaciones}
+\fig{validation}
+\takeaway{Ambas formas recuperan M1/M3 internos, pero esas metas no identifican la forma funcional.}
+\source{D73, mismo dominio amplio. Ambas constantes reajustadas con $\psi_I$ y nivel de $\kappa$. V3: corte fraccional de quintiles de activos. Gasto: hogares por sector dominante. Meta registrada sin revalidar microdatos.}
+\end{frame}
+
+% 20
+\begin{frame}[label=verificacion]{El GE reajusta la tasa de interés y el capital agregado}
+\fig{macro_ge}
+\takeaway{Las cuñas cambian decisiones, distribución y precios. Estos son contrastes estacionarios entre especificaciones.}
+\source{D73 amplio. Referencia: $r=\InterestRefFinal\%$, $K=\CapitalRefFinal$ unidades del modelo. No son IRF ni efectos causales de política. \CountMATFinal{} MAT auditados, \CountGEFinal{} GE; precisión global pendiente. Python relee diagnósticos, no ejecuta MATLAB. \hyperlink{precision}{\beamergotobutton{Auditoría}}}
+\end{frame}
+
+% 21
+\begin{frame}[fragile,label=lean]{Lean comprueba la derivada de las políticas laborales explícitas}
+\begin{columns}[T,onlytextwidth]
+\column{.36\linewidth}\labeltext{Paper, Proposición 1}
+\small
+\[\begin{aligned}\partial_a s_I&=s_I(1-s_I)(\phi_I-\phi_F)\\&\quad\cdot V_{aa}/V_a.\end{aligned}\]
+En Lean, $V(a)=V_a(a,z)$ y $d=V_{aa}(a,z)$.\par\vspace{2mm}
+Retornos y costos positivos; derivabilidad de $V$. Los signos requieren $d<0$.\par\vspace{2mm}
+Código propio, comprobado localmente sin \texttt{sorry}.
+\column{.61\linewidth}\labeltext{Declaración y fragmento reales}
+\lstinputlisting[firstline=50,lastline=57]{../lean/LaborComposition.lean}
+\end{columns}
+\takeaway{Verifica la rama explícita del resultado condicional; no prueba concavidad de la HJB ni existencia del GE.}
+\source{Lean 4.30.0-rc2, Mathlib 5450b53e. Salida y hash de fuente en \path{lean/verification/}. Falta el flujo oficial sobre el paper publicado en commit. \hyperlink{formalizacion}{\beamergotobutton{Alcance}}}
+\end{frame}
+
+% 22
+\begin{frame}[label=ia]{El tope de tiempo no explica el mecanismo si está holgado}
+\labeltext{Idea de la IA que se revisó}
+Un tope activo podría cambiar el reparto cuando el hogar se empobrece.
+\labeltext{Derivación para evaluar esa idea}
+\[V_aR_s=\psi_s\ell_s^{1/\phi_s}+\lambda_H,\qquad
+\lambda_H(\bar H-\ell_F-\ell_I)=0.\]
+\labeltext{Veredicto para la calibración histórica}
+\small El álgebra del caso restringido puede ser correcta, pero ese mecanismo no opera aquí: masa en el tope = \PENoCap, horas máximas = \PEMaxHours{} con $\bar H=1$. Se debe estudiar el bloque interior, $\lambda_H=0$.
+\takeaway{La derivación está tipografiada para revisar el argumento. Falta la hoja manuscrita personal.}
+\source{Caso B1 del registro de decisiones; diagnóstico reproducido desde el export histórico. No es una cita literal nueva atribuida a la IA. La consigna exige mostrar la evidencia manuscrita.}
+\end{frame}
+
+% 23
+\begin{frame}{La respuesta condicional es clara; la medición necesita más trabajo}
+\labeltext{Resultado}
+La igualdad de elasticidades elimina el canal directo de composición por riqueza. Una diferencia lo recupera bajo interioridad y concavidad.
+\vspace{2mm}\labeltext{Robustez}
+La pendiente de la barrera influye en M3. Recuperar dos metas internas no elige entre formas funcionales.
+\vspace{2mm}\labeltext{Lo que sigue abierto}
+No se identifica un efecto causal de activos, no se demuestra mejor ajuste a una medida empírica homogénea y no se presenta respuesta a un choque agregado.
+\source{F/I/N, GHH y otras variantes siguen como líneas distintas. No se incorporan como una única arquitectura certificada.}
+\end{frame}
+
+% 24
+\begin{frame}[label=critica]{Tres preguntas para orientar la crítica de la clase}
+\begin{enumerate}
+\item ¿Qué evidencia disciplina la diferencia de elasticidades, separándola del nivel de las desutilidades laborales?
+\vspace{4mm}
+\item ¿Qué momento externo distingue una barrera dependiente de productividad de una constante después del reajuste?
+\vspace{4mm}
+\item ¿Cómo construir una medida comparable sin mezclar personas con horas ni gasto con patrimonio?
+\end{enumerate}
+\vspace{4mm}
+\href{https://github.com/johnbarraza/ai-project}{github.com/johnbarraza/ai-project}\hfill\hyperlink{anexos}{\beamergotobutton{Anexos técnicos}}
+\end{frame}
+
+\appendix
+\begin{frame}[label=anexos]{Anexos para responder preguntas sin perder el hilo}
+\begin{tabular}{@{}ll@{}}
+\hyperlink{hjb}{A1. HJB, consumo y riesgo}&Problema dinámico\\[3mm]
+\hyperlink{kkt}{A2. Restricción de tiempo}&Dónde cambia la fórmula interior\\[3mm]
+\hyperlink{recursos}{A3. Bien formal}&Pagos reales de ambas cuñas\\[3mm]
+\hyperlink{parametros}{A4. Parámetros y roles}&Supuestos frente a evidencia\\[3mm]
+\hyperlink{precision}{A5. Precisión y procedencia}&PE y GE D73 separados\\[3mm]
+\hyperlink{literatura}{A6. Literatura}&Qué hace cada antecedente\\[3mm]
+\hyperlink{formalizacion}{A7. Lean y manuscrito}&Pendientes de entrega\\
+\end{tabular}\back{critica}
+\end{frame}
+
+\begin{frame}[label=hjb]{A1. La HJB determina valor; la KFE determina distribución}
+\[\rho v(a,z)=\max_{c_F,c_I,\ell_F,\ell_I}\{u(C,\ell_F,\ell_I)+V_a\dot a+\mathcal L_zv\}.\]
+\[u=\ln C-\sum_s\frac{\psi_s\ell_s^{1+1/\phi_s}}{1+1/\phi_s}.\]
+\small $\mathcal L_z$ es el generador del riesgo exógeno. La distribución estacionaria satisface la KFE asociada a las políticas y ese riesgo.\par\vspace{3mm}
+$C$ es CES en $c_F,c_I$. El precio formal es uno y $p_I$ es relativo. El bloque de consumo no altera la derivada laboral bajo las condiciones declaradas.
+\source{HJB y KFE cumplen funciones distintas. Una solución estacionaria numérica no sustituye una prueba global de concavidad.}\back{hogar}
+\end{frame}
+
+\begin{frame}[label=kkt]{A2. Con tiempo activo, el multiplicador cambia ambas FOC}
+\[\mathcal H=V_a(R_F\ell_F+R_I\ell_I)-\sum_s\frac{\psi_s\ell_s^{1+1/\phi_s}}{1+1/\phi_s}+\lambda_H(\bar H-\ell_F-\ell_I).\]
+\[V_aR_s=\psi_s\ell_s^{1/\phi_s}+\lambda_H,\qquad\lambda_H\geq0.\]
+\[\lambda_H(\bar H-\ell_F-\ell_I)=0.\]
+\takeaway{Con $\lambda_H>0$ ya no se obtiene el cociente interior de la proposición.}
+\source{FOC para horas positivas; las esquinas sectoriales requieren sus condiciones de complementariedad.}\back{foc}
+\end{frame}
+
+\begin{frame}[label=recursos]{A3. Ambas cuñas consumen recursos del bien formal}
+\[L_F=\int z\ell_F\,d\mu,\qquad L_I=\int z^{\nu_I}\ell_I\,d\mu,\qquad T=\tau w_FL_F.\]
+\[Y_F=C_F+\delta(K_F+K_I)+\mathcal K+\mathcal D,\]
+\[\mathcal K=\int\kappa(z)\ell_F\,d\mu,\qquad
+\mathcal D=\int\chi(z)(-a)_+\,d\mu.\]
+\labeltext{Por qué importa}
+\small El indicador guardado de un MAT histórico omitía la prima. D72 conservó ese fallo. Los contrastes nuevos D73 recalculan ambos pagos y comprueban mercados y recursos.
+\takeaway{Un residuo pequeño informa solo si corresponde a la identidad económica correcta.}
+\source{D72 y protocolo D73. HANK respalda prima como servicios financieros, pero sus letras y costos no equivalen a los nuestros.}\back{mercados}
+\end{frame}
+
+\begin{frame}[label=parametros]{A4. Cada parámetro tiene un papel y un límite de interpretación}
+\small\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}p{2cm}p{6cm}p{8cm}@{}}\toprule
+Objeto&Rol&Justificación\\\midrule
+$\phi_F,\phi_I$&Elasticidad de horas&Común en referencia; diferencia ilustrativa, no estimación nueva\\
+$\psi_F,\psi_I$&Nivel de desutilidad&Reajustados a momentos internos donde se indica\\
+$\kappa(z)$&Costo por hora formal&Forma reducida; no identifica acceso\\
+$\chi(z)$&Prima de deuda&Constante como robustez; sin default endógeno\\
+$\nu_I$&Trabajo efectivo informal&Supuesto/calibración; una cita no lo identifica\\
+$\bar H$&Tiempo disponible&Normalización; la fórmula requiere holgura\\\bottomrule
+\end{tabular}
+\source{Céspedes y Rendón estudian una población y especificación particulares; no demuestran la desigualdad de elasticidades estructurales de este modelo.}\back{modelo}
+\end{frame}
+
+\begin{frame}[label=precision]{A5. Reproducción, auditoría y precisión son diferentes}
+\small\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}p{4cm}p{6.5cm}p{5.4cm}@{}}\toprule
+Bloque&Qué vuelve a hacer Python&Qué no vuelve a hacer\\\midrule
+PE de octubre&FOC, óptimos independientes, reajuste y figuras&GE de la sensibilidad\\
+D73, noviembre&Diagnósticos exportados, tolerancias y metas&Resolver de nuevo HJB/KFE\\
+Precisión global&Conservar el estado pendiente&Certificar refinamientos amplios y resolución de $z$\\\bottomrule
+\end{tabular}
+\vspace{3mm}
+D73 amplio: $400\times40$ nodos, activos de $-1$ a 40. PE recuperado: exportación histórica $200\times40$. Cada comparación mantiene su definición de quintiles.
+\source{No se mezclan cambios de discretización y modelo ni se relajan tolerancias para aprobar.}\back{verificacion}
+\end{frame}
+
+\begin{frame}[label=literatura]{A6. La decisión del hogar distingue el aporte del antecedente}
+\small\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}p{4cm}p{6.1cm}p{6cm}@{}}\toprule
+Trabajo&Aporte&Distinción\\\midrule
+Huggett (1993), Aiyagari (1994)&Ahorro bajo riesgo idiosincrático&No es por sí solo reparto de horas entre sectores\\
+Achdou et al. (2022)&Método en tiempo continuo&No identifica nuestras cuñas\\
+Galindo et al., manuscrito local&Informalidad y riqueza&Estado laboral exógeno; aquí se eligen horas\\
+Kaplan, Moll y Violante (2018)&Heterogeneidad y prima de deuda&No respalda el perfil compartido de cuñas\\\bottomrule
+\end{tabular}
+\source{Fuentes y versiones en \path{proposal/literature-check.md}. El manuscrito local de Galindo no se presenta como publicación editorial certificada.}\back{modelo}
+\end{frame}
+
+\begin{frame}[label=formalizacion]{A7. Comprobación local y cierre oficial son pasos diferentes}
+\labeltext{Lo comprobado localmente}
+\small Código propio de la Proposición 1: derivada y signos de políticas explícitas, con recibo ligado al hash de fuente. No se copió la formalización anterior como si probara el paper nuevo.
+\vspace{3mm}\labeltext{Flujo oficial pendiente}
+Publicar la versión del paper en un commit y ejecutar AppliedModelingLib; conservar la carpeta generada íntegra y el check de contribución. La revisión semántica humana se registra por separado.
+\vspace{3mm}\labeltext{Manuscrito personal}
+Escribir el paso de las FOC al cociente, el caso con multiplicador y el veredicto. Incorporar la foto real y legible.
+\takeaway{El check local no sustituye el flujo del curso ni la derivación manuscrita personal.}
+\source{Puntos 6 y 7 de la final, issue \#7. Paper completo y apéndice manuscrito: 26nov.}\back{lean}
+\end{frame}
 \end{document}

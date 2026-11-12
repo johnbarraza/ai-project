@@ -1,0 +1,45 @@
+{
+  "document_type": "theoretical_macroeconomics_course_project",
+  "as_of": "2026-11-12",
+  "human_semantic_review_recorded": false,
+  "official_contribution_workflow_complete": false,
+  "numeric_sources": {
+    "PE": "code/data/baseline.csv; code/output/verification.json",
+    "GE_D73": "code/data/final_wedges.json; source audit SHA retained inside",
+    "new_MATLAB_run": false
+  },
+  "source_metadata": [
+    {
+      "key": "Aiyagari1994",
+      "url": "https://academic.oup.com/qje/issue/109/3",
+      "scope": "bibliographic metadata; prior baseline review limited"
+    },
+    {
+      "key": "Achdou2022",
+      "url": "https://academic.oup.com/restud/article/89/1/45/6149490",
+      "scope": "publisher metadata and prior local published PDF review; access redirect on current open"
+    },
+    {
+      "key": "Kaplan2018",
+      "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20160042",
+      "scope": "publisher metadata; primary-PDF wedge accounting recorded in D72/D73"
+    },
+    {
+      "key": "Galindo2024",
+      "url": "https://www.bcrp.gob.pe/docs/Publicaciones/Documentos-de-Trabajo/2024/documento-de-trabajo-005-2024.pdf",
+      "scope": "working-paper status and previously reviewed local manuscript; no later publication asserted"
+    }
+  ],
+  "artifacts": {
+    "paper/paper.tex": "b36b86de6647aee9aef8e2904e3a82ea42bb14ab9200717e87d614e976d9fbd6",
+    "paper/paper.pdf": "df93dd644aaf9a375343f87d547f17029236d963d4fa70060fc86a411cc97afe",
+    "paper/references.bib": "145eb665880cc7b89ab70ca0ea98f3c20c09ffec1516d672655146e13bd20c82",
+    "slides/final.tex": "e36629330b9b18cc95359282c81aaca8ea4e44b9b18ebee63cebe96070070059",
+    "slides/final.pdf": "688f0ea4f6c76e6cce6171bdc091e9c9267031af0c97b0be4b1f51fb77953a1e",
+    "code/data/baseline.csv": "bb1855b43bd2c46767d3edb4471b3c5d7360b1223faac08c6f575adefc6de289",
+    "code/data/final_wedges.json": "49269902fbdd276acc3fac11a873b222f887f3d2f83c18709068201544bb3a77",
+    "code/output/final_verification.json": "acb084e693fbfc17d7b250dcc737179ff3ed88fe74202656426e33d40ad270cb",
+    "lean/LaborComposition.lean": "e31e7fb3f9fec913d61ae558537ea5dcb8d8ac81a7ebcf8348909200a871a4a3",
+    "lean/verification/local_check.json": "f30b9388110b511825540c283140fdd226799012a4be865879210fea2c10697c"
+  }
+}

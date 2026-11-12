@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "exit_code": 0,
+  "source_sha256": "e31e7fb3f9fec913d61ae558537ea5dcb8d8ac81a7ebcf8348909200a871a4a3",
+  "lean_version": "Lean (version 4.30.0-rc2, x86_64-unknown-linux-gnu, commit 3dc1a088b6d2d8eafe25a7cd7ec7b58d731bd7cc, Release)",
+  "mathlib_commit": "5450b53e5ddc75d46418fabb605edbf36bd0beb6",
+  "checked_declarations": [
+    "Barraza26LaborComposition.composition_hasDerivAt",
+    "Barraza26LaborComposition.composition_sign"
+  ],
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "scope": "Explicit interior labor policies: derivative, chain rule and signs. HJB concavity and GE existence are not proved.",
+  "official_applied_modeling_workflow": false,
+  "published_paper_commit": null,
+  "human_semantic_review_recorded": false
+}
