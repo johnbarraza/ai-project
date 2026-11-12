@@ -344,33 +344,22 @@ En equilibrio general cambian retornos, $V_a$ y distribución; estas FOC no fija
 \figurenote{Vale con solución interior, $\ell_F+\ell_I<\bar H$: en el modelo de dos sectores el máximo es $\MaxHoursBase$ con $\bar H=\TimeCap$. Con tope de tiempo: \hyperlink{a4}{anexo A7}.}
 \end{frame}
 
-% ===== 3. FOC gráfica (1:00) =====
-\begin{frame}{3. La misma diferencia de $V_a$ \teal{mueve más las horas informales}}
-\centering
-\includegraphics[width=\linewidth,height=6.3cm,keepaspectratio]{../code/figures/foc_hours.pdf}
-\figurenote{Calibrado, equilibrio parcial; mismo $z=\CentralProductivity$, pobre en el percentil 10 de riqueza y rico en el 90.
-Rectas: BMg $=V_aR_s(z)$, una por hogar. Curvas: CMg $=\psi_s\ell^{1/\phi_s}$. Cada corte son las horas óptimas.}
-\end{frame}
-
 % ===== 3. Conjetura (2:00) =====
 \begin{frame}{3. Conjetura: \teal{la riqueza cambia la composición de horas}}
 \vfill
-\[
-\frac{\ell_I}{\ell_F}\;\propto\;V_a^{\,\phi_I-\phi_F}
-\]
-\vspace{8mm}
 \panel{PaleTeal}{\linewidth}{\large
-Si $\phi_I>\phi_F$ y $V_a$ disminuye con los activos, menos activos implican una mayor fracción de horas informales, a igual productividad.}
-\par\vspace{5mm}
-{\small Resultado condicionado: \hyperlink{aresult}{definiciones y condiciones completas en el anexo A17}.}
+A igual productividad, un hogar con más activos dedica una menor fracción de sus horas al sector informal.}
+\par\vspace{6mm}
+{\small Si $\phi_I>\phi_F$ y $V_a$ disminuye al aumentar los activos.\par\vspace{3mm}
+\hyperlink{aresult}{Fórmula y condiciones completas en el anexo A17}.}
 \vfill
 \end{frame}
 
 % ===== 3. Gráfico por activos (1:00) =====
-\begin{frame}{3. Con $\phi_I>\phi_F$ la fracción informal \teal{cae con los activos}}
+\begin{frame}{3. A igual productividad, \teal{más activos implican menor fracción informal}}
 \centering
 \includegraphics[width=\linewidth,height=6.4cm,keepaspectratio]{../code/figures/informal_share_by_assets.pdf}
-\figurenote{Calibrado, equilibrio parcial: $V_a$, $g$ y precios del modelo de dos sectores. Mismo $z=\CentralProductivity$.
+\figurenote{Con $\phi_I>\phi_F$. Calibrado, equilibrio parcial: $V_a$, $g$ y precios del modelo de dos sectores. Mismo $z=\CentralProductivity$.
 Línea gris: modelo de dos sectores ($\phi_I=\phi_F=\PhiBase$), plana porque $V_a$ se cancela. Cada curva recalibra $\psi_I$ y $\kappa_{z1}$ para mantener M1 y M3.}
 \end{frame}
 
@@ -403,26 +392,22 @@ Línea gris: modelo de dos sectores ($\phi_I=\phi_F=\PhiBase$), plana porque $V_
 % ===== 5. Plan (1:15) =====
 \renewcommand{\partid}{5}
 \begin{frame}{5. Del resultado condicional \teal{al equilibrio general}}
+\vfill
 \begin{columns}[T,onlytextwidth]
 \column{.31\textwidth}
-\panel{Pale}{\linewidth}{\labeltext{Demostrar}
-La pendiente de $s_I$ en $V_a$ con sus tres condiciones, a mano y con verificación simbólica.}
+\panelh{Pale}{\linewidth}{25mm}{\labeltext{Demostrar}
+Precisar cuándo la riqueza cambia el reparto de horas.}
 \column{.31\textwidth}
-\panel{Pale}{\linewidth}{\labeltext{Simular}
-Equilibrio general con $\phi_I\neq\phi_F$ en el solver del modelo de dos sectores: ¿sobrevive la pendiente cuando cambian $r$, $p_I$ y $V_a$?}
+\panelh{Pale}{\linewidth}{25mm}{\labeltext{Simular}
+Comprobar si el resultado se mantiene en un nuevo equilibrio general.}
 \column{.31\textwidth}
-\panel{Pale}{\linewidth}{\labeltext{Formalizar en Lean}
-La proposición condicional, con AppliedModelingLib sobre el paper final.}
+\panelh{Pale}{\linewidth}{25mm}{\labeltext{Formalizar en Lean}
+Verificar la proposición condicional del paper final.}
 \end{columns}
-\vspace{4mm}
-\panel{PaleTeal}{\linewidth}{\labeltext{\color{Teal}Estimar $\phi_I$}
-En el modelo, a igual $z$, las horas solo varían por $V_a$:
-$\ \mathrm{sd}(\ln\ell_I\mid z)\,/\,\mathrm{sd}(\ln\ell_F\mid z)=\phi_I/\phi_F$. Se mide con ENAHO dentro de cada nivel educativo.}
-\vspace{2mm}
-\panel{PaleOrange}{\linewidth}{\labeltext{\color{Orange}Paso más riesgoso}
-En equilibrio general cambian $r$, $p_I$ y la distribución: la brecha podría ser menor.
-Primer intento: el solver reproduce el modelo de dos sectores, pero con $\phi_I=\PhiMid$ y $\PhiHigh$ aún no converge.
-\textbf{Plan B:} el resultado condicional y el experimento parcial como cota.}
+\vspace{7mm}
+\panel{PaleOrange}{\linewidth}{\textbf{Riesgo:} resolver el nuevo equilibrio general.\par\vspace{3mm}
+\textbf{Alternativa:} presentar el resultado condicional y el ejercicio de equilibrio parcial.}
+\vfill
 \end{frame}
 
 % ===== 5. Cierre (0:30) =====

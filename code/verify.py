@@ -497,6 +497,8 @@ def main():
     write_outputs(baseline, scenarios, sensitivity, summary, moments_data)
     from figures import build_figures
     build_figures(baseline, scenarios, sensitivity, summary, moments_data)
+    from final_figures import build_final
+    build_final(baseline, scenarios, summary, moments_data)
     print("OK: SymPy, baseline, quintile conventions, joint calibration and independent maxima")
     print(f"V_a relative gap: {baseline['va_relative_gap']:.12g}")
     print("phi_I   psi_I       kappa_z1    V3 D17 (pp)   V3 MATLAB (pp)")

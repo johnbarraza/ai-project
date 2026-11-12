@@ -1,9 +1,9 @@
 # Hoja de defensa · presentación de tema (16 oct)
 
-`topic.pdf` tiene 42 páginas: 18 de contenido, 5 separadores principales, un separador ANEXOS, el índice y 17 anexos (variables, firmas, equilibrio, momentos y formas de κ pasaron a anexos el 15 oct). Para cada slide: qué decir en una oración, de dónde sale cada número y qué preguntará probablemente el profesor. Los números vienen de `code/output/topic_numbers.tex`.
+`topic.pdf` tiene 41 páginas: 17 de contenido, 5 separadores principales, un separador ANEXOS, el índice y 17 anexos (variables, firmas, equilibrio, momentos y formas de κ pasaron a anexos el 15 oct). Para cada slide: qué decir en una oración, de dónde sale cada número y qué preguntará probablemente el profesor. Los números vienen de `code/output/topic_numbers.tex`.
 
 **Ritmo.** Unos 15 minutos sin interrupciones. Si vas tarde:
-- Salta la slide 16 (gráfico de la FOC) y la 18 (fracción informal por activos).
+- Salta la slide 17 (fracción informal por activos); conserva la FOC (15) y la conjetura (16).
 - Las formas de κ, las firmas y el equilibrio ya están en anexos (A12, A4 y A5): si preguntan, usa el enlace.
 
 **En la slide va poco texto; el ejemplo lo dices tú.** Ejemplo para la slide 5: *"Dos trabajadores con la misma productividad, uno sin ahorros y otro con ahorros. En mi modelo actual los dos dedican el 52 % de sus horas a lo informal. Si las horas informales son más flexibles: 54 % el pobre y 47 % el rico."*
@@ -116,25 +116,21 @@
 - **"¿Es máximo?"** La segunda derivada es −(ψ_s/φ_s) ℓ^(1/φ_s − 1) < 0.
 - **"¿Y con tope de tiempo?"** Entra λ_H (A7). Nadie llega al tope: el máximo es 0.75 frente a H̄ = 1.
 
-**Slide 16 · Gráfico de la FOC.**
-- **Guion (30 s):** *"El eje vertical está en utilidad por hora adicional; el beneficio y el costo marginal se miden igual, por eso van en el mismo eje. Las rectas naranjas son el beneficio de una hora más, V_a R_s: son planas porque no dependen de las horas, y la del pobre está más arriba porque su V_a es mayor. Las curvas son el costo marginal. Donde se cortan están las horas óptimas de cada hogar. A la izquierda, en lo formal, el pobre trabaja 40 % más. A la derecha, con φ_I = 0.70 la curva es más plana y la misma diferencia de V_a mueve 86 % las horas informales; con φ común (gris) serían también 40 %."*
-- **Lo que ya no dice la nota:** el pobre tiene a = −0.2 y el rico a = 12.3. Con φ_I = 0.70, ψ_I baja a 6.67 para mantener M1, y por eso la curva teal y la gris se cruzan.
 - **"¿Qué es el término con λ en la HJB?"** Es la tasa esperada de cambio del valor debida a la productividad. El proceso original de ln z es una difusión OU; al discretizarlo se representa mediante transiciones entre nodos. Para z' distinto de z, λ_zz' es una intensidad de transición por unidad de tiempo, no una probabilidad de un periodo. Como el hogar no controla ese proceso, el término no depende directamente de su consumo ni de sus horas actuales al calcular la FOC. La función v sí se obtiene resolviendo todo el problema de decisiones del hogar.
-- Hogar pobre: a = −0.2 (percentil 10). Rico: a = 12.3 (percentil 90). Ambos con z = 0.84.
 
-**Slide 17 · Conjetura.** Una ecuación central y una conclusión. El cociente completo, las derivadas, la barrera, las condiciones y la recalibración están en el guion y el anexo A17.
+**Slide 16 · Conjetura.** Una conclusión en palabras: a igual productividad, más activos implican menor fracción informal, bajo las condiciones declaradas. El cociente completo, las derivadas, la barrera, las condiciones y la recalibración están en el guion y el anexo A17.
 - Condiciones (i)–(iii); la (iii) se cumple en la grilla, **no está demostrada**.
 - **"¿Por qué 'si y solo si'?"** El signo de ∂s_I/∂a es el de (φ_I − φ_F) por ∂V_a/∂a, y este último es negativo.
 
-**Slide 18 · Por activos.** Gris plano en 52 %; con φ_I = 0.70 va de 56 % (a = −1) a 45 % (a = 20).
+**Slide 17 · Por activos.** Al aumentar los activos, disminuye la fracción informal en la sensibilidad. Gris plano en 52 %; con φ_I = 0.70 va de 56 % (a = −1) a 45 % (a = 20).
 - **"¿Por qué se cruzan?"** La recalibración de ψ_I mantiene M1 en el agregado.
 
-**Anexo A11 · V3** (salió del deck principal el 15 oct; la slide 17 enlaza ahí). 4.4 → 5.8 → 6.7 → 8.7 → 10.6 pp.
+**Anexo A11 · V3** (salió del deck principal el 15 oct; la slide 16 enlaza ahí). 4.4 → 5.8 → 6.7 → 8.7 → 10.6 pp.
 - **"¿Por qué no llega a 53?"** Solo hay margen intensivo; falta entrar o salir de la informalidad.
 
 ## 4. Brecha en la literatura
 
-**Slide 20.** Tabla de 6 filas y un recuadro: Galindo et al. ya conectan informalidad y riqueza, pero con el sector exógeno; aquí el hogar elige el reparto.
+**Slide 19.** Tabla de 6 filas y un recuadro: Galindo et al. ya conectan informalidad y riqueza, pero con el sector exógeno; aquí el hogar elige el reparto.
 - **Pijoan-Mas (2006):** sí tiene oferta laboral endógena (Aiyagari con horas: trabajar más también asegura), pero con un solo sector. Modelo de dos sectores también tiene oferta laboral endógena, en dos sectores.
 - **Lecturas propias** (en la propuesta, no en la slide): Achdou (introducción, sección 2), Galindo (modelo, sección 2, y conclusiones, sección 6; presentación de 2023) y el INEI.
 - **El resto viene de la bibliografía del modelo de dos sectores:** Pijoan-Mas (2006), Perry et al. (2007), Loayza (2016) y Meghir, Narita y Robin (2015).
@@ -142,13 +138,14 @@
 
 ## 5. Plan y riesgos
 
-**Slide 22.** Demostrar, simular el equilibrio general en MATLAB (primer intento en la slide: con φ_I = 0.50 y 0.70 aún no converge), formalizar en Lean y estimar φ_I.
-- **Estimar φ_I:** sd(ln ℓ_I | z)/sd(ln ℓ_F | z) = φ_I/φ_F, con ENAHO dentro de cada nivel educativo.
-- **Riesgo:** en equilibrio general cambian r, p_I y g. **Plan B:** el resultado condicional y la cota parcial.
+**Slide 21 · Plan y riesgos.** Demostrar las condiciones, simular un nuevo equilibrio general y formalizar en Lean.
+- **Detalles para preguntas:** D13, derivación propia; SymPy, comprobación simbólica; AppliedModelingLib, paper final en commit fijado.
+- **Riesgo:** resolver el nuevo equilibrio con precios y distribución endógenos. **Alternativa:** resultado condicional y ejercicio parcial. Este último no es una cota demostrada del efecto general.
+- **Contraste empírico pendiente:** la identidad sd(ln ell_I | z)/sd(ln ell_F | z)=phi_I/phi_F corresponde al modelo interior a z fijo. La educación no mide exactamente z ni elimina otras fuentes de variación o error de medición en ENAHO; la identidad no identifica por sí sola las elasticidades. Se retiró la promesa de estimación directa.
 
-**Slide 23 · La respuesta que busco.** Bajo las condiciones declaradas, la riqueza influye si las elasticidades son distintas. Con elasticidad común, V_a se cancela. Si phi_I supera phi_F, menos activos se asocian con una fracción informal mayor; con el orden inverso, el signo se invierte. El caso inverso también se comprueba en verify.py. No equiparar esos resultados con una respuesta a un choque.
+**Slide 22 · La respuesta que busco.** Bajo las condiciones declaradas, la riqueza influye si las elasticidades son distintas. Con elasticidad común, V_a se cancela. Si phi_I supera phi_F, menos activos se asocian con una fracción informal mayor; con el orden inverso, el signo se invierte. El caso inverso también se comprueba en verify.py. No equiparar esos resultados con una respuesta a un choque.
 
-## Anexos (separador ANEXOS en la página 24, índice en la 25)
+## Anexos (separador ANEXOS en la página 23, índice en la 24)
 
 - **A1:** quién elige qué.
 - **A2:** variables (estado, decisiones, precios).
@@ -171,8 +168,8 @@
   - Lectura: el gradiente educativo es de **margen extensivo** (acceso a un empleo formal, Meghir, Narita y Robin 2015), que el modelo no tiene.
   - La educación se asigna a tramos de z: supone que la educación ordena perfectamente a z, el mejor caso para el modelo.
 - **A15:** referencias y fuentes de datos.
-- **A16:** oferta de activos y demanda de capital, página PDF 41.
-- **A17:** composición de horas, definiciones, barrera y condiciones, página PDF 42.
+- **A16:** oferta de activos y demanda de capital, página PDF 40.
+- **A17:** composición de horas, definiciones, barrera y condiciones, página PDF 41.
 
 ## Glosario: cada símbolo con su rol
 
