@@ -1,0 +1,17 @@
+{
+  "published_at_utc": "2026-11-12T20:46:03Z",
+  "pull_request": "https://github.com/johnbarraza/ai-project/pull/5",
+  "source_branch_commit": "10bf6563cec2341d4e0f92e8eee4faaec6011625",
+  "paper_source_commit": "8e51a872c874f09079ce106068cc065b0a0efbee",
+  "paper_pdf_sha256": "df93dd644aaf9a375343f87d547f17029236d963d4fa70060fc86a411cc97afe",
+  "paper_url": "https://github.com/johnbarraza/ai-project/blob/8e51a872c874f09079ce106068cc065b0a0efbee/paper/paper.pdf",
+  "push_checks": "https://github.com/johnbarraza/ai-project/actions/runs/43302976115",
+  "pr_checks": "https://github.com/johnbarraza/ai-project/actions/runs/43303081769",
+  "main_checks": "https://github.com/johnbarraza/ai-project/actions/runs/43303559849",
+  "course_submission_link_already_posted": "https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7#issuecomment-6182486406",
+  "code_and_latex_checks_passed": true,
+  "official_formalization_accepted": false,
+  "human_semantic_review": false,
+  "handwritten_evidence_received": false,
+  "full_precision_certification": false
+}

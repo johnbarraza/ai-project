@@ -6,7 +6,9 @@
   "numeric_sources": {
     "PE": "code/data/baseline.csv; code/output/verification.json",
     "GE_D73": "code/data/final_wedges.json; source audit SHA retained inside",
-    "new_MATLAB_run": false
+    "new_MATLAB_run": true,
+    "new_MATLAB_scope": "Two same-grid GE replications on 2026-11-12; figures retain D73 values",
+    "MATLAB_replication": "code/data/final_matlab_replication.json"
   },
   "source_metadata": [
     {
@@ -38,8 +40,10 @@
     "slides/final.pdf": "688f0ea4f6c76e6cce6171bdc091e9c9267031af0c97b0be4b1f51fb77953a1e",
     "code/data/baseline.csv": "bb1855b43bd2c46767d3edb4471b3c5d7360b1223faac08c6f575adefc6de289",
     "code/data/final_wedges.json": "49269902fbdd276acc3fac11a873b222f887f3d2f83c18709068201544bb3a77",
-    "code/output/final_verification.json": "acb084e693fbfc17d7b250dcc737179ff3ed88fe74202656426e33d40ad270cb",
+    "code/output/final_verification.json": "e7f6df0634c90c6403a34bc5614ebeb49123ab1087ccd11c066faa13ce563321",
     "lean/LaborComposition.lean": "e31e7fb3f9fec913d61ae558537ea5dcb8d8ac81a7ebcf8348909200a871a4a3",
-    "lean/verification/local_check.json": "f30b9388110b511825540c283140fdd226799012a4be865879210fea2c10697c"
-  }
+    "lean/verification/local_check.json": "f30b9388110b511825540c283140fdd226799012a4be865879210fea2c10697c",
+    "code/data/final_matlab_replication.json": "3130c8fe20f5fa9fef83d0237fc9e14a174ab67d99cae6d46c5f493734303709"
+  },
+  "paper_source_commit": "8e51a872c874f09079ce106068cc065b0a0efbee"
 }

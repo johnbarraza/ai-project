@@ -2,6 +2,15 @@
   "scope": "PE reproducido desde exportación histórica; D73 verifica diagnósticos exportados, sin rerun HJB/KFE.",
   "export_sha256": "49269902fbdd276acc3fac11a873b222f887f3d2f83c18709068201544bb3a77",
   "original_audit_sha256": "db449ae06135a6df95fe2d101482c4e901a4efe503c29ad689c913298196ad18",
+  "matlab_replication": {
+    "date": "2026-11-12",
+    "passed": true,
+    "cases": [
+      "reference",
+      "both_constant_refit"
+    ],
+    "export_sha256": "3130c8fe20f5fa9fef83d0237fc9e14a174ab67d99cae6d46c5f493734303709"
+  },
   "checks": {
     "historical_PE": "passed",
     "wealth_chain_rule": "passed",
