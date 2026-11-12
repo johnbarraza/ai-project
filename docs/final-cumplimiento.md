@@ -15,10 +15,16 @@ Fuente: [issue #7, sección 4](https://github.com/alexanderquispe/AI-Econ-Modeli
 
 Se conservaron las slides de tema y la propuesta. La final tiene 24 láminas principales, índice de anexos y 7 anexos técnicos. No usa animaciones ni capturas de papers. El enlace del repositorio figura en portada.
 
-`python code/verify.py` reproduce el PE y las figuras, comprueba agregación, regla de cadena y diagnósticos D73. No vuelve a resolver MATLAB. La prueba Lean local se comprobó por separado con `code/verify_lean.py`; el verificador comprueba el hash de su recibo. `ready_for_submission` permanece en `false` por el flujo oficial y el manuscrito pendientes.
+`python code/verify.py` reproduce el PE y las figuras, comprueba agregación, regla de cadena y diagnósticos D73. No vuelve a resolver MATLAB. La prueba Lean local se comprobó por separado con `code/verify_lean.py`; el verificador comprueba el hash de su recibo. `ready_for_submission` permanece en `false` por el flujo oficial y la evidencia manuscrita personal pendientes.
+
+El12nov sí se ejecutó MATLAB por separado: referencia y ambas constantes reajustadas400×40/dominio40. Las dos corridas pasaron auditoría independiente y reprodujeron los casosD73 mostrados. [Evidencia y límites](replicacion-matlab-final.md). No se confunde esa repetición con la certificación global pendiente.
 
 `paper/paper.tex` ya es un borrador propio con supuestos numerados, una proposición y prueba completa, ejercicios y límites, bibliografía y tabla de correspondencia Lean. El cuerpo respeta 11pt y márgenes de una pulgada; el conteo efectivo de páginas se registra en `qa_final.json`. El paper completo vence el 26nov, pero su enunciado sirve como fuente de la lámina Lean.
 
 La lectura de microdatos no se repitió. La motivación reutiliza agregados públicos ya exportados. No se mezclan gasto y patrimonio, personas y horas, ni diferentes convenciones de quintiles como si fueran medidas idénticas.
 
 PDF y fuente deben quedar en main el 12nov a las 22:00 Lima, por rama → PR → merge. John autorizó commit, push y PR/merge el 12nov. Esa autorización permite publicar el avance, sin declarar cerrados sus pendientes científicos.
+
+Publicación realizada mediante [PR#5](https://github.com/johnbarraza/ai-project/pull/5), fusionado a las20:46:03UTC del12nov con todos los checks aprobados. Paper fuente fijado en `8e51a872c874f09079ce106068cc065b0a0efbee`. El workflow oficial se encuentra en ejecución; su estado final debe acreditarse con los archivos y checks reales.
+
+El [enlace del repositorio ya está registrado](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7#issuecomment-6182486406) en el issue del curso. Su sección2 exige postear una sola vez; para la final cuenta el merge enmain. No se envió un comentario duplicado.

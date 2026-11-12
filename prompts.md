@@ -1272,3 +1272,29 @@ procede. ademas corriste en matlab?
 No ejecuté MATLAB en esta última revisión: reproduje el ejercicio parcial en Python, comprobé Lean y usé las exportaciones de las corridas de MATLAB del 9 de noviembre. Los gráficos de GE corresponden a esas corridas auditadas.
 
 Con tu autorización, revisaré el estado remoto, publicaré la rama por PR y continuaré con la formalización oficial sobre el commit que quede en `main`.
+
+## 188. Usuario
+
+adema de las clases cual queirs eu te pase? las grabacines o algo para revisar somos varios alumnso yacad uno epxosia un dia diferetne la 2da entrega
+
+## 189. Codex (commentary)
+
+Lo más útil es la grabación de tu segunda exposición con las preguntas y recomendaciones del profesor. Después, las exposiciones de Saco/Galarza y Ventura/Arriola para comparar cómo explicaron sus modelos. Puedes pasar videos, enlaces o transcripciones; si son largas, basta el tramo de exposición y comentarios.
+
+La nueva presentación macro ya pasó los controles de GitHub. Estoy completando su publicación y el proceso de formalización exigido. Sobre MATLAB: en esta revisión usé los resultados guardados del 9 de noviembre; todavía no he hecho una nueva corrida.
+
+## 190. Codex (commentary)
+
+La presentación y el paper de trabajo ya están en `main`, mediante el PR #5, con los controles de código y compilación aprobados. Ahora el paper tiene un commit fijo para ejecutar el flujo oficial de Lean sobre esa versión.
+
+La presentación mantiene el enfoque macro: distribución de activos, agregación de horas, firmas, mercados y ajustes de precios y capital.
+
+## 191. Codex (commentary)
+
+MATLAB está disponible y no hay una corrida anterior activa. Voy a repetir en una carpeta aislada el equilibrio de referencia y el caso con cuñas constantes reajustadas que aparece en la presentación, para contrastarlos con los archivos del 9 de noviembre. Esa repetición comprobará los resultados mostrados; la revisión completa de precisión seguirá pendiente.
+
+## 192. Codex (commentary)
+
+Las dos corridas nuevas de MATLAB terminaron y pasaron la auditoría independiente: reproducen los resultados del 9 de noviembre con diferencias numéricas mínimas. Las fuentes protegidas siguen intactas.
+
+Para precisar qué grabaciones necesito: la tuya del **16 de octubre**, con la devolución sobre tu modelo, y las **exposiciones finales de tus compañeros**, especialmente Saco/Galarza del 11 de noviembre. Si puedes, incluye sus diapositivas y el tramo de preguntas del profesor.

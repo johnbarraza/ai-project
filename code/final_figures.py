@@ -58,6 +58,23 @@ def build_final(baseline, scenarios, summary, moments_data):
         [refit['M1_informal_hours'], refit['M3_formal_zmax_minus_zmin']],
         [ref['M1_informal_hours'], ref['M3_formal_zmax_minus_zmin']], atol=1e-7, rtol=0)
 
+    # Validate exported evidence from the fresh MATLAB replication; CI uses no MATLAB.
+    replication_path = HERE / 'data' / 'final_matlab_replication.json'
+    replication = json.loads(replication_path.read_text(encoding='utf-8'))
+    assert replication['passed'] and replication['engine_intact'] and replication['protected_sources_intact']
+    assert replication['matlab_rerun_executed'] and not replication['full_precision_certification']
+    assert len(replication['cases']) == 2
+    assert {c['case'] for c in replication['cases']} == {'reference', 'both_constant_refit'}
+    for case in replication['cases']:
+        previous = by_case[case['case']]
+        current = case['audit']
+        assert current['status'] == 'passed' and all(current['checks'].values())
+        assert case['reference_sha256'] == previous['sha256']
+        for key, bound in case['same_grid_bounds'].items():
+            difference = abs(current[key] - previous[key])
+            np.testing.assert_allclose(difference, case['absolute_differences'][key], atol=1e-15, rtol=0)
+            assert difference <= bound, (case['case'], key, difference, bound)
+
     # Independent chain-rule check: derivative through a differentiable Va(a).
     a = sp.symbols('a', real=True)
     q = sp.symbols('q', positive=True)
@@ -232,6 +249,9 @@ def build_final(baseline, scenarios, summary, moments_data):
         'scope':'PE reproducido desde exportación histórica; D73 verifica diagnósticos exportados, sin rerun HJB/KFE.',
         'export_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
         'original_audit_sha256':exported['source_sha256'],
+        'matlab_replication':{'date':replication['date'],'passed':True,
+                             'cases':[c['case'] for c in replication['cases']],
+                             'export_sha256':hashlib.sha256(replication_path.read_bytes()).hexdigest()},
         'checks':{'historical_PE':'passed','wealth_chain_rule':'passed','D73_export_diagnostics':'passed','refit_internal_targets':'passed'},
         'macro_aggregation':{'mass':float(wealth_mass.sum()),'mean_assets_historical':mean_assets,
                              'formal_hours_share':float(hours_fraction[0]),'informal_hours_share':float(hours_fraction[1]),

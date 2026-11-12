@@ -6,7 +6,9 @@
   "numeric_sources": {
     "PE": "code/data/baseline.csv; code/output/verification.json",
     "GE_D73": "code/data/final_wedges.json; source audit SHA retained inside",
-    "new_MATLAB_run": false
+    "new_MATLAB_run": true,
+    "new_MATLAB_scope": "Two same-grid GE replications on 2026-11-12; figures retain D73 values",
+    "MATLAB_replication": "code/data/final_matlab_replication.json"
   },
   "source_metadata": [
     {
@@ -31,15 +33,18 @@
     }
   ],
   "artifacts": {
-    "paper/paper.tex": "b36b86de6647aee9aef8e2904e3a82ea42bb14ab9200717e87d614e976d9fbd6",
+    "paper/paper.tex": "e9768a1b9cd67b5a83c58d99b1f1b62cbe28d26cf75284fe210a4dcd77e63df1",
     "paper/paper.pdf": "df93dd644aaf9a375343f87d547f17029236d963d4fa70060fc86a411cc97afe",
     "paper/references.bib": "145eb665880cc7b89ab70ca0ea98f3c20c09ffec1516d672655146e13bd20c82",
-    "slides/final.tex": "e36629330b9b18cc95359282c81aaca8ea4e44b9b18ebee63cebe96070070059",
+    "slides/final.tex": "c5bea7e55d999bfa2d20037d5422818be1264f7c19334f53a0290f5176768a3e",
     "slides/final.pdf": "688f0ea4f6c76e6cce6171bdc091e9c9267031af0c97b0be4b1f51fb77953a1e",
-    "code/data/baseline.csv": "bb1855b43bd2c46767d3edb4471b3c5d7360b1223faac08c6f575adefc6de289",
-    "code/data/final_wedges.json": "49269902fbdd276acc3fac11a873b222f887f3d2f83c18709068201544bb3a77",
-    "code/output/final_verification.json": "acb084e693fbfc17d7b250dcc737179ff3ed88fe74202656426e33d40ad270cb",
+    "code/data/baseline.csv": "7f81cecfa3cbb49d8d4fd8d0150e7236469775560ad73dbc4f6482c2ba78a95c",
+    "code/data/final_wedges.json": "eb4bc507164e61244af2f39140a3614882fca14b3b916e61cc4bd3d349d0275a",
+    "code/output/final_verification.json": "7a26154d445153556a919e072fe34490105f058e53f837a0aa99ad88d883c143",
     "lean/LaborComposition.lean": "e31e7fb3f9fec913d61ae558537ea5dcb8d8ac81a7ebcf8348909200a871a4a3",
-    "lean/verification/local_check.json": "f30b9388110b511825540c283140fdd226799012a4be865879210fea2c10697c"
-  }
+    "lean/verification/local_check.json": "96cc47cf8086c338b14f9ed96dc906fedc09148f4eb4fb355e56e204b7ccbc4a",
+    "code/data/final_matlab_replication.json": "0401fe6fed12cbea98d818d4d713ecaf2c8f351cc584b2c770080245e4ab51a5"
+  },
+  "paper_source_commit": "8e51a872c874f09079ce106068cc065b0a0efbee",
+  "artifact_hash_scope": "SHA256 of canonical Git blob bytes (LF text); files must be staged before refresh"
 }
