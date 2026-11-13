@@ -131,13 +131,13 @@ def build_figures(baseline, scenarios, sensitivity, summary, moments_data):
     share_z = 100 * np.asarray(profile["s_I"])
     fig, ax = plt.subplots(figsize=(9.6, 3.7))
     ax.plot(z, share_z, color=BASE, ls="--", lw=2.8,
-            label="Modelo de dos sectores, elasticidad común")
+            label=r"Modelo de dos sectores, $\phi_F=\phi_I=0{,}38$")
     ax.plot(z[[0, -1]], share_z[[0, -1]], "o", color=BASE, ms=7)
     for index, offset, alignment in ((0, (12, 6), "left"), (-1, (-12, -20), "right")):
         ax.annotate(f"{share_z[index]:.1f} %", (z[index], share_z[index]),
                     xytext=offset, textcoords="offset points", ha=alignment,
                     fontsize=15, color=INK)
-    ax.set_xlabel(r"Productividad $z$ (promedio = 1)")
+    ax.set_xlabel(r"Productividad $z$")
     ax.set_ylabel("Fracción de horas informales (%)")
     ax.set_xlim(0, 1.03*z[-1])
     ax.set_ylim(0, 100)
