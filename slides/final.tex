@@ -45,7 +45,9 @@
 {\LARGE\bfseries Ahorro, flexibilidad de horas\par e informalidad en el Perú}\par
 \vspace{5mm}
 {\large ¿Cuándo influye la riqueza en el reparto de horas\par entre formal e informal, a igual productividad?}\par
-\vspace{7mm}
+\vspace{4mm}
+{\normalsize\color{Teal}\textbf{Resultado:} más riqueza reduce la fracción de horas informales solo si estas son más flexibles ($\phi_I>\phi_F$), con horas interiores y tiempo holgado.}\par
+\vspace{5mm}
 {\large John Svante Barraza Ratachi}\par\vspace{2mm}
 {\small Presentación final, avance para discusión\hfill 13 de noviembre de 2026}\par
 \vspace{6mm}
@@ -60,17 +62,7 @@
 \end{frame}
 
 % 3
-\begin{frame}{La respuesta depende de la elasticidad relativa de las horas}
-\labeltext{Resultado condicional}
-\large A igual productividad, si el valor de un sol adicional disminuye con los activos, más riqueza reduce la fracción de horas informales cuando las horas informales son más elásticas.
-\vspace{4mm}
-\begin{center}\normalsize
-Elasticidades iguales: el canal directo se cancela.\par\vspace{2mm}
-Elasticidad informal mayor: aparece el canal de composición.
-\end{center}
-\takeaway{Se estudia una decisión de horas, con empleo simultáneo posible en ambos sectores.}
-\source{Condiciones: retornos positivos, horas interiores y tiempo holgado.}
-\end{frame}
+
 
 \begin{frame}[plain]\seccion{2}{Modelo}{Quién decide, qué está dado y qué precios se ajustan}\end{frame}
 
@@ -124,7 +116,7 @@ Responde con \textbf{saltos}. Suele modelarse con búsqueda y emparejamiento (\e
 \end{frame}
 
 % 7
-\begin{frame}[label=hogar]{El hogar valora consumo y paga desutilidad por trabajar}
+\begin{frame}[label=hogar]{El problema del hogar: consumir, trabajar y ahorrar}
 \begin{equation}
 \max_{c_F,c_I,\ell_F,\ell_I}\ \mathbb E_0\int_0^\infty e^{-\rho t}
 \left[\ln C-\sum_{s\in\{F,I\}}\frac{\psi_s\ell_s^{1+1/\phi_s}}{1+1/\phi_s}\right]dt
@@ -141,7 +133,7 @@ a\geq\underline a,\qquad \ell_F,\ell_I\geq0,\qquad \ell_F+\ell_I\leq\bar H.
 \source{$C$ agrega ambos bienes mediante CES; $\rho$ es descuento; $T$ es transferencia. $R_s$ es retorno neto o efectivo para el hogar. \hyperlink{hjb}{\beamergotobutton{HJB y CES}}}
 \end{frame}
 
-\begin{frame}{La barrera reduce el retorno formal; la prima encarece la deuda}
+\begin{frame}[label=cunasmain]{La barrera reduce el retorno formal; la prima encarece la deuda}
 \labeltext{Retornos por hora para el hogar}
 \begin{equation}
 R_F(z)=(1-\tau)w_Fz-\kappa(z),\qquad R_I(z)=\widetilde w_Iz^{\nu_I}.
@@ -152,7 +144,7 @@ R_F(z)=(1-\tau)w_Fz-\kappa(z),\qquad R_I(z)=\widetilde w_Iz^{\nu_I}.
 \column{.47\linewidth}\labeltext{Prima crediticia}$\chi(z)(-a)_+$: pago cuando hay deuda.\par\vspace{2mm}Modifica el ahorro y el costo de endeudarse.
 \end{columns}
 \takeaway{Son cuñas reducidas. Una barrera por hora no es costo fijo de entrada al empleo.}
-\source{\hyperlink{parametros}{\beamergotobutton{Parámetros y fuentes}}}
+\source{\hyperlink{parametros}{\beamergotobutton{Parámetros y fuentes}} \hyperlink{cunas}{\beamergotobutton{Formas de $\kappa$ y $\chi$}}}
 \end{frame}
 
 \begin{frame}[label=foc]{Una hora adicional iguala beneficio marginal y costo marginal}
@@ -299,7 +291,7 @@ s_I\equiv\frac{\ell_I}{\ell_F+\ell_I},\qquad
 \labeltext{3. De cociente a fracción de horas}
 \begin{equation}s_I=\frac{q}{1+q}\quad\Rightarrow\quad
 \partial_a s_I=s_I(1-s_I)(\phi_I-\phi_F)\frac{V_{aa}}{V_a}.\end{equation}
-\takeaway{El paso difícil pendiente es probar $V_{aa}<0$ para la solución completa, fuera de la grilla.}
+
 \source{Prueba algebraica, verificada con SymPy y Lean.}
 \end{frame}
 
@@ -385,6 +377,8 @@ No se identifica un efecto causal de activos, no se demuestra mejor ajuste a una
 \vspace{4mm}
 \item \textbf{Capital humano:} que la educación determine la productividad y el acceso al empleo formal, para acercarse al gradiente por educación (V6).
 \vspace{4mm}
+\item \textbf{Ciclo de vida:} hogares que envejecen y se jubilan, con productividad por edad; la informalidad y el ahorro cambian con la edad.
+\vspace{4mm}
 \item \textbf{Estimar las elasticidades:} medir $\phi_F$ y $\phi_I$ con datos de panel de horas por sector, en lugar de suponer su diferencia.
 \end{enumerate}
 \vspace{4mm}
@@ -406,6 +400,7 @@ No se identifica un efecto causal de activos, no se demuestra mejor ajuste a una
 \hyperlink{literatura}{A6. Literatura}&Qué hace cada antecedente\\[3mm]
 \hyperlink{formalizacion}{A7. Lean y manuscrito}&Pendientes de entrega\\[3mm]
 \hyperlink{reparto}{A8. Horas en dos sectores}&Pregunta del 16 de octubre\\[3mm]
+\hyperlink{cunas}{A9. Formas de las cuñas}&$\kappa(z)$, $\chi(z)$ y por qué\\[3mm]
 \hyperlink{det1}{D1--D6. Detalle}&Timing, distribución, signos, reajuste y cuñas en GE\\
 \end{tabular}\back{critica}
 \end{frame}
@@ -549,6 +544,27 @@ Horvath (2017) ya modela un hogar que elige consumos y horas formales e informal
 \takeaway{Las cuñas cambian decisiones, distribución y precios. Estos son contrastes estacionarios entre especificaciones.}
 \source{1 punto básico = 0,01 puntos porcentuales. Referencia: $r=\InterestRefFinal\%$, $K=\CapitalRefFinal$. \CountGEFinal{} GE resueltos en MATLAB y auditados; dos repetidos el 12nov coinciden. Comparaciones estacionarias, no efectos causales. \hyperlink{precision}{\beamergotobutton{Auditoría}}}
 \back{anexos}
+\end{frame}
+
+\begin{frame}[label=cunas]{A9. Formas funcionales de las cuñas}
+\small
+\begin{equation*}
+w(z)=\frac{z_{\max}-z}{z_{\max}-z_{\min}}\in[0,1],\qquad
+\kappa(z)=\kappa_1\,w(z),\qquad \chi(z)=\chi\,w(z)^{\eta}.
+\end{equation*}
+\begin{columns}[T,onlytextwidth]
+\column{.48\linewidth}\labeltext{Valores y condiciones}
+$\kappa_1=0{,}4$: barrera máxima, en $z_{\min}$; $\kappa(z_{\max})=0$.\par
+$\chi=0{,}02$, $\eta=1$: prima lineal, solo si $a<0$.\par
+Ambas $\ge0$ y decrecientes en $z$.\par
+$R_F(z)>0$ para todo $z$: su mínimo es $0{,}012$, en $z_{\min}$.
+\column{.48\linewidth}\labeltext{Por qué esta forma}
+Es una forma reducida elegida \emph{ad hoc}: no se estima ni se toma de un paper. Es la más simple decreciente en $z$.\par
+$\kappa_1$ se calibra para replicar M3.\par
+Robustez: formas cuadrática y raíz dan casi la misma brecha V3; formas constantes en GE bajan M3 (anexos D5 y D6).
+\end{columns}
+\takeaway{La pendiente de la barrera se disciplina con M3, pero su forma no está identificada por los datos.}
+\source{$w(z)$ usa los extremos de la grilla de $z$, así que la forma depende de esa normalización.}\back{cunasmain}
 \end{frame}
 
 \begin{frame}[plain,label=hojamano]
