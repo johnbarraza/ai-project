@@ -229,7 +229,7 @@ En equilibrio coinciden y fijan $r$.
 \begin{frame}{Hogares formal- e informal-dominantes: los informales gastan menos}
 \begin{center}\includegraphics[width=\linewidth,height=6.1cm,keepaspectratio]{figures/tesis/gasto_superpuesto.png}\end{center}
 \takeaway{Los hogares informal-dominantes gastan en promedio 32\% menos que los formal-dominantes.}
-\source{\textcolor{blue}{Azul}: dominio formal (media 1,388; desv. est. 0,384; masa 34,7\%). \textcolor{red}{Rojo}: dominio informal (media 0,947; desv. est. 0,366; masa 65,3\%). \textcolor{Gray}{Gris discontinuo}: total (media 1,100; desv. est. 0,427). Líneas punteadas: medias. Un hogar es formal-dominante si más de la mitad de sus horas son formales. $\phi_F=\phi_I$.}
+\source{Líneas punteadas: medias. Un hogar es formal-dominante si más de la mitad de sus horas son formales. $\phi_F=\phi_I$.}
 \end{frame}
 
 % 11c
@@ -240,8 +240,8 @@ En equilibrio coinciden y fijan $r$.
 \column{.40\linewidth}\centering
 \includegraphics[width=\linewidth,height=5.5cm,keepaspectratio]{figures/tesis/lorenz.png}
 \end{columns}
-\takeaway{En Q1 el ingreso informal es 39\% y la transferencia 17\%; en Q5 los activos son 50\%. Gini de riqueza 0,52.}
-\source{$\phi_F=\phi_I$.}
+\takeaway{En Q1 el ingreso informal es 39\% y la transferencia 17\%; en Q5 los activos son 50\%. Gini del modelo: riqueza 0,52; gasto 0,22.}
+\source{$\phi_F=\phi_I$. Los beneficios informales ya están dentro del ingreso informal: $\widetilde w_I=w_I+\Pi_I/L_I$; por eso ``Beneficio'' es cero. Dato Perú: Gini de consumo 0,40 (Banco Mundial 2024); de riqueza cerca de 0,68 (WID).}
 \end{frame}
 
 % 11d
@@ -250,11 +250,11 @@ En equilibrio coinciden y fijan $r$.
 \begin{tabular}{@{}p{7mm}p{62mm}rp{36mm}rl@{}}
 \toprule
 &\textbf{Momento}&\textbf{Dato}&\textbf{Fuente}&\textbf{Modelo}&\textbf{¿Replica?}\\\midrule
-\multicolumn{6}{@{}l}{\textcolor{Teal}{\textbf{Metas: se usan para calibrar}}}\\
+\multicolumn{6}{@{}l}{\textcolor{Teal}{\textbf{Calibración}}}\\
 M1&Horas informales / horas totales (\%)&\DataMOne&ENAHO 2015--2019&\ModelMOne&\textcolor{Teal}{sí}\\
 M2&PBI informal / PBI (\%)&\DataMTwo&INEI, Cuenta Satélite&\ModelMTwo&\textcolor{Teal}{sí}\\
-M3&Formalidad: $z$ máximo menos mínimo (pp)&\DataMThree&INEI, EPEN 2025&\ModelMThree&\textcolor{Teal}{sí}\\\midrule
-\multicolumn{6}{@{}l}{\textcolor{Orange}{\textbf{Validaciones: no se usan para calibrar}}}\\
+M3&Formalidad: alta $-$ baja productividad (pp)&\DataMThree&INEI, EPEN 2025&\ModelMThree&\textcolor{Teal}{sí}\\\midrule
+\multicolumn{6}{@{}l}{\textcolor{Orange}{\textbf{Validación}}}\\
 V1&Salario neto formal / informal&\DataVOne&BCRP&\ModelVOne&\textcolor{Teal}{sí}\\
 V2&Gasto hogar formal / informal&\DataVTwo&ENAHO 2015--2019&\ModelVTwo&\textcolor{Orange}{subestima}\\
 V3&Informalidad Q1 menos Q5 (pp)&\DataVThree&INEI (2018)&\PEGapLow&\textcolor{Orange}{no}\\

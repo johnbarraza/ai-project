@@ -67,11 +67,11 @@ for k, (mask, col, name) in enumerate(groups):
     xp, yp = wpdf(xg, wg)
     mu, med, sd = wstats(xg, wg)
     ax.plot(xp, yp, color=col, lw=2.2, ls="--" if k == 2 else "-",
-            label=f"{name}: media={mu:.3f}, desv. est.={sd:.3f}, masa={100*wg.sum():.1f}%")
+            label=f"{name}: media {mu:.2f}; desv. est. {sd:.2f}; masa {100*wg.sum():.0f}%".replace("0.", "0,").replace("1.", "1,"))
     ax.axvline(mu, color=col, ls=":", lw=1.2)
 ax.set(xlim=(lo, hi), ylim=(0, None), xlabel="Gasto del modelo", ylabel="Densidad")
 ax.tick_params(direction="in", top=True, right=True)
-# Leyenda en la nota al pie de la slide.
+ax.legend(loc="upper right", frameon=True, edgecolor="black", fancybox=False, fontsize=15)
 fig.tight_layout()
 out = Path(__file__).with_name("gasto_superpuesto.png")
 fig.savefig(out, dpi=300)
