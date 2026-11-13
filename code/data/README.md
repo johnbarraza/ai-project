@@ -74,3 +74,10 @@ el exportador solo se necesita para reconstruir estos insumos desde la fuente lo
 - **Regresión:** `ge_reg_phi038` (phi_I = phi_F = 0.38) reproduce la corrida de la tesis. `verify.py` lo exige con una tolerancia de 5e-4 en M1, M3, V3, Gini y r*.
 - **Columnas:** las definiciones son las de `model.py`. La masa es `g * da`; V3 usa el corte de quintiles de la tesis. `z_nodes_with_negative_slope` es la fracción de nodos de z en que s_I cae con a.
 - **Contenido:** son resultados del modelo, no microdatos.
+
+## `ge_phi_continuation.json`: GE con `phi_I` distinto de `phi_F` (13 nov)
+
+- Ocho equilibrios estacionarios 400×40 (activos de −1 a 40), `phi_F = 0.38` y `phi_I` de 0.38 a 0.70 por continuación: cada caso parte de la solución anterior.
+- Motor D73 con un único cambio: exponente informal propio (`HA_IE_FRISCH_I`). Con `phi_I = 0.38` reproduce la referencia D73 (M1 51.682 %, M3 37.364 pp, V3 4.399 pp).
+- `psi_I` y `kappa` quedan fijos (sin reajuste a M1 y M3). Todos pasan el auditor D73 (HJB, KFE, mercados, recursos y FOC con `phi_I`); `V_a` baja con `a` en toda la grilla.
+- CI no ejecuta MATLAB; el archivo guarda los indicadores auditados y el SHA-256 de cada MAT. No es una certificación de precisión global.

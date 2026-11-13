@@ -266,13 +266,18 @@ V6&Formalidad: superior $-$ secundaria (pp)&\VSixData&INEI, EPEN 2025&\VSixModel
 
 % 13
 \begin{frame}[label=resultado]{Proposición 1: cuándo la riqueza reduce la fracción de horas informales}
-\small\textbf{Supuestos:} (i) misma $z$ y mismos precios, así $R_F,R_I>0$ no dependen de $a$; (ii) $\psi_s,\phi_s>0$; (iii) $V_a>0$ y derivable, cerca de $a_0>\underline a$; (iv) horas interiores: $\ell_F,\ell_I>0$ y $\ell_F+\ell_I<\bar H$.
+\footnotesize
+\textbf{S1 (comparación individual).} $z$ fija, entorno de $a_0>\underline a$; precios y $R_F,R_I>0$ no dependen de $a$.\par
+\textbf{S2 (preferencias).} $\psi_s>0$, $\phi_s>0$; costo de horas separable entre sectores.\par
+\textbf{S3 (rama interior).} $V_a>0$ y derivable en $a_0$; $\ell_F,\ell_I>0$ cumplen las FOC y $\ell_F+\ell_I<\bar H$.\par
+\textbf{S4 (concavidad local).} $V_{aa}(a_0,z)<0$; solo se usa para los signos.\par
+\small Bajo S1--S3:
 \begin{equation}
 s_I\equiv\frac{\ell_I}{\ell_F+\ell_I},\qquad
 \boxed{\frac{\partial s_I}{\partial a}=s_I(1-s_I)(\phi_I-\phi_F)\frac{V_{aa}}{V_a}.}
 \end{equation}
 \vspace{2mm}
-\normalsize Si además $V_{aa}<0$:
+\normalsize Si además S4:
 \begin{equation}
 \phi_I>\phi_F\Rightarrow\partial_a s_I<0,\quad
 \phi_I=\phi_F\Rightarrow\partial_a s_I=0,\quad
@@ -292,7 +297,11 @@ s_I\equiv\frac{\ell_I}{\ell_F+\ell_I},\qquad
 \begin{equation}s_I=\frac{q}{1+q}\quad\Rightarrow\quad
 \partial_a s_I=s_I(1-s_I)(\phi_I-\phi_F)\frac{V_{aa}}{V_a}.\end{equation}
 
-\source{Prueba algebraica, verificada con SymPy y Lean.}
+\vspace{1mm}{\footnotesize
+\textbf{Hecho:} la identidad bajo S1--S3, verificada con SymPy y Lean.\quad
+\textbf{Difícil:} descartar el tope de tiempo (con $\lambda_H>0$ el cociente cambia; anexo A2) y ver que con $\phi_I=\phi_F$ el canal desaparece.\quad
+\textbf{Abierto:} S4 no está probado; solo se comprueba que $V_a$ baja con $a$ en la grilla. Tampoco existencia ni unicidad del GE ni el borde $a=\underline a$.}
+\source{Prueba completa en el paper, sección 4.}
 \end{frame}
 
 \begin{frame}[plain]\seccion{4}{Simulaciones}{Qué cambia en equilibrio parcial y en equilibrio general}\end{frame}
@@ -301,7 +310,7 @@ s_I\equiv\frac{\ell_I}{\ell_F+\ell_I},\qquad
 \begin{frame}[label=simulaciones]{La elasticidad informal mayor genera pendiente por activos}
 \fig{assets}
 \takeaway{Gris discontinuo: modelo de dos sectores. Curvas sólidas: sensibilidad.}
-\source{Equilibrio parcial, $z=\FixedZFinal$: precios, $V_a$ y distribución fijos; $\psi_I$ y barrera reajustados para mantener M1 y M3. No muestra el GE con $\phi_I\neq\phi_F$.}
+\source{Equilibrio parcial, $z=\FixedZFinal$: precios, $V_a$ y distribución fijos; $\psi_I$ y barrera reajustados para mantener M1 y M3. El GE con $\phi_I\neq\phi_F$ está en la slide siguiente.}
 \end{frame}
 
 % 16b
@@ -316,6 +325,29 @@ s_I\equiv\frac{\ell_I}{\ell_F+\ell_I},\qquad
 \fig{phi_gap}
 \takeaway{La brecha pasa de \PEGapLow{} a \PEGapHigh{} pp al variar $\phi_I$ entre \PhiFormalFinal{} y \PhiHighFinal.}
 \source{M1 = \PEMOne\% y M3 = \PEMThree{} pp se mantienen por reajuste.}
+\end{frame}
+
+\begin{frame}[label=gephi]{En equilibrio general, la brecha por activos también aumenta}
+\begin{columns}[T,onlytextwidth]
+\column{.52\linewidth}\centering\small
+\begin{tabular}{rrrrr}
+\toprule
+$\phi_I$&$r$ (\%)&$p_I$&M1 (\%)&\textbf{V3 (pp)}\\
+\midrule
+0,38&6,576&0,928&51,7&\textbf{4,4}\\
+0,50&6,576&0,981&42,9&\textbf{6,7}\\
+0,60&6,577&1,023&36,5&\textbf{8,2}\\
+0,70&6,577&1,063&30,9&\textbf{9,3}\\
+\bottomrule
+\end{tabular}
+\column{.45\linewidth}\footnotesize
+\labeltext{Qué verifican}
+Que el signo de la proposición sobrevive cuando $r$, $p_I$, salarios y distribución se resuelven de nuevo. Con $\phi_I=0{,}38$ se recupera la referencia exacta.
+\labeltext{Qué no pueden mostrar}
+Causalidad, el valor de $\phi_I$ en el Perú, ni precisión global. Aquí $\psi_I$ y $\kappa$ quedan fijos: M1 cae, así que la comparación no mantiene las metas.
+\end{columns}
+\takeaway{PE con reajuste: V3 de 4,3 a 10,4 pp. GE sin reajuste: de 4,4 a 9,3 pp. $r$ casi no cambia; ajusta $p_I$.}
+\source{GE $400\times40$, activos de $-1$ a 40, $\phi_F=0{,}38$. Continuación en $\phi_I$ (8 pasos), cada uno desde el anterior; los 8 pasan HJB, KFE, mercados, recursos y FOC, y $V_a$ baja con $a$ en toda la grilla. Datos: \path{code/data/ge_phi_continuation.json}.}
 \end{frame}
 
 % 18
@@ -333,12 +365,12 @@ s_I\equiv\frac{\ell_I}{\ell_F+\ell_I},\qquad
 \small
 \begin{equation}\begin{aligned}\partial_a s_I&=s_I(1-s_I)(\phi_I-\phi_F)\\&\quad\cdot V_{aa}/V_a.\end{aligned}\end{equation}
 En Lean, $V(a)=V_a(a,z)$ y $d=V_{aa}(a,z)$.\par\vspace{2mm}
-Retornos y costos positivos; derivabilidad de $V$. Los signos requieren $d<0$.\par\vspace{2mm}
+Hipótesis: S1, S2 y derivabilidad de $V$ (parte de S3). Los signos requieren $d<0$ (S4).\par\vspace{2mm}
 Código propio, comprobado localmente sin \texttt{sorry}.
 \column{.61\linewidth}\labeltext{Declaración y fragmento reales}
 \lstinputlisting[firstline=50,lastline=57]{../lean/LaborComposition.lean}
 \end{columns}
-\takeaway{Verifica la rama explícita del resultado condicional; no prueba concavidad de la HJB ni existencia del GE.}
+\takeaway{Mi veredicto: Lean prueba la identidad \emph{bajo una hipótesis añadida}. Toma las horas interiores como fórmula dada, $(vR_s/\psi_s)^{\phi_s}$, en lugar de derivarlas de las FOC y del tope (S3). S4 entra como supuesto $d<0$, no se prueba.}
 \source{Lean 4.30.0-rc2, Mathlib 5450b53e. Salida y hash de fuente en \path{lean/verification/}. Flujo oficial sobre el paper en commit 8e51a87: prueba sin \texttt{sorry} y check rápido aprobado; revisión independiente pendiente. \hyperlink{formalizacion}{\beamergotobutton{Alcance}}}
 \end{frame}
 
@@ -368,6 +400,16 @@ La pendiente de la barrera influye en M3. Recuperar dos metas internas no elige 
 \vspace{2mm}\labeltext{Lo que sigue abierto}
 No se identifica un efecto causal de activos, no se demuestra mejor ajuste a una medida empírica homogénea y no se presenta respuesta a un choque agregado.
 \source{Margen extensivo (formal, informal o no trabajar) y otras variantes quedan como líneas futuras.}
+\end{frame}
+
+\begin{frame}[label=preguntas]{Preguntas para la crítica de la clase}
+\begin{enumerate}
+\item \textbf{¿Es creíble $\phi_I>\phi_F$?} ¿Qué datos del Perú (panel de horas por sector, ENAHO) servirían para identificar la diferencia?
+\vspace{5mm}
+\item \textbf{En el GE, ¿qué comparación es la correcta?} ¿Reajustar $\psi_I$ y $\kappa$ para mantener M1 y M3, o dejar los niveles fijos como en el \hyperlink{gephi}{GE de la parte 4}?
+\vspace{5mm}
+\item \textbf{¿Basta el margen intensivo?} ¿Repartir horas entre sectores es un supuesto aceptable, o hace falta el margen extensivo (trabajar formal, informal o no trabajar)?
+\end{enumerate}
 \end{frame}
 
 % 24
