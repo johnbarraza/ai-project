@@ -259,8 +259,8 @@ z
      </g>
     </g>
     <g id="text_8">
-     <!-- Productividad laboral $z$ (índice) -->
-     <g style="fill: #172033" transform="translate(218.57 247.550188) scale(0.15 -0.15)">
+     <!-- Productividad $z$ (promedio = 1) -->
+     <g style="fill: #172033" transform="translate(216.62 247.550188) scale(0.15 -0.15)">
       <defs>
        <path id="LMSans10-Regular-50" d="M 3725 3149 
 C 3725 3834 3091 4442 2208 4442 
@@ -419,32 +419,6 @@ L 2118 845
 z
 " transform="scale(0.015625)"/>
        <path id="LMSans10-Regular-20" transform="scale(0.015625)"/>
-       <path id="LMSans10-Regular-6c" d="M 998 0 
-L 998 4442 
-L 518 4442 
-L 518 0 
-L 998 0 
-z
-" transform="scale(0.015625)"/>
-       <path id="LMSans10-Regular-62" d="M 3072 1427 
-C 3072 2221 2637 2912 2035 2912 
-C 1786 2912 1389 2848 1005 2534 
-L 1005 4442 
-L 525 4442 
-L 525 0 
-L 1024 0 
-L 1024 294 
-C 1178 154 1453 -70 1882 -70 
-C 2522 -70 3072 570 3072 1427 
-z
-M 2573 1427 
-C 2573 595 2035 320 1645 320 
-C 1395 320 1184 435 1024 730 
-L 1024 2144 
-C 1126 2298 1357 2522 1709 2522 
-C 2086 2522 2573 2246 2573 1427 
-z
-" transform="scale(0.015625)"/>
        <path id="Cmmi10-7a" d="M 313 -72 
 Q 263 -72 263 -13 
 Q 263 19 275 31 
@@ -513,32 +487,46 @@ C 506 -467 1427 -1318 1734 -1600
 L 2125 -1600 
 z
 " transform="scale(0.015625)"/>
-       <path id="LMSans10-Regular-ed" d="M 998 0 
-L 998 2842 
-L 518 2842 
-L 518 0 
-L 998 0 
+       <path id="LMSans10-Regular-70" d="M 3072 1427 
+C 3072 2195 2669 2912 2054 2912 
+C 1670 2912 1299 2778 1005 2528 
+L 1005 2842 
+L 525 2842 
+L 525 -1242 
+L 1024 -1242 
+L 1024 294 
+C 1222 109 1504 -70 1888 -70 
+C 2509 -70 3072 557 3072 1427 
 z
-M 1869 4442 
-L 1370 4442 
-L 518 3373 
-L 909 3373 
-L 1869 4442 
+M 2573 1427 
+C 2573 768 2118 320 1638 320 
+C 1389 320 1216 448 1088 621 
+C 1024 717 1024 730 1024 845 
+L 1024 2131 
+C 1178 2355 1427 2502 1702 2502 
+C 2189 2502 2573 2016 2573 1427 
 z
 " transform="scale(0.015625)"/>
-       <path id="LMSans10-Regular-6e" d="M 2784 0 
-L 2784 1907 
-C 2784 2330 2688 2912 1907 2912 
-C 1331 2912 1018 2477 979 2426 
+       <path id="LMSans10-Regular-6d" d="M 4563 0 
+L 4563 1907 
+C 4563 2336 4461 2912 3686 2912 
+C 3302 2912 2970 2733 2733 2387 
+C 2566 2874 2118 2912 1914 2912 
+C 1453 2912 1152 2650 979 2419 
 L 979 2880 
 L 518 2880 
 L 518 0 
 L 1018 0 
 L 1018 1568 
-C 1018 1990 1178 2522 1664 2522 
-C 2278 2522 2285 2067 2285 1862 
-L 2285 0 
-L 2784 0 
+C 1018 2003 1190 2522 1664 2522 
+C 2259 2522 2291 2106 2291 1862 
+L 2291 0 
+L 2790 0 
+L 2790 1568 
+C 2790 2003 2963 2522 3437 2522 
+C 4032 2522 4064 2106 4064 1862 
+L 4064 0 
+L 4563 0 
 z
 " transform="scale(0.015625)"/>
        <path id="LMSans10-Regular-65" d="M 2650 1402 
@@ -556,6 +544,23 @@ M 2285 1754
 L 704 1754 
 C 806 2240 1146 2560 1510 2560 
 C 1843 2560 2202 2342 2285 1754 
+z
+" transform="scale(0.015625)"/>
+       <path id="LMSans10-Regular-3d" d="M 4614 2240 
+C 4614 2368 4493 2368 4403 2368 
+L 570 2368 
+C 480 2368 358 2368 358 2240 
+C 358 2112 480 2112 576 2112 
+L 4397 2112 
+C 4493 2112 4614 2112 4614 2240 
+z
+M 4614 960 
+C 4614 1088 4493 1088 4397 1088 
+L 576 1088 
+C 480 1088 358 1088 358 960 
+C 358 832 480 832 570 832 
+L 4403 832 
+C 4493 832 4614 832 4614 960 
 z
 " transform="scale(0.015625)"/>
        <path id="LMSans10-Regular-29" d="M 1978 1600 
@@ -584,24 +589,22 @@ z
       <use xlink:href="#LMSans10-Regular-61" transform="translate(477.59993 0)"/>
       <use xlink:href="#LMSans10-Regular-64" transform="translate(525.699921 0)"/>
       <use xlink:href="#LMSans10-Regular-20" transform="translate(577.399918 0)"/>
-      <use xlink:href="#LMSans10-Regular-6c" transform="translate(610.699905 0)"/>
-      <use xlink:href="#LMSans10-Regular-61" transform="translate(634.599899 0)"/>
-      <use xlink:href="#LMSans10-Regular-62" transform="translate(682.69989 0)"/>
-      <use xlink:href="#LMSans10-Regular-6f" transform="translate(734.399887 0)"/>
-      <use xlink:href="#LMSans10-Regular-72" transform="translate(784.399872 0)"/>
-      <use xlink:href="#LMSans10-Regular-61" transform="translate(818.599869 0)"/>
-      <use xlink:href="#LMSans10-Regular-6c" transform="translate(866.69986 0)"/>
-      <use xlink:href="#LMSans10-Regular-20" transform="translate(890.599854 0)"/>
-      <use xlink:href="#Cmmi10-7a" transform="translate(923.899841 0)"/>
-      <use xlink:href="#LMSans10-Regular-20" transform="translate(970.384216 0)"/>
-      <use xlink:href="#LMSans10-Regular-28" transform="translate(1003.684204 0)"/>
-      <use xlink:href="#LMSans10-Regular-ed" transform="translate(1042.584198 0)"/>
-      <use xlink:href="#LMSans10-Regular-6e" transform="translate(1066.484192 0)"/>
-      <use xlink:href="#LMSans10-Regular-64" transform="translate(1118.184189 0)"/>
-      <use xlink:href="#LMSans10-Regular-69" transform="translate(1169.884186 0)"/>
-      <use xlink:href="#LMSans10-Regular-63" transform="translate(1193.78418 0)"/>
-      <use xlink:href="#LMSans10-Regular-65" transform="translate(1238.184174 0)"/>
-      <use xlink:href="#LMSans10-Regular-29" transform="translate(1282.584167 0)"/>
+      <use xlink:href="#Cmmi10-7a" transform="translate(610.699905 0)"/>
+      <use xlink:href="#LMSans10-Regular-20" transform="translate(657.18428 0)"/>
+      <use xlink:href="#LMSans10-Regular-28" transform="translate(690.484268 0)"/>
+      <use xlink:href="#LMSans10-Regular-70" transform="translate(729.384262 0)"/>
+      <use xlink:href="#LMSans10-Regular-72" transform="translate(781.084259 0)"/>
+      <use xlink:href="#LMSans10-Regular-6f" transform="translate(815.284256 0)"/>
+      <use xlink:href="#LMSans10-Regular-6d" transform="translate(865.284241 0)"/>
+      <use xlink:href="#LMSans10-Regular-65" transform="translate(944.684235 0)"/>
+      <use xlink:href="#LMSans10-Regular-64" transform="translate(989.084229 0)"/>
+      <use xlink:href="#LMSans10-Regular-69" transform="translate(1040.784225 0)"/>
+      <use xlink:href="#LMSans10-Regular-6f" transform="translate(1064.684219 0)"/>
+      <use xlink:href="#LMSans10-Regular-20" transform="translate(1114.684204 0)"/>
+      <use xlink:href="#LMSans10-Regular-3d" transform="translate(1147.984192 0)"/>
+      <use xlink:href="#LMSans10-Regular-20" transform="translate(1225.78418 0)"/>
+      <use xlink:href="#LMSans10-Regular-31" transform="translate(1259.084167 0)"/>
+      <use xlink:href="#LMSans10-Regular-29" transform="translate(1309.084152 0)"/>
      </g>
     </g>
    </g>
@@ -758,6 +761,21 @@ L 1542 3373
 L 2502 4442 
 z
 " transform="scale(0.015625)"/>
+       <path id="LMSans10-Regular-6e" d="M 2784 0 
+L 2784 1907 
+C 2784 2330 2688 2912 1907 2912 
+C 1331 2912 1018 2477 979 2426 
+L 979 2880 
+L 518 2880 
+L 518 0 
+L 1018 0 
+L 1018 1568 
+C 1018 1990 1178 2522 1664 2522 
+C 2278 2522 2285 2067 2285 1862 
+L 2285 0 
+L 2784 0 
+z
+" transform="scale(0.015625)"/>
        <path id="LMSans10-Regular-68" d="M 2784 0 
 L 2784 1907 
 C 2784 2330 2688 2912 1907 2912 
@@ -812,26 +830,11 @@ C 1107 4077 1536 4122 1702 4122
 C 1830 4122 2003 4109 2221 4013 
 z
 " transform="scale(0.015625)"/>
-       <path id="LMSans10-Regular-6d" d="M 4563 0 
-L 4563 1907 
-C 4563 2336 4461 2912 3686 2912 
-C 3302 2912 2970 2733 2733 2387 
-C 2566 2874 2118 2912 1914 2912 
-C 1453 2912 1152 2650 979 2419 
-L 979 2880 
-L 518 2880 
+       <path id="LMSans10-Regular-6c" d="M 998 0 
+L 998 4442 
+L 518 4442 
 L 518 0 
-L 1018 0 
-L 1018 1568 
-C 1018 2003 1190 2522 1664 2522 
-C 2259 2522 2291 2106 2291 1862 
-L 2291 0 
-L 2790 0 
-L 2790 1568 
-C 2790 2003 2963 2522 3437 2522 
-C 4032 2522 4064 2106 4064 1862 
-L 4064 0 
-L 4563 0 
+L 998 0 
 z
 " transform="scale(0.015625)"/>
        <path id="LMSans10-Regular-25" d="M 2131 3507 

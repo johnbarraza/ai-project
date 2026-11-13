@@ -92,9 +92,10 @@ def build_final(baseline, scenarios, summary, moments_data):
         row = scenarios[index]
         values = row['ell_i'][:, z_index] / (row['ell_i'][:, z_index]+row['ell_f'][:, z_index])
         ax.plot(baseline['a'], 100*values, color=color, ls=line, lw=2.8,
-                label=rf"$\phi_I={row['phi_I']:.2f}$")
-    ax.set(xlabel='Activos del hogar a (unidades del modelo)',
-           ylabel='Horas informales / horas totales (%)')
+                label=(r"Base: $\phi=0{,}38$ en ambos" if index == 0 else
+                       rf"$\phi_I={row['phi_I']:.2f}$".replace('.', '{,}')))
+    ax.set(xlabel='Activos del hogar a',
+           ylabel='Horas informales (%)')
     ax.legend(frameon=False, ncol=3, loc='upper right')
     ax.grid(axis='y', color=GRID)
     save(fig, 'assets')
@@ -175,17 +176,36 @@ def build_final(baseline, scenarios, summary, moments_data):
     np.testing.assert_allclose(hours_fraction[1],summary['baseline']['M1'],atol=1e-12,rtol=0)
     fig,axes = plt.subplots(1,2,figsize=(9.8,3.5))
     axes[0].plot(baseline['a'],100*np.cumsum(wealth_mass),color=BLUE,lw=2.5)
-    axes[0].set(xlabel='Activos a (unidades del modelo)',ylabel='Población acumulada (%)',ylim=(0,100),
+    axes[0].set(xlabel='Activos a',ylabel='Población acumulada (%)',ylim=(0,100),
                 title='Distribución estacionaria de activos')
     axes[0].grid(axis='y',color=GRID)
     axes[1].bar([0,1],100*hours_fraction,color=[BLUE,TEAL],width=.55)
     for k,value in enumerate(100*hours_fraction):
         axes[1].text(k,value+2,f'{value:.2f}'.replace('.',','),ha='center')
     axes[1].set(xticks=[0,1],xticklabels=['Formales','Informales'],ylim=(0,100),
-                ylabel='Horas agregadas / horas totales (%)',title='Agregación de las decisiones')
+                ylabel='Horas (% del total)',title='Agregación de las decisiones')
     axes[1].grid(axis='y',color=GRID)
     axes[1].set_axisbelow(True)
     save(fig,'macro_distribution')
+
+    # Informal share at the wealth extremes, same D17 quintile cuts as V3.
+    from model import moments
+    fig,ax = plt.subplots(figsize=(9.8,3.5))
+    bars = [(scenarios[0],BASE,r'Base: $\phi=0{,}38$ en ambos'),(scenarios[4],TEAL,rf"$\phi_I={scenarios[4]['phi_I']:.2f}$")]
+    for k,(row,color,label) in enumerate(bars):
+        m = moments(row['ell_f'],row['ell_i'],baseline)
+        np.testing.assert_allclose(m['V3'],row['V3'],atol=1e-12,rtol=0)
+        q = 100*np.array([m['Q1'],m['Q5']])
+        x = np.arange(2)+(k-.5)*.38
+        ax.bar(x,q,width=.38,color=color,label=label)
+        for xi,v in zip(x,q):
+            ax.text(xi,v+.4,f'{v:.1f}'.replace('.',','),ha='center',fontsize=12)
+    ax.set(xticks=range(2),xticklabels=['Q1: menos activos','Q5: más activos'],ylim=(40,62),
+           ylabel='Horas informales (%)')
+    ax.legend(frameon=False,ncol=2,loc='upper right')
+    ax.grid(axis='y',color=GRID)
+    ax.set_axisbelow(True)
+    save(fig,'wealth_by_sector')
 
     fig,axes = plt.subplots(1,2,figsize=(9.8,3.4))
     alternatives=['chi_constant','kappa_constant','both_constant','both_constant_refit']
