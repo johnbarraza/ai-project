@@ -1,74 +1,170 @@
 \documentclass[11pt]{article}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=1.8cm]{geometry}
 \usepackage[spanish,es-nodecimaldot]{babel}
-\usepackage{amsmath,amssymb,enumitem,xcolor}
+\usepackage{amsmath,amssymb,enumitem,xcolor,array}
+\usepackage[most]{tcolorbox}
 \usepackage[hidelinks]{hyperref}
-\definecolor{Teal}{HTML}{008A92}
-\newcommand{\caja}{$\square$\ }
-\setlist[enumerate]{itemsep=4pt}
+\usepackage{needspace}
 \setlength{\parindent}{0pt}
-\title{Guía para la derivación a mano\\\large Ahorro, flexibilidad de horas e informalidad}
-\author{John Barraza}
-\date{12 de noviembre de 2026}
+\definecolor{Escribe}{HTML}{1E8449}
+\definecolor{Entiende}{HTML}{2E5AAC}
+\definecolor{Tuyo}{HTML}{D35400}
+\newtcolorbox{escribe}[1][]{colback=Escribe!7,colframe=Escribe,fonttitle=\bfseries,title={\large\ \ ESCRIBE EN TU HOJA #1}}
+\newtcolorbox{entiende}{colback=Entiende!6,colframe=Entiende,fonttitle=\bfseries,title={PARA ENTENDER (no lo copies)}}
+\newtcolorbox{tuyo}{colback=Tuyo!8,colframe=Tuyo,fonttitle=\bfseries,title={CON TUS PALABRAS}}
+\newcommand{\paso}[1]{\par\needspace{9\baselineskip}\medskip{\Large\bfseries Paso #1}\par\smallskip}
+% Una linea de algebra: izquierda (copiar, verde) | derecha (que hice, azul)
+\newenvironment{lineas}{\begin{tcolorbox}[colback=Escribe!7,colframe=Escribe,fonttitle=\bfseries,
+  title={\large\ \ ESCRIBE la columna izquierda \hfill \textcolor{white}{derecha: qué hice (no copiar)}\ \ }]
+  \renewcommand{\arraystretch}{2.1}\begin{tabular}{@{}>{$\displaystyle}m{0.60\linewidth}<{$}>{\small\color{Entiende}\raggedright\arraybackslash}m{0.33\linewidth}@{}}}
+  {\end{tabular}\end{tcolorbox}}
+\newcommand{\por}{\textbf{$\Rightarrow$}\ }
+
 \begin{document}
-\maketitle
-
-\noindent\fbox{\parbox{\linewidth}{\small
-\textbf{Qué es este documento.} Una guía para que escribas tú, a mano, la derivación. \textbf{No} es el apéndice manuscrito ni lo reemplaza. El issue \#7 pide, en el punto 7 de la final, ``dónde no le creíste a la IA, con la derivación a mano en pantalla y tu veredicto''. Escribe en papel con tus palabras, marca cada casilla al terminar el paso y saca una foto legible a \texttt{hand/}.}}
-
+{\LARGE\bfseries Derivación a mano, paso a paso}\par
+\smallskip
+{\large Ahorro, flexibilidad de horas e informalidad. John Barraza}\par
 \bigskip
-\textbf{Orden sugerido para esta noche:} Hoja A (la que va a la slide, unos 10 min). Las hojas B y C son para el paper del 26 de noviembre.
 
-\section*{Hoja A (para mañana). Dónde no le creí a la IA: el tope de tiempo}
-
-\textbf{Lo que propuso la IA:} un tope de horas activo, $\ell_F+\ell_I=\bar H$, podría explicar por qué los hogares pobres trabajan más en el sector informal.
-
-\begin{enumerate}
-\item \caja Escribe el bloque de horas con el tope y su multiplicador:
-\[
-\mathcal H=V_a(R_F\ell_F+R_I\ell_I)-\sum_{s\in\{F,I\}}\frac{\psi_s\,\ell_s^{1+1/\phi_s}}{1+1/\phi_s}+\lambda_H(\bar H-\ell_F-\ell_I).
-\]
-\item \caja Deriva respecto a $\ell_s$. Usa $\frac{d}{d\ell}\ell^{p}=p\,\ell^{p-1}$ con $p=1+1/\phi_s$ y cancela $p$:
-\[
-V_aR_s=\psi_s\,\ell_s^{1/\phi_s}+\lambda_H,\qquad s=F,I.
-\]
-\item \caja Escribe las condiciones de holgura complementaria:
-\[
-\lambda_H\ge 0,\qquad \ell_F+\ell_I\le\bar H,\qquad \lambda_H(\bar H-\ell_F-\ell_I)=0.
-\]
-\item \caja \textbf{Caso tope activo} ($\lambda_H>0$): muestra que $\lambda_H$ entra en ambas FOC, así que el cociente $\ell_I/\ell_F$ ya no es $(V_aR_I/\psi_I)^{\phi_I}/(V_aR_F/\psi_F)^{\phi_F}$. La fórmula interior deja de valer.
-\item \caja \textbf{Caso tope holgado} ($\ell_F+\ell_I<\bar H$): por complementariedad, $\lambda_H=0$, y vuelves a $\ell_s=(V_aR_s/\psi_s)^{\phi_s}$.
-\item \caja Anota el dato de tu calibración: masa de hogares en el tope $=0$; máximo de horas $\approx 0{,}749$ con $\bar H=1$ (fuente: \texttt{code/output/final\_verification.json}).
-\item \caja \textbf{Tu veredicto, con tus palabras.} Idea: ``El álgebra con tope puede ser correcta, pero en mi calibración nadie llega al tope, así que ese mecanismo no opera. Lo que mueve la composición es $\phi_I\neq\phi_F$.''
-\end{enumerate}
-\textbf{Foto:} \texttt{hand/03-veredicto-tiempo.jpg}. Avísale a Claude o Codex y la ponemos en la slide ``El tope de tiempo no explica el mecanismo''.
-
-\section*{Hoja B (paper). FOC del hogar y política explícita}
-\begin{enumerate}
-\item \caja Define $a$ (activos), $z$ (productividad, fija), $V_a$ (valor de un sol más), $R_F,R_I$ (retornos por hora), $\psi_s$ (nivel de costo) y $\phi_s$ (elasticidad).
-\item \caja Declara las condiciones: $V_a>0$, $R_s>0$, $\psi_s>0$, $\phi_s>0$, $\ell_s>0$ y tiempo holgado.
-\item \caja Con $\lambda_H=0$: $V_aR_s-\psi_s\ell_s^{1/\phi_s}=0$.
-\item \caja Divide entre $\psi_s>0$ y eleva a $\phi_s$ (base positiva): $\ell_s=\left(V_aR_s/\psi_s\right)^{\phi_s}$.
-\item \caja Segunda derivada: $-\frac{\psi_s}{\phi_s}\ell_s^{1/\phi_s-1}<0$. Escribe que es concavidad del bloque de horas, no de toda la HJB.
-\end{enumerate}
-
-\section*{Hoja C (paper). Cociente, regla de la cadena y signos}
-\begin{enumerate}
-\item \caja $q\equiv\ell_I/\ell_F=K\,V_a^{\phi_I-\phi_F}$, con $K=\dfrac{(R_I/\psi_I)^{\phi_I}}{(R_F/\psi_F)^{\phi_F}}>0$.
-\item \caja Explica por qué $K$ no depende de $a$: $z$, precios y retornos están fijos.
-\item \caja $\ln q=\ln K+(\phi_I-\phi_F)\ln V_a\ \Rightarrow\ \dfrac{q'}{q}=(\phi_I-\phi_F)\dfrac{V_{aa}}{V_a}$.
-\item \caja $s_I=\dfrac{q}{1+q}\ \Rightarrow\ s_I'=\dfrac{q'}{(1+q)^2}$, y comprueba aparte que $s_I(1-s_I)=\dfrac{q}{(1+q)^2}$.
-\item \caja Junta todo:
-\[\boxed{\partial_a s_I=s_I(1-s_I)(\phi_I-\phi_F)\frac{V_{aa}}{V_a}}\]
-\item \caja Signos: $0<s_I<1$ y $V_a>0$. Si además $V_{aa}<0$: $\phi_I>\phi_F\Rightarrow\partial_as_I<0$; $\phi_I=\phi_F\Rightarrow 0$; $\phi_I<\phi_F\Rightarrow\partial_as_I>0$.
-\item \caja Escribe qué sigue abierto: $V_{aa}<0$ está verificado en la grilla, no demostrado para la solución completa.
-\end{enumerate}
-
-\section*{Cómo comprobar tu hoja}
-\begin{itemize}
-\item Cada paso usa solo lo escrito en los pasos anteriores.
-\item Antes de dividir o sacar logaritmo, anotaste por qué la cantidad es positiva.
-\item El resultado final coincide con la slide de la Proposición y con Lean (\texttt{compositionConditionalHours}).
-\item La foto se lee en la pantalla del proyector: letra grande, buena luz, sin sombras.
+\begin{tcolorbox}[colback=white,colframe=black!60,title=Cómo usar esta guía]
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+\item[\textcolor{Escribe}{\rule{8pt}{8pt}}] \textbf{\textcolor{Escribe}{Verde}}: cópialo a mano. En las tablas, copia \textbf{solo la columna izquierda}, una línea debajo de la otra.
+\item[\textcolor{Entiende}{\rule{8pt}{8pt}}] \textbf{\textcolor{Entiende}{Azul}}: explica qué operación hiciste para pasar de la línea anterior a esa. No lo copies; léelo para entender.
+\item[\textcolor{Tuyo}{\rule{8pt}{8pt}}] \textbf{\textcolor{Tuyo}{Naranja}}: escríbelo en la hoja, pero redactado por ti.
 \end{itemize}
+\textbf{Para mañana basta la Hoja A} (unos 15 minutos). Las hojas B y C son para el paper del 26 de noviembre.\\
+\textbf{Regla de oro:} cada línea nueva sale de la anterior haciendo \textbf{una sola} operación, la que dice la columna azul.
+\end{tcolorbox}
+
+\section*{Antes de empezar: qué es cada letra}
+\begin{entiende}
+$a$: activos. \ $z$: productividad (exógena, promedio 1). \ $\ell_F,\ell_I$: horas formales e informales.\\
+$R_F,R_I$: lo que paga una hora en cada sector (dependen de $z$ y precios, \textbf{no de $a$}).\\
+$V_a$: cuánto vale \textbf{un sol más} de activos (sale de la HJB). \ $\psi_s$: nivel del costo de trabajar. \ $\phi_s$: elasticidad de las horas.\\
+$\bar H$: tiempo total disponible. \ $\lambda_H$: ``precio'' de una hora más de tiempo (multiplicador).\\[2pt]
+\textbf{Idea:} el hogar elige horas comparando lo que paga una hora ($V_aR_s$) con lo que le cuesta.
+\end{entiende}
+
+\section*{Hoja A (para mañana): dónde no le creí a la IA}
+\begin{entiende}
+\textbf{Por qué $\lambda_H$ importa:} $\lambda_H$ es cuánto ganaría el hogar con una hora más de tiempo. Si ya le sobra tiempo, una hora extra no le sirve: $\lambda_H=0$. Solo si usa todo su tiempo, $\lambda_H>0$.\\[3pt]
+\textbf{Qué dijo la IA:} si el hogar usa todo su tiempo ($\ell_F+\ell_I=\bar H$), eso podría explicar por qué los pobres trabajan más en informal.
+\textbf{Qué vas a mostrar:} con tope activo la fórmula cambia, pero en tu modelo nadie llega al tope; ese no es el mecanismo.
+\end{entiende}
+
+\paso{1. Título}
+\begin{escribe}
+Hoja A. Revisión de una idea de la IA: ¿el tope de horas explica la informalidad?
+\end{escribe}
+
+\paso{2. El problema de horas con el tope}
+\begin{lineas}
+\mathcal L=V_a(R_F\ell_F+R_I\ell_I)-\sum_{s=F,I}\frac{\psi_s\,\ell_s^{1+1/\phi_s}}{1+1/\phi_s}+\lambda_H(\bar H-\ell_F-\ell_I) & Lo que pagan las horas, menos lo que cuestan, más el tope con su multiplicador $\lambda_H$.\\
+\end{lineas}
+
+\paso{3. Derivar respecto a $\ell_s$ y despejar}
+\begin{lineas}
+\frac{\partial\mathcal L}{\partial\ell_s}=V_aR_s-\frac{\psi_s}{1+1/\phi_s}\Big(1+\tfrac{1}{\phi_s}\Big)\ell_s^{1/\phi_s}-\lambda_H=0 & Derivo cada término. Regla: la derivada de $\ell^{p}$ es $p\,\ell^{p-1}$, con $p=1+1/\phi_s$, y $p-1=1/\phi_s$.\\
+V_aR_s-\psi_s\,\ell_s^{1/\phi_s}-\lambda_H=0 & Cancelo $(1+1/\phi_s)$ arriba y abajo.\\
+V_aR_s=\psi_s\,\ell_s^{1/\phi_s}+\lambda_H & Paso $\psi_s\ell_s^{1/\phi_s}$ y $\lambda_H$ al lado derecho (cambian de signo).\\
+\lambda_H\ge0,\quad \ell_F+\ell_I\le\bar H,\quad \lambda_H(\bar H-\ell_F-\ell_I)=0 & \textbf{Ni dato ni supuesto:} es la regla matemática (KKT) para optimizar con una restricción ``$\le$''. El supuesto es solo el tope $\ell_F+\ell_I\le\bar H$.\\
+\end{lineas}
+
+\paso{4. Caso con tope activo ($\lambda_H>0$)}
+\begin{lineas}
+\psi_s\,\ell_s^{1/\phi_s}=V_aR_s-\lambda_H & Despejo: paso $\lambda_H$ a la izquierda restando.\\
+\ell_s^{1/\phi_s}=\frac{V_aR_s-\lambda_H}{\psi_s} & Divido ambos lados entre $\psi_s>0$.\\
+\ell_s=\left(\frac{V_aR_s-\lambda_H}{\psi_s}\right)^{\phi_s} & Elevo ambos lados a $\phi_s$: $(\ell^{1/\phi})^{\phi}=\ell$.\\
+\frac{\ell_I}{\ell_F}=\frac{\big((V_aR_I-\lambda_H)/\psi_I\big)^{\phi_I}}{\big((V_aR_F-\lambda_H)/\psi_F\big)^{\phi_F}} & Divido la ecuación de $I$ entre la de $F$. \textbf{$\lambda_H$ queda dentro}: la fórmula interior ya no vale.\\
+\end{lineas}
+
+\paso{5. Caso con tope holgado}
+\begin{lineas}
+\lambda_H\cdot\underbrace{(\bar H-\ell_F-\ell_I)}_{>0}=0 & Si sobra tiempo, el paréntesis es positivo.\\
+\por \lambda_H=0 & Un producto vale 0 y un factor es positivo: el otro factor, $\lambda_H$, tiene que ser 0.\\
+\ell_s=\left(\frac{V_aR_s}{\psi_s}\right)^{\phi_s} & Reemplazo $\lambda_H=0$ en el resultado del paso 4.\\
+\end{lineas}
+
+\paso{6. Cociente de horas sin tope}
+\begin{lineas}
+\frac{\ell_I}{\ell_F}=\frac{(V_aR_I/\psi_I)^{\phi_I}}{(V_aR_F/\psi_F)^{\phi_F}} & Divido la fórmula de $\ell_I$ entre la de $\ell_F$ (ambas del paso 5).\\
+\frac{\ell_I}{\ell_F}=K\,V_a^{\phi_I-\phi_F},\qquad K\equiv\frac{(R_I/\psi_I)^{\phi_I}}{(R_F/\psi_F)^{\phi_F}} & Separo lo que tiene $V_a$ y junto potencias: $V_a^{\phi_I}/V_a^{\phi_F}=V_a^{\phi_I-\phi_F}$. $K$ no depende de $a$.\\
+\phi_I=\phi_F\ \por \frac{\ell_I}{\ell_F}=K & El exponente es 0: el reparto no depende de la riqueza.\\
+\phi_I\neq\phi_F\ \por \frac{\ell_I}{\ell_F}\ \text{cambia con } V_a\text{, es decir, con la riqueza} & Solo $V_a$ cambia con $a$; el reparto se mueve únicamente si las elasticidades difieren.\\
+\end{lineas}
+\begin{entiende}
+\textbf{¿Y cómo sé que nadie llega al tope?} No va en la hoja: es un hecho de tu modelo resuelto en la computadora. Si te preguntan: ``lo verifiqué en la solución numérica; el hogar que más trabaja (el más endeudado y más productivo) usa 0,749 de su tiempo, con $\bar H=1$''.
+\end{entiende}
+
+\paso{7. Tu veredicto}
+\begin{tuyo}
+Con tus palabras, más o menos así: ``La IA propuso que el tope de horas explica por qué los pobres trabajan más en informal. El álgebra con tope es correcta: si $\lambda_H>0$, la fórmula cambia. Pero en la solución de mi modelo ningún hogar llega al tope, así que $\lambda_H=0$. Sin tope, el reparto de horas cambia con la riqueza solo si $\phi_I\neq\phi_F$. El mecanismo es la diferencia de elasticidades, no el tope.''
+\end{tuyo}
+
+\paso{8. Firma y foto}
+\begin{escribe}
+Tu nombre y la fecha, abajo a la derecha.
+\end{escribe}
+\begin{entiende}
+Foto de frente, con buena luz, sin sombra. Guárdala como \texttt{hand/03-veredicto-tiempo.jpg} y avísame.
+\end{entiende}
+
+\newpage
+\section*{Así debería verse tu Hoja A}
+\begin{tcolorbox}[colback=white,colframe=black!40,height=16cm,valign=top]
+\textcolor{Escribe}{\textbf{Hoja A. Revisión de una idea de la IA: ¿el tope de horas explica la informalidad?}}\par\medskip
+\textcolor{Escribe}{Paso 2: $\mathcal L=\dots$ (una línea)}\par\vspace{1cm}
+\textcolor{Escribe}{Paso 3: derivada $\to$ cancelo $\to$ $V_aR_s=\psi_s\ell_s^{1/\phi_s}+\lambda_H$ \ y condiciones de $\lambda_H$ (cuatro líneas)}\par\vspace{1.8cm}
+\textcolor{Escribe}{Paso 4: despejo $\ell_s$ con $\lambda_H$ y el cociente $\ell_I/\ell_F$ (cuatro líneas)}\par\vspace{1.8cm}
+\textcolor{Escribe}{Paso 5: $\lambda_H=0$ y $\ell_s=(V_aR_s/\psi_s)^{\phi_s}$ (dos líneas)}\par\vspace{1cm}
+\textcolor{Escribe}{Paso 6: $\ell_I/\ell_F=K\,V_a^{\phi_I-\phi_F}$ y los dos casos $\phi_I=\phi_F$, $\phi_I\neq\phi_F$ (cuatro líneas)}\par\vspace{1.8cm}
+\textcolor{Tuyo}{\textbf{Paso 7. Veredicto:} tres o cuatro líneas tuyas}\par\vspace{1.5cm}
+\hfill\textcolor{Escribe}{John Barraza, 12/11/2026}
+\end{tcolorbox}
+
+\newpage
+\section*{Hojas B y C (para el paper, 26 de noviembre)}
+\begin{entiende}
+La derivación completa de la Proposición 1. Mismo método: copia la columna izquierda; la derecha te dice qué hiciste.
+\end{entiende}
+
+\paso{B. De la FOC a las horas óptimas (sin tope)}
+\begin{lineas}
+V_aR_s=\psi_s\,\ell_s^{1/\phi_s} & FOC del paso 3 con $\lambda_H=0$: beneficio de una hora $=$ costo marginal.\\
+\ell_s^{1/\phi_s}=\frac{V_aR_s}{\psi_s} & Divido entre $\psi_s>0$.\\
+\ell_s=\left(\frac{V_aR_s}{\psi_s}\right)^{\phi_s} & Elevo a $\phi_s$ (la base es positiva).\\
+\frac{\partial^2\mathcal L}{\partial\ell_s^2}=-\frac{\psi_s}{\phi_s}\ell_s^{1/\phi_s-1}<0 & Derivo otra vez: negativo, así que es un máximo.\\
+\end{lineas}
+
+\paso{C1. Cociente de horas}
+\begin{lineas}
+q\equiv\frac{\ell_I}{\ell_F}=\frac{(V_aR_I/\psi_I)^{\phi_I}}{(V_aR_F/\psi_F)^{\phi_F}} & Divido la fórmula de $\ell_I$ entre la de $\ell_F$.\\
+q=\frac{(R_I/\psi_I)^{\phi_I}}{(R_F/\psi_F)^{\phi_F}}\cdot\frac{V_a^{\phi_I}}{V_a^{\phi_F}} & Separo lo que tiene $V_a$ de lo que no.\\
+q=K\,V_a^{\phi_I-\phi_F},\qquad K\equiv\frac{(R_I/\psi_I)^{\phi_I}}{(R_F/\psi_F)^{\phi_F}}>0 & Junto potencias: $V_a^{\phi_I}/V_a^{\phi_F}=V_a^{\phi_I-\phi_F}$. $K$ no depende de $a$.\\
+\end{lineas}
+
+\paso{C2. Derivar el cociente respecto a $a$}
+\begin{lineas}
+\ln q=\ln K+(\phi_I-\phi_F)\ln V_a & Saco logaritmo (todo es positivo): el producto pasa a suma y la potencia baja.\\
+\frac{q'}{q}=0+(\phi_I-\phi_F)\frac{V_{aa}}{V_a} & Derivo respecto a $a$: $(\ln q)'=q'/q$; $\ln K$ es constante; $(\ln V_a)'=V_{aa}/V_a$.\\
+q'=q\,(\phi_I-\phi_F)\frac{V_{aa}}{V_a} & Paso $q$ multiplicando al lado derecho.\\
+\end{lineas}
+
+\paso{C3. De cociente a fracción informal}
+\begin{lineas}
+s_I=\frac{\ell_I}{\ell_F+\ell_I}=\frac{q}{1+q} & Divido arriba y abajo entre $\ell_F$.\\
+s_I'=\frac{q'(1+q)-q\,q'}{(1+q)^2}=\frac{q'}{(1+q)^2} & Regla del cociente; se cancela $q\,q'$.\\
+s_I(1-s_I)=\frac{q}{1+q}\cdot\frac{1}{1+q}=\frac{q}{(1+q)^2} & Cálculo aparte: $1-s_I=1/(1+q)$.\\
+s_I'=\frac{q}{(1+q)^2}(\phi_I-\phi_F)\frac{V_{aa}}{V_a} & Reemplazo $q'$ de C2.\\
+\boxed{\partial_a s_I=s_I(1-s_I)(\phi_I-\phi_F)\frac{V_{aa}}{V_a}} & Reemplazo $q/(1+q)^2$ por $s_I(1-s_I)$.\\
+\end{lineas}
+
+\paso{C4. Signos}
+\begin{lineas}
+s_I(1-s_I)>0,\quad V_a>0,\quad V_{aa}<0 & $0<s_I<1$; $V_a>0$ por supuesto; $V_{aa}<0$ es la concavidad.\\
+\phi_I>\phi_F\Rightarrow\partial_as_I<0;\quad \phi_I=\phi_F\Rightarrow0;\quad \phi_I<\phi_F\Rightarrow\partial_as_I>0 & El signo lo decide $(\phi_I-\phi_F)$ multiplicado por algo negativo.\\
+\end{lineas}
+\begin{tuyo}
+Intuición: más riqueza $\Rightarrow$ $V_a$ menor $\Rightarrow$ menos horas en ambos sectores; si las informales responden más, su fracción cae. Lo abierto: $V_{aa}<0$ está verificado en la grilla, no demostrado.
+\end{tuyo}
 \end{document}
