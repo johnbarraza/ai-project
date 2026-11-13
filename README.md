@@ -11,12 +11,11 @@ Versión de trabajo del 12 de noviembre de 2026.
 
 | Material | Estado y enlace |
 |---|---|
-| Presentación final | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex): 24 láminas principales y 8 de consulta, con distribución, circuito GE, precios y capital |
+| Presentación final | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex): modelo, proposición, simulaciones, Lean e IA, con anexos de consulta |
 | Manuscrito | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) · [bibliografía](paper/references.bib): borrador propio, proposición y prueba completa |
 | Simulaciones | [Verificador](code/verify.py): PE reproducido y diagnósticos GE D73; [repetición MATLAB del 12nov](docs/replicacion-matlab-final.md) de dos casos, auditada |
 | Lean propio | [Código y alcance](lean/README.md): derivada y signos comprobados localmente, sin `sorry`; flujo oficial sobre paper publicado en commit pendiente |
-| Manuscrito personal | [Guía](hand/guia_derivacion.md): fotos y revisión del estudiante pendientes; la guía no las sustituye |
-| Preparación oral | [Guion de 30 minutos](slides/final-notes.md) · [cumplimiento](docs/final-cumplimiento.md) |
+| Derivación a mano | [Hoja manuscrita](hand/01-derivacion-tope-tiempo.pdf): revisión de una idea de la IA (tope de horas), mostrada en la presentación |
 | Primera entrega | [Propuesta](proposal/proposal.pdf) · [tema](slides/topic.pdf), conservados |
 | Colaboración con IA | [Registro crudo](prompts.md); veredictos y límites en el paper |
 
