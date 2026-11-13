@@ -137,7 +137,7 @@ def build_figures(baseline, scenarios, sensitivity, summary, moments_data):
         ax.annotate(f"{share_z[index]:.1f} %", (z[index], share_z[index]),
                     xytext=offset, textcoords="offset points", ha=alignment,
                     fontsize=15, color=INK)
-    ax.set_xlabel(r"Productividad laboral $z$ (índice)")
+    ax.set_xlabel(r"Productividad $z$ (promedio = 1)")
     ax.set_ylabel("Fracción de horas informales (%)")
     ax.set_xlim(0, 1.03*z[-1])
     ax.set_ylim(0, 100)

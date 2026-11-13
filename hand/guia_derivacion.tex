@@ -1,0 +1,74 @@
+\documentclass[11pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage[spanish,es-nodecimaldot]{babel}
+\usepackage{amsmath,amssymb,enumitem,xcolor}
+\usepackage[hidelinks]{hyperref}
+\definecolor{Teal}{HTML}{008A92}
+\newcommand{\caja}{$\square$\ }
+\setlist[enumerate]{itemsep=4pt}
+\setlength{\parindent}{0pt}
+\title{Guía para la derivación a mano\\\large Ahorro, flexibilidad de horas e informalidad}
+\author{John Barraza}
+\date{12 de noviembre de 2026}
+\begin{document}
+\maketitle
+
+\noindent\fbox{\parbox{\linewidth}{\small
+\textbf{Qué es este documento.} Una guía para que escribas tú, a mano, la derivación. \textbf{No} es el apéndice manuscrito ni lo reemplaza. El issue \#7 pide, en el punto 7 de la final, ``dónde no le creíste a la IA, con la derivación a mano en pantalla y tu veredicto''. Escribe en papel con tus palabras, marca cada casilla al terminar el paso y saca una foto legible a \texttt{hand/}.}}
+
+\bigskip
+\textbf{Orden sugerido para esta noche:} Hoja A (la que va a la slide, unos 10 min). Las hojas B y C son para el paper del 26 de noviembre.
+
+\section*{Hoja A (para mañana). Dónde no le creí a la IA: el tope de tiempo}
+
+\textbf{Lo que propuso la IA:} un tope de horas activo, $\ell_F+\ell_I=\bar H$, podría explicar por qué los hogares pobres trabajan más en el sector informal.
+
+\begin{enumerate}
+\item \caja Escribe el bloque de horas con el tope y su multiplicador:
+\[
+\mathcal H=V_a(R_F\ell_F+R_I\ell_I)-\sum_{s\in\{F,I\}}\frac{\psi_s\,\ell_s^{1+1/\phi_s}}{1+1/\phi_s}+\lambda_H(\bar H-\ell_F-\ell_I).
+\]
+\item \caja Deriva respecto a $\ell_s$. Usa $\frac{d}{d\ell}\ell^{p}=p\,\ell^{p-1}$ con $p=1+1/\phi_s$ y cancela $p$:
+\[
+V_aR_s=\psi_s\,\ell_s^{1/\phi_s}+\lambda_H,\qquad s=F,I.
+\]
+\item \caja Escribe las condiciones de holgura complementaria:
+\[
+\lambda_H\ge 0,\qquad \ell_F+\ell_I\le\bar H,\qquad \lambda_H(\bar H-\ell_F-\ell_I)=0.
+\]
+\item \caja \textbf{Caso tope activo} ($\lambda_H>0$): muestra que $\lambda_H$ entra en ambas FOC, así que el cociente $\ell_I/\ell_F$ ya no es $(V_aR_I/\psi_I)^{\phi_I}/(V_aR_F/\psi_F)^{\phi_F}$. La fórmula interior deja de valer.
+\item \caja \textbf{Caso tope holgado} ($\ell_F+\ell_I<\bar H$): por complementariedad, $\lambda_H=0$, y vuelves a $\ell_s=(V_aR_s/\psi_s)^{\phi_s}$.
+\item \caja Anota el dato de tu calibración: masa de hogares en el tope $=0$; máximo de horas $\approx 0{,}749$ con $\bar H=1$ (fuente: \texttt{code/output/final\_verification.json}).
+\item \caja \textbf{Tu veredicto, con tus palabras.} Idea: ``El álgebra con tope puede ser correcta, pero en mi calibración nadie llega al tope, así que ese mecanismo no opera. Lo que mueve la composición es $\phi_I\neq\phi_F$.''
+\end{enumerate}
+\textbf{Foto:} \texttt{hand/03-veredicto-tiempo.jpg}. Avísale a Claude o Codex y la ponemos en la slide ``El tope de tiempo no explica el mecanismo''.
+
+\section*{Hoja B (paper). FOC del hogar y política explícita}
+\begin{enumerate}
+\item \caja Define $a$ (activos), $z$ (productividad, fija), $V_a$ (valor de un sol más), $R_F,R_I$ (retornos por hora), $\psi_s$ (nivel de costo) y $\phi_s$ (elasticidad).
+\item \caja Declara las condiciones: $V_a>0$, $R_s>0$, $\psi_s>0$, $\phi_s>0$, $\ell_s>0$ y tiempo holgado.
+\item \caja Con $\lambda_H=0$: $V_aR_s-\psi_s\ell_s^{1/\phi_s}=0$.
+\item \caja Divide entre $\psi_s>0$ y eleva a $\phi_s$ (base positiva): $\ell_s=\left(V_aR_s/\psi_s\right)^{\phi_s}$.
+\item \caja Segunda derivada: $-\frac{\psi_s}{\phi_s}\ell_s^{1/\phi_s-1}<0$. Escribe que es concavidad del bloque de horas, no de toda la HJB.
+\end{enumerate}
+
+\section*{Hoja C (paper). Cociente, regla de la cadena y signos}
+\begin{enumerate}
+\item \caja $q\equiv\ell_I/\ell_F=K\,V_a^{\phi_I-\phi_F}$, con $K=\dfrac{(R_I/\psi_I)^{\phi_I}}{(R_F/\psi_F)^{\phi_F}}>0$.
+\item \caja Explica por qué $K$ no depende de $a$: $z$, precios y retornos están fijos.
+\item \caja $\ln q=\ln K+(\phi_I-\phi_F)\ln V_a\ \Rightarrow\ \dfrac{q'}{q}=(\phi_I-\phi_F)\dfrac{V_{aa}}{V_a}$.
+\item \caja $s_I=\dfrac{q}{1+q}\ \Rightarrow\ s_I'=\dfrac{q'}{(1+q)^2}$, y comprueba aparte que $s_I(1-s_I)=\dfrac{q}{(1+q)^2}$.
+\item \caja Junta todo:
+\[\boxed{\partial_a s_I=s_I(1-s_I)(\phi_I-\phi_F)\frac{V_{aa}}{V_a}}\]
+\item \caja Signos: $0<s_I<1$ y $V_a>0$. Si además $V_{aa}<0$: $\phi_I>\phi_F\Rightarrow\partial_as_I<0$; $\phi_I=\phi_F\Rightarrow 0$; $\phi_I<\phi_F\Rightarrow\partial_as_I>0$.
+\item \caja Escribe qué sigue abierto: $V_{aa}<0$ está verificado en la grilla, no demostrado para la solución completa.
+\end{enumerate}
+
+\section*{Cómo comprobar tu hoja}
+\begin{itemize}
+\item Cada paso usa solo lo escrito en los pasos anteriores.
+\item Antes de dividir o sacar logaritmo, anotaste por qué la cantidad es positiva.
+\item El resultado final coincide con la slide de la Proposición y con Lean (\texttt{compositionConditionalHours}).
+\item La foto se lee en la pantalla del proyector: letra grande, buena luz, sin sombras.
+\end{itemize}
+\end{document}
