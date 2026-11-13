@@ -8,6 +8,7 @@
 \lstset{basicstyle=\ttfamily\fontsize{7.6}{9}\selectfont,columns=fullflexible,breaklines=true,keepspaces=true,showstringspaces=false,literate={ℝ}{{$\mathbb R$}}1 {→}{{$\to$}}1}
 \usetikzlibrary{arrows.meta,positioning,calc}
 \input{../code/output/final_numbers.tex}
+\input{../code/output/topic_numbers.tex}
 \usefonttheme{professionalfonts}
 \definecolor{Ink}{HTML}{172033}
 \definecolor{Blue}{HTML}{223F91}
@@ -87,6 +88,22 @@ La sensibilidad permite elasticidades sectoriales distintas.
 \end{columns}
 \takeaway{Se conserva ahorro bajo riesgo. Se añade una decisión de composición de horas.}
 \source{Aiyagari (1994); formulación continua de Achdou et al. (2022). Galindo et al. es antecedente de informalidad y riqueza, con estado laboral exógeno. \hyperlink{literatura}{\beamergotobutton{Literatura}} \hyperlink{reparto}{\beamergotobutton{¿Repartir horas?}}}
+\end{frame}
+
+% 4b
+\begin{frame}[label=margenes]{Este modelo estudia el margen intensivo, no el extensivo}
+\begin{columns}[T,onlytextwidth]
+\column{.47\linewidth}\labeltext{Margen intensivo (este modelo)}
+\textbf{Qué es:} cuántas \textbf{horas} trabaja el hogar en cada sector, una variable continua.\par\vspace{2mm}
+Todos trabajan en ambos sectores; cambia la \emph{proporción} de horas.\par\vspace{2mm}
+Responde de forma \textbf{continua}: sale de la FOC de horas.\par\vspace{2mm}
+Medida: fracción de horas informales, $s_I=\ell_I/(\ell_F+\ell_I)$.
+\column{.47\linewidth}\labeltext{Margen extensivo (fuera del alcance)}
+\textbf{Qué es:} decisiones \textbf{discretas}: trabajar o no, y en qué sector.\par\vspace{2mm}
+Cada persona está en un solo estado; cambia \emph{cuántas personas} hay en cada uno.\par\vspace{2mm}
+Responde con \textbf{saltos}. Suele modelarse con búsqueda y emparejamiento (\emph{matching}): vacantes, llegada de ofertas y separaciones, o con costos fijos de entrada.
+\end{columns}
+\takeaway{El modelo solo tiene margen intensivo. Para comparar con datos de personas, un hogar es ``informal-dominante'' si más de la mitad de sus horas son informales.}
 \end{frame}
 
 % 5
@@ -210,9 +227,9 @@ En equilibrio coinciden y fijan $r$.
 
 % 11b
 \begin{frame}{Hogares formal- e informal-dominantes: los informales gastan menos}
-\begin{center}\includegraphics[width=\linewidth,height=6.1cm,keepaspectratio]{figures/tesis/gasto_dominio.png}\end{center}
-\takeaway{Dominio informal: 65,3\% de los hogares, gasto medio 0,95. Dominio formal: 34,7\%, gasto medio 1,39.}
-\source{Un hogar es formal-dominante si más de la mitad de sus horas son formales. $\phi_F=\phi_I$.}
+\begin{center}\includegraphics[width=\linewidth,height=6.1cm,keepaspectratio]{figures/tesis/gasto_superpuesto.png}\end{center}
+\takeaway{Los hogares informal-dominantes gastan en promedio 32\% menos que los formal-dominantes.}
+\source{\textcolor{blue}{Azul}: dominio formal (media 1,388; desv. est. 0,384; masa 34,7\%). \textcolor{red}{Rojo}: dominio informal (media 0,947; desv. est. 0,366; masa 65,3\%). \textcolor{Gray}{Gris discontinuo}: total (media 1,100; desv. est. 0,427). Líneas punteadas: medias. Un hogar es formal-dominante si más de la mitad de sus horas son formales. $\phi_F=\phi_I$.}
 \end{frame}
 
 % 11c
@@ -225,6 +242,26 @@ En equilibrio coinciden y fijan $r$.
 \end{columns}
 \takeaway{En Q1 el ingreso informal es 39\% y la transferencia 17\%; en Q5 los activos son 50\%. Gini de riqueza 0,52.}
 \source{$\phi_F=\phi_I$.}
+\end{frame}
+
+% 11d
+\begin{frame}{Calibración: tres metas y cuatro validaciones}
+\small\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}p{7mm}p{62mm}rp{36mm}rl@{}}
+\toprule
+&\textbf{Momento}&\textbf{Dato}&\textbf{Fuente}&\textbf{Modelo}&\textbf{¿Replica?}\\\midrule
+\multicolumn{6}{@{}l}{\textcolor{Teal}{\textbf{Metas: se usan para calibrar}}}\\
+M1&Horas informales / horas totales (\%)&\DataMOne&ENAHO 2015--2019&\ModelMOne&\textcolor{Teal}{sí}\\
+M2&PBI informal / PBI (\%)&\DataMTwo&INEI, Cuenta Satélite&\ModelMTwo&\textcolor{Teal}{sí}\\
+M3&Formalidad: $z$ máximo menos mínimo (pp)&\DataMThree&INEI, EPEN 2025&\ModelMThree&\textcolor{Teal}{sí}\\\midrule
+\multicolumn{6}{@{}l}{\textcolor{Orange}{\textbf{Validaciones: no se usan para calibrar}}}\\
+V1&Salario neto formal / informal&\DataVOne&BCRP&\ModelVOne&\textcolor{Teal}{sí}\\
+V2&Gasto hogar formal / informal&\DataVTwo&ENAHO 2015--2019&\ModelVTwo&\textcolor{Orange}{subestima}\\
+V3&Informalidad Q1 menos Q5 (pp)&\DataVThree&INEI (2018)&\PEGapLow&\textcolor{Orange}{no}\\
+V6&Formalidad: superior $-$ secundaria (pp)&\VSixData&INEI, EPEN 2025&\VSixModel&\textcolor{Orange}{no}\\\bottomrule
+\end{tabular}
+\takeaway{El modelo acierta niveles, pero no los gradientes por riqueza y educación. Ese hueco motiva $\phi_I>\phi_F$.}
+\source{$\phi_F=\phi_I$. V3: el dato cuenta personas por quintil de ingreso; el modelo, horas por quintil de activos.}
 \end{frame}
 
 % 11
@@ -315,15 +352,17 @@ Código propio, comprobado localmente sin \texttt{sorry}.
 
 % 22
 \begin{frame}[label=ia]{El tope de tiempo no explica el mecanismo si está holgado}
-\labeltext{Idea de la IA que se revisó}
-Un tope activo podría cambiar el reparto cuando el hogar se empobrece.
-\labeltext{Derivación para evaluar esa idea}
-\begin{equation}V_aR_s=\psi_s\ell_s^{1/\phi_s}+\lambda_H,\qquad
-\lambda_H(\bar H-\ell_F-\ell_I)=0.\end{equation}
-\labeltext{Veredicto para la calibración histórica}
-\small El álgebra del caso restringido puede ser correcta, pero ese mecanismo no opera aquí: masa en el tope = \PENoCap, horas máximas = \PEMaxHours{} con $\bar H=1$. Se debe estudiar el bloque interior, $\lambda_H=0$.
-\takeaway{La derivación está tipografiada para revisar el argumento. Falta la hoja manuscrita personal.}
-\source{Caso B1 del registro de decisiones, reproducido con el export histórico.}
+\begin{columns}[T,onlytextwidth]
+\column{.56\linewidth}\centering
+\hyperlink{hojamano}{\includegraphics[width=\linewidth,height=6.6cm,keepaspectratio]{figures/hand_tope_tiempo.png}}
+\column{.41\linewidth}\labeltext{Idea de la IA}
+\small Un tope de horas activo podría cambiar el reparto cuando el hogar se empobrece.
+\labeltext{Mi derivación (a mano)}
+Con tope activo, $\lambda_H$ entra en ambas FOC y la fórmula cambia. Con tope holgado, KKT da $\lambda_H=0$.
+\labeltext{Veredicto}
+En mi modelo nadie llega al tope (horas máximas \PEMaxHours{} con $\bar H=1$): $\lambda_H=0$. El reparto cambia con la riqueza solo si $\phi_I\neq\phi_F$.
+\end{columns}
+\source{Caso B1 del registro de decisiones. Original en el repo: \href{https://github.com/johnbarraza/ai-project/blob/main/hand/01-derivacion-tope-tiempo.pdf}{\path{hand/01-derivacion-tope-tiempo.pdf}}. \hyperlink{hojamano}{\beamergotobutton{Ver hoja completa}}}
 \end{frame}
 
 \begin{frame}[plain]\seccion{6}{Discusión}{Respuesta, límites y preguntas para la clase}\end{frame}
@@ -496,7 +535,7 @@ Horvath (2017) ya modela un hogar que elige consumos y horas formales e informal
 \source{GE $400\times40$. Ambas constantes reajustadas con $\psi_I$ y el nivel de $\kappa$.}
 \back{anexos}
 \end{frame}
-\begin{frame}[label=det5]{D5. En GE, la barrera influye en la brecha por productividad}
+\begin{frame}[label=det7]{D5. En GE, la barrera influye en la brecha por productividad}
 \fig{wedges}
 \takeaway{La barrera constante reduce M3 de \WedgeMThreeRef{} a \WedgeMThreeConst{} pp. La prima constante cambia poco.}
 \source{GE $400\times40$: precios, políticas y distribución se resuelven de nuevo. M3 compara extremos de $z$.}
@@ -508,6 +547,11 @@ Horvath (2017) ya modela un hogar que elige consumos y horas formales e informal
 \takeaway{Las cuñas cambian decisiones, distribución y precios. Estos son contrastes estacionarios entre especificaciones.}
 \source{1 punto básico = 0,01 puntos porcentuales. Referencia: $r=\InterestRefFinal\%$, $K=\CapitalRefFinal$. \CountGEFinal{} GE resueltos en MATLAB y auditados; dos repetidos el 12nov coinciden. Comparaciones estacionarias, no efectos causales. \hyperlink{precision}{\beamergotobutton{Auditoría}}}
 \back{anexos}
+\end{frame}
+
+\begin{frame}[plain,label=hojamano]
+\centering\includegraphics[height=.92\paperheight,width=.98\paperwidth,keepaspectratio]{figures/hand_tope_tiempo.png}
+\hfill\hyperlink{ia}{\beamerreturnbutton{Volver}}
 \end{frame}
 
 \end{document}
