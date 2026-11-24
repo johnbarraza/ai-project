@@ -1,7 +1,7 @@
 # Ahorro, flexibilidad de horas e informalidad en el Perú
 
 **John Svante Barraza Ratachi · AI and Economic Modeling · UP 2026-II · Track B**
-Versión de trabajo del 12 de noviembre de 2026.
+Revisión para el paper final: 24 de noviembre de 2026. [Estado de requisitos y pendientes](docs/entrega-paper.md).
 
 **Pregunta.** ¿Cuándo influye la riqueza en el reparto de horas entre formal e informal, a igual productividad?
 
@@ -12,15 +12,15 @@ Versión de trabajo del 12 de noviembre de 2026.
 | Material | Estado y enlace |
 |---|---|
 | Presentación final | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex): modelo, proposición, simulaciones, Lean e IA, con anexos de consulta |
-| Manuscrito | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) · [bibliografía](paper/references.bib): borrador propio, proposición y prueba completa |
-| Simulaciones | [Verificador](code/verify.py): PE reproducido y diagnósticos GE D73; [repetición MATLAB del 12nov](docs/replicacion-matlab-final.md) de dos casos, auditada |
+| Manuscrito | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) · [bibliografía](paper/references.bib): 13 páginas de cuerpo, 15 totales; GE y contrastes de tiempo incorporados; cierre Lean/manuscrito pendiente |
+| Simulaciones | [Verificador](code/verify.py): PE, D73, [repetición MATLAB del12nov](docs/replicacion-matlab-final.md) y 23 GE del13nov reanalizados para el paper; cuatro figuras nuevas |
 | Lean propio | [Código y alcance](lean/README.md): derivada y signos comprobados localmente, sin `sorry`; flujo oficial sobre paper publicado en commit pendiente |
-| Derivación a mano | [Hoja manuscrita](hand/01-derivacion-tope-tiempo.pdf): revisión de una idea de la IA (tope de horas), mostrada en la presentación |
+| Derivación a mano | [Hoja original y pendientes](hand/README.md): una página, con errata identificada; faltan las demás derivaciones personales |
 | Primera entrega | [Propuesta](proposal/proposal.pdf) · [tema](slides/topic.pdf), conservados |
 | Colaboración con IA | [Registro crudo](prompts.md); veredictos y límites en el paper |
 
 **Reproducir:** instalar `code/requirements.txt` y ejecutar `python code/verify.py`. Compilar desde `paper/` con `pdflatex paper.tex`, `bibtex paper`, dos pasadas de `pdflatex`; desde `slides/`, dos pasadas de `pdflatex final.tex`. Lean tiene instrucciones separadas en su README.
 
-Los números por personas/gasto y por horas/activos no se tratan como medidas idénticas. Los contrastes D73 son estacionarios, no IRF ni efectos causales. La precisión global sigue pendiente.
+Personas/gasto y horas/activos no son medidas idénticas. Los GE son estacionarios, sin IRF ni interpretación causal. Las elasticidades distintas son una sensibilidad ilustrativa; [evidencia y límites](docs/evidencia-elasticidades.md). La precisión global sigue pendiente.
 
 Según el [issue #7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7), las slides se entregan en main el **12nov, 22:00 Lima**; exposición **13nov, 07:30**; paper completo **26nov, 22:00**. La final se publicó mediante el [PR #5](https://github.com/johnbarraza/ai-project/pull/5), con checks aprobados. El [paper fuente en commit](https://github.com/johnbarraza/ai-project/blob/8e51a872c874f09079ce106068cc065b0a0efbee/paper/paper.pdf) queda fijado para el flujo oficial. Los pendientes científicos permanecen explícitos.

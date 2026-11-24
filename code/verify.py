@@ -18,9 +18,9 @@ from model import (PHI_I_GRID, calibrate, fit_education_groups, group_formality,
 
 HERE = Path(__file__).resolve().parent
 GE_WALRAS_TOL = 1e-3  # regression run reaches 8.6e-5
-# Céspedes y Rendón (2012), BCRP DT 2012-017, Cuadro 2 (ingreso total por hora; EPE Lima 2002-2010),
-# as read by John on p. 18-19 of the BCRP PDF: formal 0.39 (e.e. 0.02), informal 0.37. Mean 0.38 = thesis phi_F.
-FRISCH_EVIDENCE = dict(formal=0.39, informal=0.37, formal_se=0.02)
+# Céspedes y Rendón (2012), BCRP DT 2012-017, Cuadro 2: total hourly income.
+# Source version and interpretation limits are recorded with the estimates.
+FRISCH_EVIDENCE = json.loads((HERE/'data/frisch_evidence.json').read_text(encoding='utf-8'))['estimates']
 
 
 def require(condition, message):
@@ -499,6 +499,8 @@ def main():
     build_figures(baseline, scenarios, sensitivity, summary, moments_data)
     from final_figures import build_final
     build_final(baseline, scenarios, summary, moments_data)
+    from paper_results import build_paper_results
+    build_paper_results()
     print("OK: SymPy, baseline, quintile conventions, joint calibration and independent maxima")
     print(f"V_a relative gap: {baseline['va_relative_gap']:.12g}")
     print("phi_I   psi_I       kappa_z1    V3 D17 (pp)   V3 MATLAB (pp)")

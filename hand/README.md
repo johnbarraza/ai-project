@@ -1,7 +1,15 @@
-# Derivaciones manuscritas: evidencia personal pendiente
+# Derivaciones personales para el paper
 
-El profesor pide las derivaciones reales del estudiante, sin saltos de álgebra y con cada condición comprobada donde se usa. Deben conservarse fotos o escaneos legibles.
+La evidencia manuscrita disponible es [01-derivacion-tope-tiempo.pdf](01-derivacion-tope-tiempo.pdf), una página del autor ya mostrada en la presentación. Conserva su versión original. Tiene dos errores identificados en [la errata](errata-01.md); la errata tipografiada no se presenta como una corrección escrita por el estudiante.
 
-La [guía tipografiada](guia_derivacion.md) prepara las FOC, la proposición y el veredicto sobre el tope de tiempo. No es evidencia manuscrita ni prueba de que el autor ya hizo esa revisión. Todavía no se encontraron o recibieron las fotos de esas hojas.
+Para la entrega del 26 de noviembre faltan las hojas personales que completen la prueba y las demás derivaciones del paper. La guía existente [guia_derivacion.tex](guia_derivacion.tex) es material de preparación, no evidencia manuscrita. Los PDF locales llamados `guia_*` son guías y borradores; no se cuentan como hojas del autor ni se incorporan automáticamente al entregable.
 
-La lámina 22 debe incorporar una foto real del paso que revisaste y tu veredicto. El paper exige después el conjunto completo de derivaciones, incluidas firmas y recursos. No se ha declarado completado ese apéndice.
+Comprobar antes de entregar:
+
+- FOC de horas, inversión de la potencia, condiciones de positividad e interioridad.
+- Cociente de horas, logaritmos, derivación por activos y regla del cociente.
+- Identidad `q/(1+q)^2 = sI(1−sI)` y los tres casos de signo, con cada condición indicada.
+- Consumo y agregador CES, FOC de ambas firmas y cierre de recursos, cuando se deriven en el texto.
+- Distinción entre tope e igualdad de tiempo: complementariedad y signo del multiplicador solo corresponden al tope.
+
+Cada paso debe estar escrito y explicado por John. El estado seguirá siendo parcial hasta recibir y revisar esas hojas; no se inventa firma, comprensión ni aprobación personal.

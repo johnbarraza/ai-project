@@ -16,6 +16,11 @@ ROOT = Path(__file__).resolve().parent.parent
 LEAN = ROOT/'lean'
 
 
+def source_sha256(path):
+    """Bind Lean text while treating Git's LF/CRLF checkout conversion equally."""
+    return hashlib.sha256(Path(path).read_text(encoding='utf-8').encode('utf-8')).hexdigest()
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--wsl-cache', help='Existing Lake project with a compatible Mathlib cache')
@@ -47,7 +52,8 @@ def main():
     (folder/'local_check.txt').write_text(output,encoding='utf-8')
     receipt = {
         'status':'passed' if valid else 'failed',
-        'exit_code':run.returncode,'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),
+        'exit_code':run.returncode,'source_sha256':source_sha256(source),
+        'source_hash_format':'utf8-lf',
         'lean_version':version,'mathlib_commit':mathlib,
         'checked_declarations':['Barraza26LaborComposition.composition_hasDerivAt','Barraza26LaborComposition.composition_sign'],
         'axioms':actual_axioms,

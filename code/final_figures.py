@@ -12,6 +12,7 @@ import numpy as np
 import sympy as sp
 
 from figures import style, INK, BASE, BLUE, TEAL, ORANGE, GRID
+from verify_lean import source_sha256
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / 'figures' / 'final'
@@ -263,7 +264,7 @@ def build_final(baseline, scenarios, summary, moments_data):
     lean_receipt = json.loads(receipt_path.read_text(encoding='utf-8')) if receipt_path.exists() else None
     if lean_receipt:
         lean_source = HERE.parent/'lean'/'LaborComposition.lean'
-        if lean_receipt['status']!='passed' or lean_receipt['source_sha256']!=hashlib.sha256(lean_source.read_bytes()).hexdigest():
+        if lean_receipt['status']!='passed' or lean_receipt['source_sha256']!=source_sha256(lean_source):
             raise AssertionError('Lean receipt failed or source changed since its check')
     report = {
         'scope':'PE reproducido desde exportación histórica; D73 verifica diagnósticos exportados, sin rerun HJB/KFE.',
@@ -282,7 +283,7 @@ def build_final(baseline, scenarios, summary, moments_data):
         'ready_for_submission':False,
         'local_lean_checked':bool(lean_receipt),
         'official_applied_modeling_workflow':False,
-        'remaining_requirements':(['Flujo oficial AppliedModelingLib sobre paper publicado en commit'] if lean_receipt else ['Formalización propia y fragmento Lean verificado'])+['Derivación manuscrita personal en pantalla'],
+        'remaining_requirements':(['Formalización oficial cotejada con el paper'] if lean_receipt else ['Formalización propia y fragmento Lean verificado'])+['Derivaciones manuscritas completas y corrección de la hoja 01'],
     }
     (HERE/'output'/'final_verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
-    print('OK: final figures, chain rule and D73 exported diagnostics. Official workflow/handwritten evidence remain open.')
+    print('OK: final figures, chain rule and D73 exported diagnostics. Official workflow/complete handwritten appendix remain open.')

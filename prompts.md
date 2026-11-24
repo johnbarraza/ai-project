@@ -1298,3 +1298,63 @@ MATLAB está disponible y no hay una corrida anterior activa. Voy a repetir en u
 Las dos corridas nuevas de MATLAB terminaron y pasaron la auditoría independiente: reproducen los resultados del 9 de noviembre con diferencias numéricas mínimas. Las fuentes protegidas siguen intactas.
 
 Para precisar qué grabaciones necesito: la tuya del **16 de octubre**, con la devolución sobre tu modelo, y las **exposiciones finales de tus compañeros**, especialmente Saco/Galarza del 11 de noviembre. Si puedes, incluye sus diapositivas y el tramo de preguntas del profesor.
+
+## 193. Usuario, 23 de noviembre de 2026
+
+AHORA FALTA AL ETNREGA FINAL CONTINUA CON LO PEDIOD PAR LA TENREG AIFNAL REVISA EL PREO
+
+## 194. Codex (commentary)
+
+Voy a revisar el repositorio y retomar los pendientes del paper final: Lean, pruebas, simulaciones, bibliografía y archivos exigidos para la entrega. También comprobaré qué quedó terminado desde la última sesión.
+
+## 195. Codex (preguntas)
+
+Para actualizar el paper, recomiendo A. ¿Qué opción eliges? Tu regla en plan_ai_project.md:717 dice: «Antes de escribir en un .tex, dame 2 opciones en el chat y yo elijo». Mientras respondes revisaré datos, código y Lean.
+
+A: conservar la pregunta y proposición actuales; incorporar los GE nuevos y presentar las restricciones de tiempo como contrastes (recomendada).
+
+B: centrar el paper en la igualdad de tiempo; reformular la proposición y repetir su formalización.
+
+¿Qué correcciones te pidió el profesor durante tu exposición del 13 de noviembre? Puedes indicar los puntos principales o la ruta/enlace de la grabación; revisaré también los archivos disponibles.
+
+## 196. Usuario (respuesta sobre instrucciones)
+
+PERO DIME CUALE OSN LAS INDTRUCCIOENS FINALES DEL REPO. PQ Y TUE MI PREIMA EXPO YL A 2DA PERO ES HASTA 26 UNA ENTREGA
+
+## 197. Codex (commentary)
+
+Sí: **ya hiciste las dos exposiciones. El 26 de noviembre, a las 22:00 de Lima, debes entregar el repositorio completo con el paper final**. El paper vale 30 %. Estas son las instrucciones oficiales del [issue #7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7):
+
+- **Paper:** `paper.tex`, `references.bib` y `paper.pdf`. Entre **8 y 20 páginas de cuerpo**, sin contar referencias ni anexos; 11 pt, márgenes de una pulgada y una columna.
+- **Contenido:** introducción, literatura, modelo con supuestos numerados, al menos una proposición propia con todas sus condiciones y prueba completa, simulaciones, discusión, límites y conclusión.
+- **Código:** `code/verify.py` debe reproducir las figuras y números y fallar si sus comprobaciones no se cumplen.
+- **Lean:** formalizar los resultados numerados del paper mediante el flujo indicado, conservar la carpeta generada completa y la salida del check. El apéndice debe indicar qué está probado, bajo qué hipótesis y qué sigue abierto.
+- **Derivaciones a mano:** todas, paso a paso, fotografiadas o escaneadas en `hand/`.
+- **Registro de IA:** `prompts.md` y un apéndice con lo que propuso la IA, tu veredicto y cómo lo comprobaste.
+- **Conservar:** propuesta, diapositivas de ambas exposiciones y un README de una página con el estado real de cada parte.
+
+**Todo debe estar fusionado en `main` antes del plazo**, por rama → PR → merge, con los controles de compilación y código aprobados.
+
+En tu caso, estoy cerrando la integración de los avances numéricos, la formalización y la correspondencia con el paper. Las hojas personales completas siguen siendo una parte pendiente de la entrega.
+
+## 198. Usuario (respuesta sobre avances)
+
+https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7 https://github.com/johnbarraza/aiyagari-2firms-peru PEUDS REVISAR MI AVANCE QUE TENOG EN AIYGARI 2 FIRMS.
+
+## 199. Codex (commentary)
+
+Voy a revisar **`aiyagari-2firms-peru`** y compararlo con lo que está en `ai-project`, para identificar los avances que pueden incorporarse al paper del curso. Revisaré sus documentos, código y resultados; las fuentes protegidas se mantienen en solo lectura.
+
+## 200. Usuario, 24 de noviembre de 2026
+
+continua
+
+## 201. Codex (commentary)
+
+Continúo con la pregunta y la proposición vigentes, incorporando los avances al paper. También estoy contrastando `aiyagari-2firms-peru` con el proyecto del curso: su versión pública llega al 6 de octubre, mientras que los experimentos de noviembre están en el trabajo local y deben quedar documentados para la entrega.
+
+## 202. Codex (commentary)
+
+La revisión del repo de base confirma tres puntos importantes para el paper: algunos momentos de calibración no identifican todos los parámetros por sí solos; las brechas de personas por gasto y de horas por activos no son comparables directamente; y sus pruebas Lean históricas no prueban automáticamente la proposición nueva.
+
+El borrador ampliado ya compila: tiene **13 páginas de cuerpo, 15 en total**, dentro del límite del curso. Conservé sin cambios los cuatro supuestos, la proposición y su prueba.
