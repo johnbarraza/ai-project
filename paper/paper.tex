@@ -341,23 +341,28 @@ A igual productividad y dentro de una rama interior con tiempo holgado, la compo
 \appendix
 
 \section{Correspondencia con Lean}\label{app:lean}
-La fuente propia es \texttt{lean/LaborComposition.lean}. La comprobación local se ejecutó con Lean 4.30.0-rc2 y Mathlib fijado en el commit indicado por \texttt{lean/lakefile.toml}. La salida y el hash de fuente están en \texttt{lean/verification/local\_check.json}. Los únicos axiomas reportados son los estándar de Mathlib: \texttt{propext}, \texttt{Classical.choice} y \texttt{Quot.sound}; no aparece \texttt{sorryAx}.
+La carpeta \texttt{lean/} contiene la copia íntegra del directorio generado por AppliedModelingLib, respetando su \texttt{.gitignore}. La fuente es el paper fusionado en el commit \href{https://github.com/johnbarraza/ai-project/blob/6777134ba22670ebd53b65d21a48d719c09b3fbd/paper/paper.pdf}{\texttt{6777134}} del repositorio propio; los hashes completos figuran en \texttt{docs/lean-workflow.json}. Esta actualización del apéndice no modifica los cuatro supuestos, la proposición ni su prueba ordinaria.
 
 \begin{center}\small
 \begin{tabular}{p{2.6cm}p{7.3cm}p{4cm}}\toprule
 Resultado&Declaraciones, prefijo \texttt{Barraza26LaborComposition}&Estado\\\midrule
-Proposición \ref{prop:composition}, identidad y signos&\texttt{composition\_hasDerivAt} y \texttt{composition\_sign}, en \texttt{lean/LaborComposition.lean}&Comprobación local del bloque explícito. Proposición completa abierta en el flujo oficial\\\bottomrule
+Proposición \ref{prop:composition}, identidad y signos&\texttt{compositionConditionalHours}, en \texttt{lean/ProofInterface.lean}; tipo \texttt{compositionConditionalHoursSpec}, en \texttt{lean/PaperInterface.lean}&Abierta: el endpoint compila; falta la revisión semántica independiente y el cierre del protocolo\\\bottomrule
 \end{tabular}
 \end{center}
 
-El código define \texttt{labor v R psi phi = (v*R/psi)\^{}phi} y \texttt{share} como la fracción de horas de \eqref{eq:explicit}. La función \texttt{V} representa \(a\mapsto\Va(a,z)\), mientras \texttt{d} representa su derivada. \texttt{HasDerivAt V d a} es una hipótesis sobre esa función, no la conclusión de la proposición. La derivación de las FOC desde una HJB regular sigue en la prueba ordinaria; Lean comprueba el resultado de la rama explícita y no todo el problema dinámico.
+La interfaz declara una rama interior regular con las FOC, positividad y tiempo holgado. La prueba recupera de esas FOC las políticas explícitas y aplica la derivada y los signos. La función \texttt{V} representa \(a\mapsto\Va(a,z)\), mientras \texttt{d} representa su derivada. \texttt{HasDerivAt V d a} es una condición de regularidad, no la conclusión. No se demuestra concavidad global de la HJB ni existencia del GE.
 
-El commit fuente y el recibo oficial de \texttt{paper\_contribution.py check} deben registrarse al ejecutar ese flujo. La correspondencia local no se presenta como cierre de contribución. Tampoco se ha registrado una revisión semántica humana de este nuevo archivo. Si se modifica un enunciado, debe revisarse la correspondencia y repetir la comprobación pertinente.
+El 24 de noviembre se ejecutó el check rápido exigido por el curso, con salida 0:
+\begin{quote}\small
+\texttt{python3 scripts/paper\_contribution.py check \textbackslash}\\
+\texttt{\ \ Barraza26LaborComposition -{}-fast}
+\end{quote}
+La salida se conserva en \texttt{lean/contribution-check-fast.txt}. Además se compiló de forma forzada \texttt{ProofInterface}, también con salida 0. El check rápido compila la interfaz y verifica espacios del diff; no certifica la equivalencia semántica con el paper. El flujo con GPT-5.6 Sol y esfuerzo \texttt{xhigh} se interrumpió por un límite de uso antes de cerrar esa revisión.
 
-La carpeta de trabajo de AppliedModelingLib ya contiene el puente de FOC a políticas y el endpoint \texttt{compositionConditionalHours}, pero su revisión independiente, documentación y traslado íntegro al repositorio siguen en curso. La tabla describe la evidencia actualmente incorporada; no otorga crédito de cierre a archivos que aún no están en la entrega. Las pruebas históricas del modelo coautorado tampoco sustituyen la formalización de esta proposición.
+La migración del mapa, la revisión independiente y el cierre siguen abiertos. El preflight detectó que una cita del mapa no coincide con el segmento de la fuente vigente; deben regenerarse las anclas antes de revisarlas. No hay credencial de aceptación ni revisión semántica humana registrada. Los campos de borrador y notas históricas se describen en \texttt{docs/estado-lean.md}. El prototipo anterior y su comprobación local se preservan en \texttt{lean-prototype/}; tampoco sustituyen el cierre oficial ni las pruebas históricas del modelo coautorado.
 
 \section{Colaboración con IA y veredictos}
-Los intercambios crudos relevantes están en \texttt{prompts.md}; el registro de decisiones conserva los contrastes. En el caso del tope de tiempo, se consideró un mecanismo que dependía de una restricción activa. Las condiciones correctas para horas positivas son
+Los intercambios relevantes están en \texttt{prompts.md}; el registro de decisiones conserva los contrastes. En el caso del tope de tiempo, se consideró un mecanismo que dependía de una restricción activa. Las condiciones correctas para horas positivas son
 \[
 \Va R_s=\psi_s\ell_s^{1/\phi_s}+\lambda_H,\qquad
 \lambda_H(\bar H-\ell_F-\ell_I)=0,\quad\lambda_H\geq0.

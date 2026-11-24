@@ -1,0 +1,245 @@
+{
+  "schema": 1,
+  "paper": "Barraza26LaborComposition",
+  "namespace": "Barraza26LaborComposition",
+  "paper_interface_module": "",
+  "semantic_route_schema": 2,
+  "closeout_review_policy": {
+    "schema": 1,
+    "source_scope": "all_named_theory",
+    "repeat_final_scope": "main_primary",
+    "required_final_adversary_count": 1,
+    "scheduling": {
+      "initial_semantic_review": [],
+      "final_adversarial_review": []
+    }
+  },
+  "source_version": "unpublished working manuscript, 2026-11-24, merged-main source commit 6777134ba22670ebd53b65d21a48d719c09b3fbd",
+  "add_source_items": {
+    "comparisonIndividualCondition": {
+      "statement": "Se fija z y se considera un entorno abierto de un punto a_0 > \\underline a. Los retornos R_F,R_I>0, los precios y las remuneraciones efectivas se mantienen fijos y no dependen directamente de los activos en esa comparación.",
+      "source_kind": "assumption",
+      "source_location": "source-audited.tex:112-114",
+      "source_note": "Selected normal-scope semantic prerequisite in the complete source-only inventory; it is not an independent result row.",
+      "claim_bearing": false,
+      "lean_declarations": ["Barraza26LaborComposition.comparisonIndividualCondition"]
+    },
+    "laborPreferencesCondition": {
+      "statement": "Para s\\in\\{F,I\\}, \\psi_s>0 y \\phi_s>0. El costo de horas es el de \\eqref{eq:preferences}, separable entre actividades.",
+      "source_kind": "assumption",
+      "source_location": "source-audited.tex:115-117",
+      "source_note": "Selected normal-scope semantic prerequisite in the complete source-only inventory; it is not an independent result row.",
+      "claim_bearing": false,
+      "lean_declarations": ["Barraza26LaborComposition.laborPreferencesCondition"]
+    },
+    "interiorRegularBranchCondition": {
+      "statement": "La función a\\mapsto\\Va(a,z) es positiva y diferenciable en a_0. Las horas de la rama considerada satisfacen las FOC de \\eqref{eq:hoursblock}, son positivas y su suma es estrictamente menor que \\bar H.",
+      "source_kind": "assumption",
+      "source_location": "source-audited.tex:118-120",
+      "source_note": "Selected normal-scope semantic prerequisite in the complete source-only inventory; it is not an independent result row.",
+      "claim_bearing": false,
+      "lean_declarations": ["Barraza26LaborComposition.interiorRegularBranchCondition"]
+    },
+    "localConcavityCondition": {
+      "statement": "Cuando se interpreta el signo por riqueza se mantiene \\Vaa(a_0,z)<0.",
+      "source_kind": "assumption",
+      "source_location": "source-audited.tex:121-123",
+      "source_note": "Selected normal-scope semantic prerequisite in the complete source-only inventory; it is not an independent result row.",
+      "claim_bearing": false,
+      "lean_declarations": ["Barraza26LaborComposition.localConcavityCondition"]
+    },
+    "informalHoursShare": {
+      "statement": "Defina la fracción de horas informales como \\sI=\\ell_I/(\\ell_F+\\ell_I). Esta definición cuenta horas y no clasifica ex ante a una persona como informal. Bajo los retornos positivos y la rama interior, 0<\\sI<1.",
+      "source_kind": "definition",
+      "source_location": "papers/Barraza26LaborComposition/source-audited.tex:128-129",
+      "source_note": "Governing unnumbered prose definition selected as a normal-scope semantic prerequisite.",
+      "claim_bearing": true,
+      "lean_declarations": ["Barraza26LaborComposition.informalHoursShare"]
+    },
+    "compositionConditionalHours": {
+      "statement": "Bajo los supuestos \\ref{ass:fixed}--\\ref{ass:regular}, la política interior satisface \\frac{\\partial\\sI(a_0,z)}{\\partial a}=\\sI(a_0,z)\\bigl(1-\\sI(a_0,z)\\bigr)(\\phi_I-\\phi_F)\\frac{\\Vaa(a_0,z)}{\\Va(a_0,z)}. Si además se cumple el supuesto \\ref{ass:concavity}, la derivada es negativa cuando \\phi_I>\\phi_F, cero cuando \\phi_I=\\phi_F y positiva cuando \\phi_I<\\phi_F.",
+      "source_kind": "proposition",
+      "source_location": "source-audited.tex:131-139",
+      "source_note": "Sole independent named result selected by the complete source-only inventory.",
+      "claim_bearing": true,
+      "lean_declarations": ["Barraza26LaborComposition.compositionConditionalHoursSpec"]
+    }
+  },
+  "include_specs": [
+    "compositionConditionalHours"
+  ],
+  "source_item_for_spec": {
+    "compositionConditionalHours": "compositionConditionalHours"
+  },
+  "evidence_declaration_for_spec": {
+    "compositionConditionalHours": "Barraza26LaborComposition.compositionConditionalHours"
+  },
+  "source_semantic_declarations": {
+    "comparisonIndividualCondition": ["Barraza26LaborComposition.comparisonIndividualCondition"],
+    "laborPreferencesCondition": ["Barraza26LaborComposition.laborPreferencesCondition"],
+    "interiorRegularBranchCondition": ["Barraza26LaborComposition.interiorRegularBranchCondition"],
+    "localConcavityCondition": ["Barraza26LaborComposition.localConcavityCondition"],
+    "informalHoursShare": ["Barraza26LaborComposition.informalHoursShare"]
+  },
+  "paper_semantic_prerequisite_sources": {
+    "Barraza26LaborComposition.comparisonIndividualCondition": "comparisonIndividualCondition",
+    "Barraza26LaborComposition.laborPreferencesCondition": "laborPreferencesCondition",
+    "Barraza26LaborComposition.interiorRegularBranchCondition": "interiorRegularBranchCondition",
+    "Barraza26LaborComposition.localConcavityCondition": "localConcavityCondition",
+    "Barraza26LaborComposition.informalHoursShare": "informalHoursShare"
+  },
+  "library_semantic_prerequisite_sources": {},
+  "semantic_context_requirements": {
+    "comparisonIndividualCondition": [
+      {"semantic_role": "model", "source_location": "source-audited.tex:57-57"},
+      {"semantic_role": "definition", "source_location": "source-audited.tex:73-77"}
+    ],
+    "laborPreferencesCondition": [
+      {"semantic_role": "model", "source_location": "source-audited.tex:58-63"}
+    ],
+    "interiorRegularBranchCondition": [
+      {"semantic_role": "model_construction", "source_location": "source-audited.tex:104-110"},
+      {"semantic_role": "scope", "source_location": "source-audited.tex:125-125"}
+    ],
+    "localConcavityCondition": [
+      {"semantic_role": "scope", "source_location": "source-audited.tex:125-125"}
+    ],
+    "compositionConditionalHours": [
+      {"semantic_role": "model", "source_location": "source-audited.tex:58-63"},
+      {"semantic_role": "model", "source_location": "source-audited.tex:66-71"},
+      {"semantic_role": "definition", "source_location": "source-audited.tex:73-77"},
+      {"semantic_role": "model_construction", "source_location": "source-audited.tex:104-110"},
+      {"semantic_role": "stated_antecedent", "source_location": "source-audited.tex:112-114"},
+      {"semantic_role": "stated_antecedent", "source_location": "source-audited.tex:115-117"},
+      {"semantic_role": "stated_antecedent", "source_location": "source-audited.tex:118-120"},
+      {"semantic_role": "stated_antecedent", "source_location": "source-audited.tex:121-123"},
+      {"semantic_role": "scope", "source_location": "source-audited.tex:125-125"},
+      {"semantic_role": "definition", "source_location": "source-audited.tex:128-129"}
+    ]
+  },
+  "replace_semantic_context_requirements_for": [
+    "comparisonIndividualCondition",
+    "laborPreferencesCondition",
+    "interiorRegularBranchCondition",
+    "localConcavityCondition",
+    "compositionConditionalHours"
+  ],
+  "model_convention_ids_by_source_item": {
+    "comparisonIndividualCondition": [
+      "B26-FIXED-Z-UNARY-SLICE",
+      "B26-OPEN-NEIGHBORHOOD-NHDS",
+      "B26-FIXED-RETURNS-SCALARS"
+    ],
+    "interiorRegularBranchCondition": [
+      "B26-FIXED-Z-UNARY-SLICE",
+      "B26-OPEN-NEIGHBORHOOD-NHDS",
+      "B26-FIXED-RETURNS-SCALARS"
+    ],
+    "informalHoursShare": [
+      "B26-FIXED-Z-UNARY-SLICE"
+    ],
+    "compositionConditionalHours": [
+      "B26-FIXED-Z-UNARY-SLICE",
+      "B26-OPEN-NEIGHBORHOOD-NHDS",
+      "B26-FIXED-RETURNS-SCALARS"
+    ]
+  },
+  "prose_definition_reconciliations": {
+    "informalHoursShare": {
+      "presentation_id": "informal_hours_share_definition",
+      "semantic_basis": "The proposed item defines the same object, s_I=ell_I/(ell_F+ell_I), and captures both adjoining scope statements: it counts hours rather than classifying a person ex ante, and 0<s_I<1 holds under positive returns and the interior branch.",
+      "validator": "/root/formalizacion_final/definition_reconciler",
+      "validator_type": "agent",
+      "validated_at": "2026-11-24T15:00:00Z"
+    }
+  },
+  "source_named_result_inventory_review": {
+    "complete": true,
+    "validator": "/root/formalizacion_final/source_inventory",
+    "method": "complete source-only read of all 297 TeX lines and all 549 cached PDF-extraction lines before consulting Lean",
+    "validated_at": "2026-11-23T00:00:00Z",
+    "prose_definition_presentations": [
+      {
+        "id": "informal_hours_share_definition",
+        "source_locator": "papers/Barraza26LaborComposition/source-audited.tex:123-124",
+        "defined_entity_kind": "object",
+        "defined_object": "\\sI",
+        "scope_disposition": "normal_named_theory_definition"
+      }
+    ],
+    "candidate_presentations": [
+      {
+        "id": "candidate_abstract_summary",
+        "source_locator": "source-audited.tex:24-26",
+        "presentation_label": "abstract mechanism summary",
+        "scope_disposition": "deep_audit_material",
+        "semantic_basis": "The abstract summarizes the selected proposition and its limits; it is not a second independent named result."
+      },
+      {
+        "id": "candidate_scope_boundary",
+        "source_locator": "source-audited.tex:120-120",
+        "presentation_label": "local-result scope boundary",
+        "scope_disposition": "deep_audit_material",
+        "semantic_basis": "This paragraph states the local and boundary scope of the selected assumptions and proposition rather than an independent result."
+      },
+      {
+        "id": "candidate_result_interpretation",
+        "source_locator": "source-audited.tex:171-173",
+        "presentation_label": "post-proposition interpretation",
+        "scope_disposition": "deep_audit_material",
+        "semantic_basis": "These paragraphs interpret and restate consequences of Proposition 1 without presenting another independent result."
+      },
+      {
+        "id": "candidate_conclusion_restatement",
+        "source_locator": "source-audited.tex:262-263",
+        "presentation_label": "conclusion restatement",
+        "scope_disposition": "deep_audit_material",
+        "semantic_basis": "The conclusion restates the selected conditional mechanism and numerical discussion; it is not another independent result."
+      },
+      {
+        "id": "candidate_lean_correspondence",
+        "source_locator": "source-audited.tex:270-283",
+        "presentation_label": "appendix Lean correspondence",
+        "scope_disposition": "deep_audit_material",
+        "semantic_basis": "The appendix records implementation correspondence and pending review status rather than a separate paper theorem."
+      }
+    ],
+    "source_region_partition": {
+      "complete": true,
+      "validator": "/root/formalizacion_final/source_inventory",
+      "method": "complete source-only read of all 297 TeX lines and all 549 cached PDF-extraction lines before consulting Lean",
+      "validated_at": "2026-11-23T00:00:00Z",
+      "regions": [
+        {
+          "id": "main_text",
+          "kind": "main_text",
+          "source_locator": "source-audited.tex:1-269"
+        },
+        {
+          "id": "appendix",
+          "kind": "appendix",
+          "source_locator": "source-audited.tex:270-297"
+        }
+      ],
+      "source_item_regions": {
+        "comparisonIndividualCondition": "main_text",
+        "laborPreferencesCondition": "main_text",
+        "interiorRegularBranchCondition": "main_text",
+        "localConcavityCondition": "main_text",
+        "informalHoursShare": "main_text",
+        "compositionConditionalHours": "main_text"
+      },
+      "candidate_presentation_regions": {
+        "candidate_abstract_summary": "main_text",
+        "candidate_scope_boundary": "main_text",
+        "candidate_result_interpretation": "main_text",
+        "candidate_conclusion_restatement": "main_text",
+        "candidate_lean_correspondence": "appendix"
+      },
+      "prose_definition_presentation_regions": {
+        "informal_hours_share_definition": "main_text"
+      },
+      "promoted_source_items": []
+    }
+  }
+}

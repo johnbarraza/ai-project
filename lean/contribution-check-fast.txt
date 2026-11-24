@@ -1,0 +1,3 @@
++ lake build +Barraza26LaborComposition.PaperInterface
+Build completed successfully (8315 jobs).
++ git diff --check -- papers/Barraza26LaborComposition papers/Barraza26LaborComposition.lean lakefile.toml ':(exclude)papers/Barraza26LaborComposition/source/'

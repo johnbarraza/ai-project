@@ -12,7 +12,7 @@ import numpy as np
 import sympy as sp
 
 from figures import style, INK, BASE, BLUE, TEAL, ORANGE, GRID
-from verify_lean import source_sha256
+from verify_lean import source_sha256, check_official_snapshot
 
 HERE = Path(__file__).resolve().parent
 OUT = HERE / 'figures' / 'final'
@@ -260,10 +260,11 @@ def build_final(baseline, scenarios, summary, moments_data):
     wedge_rows = ''.join(f"{names[k]} & {100*by_case[k]['M1_informal_hours']:.3f} & {100*by_case[k]['M3_formal_zmax_minus_zmin']:.3f} & {100*by_case[k]['V3_assets_Q1_minus_Q5_fractional']:.3f} & {by_case[k]['expenditure_ratio_dominant_formal_informal']:.3f} \\\\\n" for k in names)
     text += '\\newcommand{\\FinalWedgeRows}{%\n'+wedge_rows+'}\n'
     (HERE/'output'/'final_numbers.tex').write_text(text,encoding='utf-8')
-    receipt_path = HERE.parent/'lean'/'verification'/'local_check.json'
+    official_snapshot = check_official_snapshot()
+    receipt_path = HERE.parent/'lean-prototype'/'verification'/'local_check.json'
     lean_receipt = json.loads(receipt_path.read_text(encoding='utf-8')) if receipt_path.exists() else None
     if lean_receipt:
-        lean_source = HERE.parent/'lean'/'LaborComposition.lean'
+        lean_source = HERE.parent/'lean-prototype'/'LaborComposition.lean'
         if lean_receipt['status']!='passed' or lean_receipt['source_sha256']!=source_sha256(lean_source):
             raise AssertionError('Lean receipt failed or source changed since its check')
     report = {
@@ -283,6 +284,9 @@ def build_final(baseline, scenarios, summary, moments_data):
         'ready_for_submission':False,
         'local_lean_checked':bool(lean_receipt),
         'official_applied_modeling_workflow':False,
+        'official_workflow_started':True,
+        'official_snapshot_identity_checked':True,
+        'official_fast_check_retained':official_snapshot['checks'][0]['exit_code']==0,
         'remaining_requirements':(['Formalización oficial cotejada con el paper'] if lean_receipt else ['Formalización propia y fragmento Lean verificado'])+['Derivaciones manuscritas completas y corrección de la hoja 01'],
     }
     (HERE/'output'/'final_verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')

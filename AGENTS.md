@@ -1,6 +1,7 @@
 # Instrucciones para agentes (Codex / Claude): `ai-project` de John Barraza
 
 Curso **AI and Economic Modeling** (UP 2026-II, prof. Alexander Quispe). Responde en español.
+Reglas expresas de John del 24 de noviembre: nunca responder, resolver ni cerrar comentarios en ninguna plataforma; no enviar mensajes ni correos sin autorización explícita; no usar el punto medio como separador. Se pueden leer comentarios y comunicar su contenido a John.
 Estilo solicitado por John: no usar rayas largas para incisos. Usar comas, paréntesis o frases separadas.
 Nombres elegidos por John (D29, actualizados en D30): en la presentación, propuesta, figuras y guion usar **Modelo de dos sectores** y **Sensibilidad**, evitando “mi tesis”. Mantener **Baseline: Aiyagari**. En la slide de barrera y prima de deuda, solo definiciones breves; valores y fuentes en A8. Conservar la procedencia original en registros y archivos de datos.
 Reglas oficiales: [issue #7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7). Si algo de este archivo lo contradice, gana el issue.

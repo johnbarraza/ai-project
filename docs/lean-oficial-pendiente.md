@@ -1,5 +1,7 @@
 # Paso oficial pendiente para la formalización
 
+**Actualización del 24 de noviembre:** el paper ampliado se publicó por PR #14 y se fijó en `6777134ba22670ebd53b65d21a48d719c09b3fbd`. El check rápido y el build de la prueba pasaron; la carpeta generada completa ya está en `lean/`, respetando su `.gitignore`. Faltan la revisión semántica independiente y el cierre del protocolo. El [estado vigente y sus recibos](estado-lean.md) sustituyen la agenda histórica que sigue debajo, conservada para trazabilidad.
+
 La comprobación local propia ya existe y pasó. El [issue #7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7), sección 6, prescribe además esta secuencia:
 
 1. **Realizado:** paper publicado por el [PR #5](https://github.com/johnbarraza/ai-project/pull/5), con checks aprobados. Fuente fijada en `8e51a872c874f09079ce106068cc065b0a0efbee`; SHA256 del PDF: `df93dd644aaf9a375343f87d547f17029236d963d4fa70060fc86a411cc97afe`.
