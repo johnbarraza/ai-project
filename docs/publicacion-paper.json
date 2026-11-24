@@ -1,0 +1,20 @@
+{
+  "published_at_utc": "2026-11-24T15:13:12Z",
+  "pull_request": "https://github.com/johnbarraza/ai-project/pull/14",
+  "source_branch_commit": "62b31aed16bd0e14decfb3618b75190af0084171",
+  "paper_source_commit": "6777134ba22670ebd53b65d21a48d719c09b3fbd",
+  "paper_pdf_sha256": "f869c74fbf081fb6a89a9c0e3a818646eb966004efaf189fec6421dac0fdce04",
+  "paper_tex_git_blob_sha256": "3bfd0418b0b7a74c6cf459e09e623f73d30ce1ccd132bb4449b9b379dafcaaa6",
+  "paper_url": "https://github.com/johnbarraza/ai-project/blob/6777134ba22670ebd53b65d21a48d719c09b3fbd/paper/paper.pdf",
+  "push_checks": "https://github.com/johnbarraza/ai-project/actions/runs/45422589746",
+  "pr_checks": "https://github.com/johnbarraza/ai-project/actions/runs/45422608888",
+  "code_and_latex_checks_passed": true,
+  "body_pages": 13,
+  "total_pages": 15,
+  "formal_claims_unchanged_from_initial_manuscript": true,
+  "official_formalization_accepted": false,
+  "handwritten_appendix_complete": false,
+  "human_semantic_review_recorded": false,
+  "full_precision_certification": false,
+  "receipt_scope": "Initial expanded-paper publication, PR14. Current artifact hashes and appendix updates are recorded in evidence-source-map.json; formal mathematical blocks remain unchanged."
+}

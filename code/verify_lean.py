@@ -13,12 +13,31 @@ import shlex
 import subprocess
 
 ROOT = Path(__file__).resolve().parent.parent
-LEAN = ROOT/'lean'
+LEAN = ROOT/'lean-prototype'
 
 
 def source_sha256(path):
     """Bind Lean text while treating Git's LF/CRLF checkout conversion equally."""
     return hashlib.sha256(Path(path).read_text(encoding='utf-8').encode('utf-8')).hexdigest()
+
+
+def check_official_snapshot(root=ROOT):
+    """Check retained file identity, without certifying Lean source correspondence."""
+    root = Path(root).resolve()
+    manifest = json.loads((root/'docs/lean-workflow.json').read_text(encoding='utf-8'))
+    assert manifest['hash_format'] == 'sha256-utf8-lf-for-text'
+    for name, digest in manifest['artifacts'].items():
+        path = (root/name).resolve()
+        assert path.is_relative_to(root/'lean'), name
+        assert source_sha256(path) == digest, f'Official snapshot changed: {name}'
+    for check in manifest['checks']:
+        assert check['exit_code'] == 0 and check['output'] in manifest['artifacts']
+    # This unfinished run has no semantic acceptance, regardless of green builds.
+    assert manifest['status'] == 'open'
+    assert not manifest['official_contribution_workflow_complete']
+    assert not manifest['accepted_closure_receipt_present']
+    assert not (root/'lean/FINAL_CLOSURE_RECEIPT.md').exists()
+    return manifest
 
 
 def main():

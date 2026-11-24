@@ -1,6 +1,6 @@
 # Ahorro, flexibilidad de horas e informalidad en el Perú
 
-**John Svante Barraza Ratachi · AI and Economic Modeling · UP 2026-II · Track B**
+**John Svante Barraza Ratachi, AI and Economic Modeling, UP 2026-II, Track B**
 Revisión para el paper final: 24 de noviembre de 2026. [Estado de requisitos y pendientes](docs/entrega-paper.md).
 
 **Pregunta.** ¿Cuándo influye la riqueza en el reparto de horas entre formal e informal, a igual productividad?
@@ -11,16 +11,16 @@ Revisión para el paper final: 24 de noviembre de 2026. [Estado de requisitos y 
 
 | Material | Estado y enlace |
 |---|---|
-| Presentación final | [PDF](slides/final.pdf) · [LaTeX](slides/final.tex): modelo, proposición, simulaciones, Lean e IA, con anexos de consulta |
-| Manuscrito | [PDF](paper/paper.pdf) · [LaTeX](paper/paper.tex) · [bibliografía](paper/references.bib): 13 páginas de cuerpo, 15 totales; GE y contrastes de tiempo incorporados; cierre Lean/manuscrito pendiente |
+| Presentación final | [PDF](slides/final.pdf), [LaTeX](slides/final.tex): modelo, proposición, simulaciones, Lean e IA, con anexos de consulta |
+| Manuscrito | [PDF](paper/paper.pdf), [LaTeX](paper/paper.tex), [bibliografía](paper/references.bib): 13 páginas de cuerpo; GE y contrastes de tiempo incorporados; cierre Lean y manuscritos personales pendientes |
 | Simulaciones | [Verificador](code/verify.py): PE, D73, [repetición MATLAB del12nov](docs/replicacion-matlab-final.md) y 23 GE del13nov reanalizados para el paper; cuatro figuras nuevas |
-| Lean propio | [Código y alcance](lean/README.md): derivada y signos comprobados localmente, sin `sorry`; flujo oficial sobre paper publicado en commit pendiente |
+| Lean propio | [Estado y recibos](docs/estado-lean.md): carpeta oficial íntegra en `lean/`, check rápido y prueba compilados; revisión semántica y cierre abiertos. Prototipo preservado aparte |
 | Derivación a mano | [Hoja original y pendientes](hand/README.md): una página, con errata identificada; faltan las demás derivaciones personales |
-| Primera entrega | [Propuesta](proposal/proposal.pdf) · [tema](slides/topic.pdf), conservados |
-| Colaboración con IA | [Registro crudo](prompts.md); veredictos y límites en el paper |
+| Primera entrega | [Propuesta](proposal/proposal.pdf), [tema](slides/topic.pdf), conservados |
+| Colaboración con IA | [Registro](prompts.md), con enlace a la versión cruda; veredictos y límites en el paper |
 
 **Reproducir:** instalar `code/requirements.txt` y ejecutar `python code/verify.py`. Compilar desde `paper/` con `pdflatex paper.tex`, `bibtex paper`, dos pasadas de `pdflatex`; desde `slides/`, dos pasadas de `pdflatex final.tex`. Lean tiene instrucciones separadas en su README.
 
 Personas/gasto y horas/activos no son medidas idénticas. Los GE son estacionarios, sin IRF ni interpretación causal. Las elasticidades distintas son una sensibilidad ilustrativa; [evidencia y límites](docs/evidencia-elasticidades.md). La precisión global sigue pendiente.
 
-Según el [issue #7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7), las slides se entregan en main el **12nov, 22:00 Lima**; exposición **13nov, 07:30**; paper completo **26nov, 22:00**. La final se publicó mediante el [PR #5](https://github.com/johnbarraza/ai-project/pull/5), con checks aprobados. El [paper fuente en commit](https://github.com/johnbarraza/ai-project/blob/8e51a872c874f09079ce106068cc065b0a0efbee/paper/paper.pdf) queda fijado para el flujo oficial. Los pendientes científicos permanecen explícitos.
+Según el [issue #7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7), el repositorio completo vence el **26nov, 22:00 Lima**. Las dos presentaciones se conservan. El paper ampliado se publicó por [PR #14](https://github.com/johnbarraza/ai-project/pull/14), con checks aprobados, y su [fuente en commit](https://github.com/johnbarraza/ai-project/blob/6777134ba22670ebd53b65d21a48d719c09b3fbd/paper/paper.pdf) queda fijada para continuar Lean. Los pendientes científicos y personales siguen explícitos.

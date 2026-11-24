@@ -1,0 +1,69 @@
+{
+  "snapshot_date": "2026-11-24",
+  "paper_folder": "Barraza26LaborComposition",
+  "applied_modeling_lib_base_commit": "a189b89",
+  "uncommitted_paper_repairs_included": true,
+  "source_paper_commit": "6777134ba22670ebd53b65d21a48d719c09b3fbd",
+  "source_paper_pdf_sha256": "f869c74fbf081fb6a89a9c0e3a818646eb966004efaf189fec6421dac0fdce04",
+  "source_paper_tex_sha256": "3bfd0418b0b7a74c6cf459e09e623f73d30ce1ccd132bb4449b9b379dafcaaa6",
+  "complete_local_folder_copied_byte_for_byte": true,
+  "generated_gitignore_respected": true,
+  "hash_format": "sha256-utf8-lf-for-text",
+  "artifacts": {
+    "lean/README.md": "36e849b66742497e11d319aa46dca973bf899a52749c62aa9d9c6d99662d2d1a",
+    "lean/proof-interface-build.txt": "9a72b14d72c3761130c019044d34b730bc2703900d50e0cf247351235a491840",
+    "lean/status.json": "1fb9fd98f8d1ce94d222e33e92bb42e02b116a44f283b036db1ea273263fa3da",
+    "lean/ProofInterface.lean": "9b097a06f9268f94164e7dadaba4ab59f9f10672621e40015a88767569a6ee53",
+    "lean/PaperInterface.lean": "f43700f096ae3e115083851fc0008305b223f5ccf65f020a9c8f66c649bd11af",
+    "lean/contribution-check-fast.txt": "8ec1a3c87dcbcc84e991c5e75980b3d994b12fd30c2c81f1237ea87913032579",
+    "lean/.gitignore": "fd9f67c80e311a15f7b601ef4f38d84825424d2d3e2beae257f1f27c49096c76",
+    "lean/review-dashboard.sh": "f2e587a1a991bbb3fdb76b1b3d5433c64578a944d02a1d4d7c47396e20147f9f",
+    "lean/Assumptions.lean": "1426475c502dbfb4f2c09a3a43f741067db048dc5874baf1f94b068a7ce5fdf9",
+    "lean/MainTheorems.lean": "3e22f99e771c19601caf569cd46e9627b6f8194e1957272bfe3e592984cf8683",
+    "lean/audit/library_semantic_review.json": "3e5a51ea275cdbd4f5b8ccf9823026deb19fb6b91b6c89d428bf5e7dc9f944ca",
+    "lean/audit/v11_source_map_preparation_config.json": "0ecd33a038121ba1493476249b7d53723ccee1af8c88bafd5e3fba802b65ca14",
+    "lean/audit/assumption_match_llm.json": "fbe58eb83f7157acf710d7103c220aff5e243abd2ac0cd3f73b69e0ff161566f",
+    "lean/audit/defect_support_match_llm.json": "fcccf8b88d1c6a2e8b17a3901bb871f12694f7141e15d032d8cd41cf8a233df2",
+    "lean/audit/paper_statement_map.json": "ff18c161c851f039f09678b2db9a84dffd60edf6f68fe10e4265d592d7eaa9c5",
+    "lean/audit/v11_raw_source_spec_screening.json": "d4f946169cda6fc307d3f88d0ffc7484f6cd85a65d4f00f556c3a5e1a6de510e",
+    "lean/audit/source_proof_fidelity.json": "89f450fbe6b9bc705b8ab489c9f894e9b0d7021768e4a7687acd3962e5ffb8f2",
+    "lean/docs/FORMALIZATION_PLAN.md": "992122db37306cf20715a7603dd82705b6a4d4415751e55af0ab93383f750bde",
+    "lean/docs/FORMALIZATION_NOTES.md": "4f447674d8a50c58685326304f29ae09fa1839c3e7c370e02d1b4145dac13bcf",
+    "lean/docs/AGENT_SOURCE_AUDIT.md": "c247006d92aa40f8cf027b3814abe3b5798fa85e5388bc32ba2761ddb60c1e85",
+    "lean/docs/FORMALIZATION_WORKING_MEMO.md": "2d0d25c85a66721a5b7049887a41d5d0cefd92f04daba31932ce53aa4fa2f504"
+  },
+  "checks": [
+    {
+      "command": "python3 scripts/paper_contribution.py check Barraza26LaborComposition --fast",
+      "cwd": "AppliedModelingLib root",
+      "exit_code": 0,
+      "output": "lean/contribution-check-fast.txt",
+      "scope": "PaperInterface forced build and paper-scoped diff whitespace check; not semantic acceptance"
+    },
+    {
+      "command": "lake build +Barraza26LaborComposition.ProofInterface",
+      "cwd": "AppliedModelingLib root",
+      "exit_code": 0,
+      "output": "lean/proof-interface-build.txt",
+      "scope": "Forced build of exact-type proof endpoint and its imports"
+    }
+  ],
+  "status": "open",
+  "official_contribution_workflow_started": true,
+  "official_contribution_workflow_complete": false,
+  "semantic_review_complete": false,
+  "accepted_closure_receipt_present": false,
+  "draft_preflight": {
+    "exit_code": 2,
+    "diagnostic": "source anchor 0 quote does not equal the current declared source slice",
+    "duplicate_spec_suffix_references_corrected": true,
+    "semantic_judgment_issued": false
+  },
+  "human_semantic_review_recorded": false,
+  "blockers": [
+    "Source-map migration is unfinished: source anchor 0 quotation does not match the current source slice. Regenerate anchors for the 24nov pin before independent review; scaffold/status and old notes retain draft fields.",
+    "No independent raw-source-to-expanded-Spec judgment or accepted closure receipt exists for the current interface.",
+    "The required GPT-5.6 Sol xhigh author/coordinator run stopped at a usage limit; builds do not replace its remaining review/closeout steps."
+  ],
+  "historical_notes": "The generated notes retain the 12nov source pin and some Lean docstrings retain old line locators; these are archival/draft navigation, not evidence of current semantic acceptance."
+}
