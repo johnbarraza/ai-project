@@ -42,4 +42,12 @@ V3 es la diferencia entre la fracción de horas informales del quintil de riquez
 
 ## Límites
 
-Es equilibrio parcial: `V_a`, `g` y precios quedan en los de la tesis. No resuelve una HJB/KF modificada ni el vaciado de mercados con `phi_I ≠ phi_F`; eso se hará con el solver MATLAB de la tesis. El rango de `phi_I` es ilustrativo. `effort_check.pdf` es un resto de la plantilla que todavía usan `paper/` y `slides/final.tex`.
+El ejercicio histórico de elasticidades es equilibrio parcial: `V_a`, `g` y precios quedan fijos. Los GE posteriores se resolvieron en MATLAB y sus resultados guardados se auditan y grafican por separado; no se les atribuye una nueva resolución en CI. El rango de `phi_I` es ilustrativo. El ejemplo de esfuerzo de la plantilla no representa el modelo de este proyecto.
+
+## Avances para el paper, 23nov2026
+
+`paper_results.py`, llamado por `verify.py`, verifica el export `data/paper_ge_experiments.json` y genera cuatro figuras `figures/final/paper_*`: sensibilidad de elasticidades con y sin reajuste, interés/capital, tope frente a igualdad de tiempo y perfiles por activos a productividad fija. Son23GE resueltos en MATLAB el13nov, reanalizados desde sus MAT el23nov; no nuevas simulaciones de esta revisión.
+
+El export conserva hashes de los MAT y motores, diagnósticos y perfiles de políticas. Los objetivos M1/M3 son los del GE de referencia de la misma grilla, no una nueva estimación con microdatos. La brecha dentro de z usa quintiles condicionales de activos con reparto fraccional del nodo de corte; se distingue de la convención histórica D17. No hay certificación global de precisión.
+
+`python -m unittest discover -s code -p test_verify_lean.py` comprueba que el recibo Lean tolere conversiones LF/CRLF de Git y siga rechazando cambios de contenido. Ese check de procedencia no sustituye la ejecución de Lean.

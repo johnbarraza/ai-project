@@ -1,14 +1,15 @@
 {
   "document_type": "theoretical_macroeconomics_course_project",
-  "as_of": "2026-11-12",
+  "as_of": "2026-11-24",
   "human_semantic_review_recorded": false,
   "official_contribution_workflow_complete": false,
   "numeric_sources": {
     "PE": "code/data/baseline.csv; code/output/verification.json",
     "GE_D73": "code/data/final_wedges.json; source audit SHA retained inside",
-    "new_MATLAB_run": true,
     "new_MATLAB_scope": "Two same-grid GE replications on 2026-11-12; figures retain D73 values",
-    "MATLAB_replication": "code/data/final_matlab_replication.json"
+    "MATLAB_replication": "code/data/final_matlab_replication.json",
+    "new_MATLAB_run_this_revision": false,
+    "GE_phi_time": "code/data/paper_ge_experiments.json; saved MATLAB runs 2026-11-13, reaudited 2026-11-23"
   },
   "source_metadata": [
     {
@@ -30,21 +31,47 @@
       "key": "Galindo2024",
       "url": "https://www.bcrp.gob.pe/docs/Publicaciones/Documentos-de-Trabajo/2024/documento-de-trabajo-005-2024.pdf",
       "scope": "working-paper status and previously reviewed local manuscript; no later publication asserted"
+    },
+    {
+      "key": "CespedesRendon2012",
+      "url": "https://www.bcrp.gob.pe/docs/Publicaciones/Documentos-de-Trabajo/2012/documento-de-trabajo-17-2012.pdf",
+      "scope": "Official PDF text extraction: Cuadros2/3 distinguished; no visual review of official table this revision"
+    },
+    {
+      "key": "BarrazaNevado2026",
+      "url": "https://github.com/johnbarraza/aiyagari-2firms-peru/tree/8d0b6c31404d27f3cd350bc0f9493d5125a3962e",
+      "scope": "Coauthored model, code/defaults and review documents inspected; no new run of historical solver/Lean"
     }
   ],
   "artifacts": {
-    "paper/paper.tex": "e9768a1b9cd67b5a83c58d99b1f1b62cbe28d26cf75284fe210a4dcd77e63df1",
-    "paper/paper.pdf": "df93dd644aaf9a375343f87d547f17029236d963d4fa70060fc86a411cc97afe",
-    "paper/references.bib": "145eb665880cc7b89ab70ca0ea98f3c20c09ffec1516d672655146e13bd20c82",
-    "slides/final.tex": "c5bea7e55d999bfa2d20037d5422818be1264f7c19334f53a0290f5176768a3e",
-    "slides/final.pdf": "688f0ea4f6c76e6cce6171bdc091e9c9267031af0c97b0be4b1f51fb77953a1e",
+    "paper/paper.tex": "3bfd0418b0b7a74c6cf459e09e623f73d30ce1ccd132bb4449b9b379dafcaaa6",
+    "paper/paper.pdf": "f869c74fbf081fb6a89a9c0e3a818646eb966004efaf189fec6421dac0fdce04",
+    "paper/references.bib": "bd8fadca76dbc5041637567a52dc6b1a14d4f3a15a79ed6c7811e21620f502a9",
+    "slides/final.tex": "3579784a9230d2008fcebbe527792f2eecc9d2f265367f15b02d1339a8222938",
+    "slides/final.pdf": "ffb698ab7c154f07fa39c0c42bb70227c2200d31100c4034bee0e5ab2267ace8",
     "code/data/baseline.csv": "7f81cecfa3cbb49d8d4fd8d0150e7236469775560ad73dbc4f6482c2ba78a95c",
     "code/data/final_wedges.json": "eb4bc507164e61244af2f39140a3614882fca14b3b916e61cc4bd3d349d0275a",
-    "code/output/final_verification.json": "7a26154d445153556a919e072fe34490105f058e53f837a0aa99ad88d883c143",
+    "code/output/final_verification.json": "f9a5aaab4d7fee283793460df3eab6d311f9f377580d379ebdcf2f72d8c78303",
     "lean/LaborComposition.lean": "e31e7fb3f9fec913d61ae558537ea5dcb8d8ac81a7ebcf8348909200a871a4a3",
     "lean/verification/local_check.json": "96cc47cf8086c338b14f9ed96dc906fedc09148f4eb4fb355e56e204b7ccbc4a",
-    "code/data/final_matlab_replication.json": "0401fe6fed12cbea98d818d4d713ecaf2c8f351cc584b2c770080245e4ab51a5"
+    "code/data/final_matlab_replication.json": "0401fe6fed12cbea98d818d4d713ecaf2c8f351cc584b2c770080245e4ab51a5",
+    "code/data/frisch_evidence.json": "1ef65ba499f7c182ad0086aae77ad18e3582334bc7a175331b866c649992577c",
+    "code/data/paper_ge_experiments.json": "7e2084e958e05e16ffd84f715900b4945e2afc4da417d141f5915e4dc2334155",
+    "code/output/paper_results.json": "3450aa3d66fe12d71185076efb282b7ad16feefaa71d2e0d4831c4ab352f4732",
+    "code/output/paper_numbers.tex": "55e052753c68e05cb87f28568264179a5734ee68169678a4a7e0743e345b450d"
   },
-  "paper_source_commit": "8e51a872c874f09079ce106068cc065b0a0efbee",
-  "artifact_hash_scope": "SHA256 of canonical Git blob bytes (LF text); files must be staged before refresh"
+  "artifact_hash_scope": "SHA256 of canonical Git blob bytes (LF text); files must be staged before refresh",
+  "formalization_source_commit": "8e51a872c874f09079ce106068cc065b0a0efbee",
+  "formalization_repin_required": true,
+  "unchanged_formal_claims": {
+    "source_commit": "8e51a872c874f09079ce106068cc065b0a0efbee",
+    "blocks_utf8_lf_sha256": [
+      "de1f5ff012d9cf4998d556780203e3e14c0eee75f70107963dd416dfea246bb0",
+      "9120b738d9c591d7a030d0918ae6f6c4b9487f15a0bc44174f4c43f10b1b2ef1",
+      "e5c4ce93167419978599d2c11b91ea1923766b5923b26e04bc7a39e57700809e",
+      "2ca1b1ef0002706d182699fcc411248f89a82c3f9b958d075cf8ea04cdf7f911",
+      "a12fdb797942431ffd91894058c7397928d261b280f7fb9c0e896fb3d4863898",
+      "e356e6bac6e3bce92806da69666cc894d228dbea790d0b8e1de06e604167d8b1"
+    ]
+  }
 }

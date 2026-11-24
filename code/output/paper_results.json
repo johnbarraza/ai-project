@@ -1,0 +1,125 @@
+{
+  "scope": "Saved MATLAB GE reaudited; no new solve. Model aggregates and policies only.",
+  "run_date": "2026-11-13",
+  "export_sha256": "7e2084e958e05e16ffd84f715900b4945e2afc4da417d141f5915e4dc2334155",
+  "counts": {
+    "fixed_parameters": 8,
+    "refit": 7,
+    "time_cap": 6,
+    "time_equality": 2
+  },
+  "checks": "passed",
+  "full_precision_certification": false,
+  "within_z_definition": "Conditional asset quintiles, fractional cut; z-mass weighted average of individual informal-share differences",
+  "fixed_high": {
+    "phi_I": 0.7,
+    "r": 0.0657709610003687,
+    "pI": 1.0631337662680236,
+    "capital": 5.145646653151038,
+    "M1_informal_hours": 0.30937373061977946,
+    "M3_formal_zmax_minus_zmin": 0.38968510800957845,
+    "V3_assets_Q1_minus_Q5_fractional": 0.09336644706770603
+  },
+  "refit_high": {
+    "phi_I": 0.7,
+    "r": 0.06562775680533282,
+    "pI": 0.9278073787025676,
+    "capital": 5.168894511515849,
+    "psi_I": 6.643800858604516,
+    "kappa_max": 0.403926119208238,
+    "M1_informal_hours": 0.5168222102347582,
+    "M3_formal_zmax_minus_zmin": 0.37363909424769537,
+    "V3_assets_Q1_minus_Q5_fractional": 0.10460952854522537
+  },
+  "reference": {
+    "r": 0.06576169504535091,
+    "pI": 0.9283339905131518,
+    "capital": 5.164749568547029,
+    "M1_informal_hours": 0.5168222118061202,
+    "M3_formal_zmax_minus_zmin": 0.37363909435821363,
+    "V3_assets_Q1_minus_Q5_fractional": 0.04398673094985989
+  },
+  "time_cases": [
+    {
+      "family": "time_cap",
+      "hbar": 0.55,
+      "mass_at_cap": 0.27340109739891527,
+      "within_z_gap_fractional": -0.00982436317941368,
+      "M1_informal_hours": 0.5148520846226483,
+      "M3_formal_zmax_minus_zmin": 0.42498068118854615,
+      "V3_assets_Q1_minus_Q5_fractional": 0.03986974997250653
+    },
+    {
+      "family": "time_cap",
+      "hbar": 0.6,
+      "mass_at_cap": 0.06055092749925982,
+      "within_z_gap_fractional": -0.001992065149082849,
+      "M1_informal_hours": 0.5165317926031144,
+      "M3_formal_zmax_minus_zmin": 0.3917838418180374,
+      "V3_assets_Q1_minus_Q5_fractional": 0.04320013771248443
+    },
+    {
+      "family": "time_cap",
+      "hbar": 0.65,
+      "mass_at_cap": 0.004867190143851945,
+      "within_z_gap_fractional": -0.00013774160122932138,
+      "M1_informal_hours": 0.5168066659485229,
+      "M3_formal_zmax_minus_zmin": 0.3769687826886034,
+      "V3_assets_Q1_minus_Q5_fractional": 0.0439510900135221
+    },
+    {
+      "family": "time_cap",
+      "hbar": 0.7,
+      "mass_at_cap": 8.821271697903571e-05,
+      "within_z_gap_fractional": -1.1675995889700395e-06,
+      "M1_informal_hours": 0.5168220847838262,
+      "M3_formal_zmax_minus_zmin": 0.373718505002339,
+      "V3_assets_Q1_minus_Q5_fractional": 0.043986380469440034
+    },
+    {
+      "family": "time_cap",
+      "hbar": 0.8,
+      "mass_at_cap": 0.0,
+      "within_z_gap_fractional": 1.2480140880332826e-17,
+      "M1_informal_hours": 0.5168222118061202,
+      "M3_formal_zmax_minus_zmin": 0.37363909435821374,
+      "V3_assets_Q1_minus_Q5_fractional": 0.043986730949859276
+    },
+    {
+      "family": "time_cap",
+      "hbar": 0.9,
+      "mass_at_cap": 0.0,
+      "within_z_gap_fractional": 2.572721290348239e-19,
+      "M1_informal_hours": 0.5168222118061202,
+      "M3_formal_zmax_minus_zmin": 0.37363909435821374,
+      "V3_assets_Q1_minus_Q5_fractional": 0.043986730949859276
+    },
+    {
+      "family": "fixed_parameters",
+      "hbar": 1.0,
+      "mass_at_cap": 0.0,
+      "within_z_gap_fractional": -6.062705928928586e-18,
+      "M1_informal_hours": 0.5168222118061202,
+      "M3_formal_zmax_minus_zmin": 0.37363909435821363,
+      "V3_assets_Q1_minus_Q5_fractional": 0.04398673094985989
+    },
+    {
+      "family": "time_equality",
+      "hbar": 0.49,
+      "mass_at_cap": 1.0000000000000004,
+      "within_z_gap_fractional": -0.02267113879135548,
+      "M1_informal_hours": 0.5093971027383191,
+      "M3_formal_zmax_minus_zmin": 0.2799889492776491,
+      "V3_assets_Q1_minus_Q5_fractional": 0.024663203293281755
+    },
+    {
+      "family": "time_equality",
+      "hbar": 0.6,
+      "mass_at_cap": 0.9999999999999994,
+      "within_z_gap_fractional": -0.014238851680780857,
+      "M1_informal_hours": 0.5242334146441011,
+      "M3_formal_zmax_minus_zmin": 0.1488779076304259,
+      "V3_assets_Q1_minus_Q5_fractional": 0.01045501418867023
+    }
+  ]
+}

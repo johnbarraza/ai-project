@@ -64,7 +64,7 @@
   "local_lean_checked": true,
   "official_applied_modeling_workflow": false,
   "remaining_requirements": [
-    "Flujo oficial AppliedModelingLib sobre paper publicado en commit",
-    "Derivación manuscrita personal en pantalla"
+    "Formalización oficial cotejada con el paper",
+    "Derivaciones manuscritas completas y corrección de la hoja 01"
   ]
 }

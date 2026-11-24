@@ -1,0 +1,10 @@
+{
+  "source": "https://www.bcrp.gob.pe/docs/Publicaciones/Documentos-de-Trabajo/2012/documento-de-trabajo-17-2012.pdf",
+  "version": "BCRP DT 2012-017, October 2012",
+  "locator": "Cuadro 2, ingreso total por hora, tipo de empleo",
+  "checked_on": "2026-11-23",
+  "access": "Official PDF text extracted by Firecrawl; local IZA PDF is a different version",
+  "estimates": {"formal": 0.39, "informal": 0.37, "formal_se": 0.02},
+  "confidence_intervals": {"formal": [0.35, 0.44], "informal": [0.33, 0.41]},
+  "interpretation": "Worker-group estimates do not identify elasticities of simultaneous activities within a household. No test of the sector difference is performed here."
+}

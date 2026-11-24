@@ -81,3 +81,11 @@ el exportador solo se necesita para reconstruir estos insumos desde la fuente lo
 - Motor D73 con un único cambio: exponente informal propio (`HA_IE_FRISCH_I`). Con `phi_I = 0.38` reproduce la referencia D73 (M1 51.682 %, M3 37.364 pp, V3 4.399 pp).
 - `psi_I` y `kappa` quedan fijos (sin reajuste a M1 y M3). Todos pasan el auditor D73 (HJB, KFE, mercados, recursos y FOC con `phi_I`); `V_a` baja con `a` en toda la grilla.
 - CI no ejecuta MATLAB; el archivo guarda los indicadores auditados y el SHA-256 de cada MAT. No es una certificación de precisión global.
+
+## `paper_ge_experiments.json`: experimentos para el paper final
+
+Son23GE guardados el13nov y reanalizados desde los MAT el23nov2026: ocho con elasticidad informal variable a parámetros fijos, siete con reajuste a M1/M3 internos, seis con tope menor y dos con igualdad de tiempo. Se conservan los hashes de MAT y motor, diagnósticos, activos y tres perfiles por productividad. No contiene microdatos ni rutas privadas.
+
+La comprobación laboral recupera `Va` mediante la FOC de consumo logarítmico y verifica condiciones por nodo, incluidos esquinas, factibilidad y signo del multiplicador cuando corresponde. Las bitácoras confirman impuesto al consumo nulo e igualdad activada en esos dos casos. Una igualdad permite multiplicador libre; un tope requiere signo y complementariedad.
+
+`within_z_gap_fractional` compara fracciones individuales entre quintiles condicionales de activos y promedia por masa de z, con corte fraccional. Es distinto de V3, que compara razones de horas agregadas entre quintiles de activos de toda la población. Las figuras y los resúmenes se reproducen desde `code/verify.py`. Los controles exportados no equivalen a resolver de nuevo MATLAB en CI ni a certificar precisión global.

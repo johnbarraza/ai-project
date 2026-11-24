@@ -1,4 +1,4 @@
-% Manuscrito propio de trabajo, 12nov2026. No cambia geometría de la plantilla.
+% Revisión para la entrega final, 24nov2026. Geometría de la plantilla conservada.
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -8,6 +8,7 @@
 \usepackage[round]{natbib}
 \usepackage[colorlinks=true,allcolors=blue!50!black]{hyperref}
 \input{../code/output/final_numbers.tex}
+\input{../code/output/paper_numbers.tex}
 \newtheorem{proposition}{Proposición}
 \theoremstyle{definition}
 \newtheorem{assumption}{Supuesto}
@@ -17,16 +18,18 @@
 \title{Ahorro, flexibilidad de horas e informalidad en el Perú\\[3pt]\large Un mecanismo laboral en un modelo macroeconómico de agentes heterogéneos}
 \author{John Svante Barraza Ratachi\\ \small Universidad del Pacífico, AI and Economic Modeling, Track B\\
 \small\url{https://github.com/johnbarraza/ai-project}}
-\date{12 de noviembre de 2026. Manuscrito de trabajo para discusión}
+\date{24 de noviembre de 2026. Revisión para la entrega final}
 \setlength{\emergencystretch}{2em}
 \begin{document}
 \maketitle
 \begin{abstract}
-Estudio cuándo la riqueza modifica el reparto de horas formales e informales a productividad fija. En un bloque laboral interior con desutilidad isoelástica separable, la elasticidad del cociente de horas respecto al valor marginal de los activos es la diferencia entre las elasticidades sectoriales. Si ese valor marginal disminuye con los activos, la fracción informal cae con la riqueza exactamente cuando la elasticidad informal es mayor. Con elasticidad común, el canal directo se cancela. Un ejercicio parcial reproduce el mecanismo y contrastes de equilibrio general muestran dependencia de la barrera formal. No se identifican efectos causales ni se prueba concavidad global de la HJB. Lean comprueba localmente la derivada de las políticas explícitas y sus signos; el flujo oficial sobre un paper publicado en commit sigue pendiente.
+Estudio cuándo la riqueza modifica el reparto de horas formales e informales a productividad fija, dentro de una economía de agentes heterogéneos con dos sectores y precios endógenos. En una rama laboral interior con tiempo holgado, la derivada de la fracción informal depende de la diferencia de elasticidades y de la pendiente del valor marginal de los activos. Bajo concavidad local, una elasticidad informal mayor genera una fracción decreciente por activos; con elasticidad común se cancela ese canal directo. Un ejercicio parcial y dos protocolos de equilibrio general reproducen el mecanismo, pero muestran respuestas distintas de la brecha por activos y de la informalidad agregada. Los contrastes de tiempo delimitan la validez del resultado interior. No se identifican efectos causales ni elasticidades sectoriales para Perú. Tampoco se prueban concavidad global o existencia del equilibrio. La revisión oficial de Lean y el apéndice manuscrito completo permanecen abiertos.
 \end{abstract}
 
 \section{Introducción}
 El marco es una economía de equilibrio general con hogares heterogéneos, producción formal e informal y una distribución de activos. La pregunta individual importa para macro porque sus políticas se agregan mediante esa distribución, determinan oferta de trabajo y ahorro y deben ser compatibles con los precios de los mercados. La proposición estudia una pieza de ese circuito; los contrastes numéricos de equilibrio general muestran cómo la especificación se transmite también a precios y capital.
+
+El marco y el motor original proceden del trabajo académico coautorado con Enzo Nevado, \citet{BarrazaNevado2026}. Ese antecedente y sus pruebas de bloques estáticos no se presentan como resultados nuevos de autoría individual. Este paper del curso estudia una pregunta más acotada: la cancelación del canal de composición por riqueza con elasticidad común y su sensibilidad a elasticidades distintas, dentro de la economía de dos sectores. El aporte se delimita mediante una proposición condicional y contrastes numéricos trazables.
 
 La informalidad puede asociarse tanto con la productividad de la persona como con los recursos que tiene disponibles. Esa asociación no dice por sí sola qué decisión cambiaría si dos hogares con igual productividad dispusieran de activos diferentes. La pregunta de este trabajo es más acotada: ¿cuándo influye la riqueza en el reparto de horas entre trabajo formal e informal, manteniendo la productividad laboral individual fija? La decisión considerada es una cantidad de horas en cada actividad. Ambos trabajos pueden coexistir; no se modela aquí la llegada de una oferta ni una elección discreta de sector.
 
@@ -45,7 +48,9 @@ El antecedente cercano para Perú es el Documento de Trabajo 2024-005 del BCRP, 
 
 La revisión previa de supuestos también consideró \citet{Kaplan2018}. El tratamiento de una prima crediticia como costo de intermediación resulta útil para la contabilidad. No ofrece respaldo automático para imponer a la barrera laboral y a la prima de deuda una misma función decreciente de productividad. La coincidencia de letras entre artículos tampoco establece equivalencia económica. Por ello, los perfiles de cuñas se mantienen como elecciones del proyecto que requieren contraste.
 
-La revisión de literatura es focalizada y su registro conserva límites de acceso y de lectura. No se declara exhaustiva la búsqueda de trabajos que citan a los antecedentes. Tampoco se atribuye a esas referencias una estimación de la desigualdad entre elasticidades formal e informal. Esa desigualdad es una sensibilidad ilustrativa del bloque de horas. El resultado teórico no depende de que tal orden se haya estimado para Perú, pero su aplicación cuantitativa sí necesita evidencia que lo discipline.
+El antecedente empírico de \citet{CespedesRendon2012} requiere distinguir versión y cuadro. El Cuadro 2 del documento BCRP, con ingreso total por hora, reporta elasticidades puntuales de \EmpiricalPhiFormal{} para trabajadores formales y \EmpiricalPhiInformal{} para informales. Ese orden es contrario al rango ilustrativo con elasticidad informal mayor. Los intervalos reportados se superponen y aquí no se realiza una prueba de diferencia entre estimaciones. Además, categorías de trabajadores no identifican automáticamente dos elasticidades de actividades simultáneas dentro de un mismo hogar. La versión inglesa IZA tiene una tabla de heterogeneidad distinta; no se le atribuyen esas filas sectoriales.
+
+La revisión de literatura es focalizada y conserva límites de acceso y de lectura. No se declara exhaustiva la búsqueda de citantes ni se afirma prioridad frente a toda la literatura. La desigualdad de elasticidades es una sensibilidad del bloque de horas, no una estimación sectorial para Perú. La versión de trabajo de cada antecedente se identifica en la bibliografía; no se presupone una publicación posterior arbitrada.
 
 \section{Modelo y supuestos}
 \subsection{Estados, información y decisiones}
@@ -182,7 +187,7 @@ La igualdad de elasticidades es, por tanto, una frontera útil de sensibilidad. 
 \subsection{Qué se reproduce}
 El punto de entrada es \texttt{python code/verify.py}. El script comprueba las FOC por diferenciación simbólica y compara políticas explícitas con optimizaciones escalares independientes del objetivo. También verifica la derivada de la fracción y la regla de la cadena utilizada en \eqref{eq:main}. El procedimiento falla si una identidad o tolerancia declarada no se cumple. Estas comprobaciones detectan errores de implementación; una colección finita de casos no sustituye la demostración.
 
-Se conservan dos fuentes numéricas. La primera es la exportación pública del cierre histórico, de \(200\times40\) nodos, desde la que se reconstruye el valor marginal compatible con las FOC. La segunda son exportaciones de diagnósticos de los contrastes D73 del 9 de noviembre. En esta revisión Python vuelve a producir el PE desde la primera fuente y relee los indicadores guardados de la segunda. No vuelve a resolver en MATLAB las HJB/KFE de D73. Los archivos de procedencia distinguen ambas operaciones.
+Se conservan tres bloques numéricos. El primero es la exportación pública del cierre histórico, de \(200\times40\) nodos, desde la que se reconstruye el valor marginal compatible con las FOC. El segundo contiene los contrastes de cuñas D73 del 9 de noviembre y su repetición de dos GE el 12 de noviembre. El tercero incorpora los \GEPaperCount{} GE resueltos en MATLAB el 13 de noviembre, con elasticidades distintas y restricciones de tiempo. Los MAT de este último bloque se reanalizaron el 23 de noviembre. Python reproduce el PE, valida las exportaciones y genera las figuras; la verificación en CI no resuelve de nuevo las HJB/KFE. Procedencia, hashes y alcance distinguen estas operaciones.
 
 Esta distinción también determina el significado de la palabra verificación. La identidad de composición tiene una prueba algebraica y una comprobación simbólica. El ejercicio parcial tiene una reproducción numérica. Las corridas D73 conservan una auditoría independiente realizada sobre sus MAT y sus diagnósticos exportados, pero no se les atribuye una nueva ejecución en esta sesión. Finalmente, la estabilidad frente a grilla y dominio es un problema separado del cierre de una corrida individual.
 
@@ -209,6 +214,42 @@ La figura \ref{fig:assets} muestra la fracción informal por activos en un mismo
 \end{table}
 
 La brecha V3 aumenta de \PEGapLow\ a \PEGapHigh\ puntos en el rango considerado. La tabla utiliza la convención D17, que incorpora el nodo que cruza el corte de Q1. El código histórico también conserva la convención antigua de MATLAB, que produce cifras próximas, pero distintas. No se intercambian esas definiciones dentro de una comparación. La magnitud no se interpreta como reducción de una brecha empírica: los descriptivos de personas por gasto y el resultado de horas por activos no comparten denominador ni variable de clasificación.
+
+\subsection{Elasticidades distintas en equilibrio general}
+La extensión cuantitativa resuelve de nuevo HJB, distribución y mercados con \(400\times40\) nodos, activos entre \(-1\) y \(40\), y elasticidad formal de \(0,38\). La elasticidad informal recorre \GEFixedCount{} valores entre \(0,38\) y \(0,70\). Cada equilibrio sirve como inicializador del siguiente. Es continuación numérica entre estados estacionarios, no una trayectoria temporal de la economía.
+
+Se comparan dos protocolos. El primero conserva los niveles de desutilidad y la barrera de referencia. El segundo reajusta \(\psi_I\) y el nivel de la barrera lineal para recuperar M1/M3 del GE de referencia de igual grilla; contiene los \GERefitCount{} valores distintos de esa referencia. Son metas internas, no una nueva estimación con microdatos. En ambos protocolos se permiten los ajustes de precios y distribución que exige el GE.
+
+En estos reajustes se mantienen \(\psi_F\) y la productividad informal agregada \(A_I\) en sus valores de referencia. No se estiman libremente cuatro parámetros a partir de tres momentos, problema identificado en la auditoría del paquete coautorado. Recuperar dos metas con dos instrumentos tampoco demuestra identificación única ni validez de las normalizaciones mantenidas.
+
+Sin reajuste, V3 pasa de \GEBaseVThree{} a \GEFixedHighVThree{} puntos porcentuales, mientras la participación agregada de horas informales baja de \GEBaseMOne\% a \GEFixedHighMOne\%. Una brecha por activos mayor puede coexistir con menor informalidad agregada. La elasticidad modifica la curvatura, pero sus efectos de nivel también dependen del valor marginal, los retornos y los parámetros mantenidos.
+
+Con reajuste, M1/M3 recuperan los valores internos de referencia y V3 llega a \GERefitHighVThree{} puntos. Al final del rango, \(\psi_I=\GERefitPsi\) y el nivel de la barrera es \(\GERefitKappa\). La similitud con la brecha del PE es un resultado de este contraste; no demuestra que un cálculo parcial reproduzca cualquier efecto de equilibrio general.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=.88\linewidth]{../code/figures/final/paper_ge_sensitivity.pdf}
+\caption{GE con elasticidades distintas: brecha Q1--Q5 de razones de horas informales (izquierda) y participación agregada de horas informales (derecha). Reajuste a M1/M3 internos frente a parámetros fijos. Quintiles fraccionales de activos. Fuente: \texttt{code/verify.py}.}
+\label{fig:ge_phi}
+\end{figure}
+
+\begin{table}[htbp]
+\centering\small
+\caption{GE con elasticidad informal variable, selección de casos}
+\begin{tabular}{lrrrrrr}\toprule
+Protocolo&\(\phi_I\)&M1 (\%)&M3 (pp)&V3 (pp)&\(r\) (\%)&\(K\)\\\midrule
+\PaperGERows\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize M1/M3 del reajuste son los de la referencia de igual grilla. V3 usa corte fraccional, distinto del PE D17. Capital en unidades del modelo.
+\label{tab:ge_phi}
+\end{table}
+
+Los precios y agregados también distinguen los protocolos. Con reajuste y \(\phi_I=0,70\), la tasa cambia \(\GERefitRChangeBP\) puntos básicos y el capital aumenta \GERefitKChange\% respecto de la referencia. Sin reajuste, el cambio de interés es pequeño y positivo y el capital disminuye \GEFixedKDecline\%. Son diferencias estacionarias entre especificaciones y protocolos, no efectos causales de una reforma ni medidas de bienestar.
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=.88\linewidth]{../code/figures/final/paper_ge_aggregates.pdf}
+\caption{Interés y capital en los dos protocolos de elasticidades. Cambios respecto de la misma referencia: puntos básicos de interés y variación porcentual del capital. Fuente: \texttt{code/verify.py}.}
+\label{fig:ge_phi_macro}
+\end{figure}
 
 \subsection{Cuñas en equilibrio general}
 Los contrastes D73 utilizan el modelo simultáneo original con elasticidad común. Comparan la referencia con prima constante, barrera constante y ambas constantes. Los niveles constantes iniciales igualan pagos agregados evaluados con las políticas de referencia. Esa igualdad inicial no garantiza pagos iguales después de resolver el GE. En cada contraste se ajustan precios, políticas y distribución y se comprueban mercados, HJB, KFE y condiciones laborales.
@@ -245,22 +286,54 @@ En los GE D73 el capital debe ser consistente con los activos agregados. Se agre
 \label{fig:macro_ge}
 \end{figure}
 
+\subsection{Tope e igualdad de tiempo como contrastes}
+La holgura es una condición sustantiva de la proposición. Al reducir el tope de horas con elasticidad común, algunos hogares alcanzan la restricción. Con \(\bar H=0,55\), la masa en el tope es \CapMassAtLow\%. La brecha media entre quintiles condicionales de activos, ponderada por la masa de cada \(z\), es \(\CapWithinGapLow\) puntos. Este indicador compara fracciones individuales dentro de cada productividad; no es V3 agregado y no comparte automáticamente su signo.
+
+La igualdad impone otro conjunto factible. Todos trabajan una cantidad fija, aun si preferirían trabajar menos; desaparece el ajuste de horas totales. Los casos \(\bar H=0,49\) y \(0,60\), con elasticidades comunes, muestran pendientes por activos cuyo signo varía con los retornos relativos. La brecha dentro de \(z\) es \(\EqWithinLow\) y \(\EqWithinHigh\) puntos, respectivamente. V3 agregado sigue siendo positivo: \EqLowVThree{} y \EqHighVThree{} puntos. Una comparación a productividad fija y una comparación de quintiles de toda la población responden preguntas distintas.
+
+\begin{table}[htbp]
+\centering\small
+\caption{Restricciones de tiempo con elasticidad común}
+\begin{tabular}{lrrrr}\toprule
+Régimen&\(\bar H\)&M1 (\%)&V3 (pp)&Brecha dentro de \(z\) (pp)\\\midrule
+\PaperTimeRows\bottomrule
+\end{tabular}
+\par\smallskip\footnotesize La última columna usa quintiles condicionales de activos con corte fraccional y promedia por masa de \(z\); compara fracciones individuales. V3 usa razones agregadas de horas por quintiles incondicionales de activos.
+\label{tab:time}
+\end{table}
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=.88\linewidth]{../code/figures/final/paper_time_constraints.pdf}
+\caption{Masa en el tope y brecha de composición dentro de productividad. La igualdad se grafica como régimen distinto, no como una restricción con holgura. Fuente: \texttt{code/verify.py}.}
+\label{fig:time}
+\end{figure}
+
+\begin{figure}[htbp]
+\centering\includegraphics[width=.88\linewidth]{../code/figures/final/paper_equality_profiles.pdf}
+\caption{Fracción informal por activos a productividad fija, con elasticidad común. Comparación de la referencia con dos igualdades de tiempo; eje de activos acotado para facilitar lectura. Fuente: \texttt{code/verify.py}.}
+\label{fig:equality}
+\end{figure}
+
+La igualdad no contradice la Proposición~\ref{prop:composition}: incumple su condición de holgura. Sus resultados tampoco justifican imponer horas fijas como política sin estudiar bienestar y plausibilidad económica. Para el tope, el multiplicador es no negativo y satisface complementariedad; para la igualdad es libre de signo. No se aplica la política interior original a esos regímenes como si sus condiciones se conservaran.
+
 \subsection{Diagnósticos y límites de precisión}
 El registro D73 conserva \CountMATFinal\ MAT auditados, de los cuales \CountGEFinal\ son GE. Los controles distinguen masa, generador, HJB, KFE, unicidad de clase cerrada, factibilidad, FOC y mercados. Un indicador agregado pequeño no basta si su fórmula omite un costo real. La revisión previa encontró un indicador histórico que excluía la prima de deuda; los contrastes nuevos verifican los dos pagos de \eqref{eq:formal_resources}. El fallo histórico no se borra ni se reutiliza como certificación de los nuevos resultados.
 
-La ampliación del dominio reduce masa en la frontera superior, pero quedan dos pares finos comparables en el mismo dominio amplio y una revisión de resolución o truncamiento de \(z\). No se declara certificación global de precisión. Cambiar los extremos de productividad puede modificar el perfil normalizado de una cuña y no solo su resolución; por eso las anclas económicas deben mantenerse al hacer comparaciones de grilla. Tampoco se cambia silenciosamente el límite de endeudamiento para que converja un caso.
+La ampliación del dominio reduce masa en la frontera superior, pero faltan dos pares finos comparables en el mismo dominio amplio y una revisión de resolución o truncamiento de \(z\). No se declara certificación global de precisión. Cambiar los extremos de productividad puede modificar el perfil normalizado de una cuña y no solo su resolución; por eso las anclas económicas deben mantenerse al hacer comparaciones de grilla. Tampoco se cambia silenciosamente el límite de endeudamiento para que converja un caso.
+
+Los \GEPaperCount{} GE de noviembre incorporados al paper se reanalizaron desde sus MAT. Además de los controles anteriores, se verificaron condiciones laborales por nodo, incluidas esquinas y multiplicadores. Con utilidad logarítmica e impuesto al consumo nulo, la FOC de consumo recupera \(\Va=1/(c_F+p_Ic_I)\). Las bitácoras confirman ese impuesto y el régimen de tiempo de cada corrida. Así se evita sustituir la derivada utilizada por el control laboral por diferencias centrales de \(V\). Pasar esas comprobaciones sigue siendo distinto de certificar precisión global.
 
 \section{Discusión y limitaciones}
 La proposición identifica el papel de la igualdad de elasticidades y de la concavidad local. Su fuerza consiste en aislar ese canal; su límite consiste en las condiciones que requiere. Un hogar en una esquina sectorial, en el tope de tiempo o en un punto sin derivabilidad exige otro enunciado. Esos casos no pueden incorporarse mediante la misma fórmula solo porque el solver entregue un número. La extensión a un cambio de precios también añade términos que aquí se mantienen constantes.
 
-El resultado agregado requiere integrar políticas con una distribución. Una brecha positiva entre quintiles de activos no contradice la cancelación a \(z\) fijo, porque la productividad puede estar distribuida de manera distinta entre quintiles. Del mismo modo, una brecha parcial mayor al variar una elasticidad no demuestra que un GE tenga el mismo cambio. Recalcular equilibrio es una tarea distinta y el manuscrito no afirma haberla completado para las elasticidades de sensibilidad.
+El resultado agregado requiere integrar políticas con una distribución. Una brecha positiva entre quintiles de activos no contradice la cancelación a \(z\) fijo, porque la productividad puede estar distribuida de manera distinta entre quintiles. Los GE con elasticidades distintas permiten observar la respuesta del cierre completo, pero sus resultados dependen de qué parámetros se mantienen y qué momentos se recuperan. La coincidencia aproximada entre una brecha parcial y otra de GE en este rango no constituye una equivalencia general entre protocolos.
 
 La interpretación empírica sigue siendo una limitación sustantiva. Las referencias revisadas no estiman automáticamente \(\phi_I-\phi_F\), \(\nu_I\) o el perfil compartido de cuñas del proyecto. La medición por personas, horas, ingreso, gasto y patrimonio debe reconciliarse antes de juzgar ajuste. Para distinguir especificaciones después de un reajuste, hacen falta momentos externos que no se hayan utilizado para igualarlas. Comparar solo el tamaño de V3 favorecería una forma por el resultado deseado, sin identificar su mecanismo.
 
 Lean comprueba la derivada y los signos de las políticas explícitas, con la condición de concavidad declarada. No prueba regularidad o concavidad de la HJB ni existencia del GE. Quedan pendientes el flujo oficial sobre un commit publicado, el manuscrito personal y la revisión semántica del autor.
 
 \section{Conclusión}
-A igual productividad y dentro de una rama laboral interior, la composición de horas responde al valor marginal de los activos mediante la diferencia de elasticidades sectoriales. Con valor marginal decreciente en riqueza, una elasticidad informal mayor produce una fracción informal decreciente; la igualdad de elasticidades cancela el canal directo. El ejercicio parcial reproduce esa lógica y los contrastes GE muestran dependencia del gradiente por productividad respecto a la barrera formal. La conclusión es condicional y no causal. Los pasos siguientes son disciplinar empíricamente los parámetros, construir indicadores comparables y cerrar los requisitos de formalización y manuscrito con su procedencia completa.
+A igual productividad y dentro de una rama interior con tiempo holgado, la composición de horas responde al valor marginal de los activos mediante la diferencia de elasticidades. Con valor marginal decreciente, una elasticidad informal mayor produce una fracción decreciente por activos; con elasticidad común se cancela ese canal directo. Los GE muestran que ampliar una brecha por activos no equivale a aumentar la informalidad agregada y que el reajuste de momentos modifica esa comparación. Los contrastes de tiempo delimitan la validez del resultado interior. La conclusión es condicional y no causal. Quedan por disciplinar empíricamente los parámetros, mejorar la comparabilidad de indicadores, certificar precisión y completar la evidencia formal y manuscrita con su procedencia.
 \label{body:end}
 \clearpage
 \bibliographystyle{plainnat}
@@ -273,14 +346,15 @@ La fuente propia es \texttt{lean/LaborComposition.lean}. La comprobación local 
 \begin{center}\small
 \begin{tabular}{p{2.6cm}p{7.3cm}p{4cm}}\toprule
 Resultado&Declaraciones, prefijo \texttt{Barraza26LaborComposition}&Estado\\\midrule
-Proposición \ref{prop:composition}, identidad&\texttt{composition\_hasDerivAt}&Probada para políticas explícitas, comprobación local\\
-Proposición \ref{prop:composition}, signos&\texttt{composition\_sign}&Probados bajo \(\Vaa<0\), ya declarada en el paper\\\bottomrule
+Proposición \ref{prop:composition}, identidad y signos&\texttt{composition\_hasDerivAt} y \texttt{composition\_sign}, en \texttt{lean/LaborComposition.lean}&Comprobación local del bloque explícito. Proposición completa abierta en el flujo oficial\\\bottomrule
 \end{tabular}
 \end{center}
 
 El código define \texttt{labor v R psi phi = (v*R/psi)\^{}phi} y \texttt{share} como la fracción de horas de \eqref{eq:explicit}. La función \texttt{V} representa \(a\mapsto\Va(a,z)\), mientras \texttt{d} representa su derivada. \texttt{HasDerivAt V d a} es una hipótesis sobre esa función, no la conclusión de la proposición. La derivación de las FOC desde una HJB regular sigue en la prueba ordinaria; Lean comprueba el resultado de la rama explícita y no todo el problema dinámico.
 
 El commit fuente y el recibo oficial de \texttt{paper\_contribution.py check} deben registrarse al ejecutar ese flujo. La correspondencia local no se presenta como cierre de contribución. Tampoco se ha registrado una revisión semántica humana de este nuevo archivo. Si se modifica un enunciado, debe revisarse la correspondencia y repetir la comprobación pertinente.
+
+La carpeta de trabajo de AppliedModelingLib ya contiene el puente de FOC a políticas y el endpoint \texttt{compositionConditionalHours}, pero su revisión independiente, documentación y traslado íntegro al repositorio siguen en curso. La tabla describe la evidencia actualmente incorporada; no otorga crédito de cierre a archivos que aún no están en la entrega. Las pruebas históricas del modelo coautorado tampoco sustituyen la formalización de esta proposición.
 
 \section{Colaboración con IA y veredictos}
 Los intercambios crudos relevantes están en \texttt{prompts.md}; el registro de decisiones conserva los contrastes. En el caso del tope de tiempo, se consideró un mecanismo que dependía de una restricción activa. Las condiciones correctas para horas positivas son
@@ -293,5 +367,7 @@ El diagnóstico histórico reproducido da masa en el tope igual a \PENoCap\ y ho
 Otro punto revisado fue el reajuste de una sola desutilidad al variar \(\phi_I\). Mantener M1 no preserva automáticamente M3. El proyecto pasó a reajustar conjuntamente dos niveles en el ejercicio parcial. La comprobación numérica conserva el contraste de un solo parámetro y falla si se lo confunde con la recuperación de ambas metas. Finalmente, se corrigió la pretensión de comparar directamente una brecha empírica de personas por gasto con una brecha del modelo de horas por activos.
 
 \section{Apéndice manuscrito y autoría}
-El apéndice exigido por el curso debe contener derivaciones escritas por el estudiante y digitalizadas de forma legible. La guía de \texttt{hand/guia\_derivacion.md} organiza los pasos, las reglas de cálculo y las condiciones que debe revisar. No es evidencia manuscrita ni sustituye la revisión personal. No se declara que existan fotos, una firma o una aceptación del autor que no se hayan proporcionado.
+En \texttt{hand/01-derivacion-tope-tiempo.pdf} existe una hoja original del autor, mostrada en la presentación. Se conserva intacta. La nota \texttt{hand/errata-01.md} identifica un subíndice y el paso incorrecto del cociente: tras imponer \(\lambda_H=0\), se debe conservar el cociente de niveles \((R_s/\psi_s)^{\phi_s}\) y contar una sola vez la potencia de \(\Va\). La errata tipografiada no se atribuye al manuscrito personal.
+
+El apéndice completo sigue pendiente: debe contener cada derivación, paso a paso, con reglas y condiciones verificadas por el estudiante. La guía disponible organiza la preparación y no la sustituye. \texttt{hand/README.md} registra qué evidencia existe y qué hojas faltan; no se inventa una firma, comprensión o aprobación personal.
 \end{document}
