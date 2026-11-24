@@ -368,10 +368,10 @@ En Lean, $V(a)=V_a(a,z)$ y $d=V_{aa}(a,z)$.\par\vspace{2mm}
 Hipótesis: S1, S2 y derivabilidad de $V$ (parte de S3). Los signos requieren $d<0$ (S4).\par\vspace{2mm}
 Código propio, comprobado localmente sin \texttt{sorry}.
 \column{.61\linewidth}\labeltext{Declaración y fragmento reales}
-\lstinputlisting[firstline=50,lastline=57]{../lean/LaborComposition.lean}
+\lstinputlisting[firstline=50,lastline=57]{../lean-prototype/LaborComposition.lean}
 \end{columns}
 \takeaway{Mi veredicto: Lean prueba la identidad \emph{bajo una hipótesis añadida}. Toma las horas interiores como fórmula dada, $(vR_s/\psi_s)^{\phi_s}$, en lugar de derivarlas de las FOC y del tope (S3). S4 entra como supuesto $d<0$, no se prueba.}
-\source{Lean 4.30.0-rc2, Mathlib 5450b53e. Salida y hash de fuente en \path{lean/verification/}. Flujo oficial sobre el paper en commit 8e51a87: prueba sin \texttt{sorry} y check rápido aprobado; revisión independiente pendiente. \hyperlink{formalizacion}{\beamergotobutton{Alcance}}}
+\source{Lean 4.30.0-rc2, Mathlib 5450b53e. Salida y hash de fuente en \path{lean-prototype/verification/}. Flujo oficial sobre el paper en commit 8e51a87: prueba sin \texttt{sorry} y check rápido aprobado; revisión independiente pendiente. \hyperlink{formalizacion}{\beamergotobutton{Alcance}}}
 \end{frame}
 
 % 22
