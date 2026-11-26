@@ -60,7 +60,7 @@ El plan y las decisiones coinciden en avanzar con A2 en equilibrio parcial. `AGE
 
 ## 5. Usuario
 
-creo que nos quedamos en margen extensivo no?  tomabas el modelo de aiyagari base (1 firma 1 bien) y lo estábamos extendiendo. ademas ya llene el link  Sí, ya revisé el plan. Avanza con los puntos 1–4 sin correr el GE en MATLAB, en este orden,
+creo que nos quedamos en margen extensivo no?  tomabas el modelo de aiyagari base (1 firma 1 bien) y lo estaamos extendiendo. ademas ya llene el link  Sí, ya revisé el plan. Avanza con los puntos 1–4 sin correr el GE en MATLAB, en este orden,
 y detente al final de cada uno para que lo revise:
 
 1) EXPORTACIÓN
@@ -269,7 +269,7 @@ Puedes seguir en esta sesión: ya ejecuté código MATLAB mediante MCP y recibí
 
 ## 29. Usuario
 
-pero tienes las herramientas de mcp? para que t salgan inicio otro chat o cierra code  le doy /resume?
+pero tienes las herramientas de mcp? para que t salgan inicio otro chat o ciera code  le doy /resume?
 
 ## 30. Codex (commentary)
 
@@ -1168,7 +1168,7 @@ En MATLAB, las últimas iteraciones muestran que el ahorro agregado sigue dando 
 
 ## 166. Usuario
 
-ya cerré la de matlab pq demoro demasiado, no se si cuando corres ves el tiempo, incluso si lo pauso o aprieto ctrlc c pq corrio demasiado casi 24 horas
+ya carre la de matlab pq demoro demasiado, no se si cuando corres ves el tiempo, incluso si lo pauso o aprieto ctrlc c pq corrio demasiado casi 24 horas
 
 ## 167. Codex (commentary)
 
@@ -1395,3 +1395,63 @@ La revisión detectó un error concreto en el mapa de Lean: busca un nombre con 
 ## 209. Codex (commentary)
 
 La referencia duplicada ya está corregida. El siguiente bloqueo quedó identificado: el mapa conserva citas de la versión anterior y debe regenerarlas para el paper actualizado. El PDF mantiene 13 páginas de cuerpo y 15 en total; pasaron los controles numéricos, y comprobé que los supuestos, la proposición y su prueba siguen intactos.
+
+## 210. Usuario, continuación del 24 de noviembre de 2026
+
+cotniua
+
+## 211. Codex (commentary)
+
+Continúo desde el avance publicado. La revisión de Lean avanzó, pero volvió a detenerse por el límite de uso. Revisaré qué evidencia quedó guardada e incorporaré lo comprobado al repositorio, manteniendo explícito lo que falta para la entrega.
+
+## 212. Codex (commentary)
+
+El revisor alcanzó a guardar el cotejo formal de la proposición: encontró correspondencia, sin discrepancias ni incertidumbres. Ya retomé el flujo desde esa evidencia. Quedan por completar los controles y documentos finales del protocolo; todavía no hay un cierre aceptado.
+
+## 213. Codex (commentary)
+
+Mientras termina ese cierre, prepararé una guía complementaria para tus hojas personales, con consumo, FOC de las dos firmas y cierre de recursos. La guía laboral existente cubre la proposición; estas derivaciones ayudan a explicar cómo se conecta con el modelo macro. Será material de preparación, identificado aparte de tus manuscritos.
+
+## 214. Usuario, 25 de noviembre de 2026
+
+retoma
+
+## 215. Codex (commentary)
+
+Retomo desde el cierre formal. La revisión de la proposición y sus cinco prerrequisitos ya pasó; faltaban la auditoría final y los controles del protocolo. Revisaré el estado guardado y continuaré desde ahí para incorporar la carpeta actualizada a la entrega.
+
+## 216. Usuario
+
+conitnua
+
+## 217. Usuario
+
+CONITNUA
+
+## 218. Codex (commentary)
+
+Continúo con lo que puedo cerrar ahora: actualizar el paper, incorporar la guía macro y conservar los últimos recibos de Lean. La revisión matemática pasó; falta el cierre del protocolo y el revisor final sigue limitado por cuota. Lo dejaré indicado con precisión en la entrega.
+
+## 219. Usuario
+
+CUANTO FALTA? O COMO VAMOS DE LO PEDIDO?}
+
+## 220. Codex (commentary)
+
+**El paper, los gráficos y el código ya están hechos y publicados.** Revisé tu repo de base, las entregas de referencia y las reglas del profesor. El paper tiene **13 páginas de cuerpo, 8 figuras y 23 GE auditados**; los controles de código y PDF pasaron.
+
+Falta cerrar:
+
+- **Lean:** la revisión matemática pasó. Quedan la auditoría final, los controles del protocolo y publicar la carpeta actualizada. Las cuotas han demorado esta parte.
+- **Tus derivaciones manuscritas:** solo hay una hoja original con errores identificados. Las guías están preparadas, pero necesitas completar las hojas.
+- **Última publicación:** incorporar el cierre y las mejoras locales al paper mediante PR y merge.
+
+No puedo darte una hora fiable para Lean por las cuotas. La entrega vence el **26 de noviembre, 22:00 de Lima**. Sigo con el cierre; lo más urgente de tu lado son las hojas personales.
+
+## 221. Codex (commentary)
+
+El último control encontró una omisión en Lean: el paper exige un costo laboral separable exacto, pero la interfaz solo recogía la positividad de sus parámetros. Estamos corrigiendo esa representación para que incluya toda la condición. Esto debe resolverse antes de declarar cerrado Lean; el modelo y la proposición del paper se mantienen.
+
+## 222. Codex (commentary)
+
+Voy a publicar ahora la guía macro, la aclaración de activos y sus comprobaciones simbólicas, para que puedas avanzar con tus hojas mientras se corrige Lean. Así tendrás esos materiales disponibles en el repositorio. El cierre formal se incorporará cuando termine de validarse.

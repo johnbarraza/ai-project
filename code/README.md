@@ -46,6 +46,8 @@ El ejercicio histórico de elasticidades es equilibrio parcial: `V_a`, `g` y pre
 
 ## Avances para el paper, 23nov2026
 
+`macro_checks.py`, llamado por `verify.py`, comprueba simbólicamente pagos de factores y beneficios de ambas firmas, homogeneidad CES y cierre de recursos con las dos cuñas. Guarda condiciones y alcance en `output/macro_identities.json`. Es la comprobación reproducible que acompaña la guía macro; no demuestra existencia del GE ni reemplaza las hojas personales.
+
 `paper_results.py`, llamado por `verify.py`, verifica el export `data/paper_ge_experiments.json` y genera cuatro figuras `figures/final/paper_*`: sensibilidad de elasticidades con y sin reajuste, interés/capital, tope frente a igualdad de tiempo y perfiles por activos a productividad fija. Son23GE resueltos en MATLAB el13nov, reanalizados desde sus MAT el23nov; no nuevas simulaciones de esta revisión.
 
 El export conserva hashes de los MAT y motores, diagnósticos y perfiles de políticas. Los objetivos M1/M3 son los del GE de referencia de la misma grilla, no una nueva estimación con microdatos. La brecha dentro de z usa quintiles condicionales de activos con reparto fraccional del nodo de corte; se distingue de la convención histórica D17. No hay certificación global de precisión.

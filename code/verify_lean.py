@@ -25,18 +25,35 @@ def check_official_snapshot(root=ROOT):
     """Check retained file identity, without certifying Lean source correspondence."""
     root = Path(root).resolve()
     manifest = json.loads((root/'docs/lean-workflow.json').read_text(encoding='utf-8'))
-    assert manifest['hash_format'] == 'sha256-utf8-lf-for-text'
+    assert manifest['hash_format'] in (
+        'sha256-utf8-lf-for-text','sha256-utf8-lf-text-and-raw-binary')
+    binary_files = set(manifest.get('binary_artifacts',[]))
+    assert binary_files <= manifest['artifacts'].keys()
     for name, digest in manifest['artifacts'].items():
         path = (root/name).resolve()
         assert path.is_relative_to(root/'lean'), name
-        assert source_sha256(path) == digest, f'Official snapshot changed: {name}'
+        actual = (hashlib.sha256(path.read_bytes()).hexdigest()
+                  if name in binary_files else source_sha256(path))
+        assert actual == digest, f'Official snapshot changed: {name}'
+    supplementary = manifest.get('supplementary_artifacts',{})
+    for name, digest in supplementary.items():
+        path = (root/name).resolve()
+        assert path.is_relative_to(root/'docs'), name
+        assert source_sha256(path) == digest, f'Official check output changed: {name}'
+    retained_paths = manifest['artifacts'].keys() | supplementary.keys()
     for check in manifest['checks']:
-        assert check['exit_code'] == 0 and check['output'] in manifest['artifacts']
-    # This unfinished run has no semantic acceptance, regardless of green builds.
-    assert manifest['status'] == 'open'
-    assert not manifest['official_contribution_workflow_complete']
-    assert not manifest['accepted_closure_receipt_present']
-    assert not (root/'lean/FINAL_CLOSURE_RECEIPT.md').exists()
+        assert check['exit_code'] == 0 and check['output'] in retained_paths
+    # CI checks retained identities; the AML validator establishes acceptance.
+    if manifest['official_contribution_workflow_complete']:
+        assert manifest['status'] == 'accepted'
+        assert manifest['accepted_closure_receipt_present']
+        assert 'lean/FINAL_CLOSURE_RECEIPT.md' in manifest['artifacts']
+        validation = manifest['closure_validation']
+        assert validation['exit_code'] == 0
+        assert validation['output'] in retained_paths
+    else:
+        assert manifest['status'] == 'open'
+        assert not manifest['accepted_closure_receipt_present']
     return manifest
 
 

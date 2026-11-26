@@ -15,7 +15,7 @@ Revisión para el paper final: 24 de noviembre de 2026. [Estado de requisitos y 
 | Manuscrito | [PDF](paper/paper.pdf), [LaTeX](paper/paper.tex), [bibliografía](paper/references.bib): 13 páginas de cuerpo; GE y contrastes de tiempo incorporados; cierre Lean y manuscritos personales pendientes |
 | Simulaciones | [Verificador](code/verify.py): PE, D73, [repetición MATLAB del12nov](docs/replicacion-matlab-final.md) y 23 GE del13nov reanalizados para el paper; cuatro figuras nuevas |
 | Lean propio | [Estado y recibos](docs/estado-lean.md): carpeta oficial íntegra en `lean/`, check rápido y prueba compilados; revisión semántica y cierre abiertos. Prototipo preservado aparte |
-| Derivación a mano | [Hoja original y pendientes](hand/README.md): una página, con errata identificada; faltan las demás derivaciones personales |
+| Derivación a mano | [Hoja original y guías](hand/README.md): una página original con errata; guías laboral y macro disponibles; faltan las demás derivaciones personales |
 | Primera entrega | [Propuesta](proposal/proposal.pdf), [tema](slides/topic.pdf), conservados |
 | Colaboración con IA | [Registro](prompts.md), con enlace a la versión cruda; veredictos y límites en el paper |
 

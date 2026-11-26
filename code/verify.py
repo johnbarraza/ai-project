@@ -493,6 +493,8 @@ def write_outputs(baseline, scenarios, sensitivity, summary, moments_data):
 
 
 def main():
+    from macro_checks import verify_macro_identities
+    verify_macro_identities()
     baseline, scenarios, sensitivity, summary, moments_data = check()
     write_outputs(baseline, scenarios, sensitivity, summary, moments_data)
     from figures import build_figures
