@@ -38,7 +38,7 @@
       "statement": "Bajo los supuestos \\ref{ass:fixed}--\\ref{ass:regular}, la política interior satisface \\frac{\\partial\\sI(a_0,z)}{\\partial a}=\\sI(a_0,z)\\bigl(1-\\sI(a_0,z)\\bigr)(\\phi_I-\\phi_F)\\frac{\\Vaa(a_0,z)}{\\Va(a_0,z)}. Si además se cumple el supuesto \\ref{ass:concavity}, la derivada es negativa cuando \\phi_I>\\phi_F, cero cuando \\phi_I=\\phi_F y positiva cuando \\phi_I<\\phi_F.",
       "source_item": "Proposición 1 (Composición condicional de horas)",
       "source_kind": "proposition",
-      "source_location": "source-audited.tex:126-134",
+      "source_location": "source-audited.tex:131-139",
       "source_url": "https://github.com/johnbarraza/ai-project/blob/8e51a872c874f09079ce106068cc065b0a0efbee/paper/paper.pdf",
       "spec_lean_declarations": [
         "compositionConditionalHoursSpec"
@@ -54,8 +54,8 @@
       "source_anchor_evidence": [
         {
           "path": "source-audited.tex",
-          "line_start": 126,
-          "line_end": 134,
+          "line_start": 131,
+          "line_end": 139,
           "quoted_text": "\\begin{proposition}[Composición condicional de horas]\\label{prop:composition}\nBajo los supuestos \\ref{ass:fixed}--\\ref{ass:regular}, la política interior satisface\n\\begin{equation}\\label{eq:main}\n\\frac{\\partial\\sI(a_0,z)}{\\partial a}\n=\\sI(a_0,z)\\bigl(1-\\sI(a_0,z)\\bigr)\n(\\phi_I-\\phi_F)\\frac{\\Vaa(a_0,z)}{\\Va(a_0,z)} .\n\\end{equation}\nSi además se cumple el supuesto \\ref{ass:concavity}, la derivada es negativa cuando \\(\\phi_I>\\phi_F\\), cero cuando \\(\\phi_I=\\phi_F\\) y positiva cuando \\(\\phi_I<\\phi_F\\).\n\\end{proposition}",
           "quoted_text_sha256": "a12fdb797942431ffd91894058c7397928d261b280f7fb9c0e896fb3d4863898"
         }
@@ -66,8 +66,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 53,
-              "line_end": 58,
+              "line_start": 58,
+              "line_end": 63,
               "quoted_text": "\\begin{equation}\\label{eq:preferences}\n\\mathbb E_0\\int_0^\\infty e^{-\\rho t}\n\\left[\\ln C(c_F,c_I)-\n\\sum_{s\\in\\{F,I\\}}\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right]dt.\n\\end{equation}\nLa canasta distingue los dos bienes. El argumento de composición laboral usa la separabilidad del bloque de horas y su vínculo con la restricción de recursos; no requiere estimar aquí un nuevo parámetro de sustitución de consumo.",
               "quoted_text_sha256": "e3572f868c66cf4391106858fde02bb57d9389ba7c1e70fb22b3d136eaec5b9d"
             }
@@ -78,8 +78,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 61,
-              "line_end": 66,
+              "line_start": 66,
+              "line_end": 71,
               "quoted_text": "\\begin{equation}\\label{eq:budget}\n\\dot a=R_F(z)\\ell_F+R_I(z)\\ell_I+ra-\\chi(z)(-a)_+\n+T-c_F-p_Ic_I,\n\\end{equation}\ncon \\(a\\geq\\underline a\\), \\(\\ell_s\\geq0\\) y\n\\(\\ell_F+\\ell_I\\leq\\bar H\\). El hogar observa su estado actual y conoce la ley del riesgo, pero no su realización futura. Toma precios, remuneraciones efectivas y transferencias como dados al resolver su problema individual.",
               "quoted_text_sha256": "487a0c3e97012f8a78f21a2b7f91711e45952662035230ba8329ac5a4926ae0a"
             }
@@ -90,8 +90,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 68,
-              "line_end": 72,
+              "line_start": 73,
+              "line_end": 77,
               "quoted_text": "Los retornos por hora que recibe son\n\\begin{equation}\\label{eq:returns}\nR_F(z)=(1-\\tau)w_Fz-\\kappa(z),\\qquad\nR_I(z)=\\widetilde w_Iz^{\\nu_I}.\n\\end{equation}",
               "quoted_text_sha256": "9abb3ca0f1e6e36ad9568d04123e36f23de20932b9a689d36201b53a12cd998d"
             }
@@ -102,8 +102,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 99,
-              "line_end": 105,
+              "line_start": 104,
+              "line_end": 110,
               "quoted_text": "Escribo \\(v(a,z)\\) para el valor del hogar y \\(\\Va(a,z)=\\partial_av(a,z)\\). Cuando la solución es regular, el bloque laboral de la HJB es\n\\begin{equation}\\label{eq:hoursblock}\n\\max_{\\ell_F,\\ell_I}\n\\left\\{\\Va(R_F\\ell_F+R_I\\ell_I)-\n\\sum_s\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right\\}.\n\\end{equation}\nLa derivación no constituye una prueba de regularidad de la HJB. Se explicitan las condiciones bajo las que puede usarse.",
               "quoted_text_sha256": "0d9c3f1fe3bb24f6a7f3490f9d4e02fdacc97e92afdcb7e36557d274677a244a"
             }
@@ -114,8 +114,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 107,
-              "line_end": 109,
+              "line_start": 112,
+              "line_end": 114,
               "quoted_text": "\\begin{assumption}[Comparación individual]\\label{ass:fixed}\nSe fija \\(z\\) y se considera un entorno abierto de un punto \\(a_0>\\underline a\\). Los retornos \\(R_F,R_I>0\\), los precios y las remuneraciones efectivas se mantienen fijos y no dependen directamente de los activos en esa comparación.\n\\end{assumption}",
               "quoted_text_sha256": "de1f5ff012d9cf4998d556780203e3e14c0eee75f70107963dd416dfea246bb0"
             }
@@ -126,8 +126,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 110,
-              "line_end": 112,
+              "line_start": 115,
+              "line_end": 117,
               "quoted_text": "\\begin{assumption}[Preferencias laborales]\\label{ass:parameters}\nPara \\(s\\in\\{F,I\\}\\), \\(\\psi_s>0\\) y \\(\\phi_s>0\\). El costo de horas es el de \\eqref{eq:preferences}, separable entre actividades.\n\\end{assumption}",
               "quoted_text_sha256": "9120b738d9c591d7a030d0918ae6f6c4b9487f15a0bc44174f4c43f10b1b2ef1"
             }
@@ -138,8 +138,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 113,
-              "line_end": 115,
+              "line_start": 118,
+              "line_end": 120,
               "quoted_text": "\\begin{assumption}[Rama interior regular]\\label{ass:regular}\nLa función \\(a\\mapsto\\Va(a,z)\\) es positiva y diferenciable en \\(a_0\\). Las horas de la rama considerada satisfacen las FOC de \\eqref{eq:hoursblock}, son positivas y su suma es estrictamente menor que \\(\\bar H\\).\n\\end{assumption}",
               "quoted_text_sha256": "e5c4ce93167419978599d2c11b91ea1923766b5923b26e04bc7a39e57700809e"
             }
@@ -150,8 +150,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 116,
-              "line_end": 118,
+              "line_start": 121,
+              "line_end": 123,
               "quoted_text": "\\begin{assumption}[Concavidad local para la interpretación]\\label{ass:concavity}\nCuando se interpreta el signo por riqueza se mantiene \\(\\Vaa(a_0,z)<0\\).\n\\end{assumption}",
               "quoted_text_sha256": "2ca1b1ef0002706d182699fcc411248f89a82c3f9b958d075cf8ea04cdf7f911"
             }
@@ -162,8 +162,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 120,
-              "line_end": 120,
+              "line_start": 125,
+              "line_end": 125,
               "quoted_text": "Los tres primeros supuestos permiten derivar la identidad. El cuarto solo se usa para ordenar sus signos. Su cumplimiento en una grilla no implica una demostración global. Si el tope de tiempo se activa, aparece un multiplicador común y la fórmula interior deja de ser la política correspondiente. Si se evalúa el límite de endeudamiento, se requieren derivadas unilaterales y un enunciado adaptado; ese caso no queda cubierto por el entorno abierto utilizado aquí.",
               "quoted_text_sha256": "cb2e5a92641a4ed32ac89ae5eae4d2e494158e836dfec40ebe4ee1c2082690f4"
             }
@@ -174,8 +174,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 123,
-              "line_end": 124,
+              "line_start": 128,
+              "line_end": 129,
               "quoted_text": "Defina la fracción de horas informales como\n\\(\\sI=\\ell_I/(\\ell_F+\\ell_I)\\). Esta definición cuenta horas y no clasifica ex ante a una persona como informal. Bajo los retornos positivos y la rama interior, \\(0<\\sI<1\\).",
               "quoted_text_sha256": "a8694ee008a60fdf68766a8e0a6d728b8693a03ca0a834eed2151afe1b24a0e2"
             }
@@ -205,48 +205,86 @@
           "protocol": "approved-source-review-context-v1",
           "id": "B26-FIXED-RETURNS-SCALARS",
           "kind": "source_model_convention",
-          "source_locator": "source-audited.tex:107-109",
+          "source_locator": "source-audited.tex:112-114",
           "classification": "source_representation_convention",
           "formal_meaning": "The positive returns held fixed in the comparison are represented by scalar constants RF and RI.",
           "why_needed": "This records that the formalization differentiates only with respect to assets and does not introduce asset-dependent returns.",
           "checked_scope": "Assumption 1, Assumption 3, and Proposition 1 only.",
-          "record_sha256": "2c0c320b09eabd6947cedef84e23a3d4017dffb4b17bc03a1716091c24aafbda"
+          "record_sha256": "1754a85a0137abe461f2bf12c4674c1f04cb1e27000dfc1f0d3709183068543c"
         },
         {
           "protocol": "approved-source-review-context-v1",
           "id": "B26-FIXED-Z-UNARY-SLICE",
           "kind": "source_model_convention",
-          "source_locator": "source-audited.tex:107-109",
+          "source_locator": "source-audited.tex:112-114",
           "classification": "source_representation_convention",
           "formal_meaning": "After fixing z, V, ellF, and ellI are represented as unary real functions of the asset coordinate a.",
           "why_needed": "Lean suppresses the fixed productivity argument so the local derivative is taken only along the source's asset comparison.",
           "checked_scope": "Assumption 1, Assumption 3, the hours-share definition, and Proposition 1 only.",
-          "record_sha256": "e3ab028975a931352ec147b93f9b5419ef9296b00fcd70cea34bb1536d1a996b"
+          "record_sha256": "6cdbbb177d6742f56081695fe169d35dd7f5a1764825f0c03d0ffffc14847e3c"
         },
         {
           "protocol": "approved-source-review-context-v1",
           "id": "B26-OPEN-NEIGHBORHOOD-NHDS",
           "kind": "source_model_convention",
-          "source_locator": "source-audited.tex:107-120",
+          "source_locator": "source-audited.tex:112-125",
           "classification": "source_representation_convention",
           "formal_meaning": "A property holding on the source's open neighborhood of a0 is represented by eventual truth in the neighborhood filter nhds a.",
           "why_needed": "The FOC-to-explicit-policy bridge needs the positive interior and slack branch locally, without asserting global HJB regularity.",
           "checked_scope": "Assumption 1, Assumption 3, and the local derivative clause of Proposition 1 only.",
-          "record_sha256": "496fbbdf5f37bc739d31f4d28e789adef01c62c03950c8bcecbe0cdc4c584f99"
+          "record_sha256": "2771c84c3121ee577192cb8fa25e454d70cb2547dd0bd221db0e163562f48499"
+        }
+      ],
+      "source_claim_atoms": [
+        {
+          "id": "identity",
+          "source_locator": "source-audited.tex:131-139",
+          "source_quote_sha256": "a12fdb797942431ffd91894058c7397928d261b280f7fb9c0e896fb3d4863898",
+          "semantic_claim": "Interior informal-hours share derivative identity under Assumptions 1-3.",
+          "reviewed_lean_route": "Barraza26LaborComposition.compositionConditionalHours",
+          "identity_schema": 3,
+          "verbatim_source_clause": "Bajo los supuestos \\ref{ass:fixed}--\\ref{ass:regular}, la política interior satisface\n\\begin{equation}\\label{eq:main}\n\\frac{\\partial\\sI(a_0,z)}{\\partial a}\n=\\sI(a_0,z)\\bigl(1-\\sI(a_0,z)\\bigr)\n(\\phi_I-\\phi_F)\\frac{\\Vaa(a_0,z)}{\\Va(a_0,z)} .\n\\end{equation}"
+        },
+        {
+          "id": "negative_sign",
+          "source_locator": "source-audited.tex:131-139",
+          "source_quote_sha256": "a12fdb797942431ffd91894058c7397928d261b280f7fb9c0e896fb3d4863898",
+          "semantic_claim": "Negative derivative sign case under local concavity when phi_I exceeds phi_F.",
+          "reviewed_lean_route": "Barraza26LaborComposition.compositionConditionalHours",
+          "identity_schema": 3,
+          "verbatim_source_clause": "la derivada es negativa cuando \\(\\phi_I>\\phi_F\\)"
+        },
+        {
+          "id": "zero_sign",
+          "source_locator": "source-audited.tex:131-139",
+          "source_quote_sha256": "a12fdb797942431ffd91894058c7397928d261b280f7fb9c0e896fb3d4863898",
+          "semantic_claim": "Zero derivative sign case under local concavity when phi_I equals phi_F.",
+          "reviewed_lean_route": "Barraza26LaborComposition.compositionConditionalHours",
+          "identity_schema": 3,
+          "verbatim_source_clause": "cero cuando \\(\\phi_I=\\phi_F\\)"
+        },
+        {
+          "id": "positive_sign",
+          "source_locator": "source-audited.tex:131-139",
+          "source_quote_sha256": "a12fdb797942431ffd91894058c7397928d261b280f7fb9c0e896fb3d4863898",
+          "semantic_claim": "Positive derivative sign case under local concavity when phi_I is below phi_F.",
+          "reviewed_lean_route": "Barraza26LaborComposition.compositionConditionalHours",
+          "identity_schema": 3,
+          "verbatim_source_clause": "positiva cuando \\(\\phi_I<\\phi_F\\)"
         }
       ]
     },
     "comparisonIndividualCondition": {
       "source_kind": "assumption",
-      "source_location": "source-audited.tex:107-109",
+      "source_location": "source-audited.tex:112-114",
       "statement": "Se fija z y se considera un entorno abierto de un punto a_0 > \\underline a. Los retornos R_F,R_I>0, los precios y las remuneraciones efectivas se mantienen fijos y no dependen directamente de los activos en esa comparación.",
       "source_note": "Selected normal-scope semantic prerequisite in the complete source-only inventory; it is not an independent result row.",
       "claim_bearing": false,
       "source_anchor_evidence": [
         {
           "path": "source-audited.tex",
-          "line_start": 107,
-          "line_end": 109,
+          "line_start": 112,
+          "line_end": 114,
           "quoted_text": "\\begin{assumption}[Comparación individual]\\label{ass:fixed}\nSe fija \\(z\\) y se considera un entorno abierto de un punto \\(a_0>\\underline a\\). Los retornos \\(R_F,R_I>0\\), los precios y las remuneraciones efectivas se mantienen fijos y no dependen directamente de los activos en esa comparación.\n\\end{assumption}",
           "quoted_text_sha256": "de1f5ff012d9cf4998d556780203e3e14c0eee75f70107963dd416dfea246bb0"
         }
@@ -263,8 +301,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 52,
-              "line_end": 52,
+              "line_start": 57,
+              "line_end": 57,
               "quoted_text": "El estado individual es \\((a,z)\\), donde \\(a\\) son activos y \\(z>0\\) es productividad laboral. Los activos evolucionan mediante el ahorro; la productividad sigue un proceso exógeno conocido por el hogar. En tiempo continuo el hogar elige consumos \\(c_F,c_I\\) y horas \\(\\ell_F,\\ell_I\\). Con una canasta CES \\(C(c_F,c_I)\\), sus preferencias son",
               "quoted_text_sha256": "43c9430258004fa8b24cbe7841f0407bfc1cff4b4c9658967d99fa831e31de7f"
             }
@@ -275,8 +313,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 68,
-              "line_end": 72,
+              "line_start": 73,
+              "line_end": 77,
               "quoted_text": "Los retornos por hora que recibe son\n\\begin{equation}\\label{eq:returns}\nR_F(z)=(1-\\tau)w_Fz-\\kappa(z),\\qquad\nR_I(z)=\\widetilde w_Iz^{\\nu_I}.\n\\end{equation}",
               "quoted_text_sha256": "9abb3ca0f1e6e36ad9568d04123e36f23de20932b9a689d36201b53a12cd998d"
             }
@@ -295,48 +333,48 @@
           "protocol": "approved-source-review-context-v1",
           "id": "B26-FIXED-RETURNS-SCALARS",
           "kind": "source_model_convention",
-          "source_locator": "source-audited.tex:107-109",
+          "source_locator": "source-audited.tex:112-114",
           "classification": "source_representation_convention",
           "formal_meaning": "The positive returns held fixed in the comparison are represented by scalar constants RF and RI.",
           "why_needed": "This records that the formalization differentiates only with respect to assets and does not introduce asset-dependent returns.",
           "checked_scope": "Assumption 1, Assumption 3, and Proposition 1 only.",
-          "record_sha256": "2c0c320b09eabd6947cedef84e23a3d4017dffb4b17bc03a1716091c24aafbda"
+          "record_sha256": "1754a85a0137abe461f2bf12c4674c1f04cb1e27000dfc1f0d3709183068543c"
         },
         {
           "protocol": "approved-source-review-context-v1",
           "id": "B26-FIXED-Z-UNARY-SLICE",
           "kind": "source_model_convention",
-          "source_locator": "source-audited.tex:107-109",
+          "source_locator": "source-audited.tex:112-114",
           "classification": "source_representation_convention",
           "formal_meaning": "After fixing z, V, ellF, and ellI are represented as unary real functions of the asset coordinate a.",
           "why_needed": "Lean suppresses the fixed productivity argument so the local derivative is taken only along the source's asset comparison.",
           "checked_scope": "Assumption 1, Assumption 3, the hours-share definition, and Proposition 1 only.",
-          "record_sha256": "e3ab028975a931352ec147b93f9b5419ef9296b00fcd70cea34bb1536d1a996b"
+          "record_sha256": "6cdbbb177d6742f56081695fe169d35dd7f5a1764825f0c03d0ffffc14847e3c"
         },
         {
           "protocol": "approved-source-review-context-v1",
           "id": "B26-OPEN-NEIGHBORHOOD-NHDS",
           "kind": "source_model_convention",
-          "source_locator": "source-audited.tex:107-120",
+          "source_locator": "source-audited.tex:112-125",
           "classification": "source_representation_convention",
           "formal_meaning": "A property holding on the source's open neighborhood of a0 is represented by eventual truth in the neighborhood filter nhds a.",
           "why_needed": "The FOC-to-explicit-policy bridge needs the positive interior and slack branch locally, without asserting global HJB regularity.",
           "checked_scope": "Assumption 1, Assumption 3, and the local derivative clause of Proposition 1 only.",
-          "record_sha256": "496fbbdf5f37bc739d31f4d28e789adef01c62c03950c8bcecbe0cdc4c584f99"
+          "record_sha256": "2771c84c3121ee577192cb8fa25e454d70cb2547dd0bd221db0e163562f48499"
         }
       ]
     },
     "laborPreferencesCondition": {
       "source_kind": "assumption",
-      "source_location": "source-audited.tex:110-112",
+      "source_location": "source-audited.tex:115-117",
       "statement": "Para s\\in\\{F,I\\}, \\psi_s>0 y \\phi_s>0. El costo de horas es el de \\eqref{eq:preferences}, separable entre actividades.",
       "source_note": "Selected normal-scope semantic prerequisite in the complete source-only inventory; it is not an independent result row.",
       "claim_bearing": false,
       "source_anchor_evidence": [
         {
           "path": "source-audited.tex",
-          "line_start": 110,
-          "line_end": 112,
+          "line_start": 115,
+          "line_end": 117,
           "quoted_text": "\\begin{assumption}[Preferencias laborales]\\label{ass:parameters}\nPara \\(s\\in\\{F,I\\}\\), \\(\\psi_s>0\\) y \\(\\phi_s>0\\). El costo de horas es el de \\eqref{eq:preferences}, separable entre actividades.\n\\end{assumption}",
           "quoted_text_sha256": "9120b738d9c591d7a030d0918ae6f6c4b9487f15a0bc44174f4c43f10b1b2ef1"
         }
@@ -353,8 +391,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 53,
-              "line_end": 58,
+              "line_start": 58,
+              "line_end": 63,
               "quoted_text": "\\begin{equation}\\label{eq:preferences}\n\\mathbb E_0\\int_0^\\infty e^{-\\rho t}\n\\left[\\ln C(c_F,c_I)-\n\\sum_{s\\in\\{F,I\\}}\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right]dt.\n\\end{equation}\nLa canasta distingue los dos bienes. El argumento de composición laboral usa la separabilidad del bloque de horas y su vínculo con la restricción de recursos; no requiere estimar aquí un nuevo parámetro de sustitución de consumo.",
               "quoted_text_sha256": "e3572f868c66cf4391106858fde02bb57d9389ba7c1e70fb22b3d136eaec5b9d"
             }
@@ -365,15 +403,15 @@
     },
     "interiorRegularBranchCondition": {
       "source_kind": "assumption",
-      "source_location": "source-audited.tex:113-115",
+      "source_location": "source-audited.tex:118-120",
       "statement": "La función a\\mapsto\\Va(a,z) es positiva y diferenciable en a_0. Las horas de la rama considerada satisfacen las FOC de \\eqref{eq:hoursblock}, son positivas y su suma es estrictamente menor que \\bar H.",
       "source_note": "Selected normal-scope semantic prerequisite in the complete source-only inventory; it is not an independent result row.",
       "claim_bearing": false,
       "source_anchor_evidence": [
         {
           "path": "source-audited.tex",
-          "line_start": 113,
-          "line_end": 115,
+          "line_start": 118,
+          "line_end": 120,
           "quoted_text": "\\begin{assumption}[Rama interior regular]\\label{ass:regular}\nLa función \\(a\\mapsto\\Va(a,z)\\) es positiva y diferenciable en \\(a_0\\). Las horas de la rama considerada satisfacen las FOC de \\eqref{eq:hoursblock}, son positivas y su suma es estrictamente menor que \\(\\bar H\\).\n\\end{assumption}",
           "quoted_text_sha256": "e5c4ce93167419978599d2c11b91ea1923766b5923b26e04bc7a39e57700809e"
         }
@@ -390,8 +428,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 99,
-              "line_end": 105,
+              "line_start": 104,
+              "line_end": 110,
               "quoted_text": "Escribo \\(v(a,z)\\) para el valor del hogar y \\(\\Va(a,z)=\\partial_av(a,z)\\). Cuando la solución es regular, el bloque laboral de la HJB es\n\\begin{equation}\\label{eq:hoursblock}\n\\max_{\\ell_F,\\ell_I}\n\\left\\{\\Va(R_F\\ell_F+R_I\\ell_I)-\n\\sum_s\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right\\}.\n\\end{equation}\nLa derivación no constituye una prueba de regularidad de la HJB. Se explicitan las condiciones bajo las que puede usarse.",
               "quoted_text_sha256": "0d9c3f1fe3bb24f6a7f3490f9d4e02fdacc97e92afdcb7e36557d274677a244a"
             }
@@ -402,8 +440,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 120,
-              "line_end": 120,
+              "line_start": 125,
+              "line_end": 125,
               "quoted_text": "Los tres primeros supuestos permiten derivar la identidad. El cuarto solo se usa para ordenar sus signos. Su cumplimiento en una grilla no implica una demostración global. Si el tope de tiempo se activa, aparece un multiplicador común y la fórmula interior deja de ser la política correspondiente. Si se evalúa el límite de endeudamiento, se requieren derivadas unilaterales y un enunciado adaptado; ese caso no queda cubierto por el entorno abierto utilizado aquí.",
               "quoted_text_sha256": "cb2e5a92641a4ed32ac89ae5eae4d2e494158e836dfec40ebe4ee1c2082690f4"
             }
@@ -422,48 +460,48 @@
           "protocol": "approved-source-review-context-v1",
           "id": "B26-FIXED-RETURNS-SCALARS",
           "kind": "source_model_convention",
-          "source_locator": "source-audited.tex:107-109",
+          "source_locator": "source-audited.tex:112-114",
           "classification": "source_representation_convention",
           "formal_meaning": "The positive returns held fixed in the comparison are represented by scalar constants RF and RI.",
           "why_needed": "This records that the formalization differentiates only with respect to assets and does not introduce asset-dependent returns.",
           "checked_scope": "Assumption 1, Assumption 3, and Proposition 1 only.",
-          "record_sha256": "2c0c320b09eabd6947cedef84e23a3d4017dffb4b17bc03a1716091c24aafbda"
+          "record_sha256": "1754a85a0137abe461f2bf12c4674c1f04cb1e27000dfc1f0d3709183068543c"
         },
         {
           "protocol": "approved-source-review-context-v1",
           "id": "B26-FIXED-Z-UNARY-SLICE",
           "kind": "source_model_convention",
-          "source_locator": "source-audited.tex:107-109",
+          "source_locator": "source-audited.tex:112-114",
           "classification": "source_representation_convention",
           "formal_meaning": "After fixing z, V, ellF, and ellI are represented as unary real functions of the asset coordinate a.",
           "why_needed": "Lean suppresses the fixed productivity argument so the local derivative is taken only along the source's asset comparison.",
           "checked_scope": "Assumption 1, Assumption 3, the hours-share definition, and Proposition 1 only.",
-          "record_sha256": "e3ab028975a931352ec147b93f9b5419ef9296b00fcd70cea34bb1536d1a996b"
+          "record_sha256": "6cdbbb177d6742f56081695fe169d35dd7f5a1764825f0c03d0ffffc14847e3c"
         },
         {
           "protocol": "approved-source-review-context-v1",
           "id": "B26-OPEN-NEIGHBORHOOD-NHDS",
           "kind": "source_model_convention",
-          "source_locator": "source-audited.tex:107-120",
+          "source_locator": "source-audited.tex:112-125",
           "classification": "source_representation_convention",
           "formal_meaning": "A property holding on the source's open neighborhood of a0 is represented by eventual truth in the neighborhood filter nhds a.",
           "why_needed": "The FOC-to-explicit-policy bridge needs the positive interior and slack branch locally, without asserting global HJB regularity.",
           "checked_scope": "Assumption 1, Assumption 3, and the local derivative clause of Proposition 1 only.",
-          "record_sha256": "496fbbdf5f37bc739d31f4d28e789adef01c62c03950c8bcecbe0cdc4c584f99"
+          "record_sha256": "2771c84c3121ee577192cb8fa25e454d70cb2547dd0bd221db0e163562f48499"
         }
       ]
     },
     "localConcavityCondition": {
       "source_kind": "assumption",
-      "source_location": "source-audited.tex:116-118",
+      "source_location": "source-audited.tex:121-123",
       "statement": "Cuando se interpreta el signo por riqueza se mantiene \\Vaa(a_0,z)<0.",
       "source_note": "Selected normal-scope semantic prerequisite in the complete source-only inventory; it is not an independent result row.",
       "claim_bearing": false,
       "source_anchor_evidence": [
         {
           "path": "source-audited.tex",
-          "line_start": 116,
-          "line_end": 118,
+          "line_start": 121,
+          "line_end": 123,
           "quoted_text": "\\begin{assumption}[Concavidad local para la interpretación]\\label{ass:concavity}\nCuando se interpreta el signo por riqueza se mantiene \\(\\Vaa(a_0,z)<0\\).\n\\end{assumption}",
           "quoted_text_sha256": "2ca1b1ef0002706d182699fcc411248f89a82c3f9b958d075cf8ea04cdf7f911"
         }
@@ -480,8 +518,8 @@
           "source_anchor_evidence": [
             {
               "path": "source-audited.tex",
-              "line_start": 120,
-              "line_end": 120,
+              "line_start": 125,
+              "line_end": 125,
               "quoted_text": "Los tres primeros supuestos permiten derivar la identidad. El cuarto solo se usa para ordenar sus signos. Su cumplimiento en una grilla no implica una demostración global. Si el tope de tiempo se activa, aparece un multiplicador común y la fórmula interior deja de ser la política correspondiente. Si se evalúa el límite de endeudamiento, se requieren derivadas unilaterales y un enunciado adaptado; ese caso no queda cubierto por el entorno abierto utilizado aquí.",
               "quoted_text_sha256": "cb2e5a92641a4ed32ac89ae5eae4d2e494158e836dfec40ebe4ee1c2082690f4"
             }
@@ -492,15 +530,15 @@
     },
     "informalHoursShare": {
       "source_kind": "definition",
-      "source_location": "papers/Barraza26LaborComposition/source-audited.tex:123-124",
+      "source_location": "papers/Barraza26LaborComposition/source-audited.tex:128-129",
       "statement": "Defina la fracción de horas informales como \\sI=\\ell_I/(\\ell_F+\\ell_I). Esta definición cuenta horas y no clasifica ex ante a una persona como informal. Bajo los retornos positivos y la rama interior, 0<\\sI<1.",
       "source_note": "Governing unnumbered prose definition selected as a normal-scope semantic prerequisite.",
       "claim_bearing": true,
       "source_anchor_evidence": [
         {
           "path": "papers/Barraza26LaborComposition/source-audited.tex",
-          "line_start": 123,
-          "line_end": 124,
+          "line_start": 128,
+          "line_end": 129,
           "quoted_text": "Defina la fracción de horas informales como\n\\(\\sI=\\ell_I/(\\ell_F+\\ell_I)\\). Esta definición cuenta horas y no clasifica ex ante a una persona como informal. Bajo los retornos positivos y la rama interior, \\(0<\\sI<1\\).",
           "quoted_text_sha256": "a8694ee008a60fdf68766a8e0a6d728b8693a03ca0a834eed2151afe1b24a0e2"
         }
@@ -514,13 +552,13 @@
       "source_prose_definition_reconciliation": {
         "schema": 2,
         "relation": "source_item_represents_prose_definition",
-        "presentation_sha256": "504b3c837a2d26541c8cf6311c0da7b12516dd6587a29d472bee5c9f7068fa5e",
+        "presentation_sha256": "fed7a206227b2111a4ca8d21d2ef86575623efedb8788efaf55df7567f8d563c",
         "source_item_statement_sha256": "755d3aa725bc11f3b4c902dad3ff259ea626891b7516a4796134253ce96ab732",
         "judgment": "semantically_equivalent",
-        "semantic_basis": "The proposed item defines the same object, s_I=ell_I/(ell_F+ell_I), and captures both adjoining scope statements: it counts hours rather than classifying a person ex ante, and 0<s_I<1 holds under positive returns and the interior branch.",
+        "semantic_basis": "The proposed item reproduces s_I=ell_I/(ell_F+ell_I), the hours-not-person classification scope, and the conditional range 0<s_I<1; presentation informal_hours_share_definition identifies the same object at the exact source locator.",
         "validator": "/root/formalizacion_final/definition_reconciler",
         "validator_type": "agent",
-        "validated_at": "2026-11-24T15:00:00Z"
+        "validated_at": "2026-11-24T22:45:00Z"
       },
       "inventory_role": "source_semantic_declaration",
       "model_convention_ids": [
@@ -532,12 +570,12 @@
           "protocol": "approved-source-review-context-v1",
           "id": "B26-FIXED-Z-UNARY-SLICE",
           "kind": "source_model_convention",
-          "source_locator": "source-audited.tex:107-109",
+          "source_locator": "source-audited.tex:112-114",
           "classification": "source_representation_convention",
           "formal_meaning": "After fixing z, V, ellF, and ellI are represented as unary real functions of the asset coordinate a.",
           "why_needed": "Lean suppresses the fixed productivity argument so the local derivative is taken only along the source's asset comparison.",
           "checked_scope": "Assumption 1, Assumption 3, the hours-share definition, and Proposition 1 only.",
-          "record_sha256": "e3ab028975a931352ec147b93f9b5419ef9296b00fcd70cea34bb1536d1a996b"
+          "record_sha256": "6cdbbb177d6742f56081695fe169d35dd7f5a1764825f0c03d0ffffc14847e3c"
         }
       ]
     }
@@ -569,9 +607,9 @@
   "source_named_result_inventory_review": {
     "schema": 1,
     "complete": true,
-    "validator": "/root/formalizacion_final/source_inventory",
-    "method": "complete source-only read of all 297 TeX lines and all 549 cached PDF-extraction lines before consulting Lean",
-    "validated_at": "2026-11-23T00:00:00Z",
+    "validator": "/root/formalizacion_final/source_inventory_repin",
+    "method": "complete source-only read of all 373 TeX lines and all 15 PDF pages before consulting Lean; classified the four recorded holistic candidates and all 8 figures, 4 captioned tables, and numerical prose as deep-only",
+    "validated_at": "2026-11-24T15:20:00Z",
     "prose_definition_presentations": [
       {
         "schema": 1,
@@ -582,106 +620,90 @@
         "scope_disposition": "normal_named_theory_definition",
         "source_anchor": {
           "path": "papers/Barraza26LaborComposition/source-audited.tex",
-          "line_start": 123,
-          "line_end": 124,
+          "line_start": 128,
+          "line_end": 129,
           "quoted_text": "Defina la fracción de horas informales como\n\\(\\sI=\\ell_I/(\\ell_F+\\ell_I)\\). Esta definición cuenta horas y no clasifica ex ante a una persona como informal. Bajo los retornos positivos y la rama interior, \\(0<\\sI<1\\).",
           "quoted_text_sha256": "a8694ee008a60fdf68766a8e0a6d728b8693a03ca0a834eed2151afe1b24a0e2"
         }
       }
     ],
-    "discovered_prose_definition_sha256": "2ece0adf712cadb871b19f8ba907b92dd079247af79403fe8c4245285ddb5d45",
-    "source_artifact_sha256": "e9768a1b9cd67b5a83c58d99b1f1b62cbe28d26cf75284fe210a4dcd77e63df1",
+    "discovered_prose_definition_sha256": "f8ba7e2d4ee40c5fad49b7a8bcc4a04333a90ead92571905b38223a30a016834",
+    "source_artifact_sha256": "3bfd0418b0b7a74c6cf459e09e623f73d30ce1ccd132bb4449b9b379dafcaaa6",
     "candidate_presentations": [
       {
         "schema": 1,
-        "id": "candidate_abstract_summary",
-        "presentation_label": "abstract mechanism summary",
+        "id": "candidate_diagnostic_identity",
+        "presentation_label": "diagnostic identity and precision limits",
         "visible_kind": "holistic",
         "scope_disposition": "deep_audit_material",
-        "semantic_basis": "The abstract summarizes the selected proposition and its limits; it is not a second independent named result.",
+        "semantic_basis": "This diagnostic discussion reports numerical checks and precision limits; it is not an independent named theoretical result.",
         "discovery_basis": "holistic_full_text_review",
         "source_anchor": {
           "path": "papers/Barraza26LaborComposition/source-audited.tex",
-          "line_start": 24,
-          "line_end": 26,
-          "quoted_text": "\\begin{abstract}\nEstudio cuándo la riqueza modifica el reparto de horas formales e informales a productividad fija. En un bloque laboral interior con desutilidad isoelástica separable, la elasticidad del cociente de horas respecto al valor marginal de los activos es la diferencia entre las elasticidades sectoriales. Si ese valor marginal disminuye con los activos, la fracción informal cae con la riqueza exactamente cuando la elasticidad informal es mayor. Con elasticidad común, el canal directo se cancela. Un ejercicio parcial reproduce el mecanismo y contrastes de equilibrio general muestran dependencia de la barrera formal. No se identifican efectos causales ni se prueba concavidad global de la HJB. Lean comprueba localmente la derivada de las políticas explícitas y sus signos; el flujo oficial sobre un paper publicado en commit sigue pendiente.\n\\end{abstract}",
-          "quoted_text_sha256": "1cf4ab3c7e78eabaa92dc135b0c5666d88bb2ff2cf6f3f442f622b272de209a4"
+          "line_start": 319,
+          "line_end": 324,
+          "quoted_text": "\\subsection{Diagnósticos y límites de precisión}\nEl registro D73 conserva \\CountMATFinal\\ MAT auditados, de los cuales \\CountGEFinal\\ son GE. Los controles distinguen masa, generador, HJB, KFE, unicidad de clase cerrada, factibilidad, FOC y mercados. Un indicador agregado pequeño no basta si su fórmula omite un costo real. La revisión previa encontró un indicador histórico que excluía la prima de deuda; los contrastes nuevos verifican los dos pagos de \\eqref{eq:formal_resources}. El fallo histórico no se borra ni se reutiliza como certificación de los nuevos resultados.\n\nLa ampliación del dominio reduce masa en la frontera superior, pero faltan dos pares finos comparables en el mismo dominio amplio y una revisión de resolución o truncamiento de \\(z\\). No se declara certificación global de precisión. Cambiar los extremos de productividad puede modificar el perfil normalizado de una cuña y no solo su resolución; por eso las anclas económicas deben mantenerse al hacer comparaciones de grilla. Tampoco se cambia silenciosamente el límite de endeudamiento para que converja un caso.\n\nLos \\GEPaperCount{} GE de noviembre incorporados al paper se reanalizaron desde sus MAT. Además de los controles anteriores, se verificaron condiciones laborales por nodo, incluidas esquinas y multiplicadores. Con utilidad logarítmica e impuesto al consumo nulo, la FOC de consumo recupera \\(\\Va=1/(c_F+p_Ic_I)\\). Las bitácoras confirman ese impuesto y el régimen de tiempo de cada corrida. Así se evita sustituir la derivada utilizada por el control laboral por diferencias centrales de \\(V\\). Pasar esas comprobaciones sigue siendo distinto de certificar precisión global.",
+          "quoted_text_sha256": "452e03891e3ebe2101202964a315e7633b2f6ab04693f46d1c2e97a4c3ba7422"
         }
       },
       {
         "schema": 1,
-        "id": "candidate_scope_boundary",
-        "presentation_label": "local-result scope boundary",
+        "id": "candidate_appendix_lean_table",
+        "presentation_label": "appendix Lean correspondence table",
         "visible_kind": "holistic",
         "scope_disposition": "deep_audit_material",
-        "semantic_basis": "This paragraph states the local and boundary scope of the selected assumptions and proposition rather than an independent result.",
+        "semantic_basis": "The appendix table records implementation correspondence and open review status rather than a separate paper theorem.",
         "discovery_basis": "holistic_full_text_review",
         "source_anchor": {
           "path": "papers/Barraza26LaborComposition/source-audited.tex",
-          "line_start": 120,
-          "line_end": 120,
-          "quoted_text": "Los tres primeros supuestos permiten derivar la identidad. El cuarto solo se usa para ordenar sus signos. Su cumplimiento en una grilla no implica una demostración global. Si el tope de tiempo se activa, aparece un multiplicador común y la fórmula interior deja de ser la política correspondiente. Si se evalúa el límite de endeudamiento, se requieren derivadas unilaterales y un enunciado adaptado; ese caso no queda cubierto por el entorno abierto utilizado aquí.",
-          "quoted_text_sha256": "cb2e5a92641a4ed32ac89ae5eae4d2e494158e836dfec40ebe4ee1c2082690f4"
+          "line_start": 346,
+          "line_end": 351,
+          "quoted_text": "\\begin{center}\\small\n\\begin{tabular}{p{2.6cm}p{7.3cm}p{4cm}}\\toprule\nResultado&Declaraciones, prefijo \\texttt{Barraza26LaborComposition}&Estado\\\\\\midrule\nProposición \\ref{prop:composition}, identidad y signos&\\texttt{composition\\_hasDerivAt} y \\texttt{composition\\_sign}, en \\texttt{lean/LaborComposition.lean}&Comprobación local del bloque explícito. Proposición completa abierta en el flujo oficial\\\\\\bottomrule\n\\end{tabular}\n\\end{center}",
+          "quoted_text_sha256": "0b9c1063916b15a20ff1d36a02a0ed386a64ede491987872a7a9bcada52658c6"
         }
       },
       {
         "schema": 1,
-        "id": "candidate_result_interpretation",
-        "presentation_label": "post-proposition interpretation",
+        "id": "candidate_cap_kkt",
+        "presentation_label": "cap KKT collaboration note",
         "visible_kind": "holistic",
         "scope_disposition": "deep_audit_material",
-        "semantic_basis": "These paragraphs interpret and restate consequences of Proposition 1 without presenting another independent result.",
+        "semantic_basis": "This collaboration note records the cap KKT equations and a numerical diagnostic verdict; it is not an independent named result.",
         "discovery_basis": "holistic_full_text_review",
         "source_anchor": {
           "path": "papers/Barraza26LaborComposition/source-audited.tex",
-          "line_start": 171,
-          "line_end": 173,
-          "quoted_text": "El resultado no afirma que riqueza e informalidad sean independientes en toda la distribución cuando las elasticidades coinciden. Afirma que la composición individual interior no responde directamente a los activos a un mismo \\(z\\). Las distribuciones de productividad por grupos de activos pueden ser distintas, y ello puede generar una brecha agregada positiva. Tampoco se compara aquí una economía con otra: un cambio de parámetros que modifica precios, políticas y distribución requiere resolver el equilibrio y agregar nuevamente.\n\nLa igualdad de elasticidades es, por tanto, una frontera útil de sensibilidad. Por encima de la diagonal \\(\\phi_I=\\phi_F\\), el signo local es negativo bajo concavidad; por debajo es positivo. El mapa no representa regiones de existencia de un equilibrio ni probabilidades estimadas. Resume la álgebra de una proposición condicional.",
-          "quoted_text_sha256": "3afff3fd3093dd17479dfe43d51626b7c91650074c0f4e83297f312238d73515"
+          "line_start": 359,
+          "line_end": 365,
+          "quoted_text": "\\section{Colaboración con IA y veredictos}\nLos intercambios crudos relevantes están en \\texttt{prompts.md}; el registro de decisiones conserva los contrastes. En el caso del tope de tiempo, se consideró un mecanismo que dependía de una restricción activa. Las condiciones correctas para horas positivas son\n\\[\n\\Va R_s=\\psi_s\\ell_s^{1/\\phi_s}+\\lambda_H,\\qquad\n\\lambda_H(\\bar H-\\ell_F-\\ell_I)=0,\\quad\\lambda_H\\geq0.\n\\]\nEl diagnóstico histórico reproducido da masa en el tope igual a \\PENoCap\\ y horas máximas de \\PEMaxHours\\ con \\(\\bar H=1\\). El veredicto es que el mecanismo vinculante no explica esa calibración, aunque su álgebra pueda ser válida en otro régimen. No se atribuye una cita literal nueva a la IA.",
+          "quoted_text_sha256": "2b35594eaa5e82efc85c1056abd555e866ff1e9a37d6182dd1354223184d1520"
         }
       },
       {
         "schema": 1,
-        "id": "candidate_conclusion_restatement",
-        "presentation_label": "conclusion restatement",
+        "id": "candidate_quotient_power_correction",
+        "presentation_label": "quotient and power correction note",
         "visible_kind": "holistic",
         "scope_disposition": "deep_audit_material",
-        "semantic_basis": "The conclusion restates the selected conditional mechanism and numerical discussion; it is not another independent result.",
+        "semantic_basis": "This appendix authorship note records a manuscript correction and remaining work; it is not an independent source result.",
         "discovery_basis": "holistic_full_text_review",
         "source_anchor": {
           "path": "papers/Barraza26LaborComposition/source-audited.tex",
-          "line_start": 262,
-          "line_end": 263,
-          "quoted_text": "\\section{Conclusión}\nA igual productividad y dentro de una rama laboral interior, la composición de horas responde al valor marginal de los activos mediante la diferencia de elasticidades sectoriales. Con valor marginal decreciente en riqueza, una elasticidad informal mayor produce una fracción informal decreciente; la igualdad de elasticidades cancela el canal directo. El ejercicio parcial reproduce esa lógica y los contrastes GE muestran dependencia del gradiente por productividad respecto a la barrera formal. La conclusión es condicional y no causal. Los pasos siguientes son disciplinar empíricamente los parámetros, construir indicadores comparables y cerrar los requisitos de formalización y manuscrito con su procedencia completa.",
-          "quoted_text_sha256": "c77baaabf17bd587ddb3e688efa2747dc1cb62579375270986de066afa114315"
-        }
-      },
-      {
-        "schema": 1,
-        "id": "candidate_lean_correspondence",
-        "presentation_label": "appendix Lean correspondence",
-        "visible_kind": "holistic",
-        "scope_disposition": "deep_audit_material",
-        "semantic_basis": "The appendix records implementation correspondence and pending review status rather than a separate paper theorem.",
-        "discovery_basis": "holistic_full_text_review",
-        "source_anchor": {
-          "path": "papers/Barraza26LaborComposition/source-audited.tex",
-          "line_start": 270,
-          "line_end": 283,
-          "quoted_text": "\\section{Correspondencia con Lean}\\label{app:lean}\nLa fuente propia es \\texttt{lean/LaborComposition.lean}. La comprobación local se ejecutó con Lean 4.30.0-rc2 y Mathlib fijado en el commit indicado por \\texttt{lean/lakefile.toml}. La salida y el hash de fuente están en \\texttt{lean/verification/local\\_check.json}. Los únicos axiomas reportados son los estándar de Mathlib: \\texttt{propext}, \\texttt{Classical.choice} y \\texttt{Quot.sound}; no aparece \\texttt{sorryAx}.\n\n\\begin{center}\\small\n\\begin{tabular}{p{2.6cm}p{7.3cm}p{4cm}}\\toprule\nResultado&Declaraciones, prefijo \\texttt{Barraza26LaborComposition}&Estado\\\\\\midrule\nProposición \\ref{prop:composition}, identidad&\\texttt{composition\\_hasDerivAt}&Probada para políticas explícitas, comprobación local\\\\\nProposición \\ref{prop:composition}, signos&\\texttt{composition\\_sign}&Probados bajo \\(\\Vaa<0\\), ya declarada en el paper\\\\\\bottomrule\n\\end{tabular}\n\\end{center}\n\nEl código define \\texttt{labor v R psi phi = (v*R/psi)\\^{}phi} y \\texttt{share} como la fracción de horas de \\eqref{eq:explicit}. La función \\texttt{V} representa \\(a\\mapsto\\Va(a,z)\\), mientras \\texttt{d} representa su derivada. \\texttt{HasDerivAt V d a} es una hipótesis sobre esa función, no la conclusión de la proposición. La derivación de las FOC desde una HJB regular sigue en la prueba ordinaria; Lean comprueba el resultado de la rama explícita y no todo el problema dinámico.\n\nEl commit fuente y el recibo oficial de \\texttt{paper\\_contribution.py check} deben registrarse al ejecutar ese flujo. La correspondencia local no se presenta como cierre de contribución. Tampoco se ha registrado una revisión semántica humana de este nuevo archivo. Si se modifica un enunciado, debe revisarse la correspondencia y repetir la comprobación pertinente.",
-          "quoted_text_sha256": "1eaa23dc62804a55f6169164f8c2745990b64c106475180f737afbe28bdcbcb1"
+          "line_start": 369,
+          "line_end": 372,
+          "quoted_text": "\\section{Apéndice manuscrito y autoría}\nEn \\texttt{hand/01-derivacion-tope-tiempo.pdf} existe una hoja original del autor, mostrada en la presentación. Se conserva intacta. La nota \\texttt{hand/errata-01.md} identifica un subíndice y el paso incorrecto del cociente: tras imponer \\(\\lambda_H=0\\), se debe conservar el cociente de niveles \\((R_s/\\psi_s)^{\\phi_s}\\) y contar una sola vez la potencia de \\(\\Va\\). La errata tipografiada no se atribuye al manuscrito personal.\n\nEl apéndice completo sigue pendiente: debe contener cada derivación, paso a paso, con reglas y condiciones verificadas por el estudiante. La guía disponible organiza la preparación y no la sustituye. \\texttt{hand/README.md} registra qué evidencia existe y qué hojas faltan; no se inventa una firma, comprensión o aprobación personal.",
+          "quoted_text_sha256": "9ef9bfc230391d106bb710b839babd006592ce27bee6639914f45ed9934a52b1"
         }
       }
     ],
-    "discovered_candidate_presentation_sha256": "2d9a0ed317fa73138f90fd74578f075fe75c09db94673f3359a56ba9f6648f76",
-    "discovered_named_result_sha256": "744ebc2a83cf696c2af7b7d2985cdd5a7e793c345a0786d744607f773b607b28",
+    "discovered_candidate_presentation_sha256": "0615932d5db9e4db3b6f9e0ddde3a02eec34da1c1acfb486d557f237c59380ef",
+    "discovered_named_result_sha256": "fdbbc3fa75770682de95969e4d2cab9c95bd47fc4c68e5b82ec1cc46972cca70",
     "source_region_partition": {
       "schema": 1,
       "complete": true,
-      "validator": "/root/formalizacion_final/source_inventory",
-      "method": "complete source-only read of all 297 TeX lines and all 549 cached PDF-extraction lines before consulting Lean",
-      "validated_at": "2026-11-23T00:00:00Z",
-      "source_artifact_sha256": "e9768a1b9cd67b5a83c58d99b1f1b62cbe28d26cf75284fe210a4dcd77e63df1",
+      "validator": "/root/formalizacion_final/source_inventory_repin",
+      "method": "complete source-only read of all 373 TeX lines and all 15 PDF pages before consulting Lean; classified the four recorded holistic candidates and all 8 figures, 4 captioned tables, and numerical prose as deep-only",
+      "validated_at": "2026-11-24T15:20:00Z",
+      "source_artifact_sha256": "3bfd0418b0b7a74c6cf459e09e623f73d30ce1ccd132bb4449b9b379dafcaaa6",
       "canonical_source_path": "papers/Barraza26LaborComposition/source-audited.tex",
       "regions": [
         {
@@ -690,9 +712,9 @@
           "source_anchor": {
             "path": "papers/Barraza26LaborComposition/source-audited.tex",
             "line_start": 1,
-            "line_end": 269,
-            "quoted_text": "% Manuscrito propio de trabajo, 12nov2026. No cambia geometría de la plantilla.\n\\documentclass[11pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[T1]{fontenc}\n\\usepackage[spanish,es-nodecimaldot,es-noquoting]{babel}\n\\usepackage[margin=1in]{geometry}\n\\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,graphicx,array,xcolor}\n\\usepackage[round]{natbib}\n\\usepackage[colorlinks=true,allcolors=blue!50!black]{hyperref}\n\\input{../code/output/final_numbers.tex}\n\\newtheorem{proposition}{Proposición}\n\\theoremstyle{definition}\n\\newtheorem{assumption}{Supuesto}\n\\newcommand{\\Va}{V_a}\n\\newcommand{\\Vaa}{V_{aa}}\n\\newcommand{\\sI}{s_I}\n\\title{Ahorro, flexibilidad de horas e informalidad en el Perú\\\\[3pt]\\large Un mecanismo laboral en un modelo macroeconómico de agentes heterogéneos}\n\\author{John Svante Barraza Ratachi\\\\ \\small Universidad del Pacífico, AI and Economic Modeling, Track B\\\\\n\\small\\url{https://github.com/johnbarraza/ai-project}}\n\\date{12 de noviembre de 2026. Manuscrito de trabajo para discusión}\n\\setlength{\\emergencystretch}{2em}\n\\begin{document}\n\\maketitle\n\\begin{abstract}\nEstudio cuándo la riqueza modifica el reparto de horas formales e informales a productividad fija. En un bloque laboral interior con desutilidad isoelástica separable, la elasticidad del cociente de horas respecto al valor marginal de los activos es la diferencia entre las elasticidades sectoriales. Si ese valor marginal disminuye con los activos, la fracción informal cae con la riqueza exactamente cuando la elasticidad informal es mayor. Con elasticidad común, el canal directo se cancela. Un ejercicio parcial reproduce el mecanismo y contrastes de equilibrio general muestran dependencia de la barrera formal. No se identifican efectos causales ni se prueba concavidad global de la HJB. Lean comprueba localmente la derivada de las políticas explícitas y sus signos; el flujo oficial sobre un paper publicado en commit sigue pendiente.\n\\end{abstract}\n\n\\section{Introducción}\nEl marco es una economía de equilibrio general con hogares heterogéneos, producción formal e informal y una distribución de activos. La pregunta individual importa para macro porque sus políticas se agregan mediante esa distribución, determinan oferta de trabajo y ahorro y deben ser compatibles con los precios de los mercados. La proposición estudia una pieza de ese circuito; los contrastes numéricos de equilibrio general muestran cómo la especificación se transmite también a precios y capital.\n\nLa informalidad puede asociarse tanto con la productividad de la persona como con los recursos que tiene disponibles. Esa asociación no dice por sí sola qué decisión cambiaría si dos hogares con igual productividad dispusieran de activos diferentes. La pregunta de este trabajo es más acotada: ¿cuándo influye la riqueza en el reparto de horas entre trabajo formal e informal, manteniendo la productividad laboral individual fija? La decisión considerada es una cantidad de horas en cada actividad. Ambos trabajos pueden coexistir; no se modela aquí la llegada de una oferta ni una elección discreta de sector.\n\nLa motivación descriptiva proviene de los agregados de ENAHO 2023 conservados en el proyecto. La tasa de empleo informal de personas ocupadas es \\MotivationQOne\\% en el quintil de menor gasto per cápita y \\MotivationQFive\\% en el de mayor gasto. Estos números fueron recuperados del archivo público de agregados y no se volvieron a estimar desde microdatos en esta revisión. Además, el gasto no es patrimonio y una tasa de personas no es una fracción de horas. El patrón sirve para formular la pregunta, pero no se usará como una meta directamente comparable con la brecha de horas por activos del modelo.\n\nLa respuesta es condicional. En el bloque de trabajo del hogar, ambas actividades reciben la misma valoración marginal de una unidad adicional de activos, \\(\\Va\\). Si las dos desutilidades tienen la misma elasticidad, ese término aparece con el mismo exponente en ambas horas y desaparece al tomar su cociente. La riqueza puede modificar el trabajo total sin modificar directamente su composición a un mismo estado de productividad. Si las elasticidades difieren, el cociente hereda una potencia de \\(\\Va\\). El signo por activos depende entonces de la diferencia de elasticidades y de la derivada de \\(\\Va\\) respecto a la riqueza.\n\nEl resultado aporta un diagnóstico del mecanismo dentro del modelo de dos sectores. No se presenta como una demostración de prioridad frente a toda la literatura de oferta laboral. Permite identificar qué supuesto impide un canal directo de composición y qué condición lo recupera. También ayuda a distinguir ese canal del gradiente por productividad generado por la barrera formal y por el rendimiento de la productividad en el sector informal. Una relación agregada entre activos e informalidad puede existir incluso con elasticidad común si la distribución de productividad difiere entre grupos de riqueza.\n\nEl trabajo separa tres tareas. La primera es la demostración analítica de la proposición local. La segunda es una reproducción del ejercicio parcial de octubre, con precios, distribución y valor marginal fijos. La tercera utiliza los contrastes de cuñas de noviembre, en los que se resolvieron de nuevo precios y distribución en equilibrio general. Esa separación evita interpretar una sensibilidad parcial como un nuevo equilibrio y evita llamar identificación empírica al reajuste de dos momentos internos.\n\n\\section{Antecedentes y alcance}\nEl punto de partida es el ahorro bajo riesgo idiosincrático de \\citet{Aiyagari1994}. La extensión relevante para este proyecto conserva activos y productividad heterogéneos, pero incorpora dos firmas, dos bienes y horas elegidas en ambas actividades. \\citet{Achdou2022} desarrolla la formulación continua mediante una HJB para valor y políticas y una ecuación de Kolmogorov para la distribución. Su sección 2.1 presenta el entorno básico y su sección 7 discute extensiones. Esa referencia justifica el marco y el método; no identifica las elasticidades laborales de este proyecto.\n\nEl antecedente cercano para Perú es el Documento de Trabajo 2024-005 del BCRP, \\citet{Galindo2024}. Su objeto es la relación entre informalidad y distribución de riqueza en un modelo de agentes heterogéneos. El documento se cita como trabajo de investigación del banco central; no se afirma aquí una publicación posterior arbitrada. En el manuscrito local revisado, el estado formal o informal es exógeno y el hogar elige consumo y ahorro. Aquí se estudia el reparto simultáneo de horas. Endogeneizar ese reparto intensivo no equivale a endogeneizar transiciones entre empleos excluyentes.\n\nLa revisión previa de supuestos también consideró \\citet{Kaplan2018}. El tratamiento de una prima crediticia como costo de intermediación resulta útil para la contabilidad. No ofrece respaldo automático para imponer a la barrera laboral y a la prima de deuda una misma función decreciente de productividad. La coincidencia de letras entre artículos tampoco establece equivalencia económica. Por ello, los perfiles de cuñas se mantienen como elecciones del proyecto que requieren contraste.\n\nLa revisión de literatura es focalizada y su registro conserva límites de acceso y de lectura. No se declara exhaustiva la búsqueda de trabajos que citan a los antecedentes. Tampoco se atribuye a esas referencias una estimación de la desigualdad entre elasticidades formal e informal. Esa desigualdad es una sensibilidad ilustrativa del bloque de horas. El resultado teórico no depende de que tal orden se haya estimado para Perú, pero su aplicación cuantitativa sí necesita evidencia que lo discipline.\n\n\\section{Modelo y supuestos}\n\\subsection{Estados, información y decisiones}\nEl estado individual es \\((a,z)\\), donde \\(a\\) son activos y \\(z>0\\) es productividad laboral. Los activos evolucionan mediante el ahorro; la productividad sigue un proceso exógeno conocido por el hogar. En tiempo continuo el hogar elige consumos \\(c_F,c_I\\) y horas \\(\\ell_F,\\ell_I\\). Con una canasta CES \\(C(c_F,c_I)\\), sus preferencias son\n\\begin{equation}\\label{eq:preferences}\n\\mathbb E_0\\int_0^\\infty e^{-\\rho t}\n\\left[\\ln C(c_F,c_I)-\n\\sum_{s\\in\\{F,I\\}}\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right]dt.\n\\end{equation}\nLa canasta distingue los dos bienes. El argumento de composición laboral usa la separabilidad del bloque de horas y su vínculo con la restricción de recursos; no requiere estimar aquí un nuevo parámetro de sustitución de consumo.\n\nEl precio formal se normaliza a uno y \\(p_I\\) es el precio relativo del bien informal. La ley de movimiento de activos es\n\\begin{equation}\\label{eq:budget}\n\\dot a=R_F(z)\\ell_F+R_I(z)\\ell_I+ra-\\chi(z)(-a)_+\n+T-c_F-p_Ic_I,\n\\end{equation}\ncon \\(a\\geq\\underline a\\), \\(\\ell_s\\geq0\\) y\n\\(\\ell_F+\\ell_I\\leq\\bar H\\). El hogar observa su estado actual y conoce la ley del riesgo, pero no su realización futura. Toma precios, remuneraciones efectivas y transferencias como dados al resolver su problema individual.\n\nLos retornos por hora que recibe son\n\\begin{equation}\\label{eq:returns}\nR_F(z)=(1-\\tau)w_Fz-\\kappa(z),\\qquad\nR_I(z)=\\widetilde w_Iz^{\\nu_I}.\n\\end{equation}\nLa barrera se paga por hora formal, \\(\\kappa(z)\\ell_F\\). La prima se paga sobre deuda, \\(\\chi(z)(-a)_+\\). Son objetos distintos: la primera no es un costo fijo de aceptación de empleo y la segunda no resuelve un problema endógeno de default.\n\n\\subsection{Producción, distribución y mercados}\nLa firma formal produce \\(Y_F=A_FK_F^\\alpha L_F^{1-\\alpha}\\) y elige capital y trabajo para maximizar \\(Y_F-w_FL_F-(r+\\delta)K_F\\). La firma informal produce \\(Y_I=A_IK_I^{\\alpha_I}L_I^{\\beta_I}\\) y maximiza \\(p_IY_I-w_IL_I-(r+\\delta)K_I\\). Se mantiene \\(0<\\alpha<1\\), \\(\\alpha_I,\\beta_I>0\\) y \\(\\alpha_I+\\beta_I<1\\). Las FOC igualan productos marginales valorados a costos de factores. Los beneficios formales son cero y los informales son\n\\[\n\\Pi_I=(1-\\alpha_I-\\beta_I)p_IY_I,\\qquad\n\\widetilde w_I=w_I+\\Pi_I/L_I.\n\\]\nEl reparto de beneficios por trabajo efectivo es una convención del modelo. El retorno informal del hogar no debe confundirse con el salario que paga la firma.\n\nSi \\(\\mu\\) es la distribución de hogares, los agregados relevantes son\n\\[\nS=\\int a\\,d\\mu,\\quad\nL_F=\\int z\\ell_F\\,d\\mu,\\quad\nL_I=\\int z^{\\nu_I}\\ell_I\\,d\\mu,\\quad\nC_s=\\int c_s\\,d\\mu .\n\\]\nLos mercados de activos y del bien informal exigen \\(S=K_F+K_I\\) y \\(C_I=Y_I\\). El gobierno devuelve la recaudación formal mediante \\(T=\\tau w_FL_F\\). El cierre de recursos formales incluye ambos pagos de cuñas:\n\\begin{equation}\\label{eq:formal_resources}\nY_F=C_F+\\delta(K_F+K_I)+\\mathcal K+\\mathcal D,\\quad\n\\mathcal K=\\int\\kappa(z)\\ell_F\\,d\\mu,\\quad\n\\mathcal D=\\int\\chi(z)(-a)_+\\,d\\mu .\n\\end{equation}\nLa ecuación de Kolmogorov determina la distribución estacionaria compatible con las políticas. En GE los precios y esa distribución vuelven a resolverse. La proposición siguiente mantiene la remuneración del problema individual fija.\n\n\\subsection{Condiciones del resultado local}\nEscribo \\(v(a,z)\\) para el valor del hogar y \\(\\Va(a,z)=\\partial_av(a,z)\\). Cuando la solución es regular, el bloque laboral de la HJB es\n\\begin{equation}\\label{eq:hoursblock}\n\\max_{\\ell_F,\\ell_I}\n\\left\\{\\Va(R_F\\ell_F+R_I\\ell_I)-\n\\sum_s\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right\\}.\n\\end{equation}\nLa derivación no constituye una prueba de regularidad de la HJB. Se explicitan las condiciones bajo las que puede usarse.\n\n\\begin{assumption}[Comparación individual]\\label{ass:fixed}\nSe fija \\(z\\) y se considera un entorno abierto de un punto \\(a_0>\\underline a\\). Los retornos \\(R_F,R_I>0\\), los precios y las remuneraciones efectivas se mantienen fijos y no dependen directamente de los activos en esa comparación.\n\\end{assumption}\n\\begin{assumption}[Preferencias laborales]\\label{ass:parameters}\nPara \\(s\\in\\{F,I\\}\\), \\(\\psi_s>0\\) y \\(\\phi_s>0\\). El costo de horas es el de \\eqref{eq:preferences}, separable entre actividades.\n\\end{assumption}\n\\begin{assumption}[Rama interior regular]\\label{ass:regular}\nLa función \\(a\\mapsto\\Va(a,z)\\) es positiva y diferenciable en \\(a_0\\). Las horas de la rama considerada satisfacen las FOC de \\eqref{eq:hoursblock}, son positivas y su suma es estrictamente menor que \\(\\bar H\\).\n\\end{assumption}\n\\begin{assumption}[Concavidad local para la interpretación]\\label{ass:concavity}\nCuando se interpreta el signo por riqueza se mantiene \\(\\Vaa(a_0,z)<0\\).\n\\end{assumption}\n\nLos tres primeros supuestos permiten derivar la identidad. El cuarto solo se usa para ordenar sus signos. Su cumplimiento en una grilla no implica una demostración global. Si el tope de tiempo se activa, aparece un multiplicador común y la fórmula interior deja de ser la política correspondiente. Si se evalúa el límite de endeudamiento, se requieren derivadas unilaterales y un enunciado adaptado; ese caso no queda cubierto por el entorno abierto utilizado aquí.\n\n\\section{Resultado y prueba}\nDefina la fracción de horas informales como\n\\(\\sI=\\ell_I/(\\ell_F+\\ell_I)\\). Esta definición cuenta horas y no clasifica ex ante a una persona como informal. Bajo los retornos positivos y la rama interior, \\(0<\\sI<1\\).\n\n\\begin{proposition}[Composición condicional de horas]\\label{prop:composition}\nBajo los supuestos \\ref{ass:fixed}--\\ref{ass:regular}, la política interior satisface\n\\begin{equation}\\label{eq:main}\n\\frac{\\partial\\sI(a_0,z)}{\\partial a}\n=\\sI(a_0,z)\\bigl(1-\\sI(a_0,z)\\bigr)\n(\\phi_I-\\phi_F)\\frac{\\Vaa(a_0,z)}{\\Va(a_0,z)} .\n\\end{equation}\nSi además se cumple el supuesto \\ref{ass:concavity}, la derivada es negativa cuando \\(\\phi_I>\\phi_F\\), cero cuando \\(\\phi_I=\\phi_F\\) y positiva cuando \\(\\phi_I<\\phi_F\\).\n\\end{proposition}\n\n\\begin{proof}\nDerivar \\eqref{eq:hoursblock} respecto a una hora positiva de la actividad \\(s\\), con el tiempo holgado, da\n\\[\n\\Va R_s-\\psi_s\\ell_s^{1/\\phi_s}=0.\n\\]\nLa derivada del costo divide y multiplica por el mismo exponente \\(1+1/\\phi_s\\); por eso no queda ese factor en la FOC. La segunda derivada de la función objetivo respecto a \\(\\ell_s>0\\) es\n\\(-(\\psi_s/\\phi_s)\\ell_s^{1/\\phi_s-1}<0\\). La rama interior tiene, por tanto, las políticas explícitas\n\\begin{equation}\\label{eq:explicit}\n\\ell_s=\\left(\\frac{\\Va R_s}{\\psi_s}\\right)^{\\phi_s}.\n\\end{equation}\nTodos los argumentos de las potencias son positivos. La composición considerada es la obtenida de estas políticas.\n\nSea \\(q=\\ell_I/\\ell_F>0\\). Al dividir \\eqref{eq:explicit} se obtiene\n\\[\nq=\\frac{(R_I/\\psi_I)^{\\phi_I}}{(R_F/\\psi_F)^{\\phi_F}}\n\\Va^{\\phi_I-\\phi_F}.\n\\]\nEl coeficiente de la derecha no depende de \\(a\\), por el supuesto \\ref{ass:fixed}. Tomar logaritmos y diferenciar da\n\\[\n\\frac{\\partial\\ln q}{\\partial a}\n=(\\phi_I-\\phi_F)\\frac{\\Vaa}{\\Va},\n\\qquad\n\\frac{\\partial q}{\\partial a}\n=q(\\phi_I-\\phi_F)\\frac{\\Vaa}{\\Va}.\n\\]\nLa división por \\(\\Va\\) es válida porque es positiva. Como\n\\(\\sI=q/(1+q)\\), la regla del cociente implica\n\\[\n\\frac{\\partial\\sI}{\\partial a}\n=\\frac{\\partial_aq}{(1+q)^2}\n=\\frac{q}{(1+q)^2}(\\phi_I-\\phi_F)\\frac{\\Vaa}{\\Va}.\n\\]\nFinalmente, \\(q/(1+q)^2=\\sI(1-\\sI)\\), lo que prueba \\eqref{eq:main}. El factor \\(\\sI(1-\\sI)/\\Va\\) es positivo. Si \\(\\Vaa<0\\), multiplicarlo por \\(\\phi_I-\\phi_F\\) produce los tres signos indicados. En la igualdad de elasticidades, la diferencia es exactamente cero y la identidad se anula.\n\\end{proof}\n\nEl resultado no afirma que riqueza e informalidad sean independientes en toda la distribución cuando las elasticidades coinciden. Afirma que la composición individual interior no responde directamente a los activos a un mismo \\(z\\). Las distribuciones de productividad por grupos de activos pueden ser distintas, y ello puede generar una brecha agregada positiva. Tampoco se compara aquí una economía con otra: un cambio de parámetros que modifica precios, políticas y distribución requiere resolver el equilibrio y agregar nuevamente.\n\nLa igualdad de elasticidades es, por tanto, una frontera útil de sensibilidad. Por encima de la diagonal \\(\\phi_I=\\phi_F\\), el signo local es negativo bajo concavidad; por debajo es positivo. El mapa no representa regiones de existencia de un equilibrio ni probabilidades estimadas. Resume la álgebra de una proposición condicional.\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.76\\linewidth]{../code/figures/final/sign_map.pdf}\n\\caption{Signo de la derivada por activos bajo \\(\\Vaa<0\\) y los demás supuestos de la proposición. Rango ilustrativo de elasticidades. Fuente: \\texttt{code/verify.py}.}\n\\label{fig:sign}\n\\end{figure}\n\n\\section{Comprobaciones y ejercicios numéricos}\n\\subsection{Qué se reproduce}\nEl punto de entrada es \\texttt{python code/verify.py}. El script comprueba las FOC por diferenciación simbólica y compara políticas explícitas con optimizaciones escalares independientes del objetivo. También verifica la derivada de la fracción y la regla de la cadena utilizada en \\eqref{eq:main}. El procedimiento falla si una identidad o tolerancia declarada no se cumple. Estas comprobaciones detectan errores de implementación; una colección finita de casos no sustituye la demostración.\n\nSe conservan dos fuentes numéricas. La primera es la exportación pública del cierre histórico, de \\(200\\times40\\) nodos, desde la que se reconstruye el valor marginal compatible con las FOC. La segunda son exportaciones de diagnósticos de los contrastes D73 del 9 de noviembre. En esta revisión Python vuelve a producir el PE desde la primera fuente y relee los indicadores guardados de la segunda. No vuelve a resolver en MATLAB las HJB/KFE de D73. Los archivos de procedencia distinguen ambas operaciones.\n\nEsta distinción también determina el significado de la palabra verificación. La identidad de composición tiene una prueba algebraica y una comprobación simbólica. El ejercicio parcial tiene una reproducción numérica. Las corridas D73 conservan una auditoría independiente realizada sobre sus MAT y sus diagnósticos exportados, pero no se les atribuye una nueva ejecución en esta sesión. Finalmente, la estabilidad frente a grilla y dominio es un problema separado del cierre de una corrida individual.\n\n\\subsection{Sensibilidad parcial de las elasticidades}\nEl experimento mantiene precios, \\(V_a\\) y distribución de la exportación histórica. Para cada elasticidad informal se reajustan \\(\\psi_I\\) y el nivel de la barrera de modo que se recuperen los momentos internos M1 y M3 de esa misma referencia. M1 es la razón de horas informales agregadas a horas totales. M3 es la diferencia de fracciones formales entre extremos de productividad. No son, respectivamente, una tasa de personas ni una estimación directa por educación.\n\nLa figura \\ref{fig:assets} muestra la fracción informal por activos en un mismo nodo de productividad. Con elasticidad común, la curva es plana. Con elasticidad informal mayor, desciende. El reajuste puede alterar niveles e intersecciones; la proposición fija el signo local, no exige que todas las curvas pasen por el mismo punto.\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.85\\linewidth]{../code/figures/final/assets.pdf}\n\\caption{Fracción de horas informales por activos, con \\(z=\\FixedZFinal\\) y \\(\\phi_F=\\PhiFormalFinal\\). PE con distribución, precios y \\(V_a\\) fijos; reajuste a M1/M3 internos. Fuente: \\texttt{code/verify.py}.}\n\\label{fig:assets}\n\\end{figure}\n\n\\begin{table}[htbp]\n\\centering\n\\caption{Sensibilidad parcial con M1/M3 internos mantenidos}\n\\label{tab:pe}\n\\begin{tabular}{rrrr}\\toprule\n\\(\\phi_I\\)&\\(\\psi_I\\)&Nivel de barrera&V3 D17 (pp)\\\\\\midrule\n\\FinalPERows\\bottomrule\n\\end{tabular}\n\\par\\smallskip\\footnotesize V3 es la diferencia Q1--Q5 de fracciones de horas informales por activos. M1 = \\PEMOne\\%, M3 = \\PEMThree\\ pp. No es una recalibración a datos nuevos.\n\\end{table}\n\nLa brecha V3 aumenta de \\PEGapLow\\ a \\PEGapHigh\\ puntos en el rango considerado. La tabla utiliza la convención D17, que incorpora el nodo que cruza el corte de Q1. El código histórico también conserva la convención antigua de MATLAB, que produce cifras próximas, pero distintas. No se intercambian esas definiciones dentro de una comparación. La magnitud no se interpreta como reducción de una brecha empírica: los descriptivos de personas por gasto y el resultado de horas por activos no comparten denominador ni variable de clasificación.\n\n\\subsection{Cuñas en equilibrio general}\nLos contrastes D73 utilizan el modelo simultáneo original con elasticidad común. Comparan la referencia con prima constante, barrera constante y ambas constantes. Los niveles constantes iniciales igualan pagos agregados evaluados con las políticas de referencia. Esa igualdad inicial no garantiza pagos iguales después de resolver el GE. En cada contraste se ajustan precios, políticas y distribución y se comprueban mercados, HJB, KFE y condiciones laborales.\n\nEl bloque amplio utiliza \\(400\\times40\\) nodos y dominio de activos de \\(-1\\) a \\(40\\). La figura \\ref{fig:wedges} y la tabla \\ref{tab:ge} muestran que hacer constante la prima cambia poco los momentos mostrados. Hacer constante la barrera reduce M3 de \\WedgeMThreeRef\\ a \\WedgeMThreeConst\\ puntos, con los otros parámetros mantenidos. El gradiente por productividad depende, por tanto, de una forma que el modelo impone. Este es un diagnóstico de sensibilidad, no una estimación del costo de acceder al sector formal.\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.85\\linewidth]{../code/figures/final/wedges.pdf}\n\\caption{M3 en contrastes GE de forma a otros parámetros fijos. Constantes iniciales igualan pagos de referencia. Los precios se resuelven de nuevo. Fuente: exportaciones D73 verificadas por \\texttt{code/verify.py}.}\n\\label{fig:wedges}\n\\end{figure}\n\n\\begin{table}[htbp]\n\\centering\n\\caption{Cuñas y reajuste en GE, dominio amplio}\n\\label{tab:ge}\n\\begin{tabular}{lrrrr}\\toprule\nCaso&M1 (\\%)&M3 (pp)&V3 (pp)&Gasto F/I\\\\\\midrule\n\\FinalWedgeRows\\bottomrule\n\\end{tabular}\n\\par\\smallskip\\footnotesize V3 usa quintiles de activos con reparto fraccional del nodo de corte. El gasto clasifica hogares por sector dominante en horas. No mezclar V3 con la convención D17.\n\\end{table}\n\nUn contraste adicional reajusta \\(\\psi_I\\) y el nivel constante de \\(\\kappa\\) para recuperar M1/M3 del GE de referencia de la misma grilla. Ambas formas recuperan esas metas internas, pero producen V3 de \\WedgeVThreeRef\\ y \\WedgeVThreeRefit\\ puntos. La razón de gasto tampoco mejora frente a la meta registrada de 1,913; esa meta se conserva como dato del paquete, sin nueva revalidación de microdatos. Ajustar dos momentos puede disciplinar parámetros dentro de una familia sin identificar cuál forma funcional es la correcta entre familias.\n\n\\subsection{Transmisión a precios y capital}\nLa distribución estacionaria es el puente entre las políticas del hogar y los agregados. La exportación histórica permite reconstruir la distribución marginal de activos y sumar horas con sus ponderaciones. El ahorro agregado es $S=\\MeanAssetsFinal$ en unidades de ese modelo, mientras que la participación informal de horas es \\PEMOne\\%. La razón de horas agregadas no equivale al promedio simple de las fracciones individuales: hogares que trabajan cantidades distintas tienen pesos distintos en el denominador.\n\nEn los GE D73 el capital debe ser consistente con los activos agregados. Se agregó a la reproducción la identidad entre el exceso de activos guardado y la diferencia de ahorro y demanda de capital. La figura \\ref{fig:macro_ge} muestra los cambios de la tasa de interés y del capital respecto al GE de referencia de la misma grilla. La escala de interés está en puntos básicos y la de capital en cambio porcentual. No se trata de una trayectoria temporal. Estos resultados describen diferencias estacionarias entre especificaciones; no se interpretan como una intervención identificada ni como efectos de bienestar.\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.85\\linewidth]{../code/figures/final/macro_ge.pdf}\n\\caption{Ajuste de precios y capital en los GE D73 amplios. Referencia: $r=\\InterestRefFinal\\%$ y $K=\\CapitalRefFinal$ unidades del modelo. Fuente: exportaciones de las mismas corridas auditadas, reproducidas por \\texttt{code/verify.py}.}\n\\label{fig:macro_ge}\n\\end{figure}\n\n\\subsection{Diagnósticos y límites de precisión}\nEl registro D73 conserva \\CountMATFinal\\ MAT auditados, de los cuales \\CountGEFinal\\ son GE. Los controles distinguen masa, generador, HJB, KFE, unicidad de clase cerrada, factibilidad, FOC y mercados. Un indicador agregado pequeño no basta si su fórmula omite un costo real. La revisión previa encontró un indicador histórico que excluía la prima de deuda; los contrastes nuevos verifican los dos pagos de \\eqref{eq:formal_resources}. El fallo histórico no se borra ni se reutiliza como certificación de los nuevos resultados.\n\nLa ampliación del dominio reduce masa en la frontera superior, pero quedan dos pares finos comparables en el mismo dominio amplio y una revisión de resolución o truncamiento de \\(z\\). No se declara certificación global de precisión. Cambiar los extremos de productividad puede modificar el perfil normalizado de una cuña y no solo su resolución; por eso las anclas económicas deben mantenerse al hacer comparaciones de grilla. Tampoco se cambia silenciosamente el límite de endeudamiento para que converja un caso.\n\n\\section{Discusión y limitaciones}\nLa proposición identifica el papel de la igualdad de elasticidades y de la concavidad local. Su fuerza consiste en aislar ese canal; su límite consiste en las condiciones que requiere. Un hogar en una esquina sectorial, en el tope de tiempo o en un punto sin derivabilidad exige otro enunciado. Esos casos no pueden incorporarse mediante la misma fórmula solo porque el solver entregue un número. La extensión a un cambio de precios también añade términos que aquí se mantienen constantes.\n\nEl resultado agregado requiere integrar políticas con una distribución. Una brecha positiva entre quintiles de activos no contradice la cancelación a \\(z\\) fijo, porque la productividad puede estar distribuida de manera distinta entre quintiles. Del mismo modo, una brecha parcial mayor al variar una elasticidad no demuestra que un GE tenga el mismo cambio. Recalcular equilibrio es una tarea distinta y el manuscrito no afirma haberla completado para las elasticidades de sensibilidad.\n\nLa interpretación empírica sigue siendo una limitación sustantiva. Las referencias revisadas no estiman automáticamente \\(\\phi_I-\\phi_F\\), \\(\\nu_I\\) o el perfil compartido de cuñas del proyecto. La medición por personas, horas, ingreso, gasto y patrimonio debe reconciliarse antes de juzgar ajuste. Para distinguir especificaciones después de un reajuste, hacen falta momentos externos que no se hayan utilizado para igualarlas. Comparar solo el tamaño de V3 favorecería una forma por el resultado deseado, sin identificar su mecanismo.\n\nLean comprueba la derivada y los signos de las políticas explícitas, con la condición de concavidad declarada. No prueba regularidad o concavidad de la HJB ni existencia del GE. Quedan pendientes el flujo oficial sobre un commit publicado, el manuscrito personal y la revisión semántica del autor.\n\n\\section{Conclusión}\nA igual productividad y dentro de una rama laboral interior, la composición de horas responde al valor marginal de los activos mediante la diferencia de elasticidades sectoriales. Con valor marginal decreciente en riqueza, una elasticidad informal mayor produce una fracción informal decreciente; la igualdad de elasticidades cancela el canal directo. El ejercicio parcial reproduce esa lógica y los contrastes GE muestran dependencia del gradiente por productividad respecto a la barrera formal. La conclusión es condicional y no causal. Los pasos siguientes son disciplinar empíricamente los parámetros, construir indicadores comparables y cerrar los requisitos de formalización y manuscrito con su procedencia completa.\n\\label{body:end}\n\\clearpage\n\\bibliographystyle{plainnat}\n\\bibliography{references}\n\\appendix\n",
-            "quoted_text_sha256": "9f2c1ad18393bf497518a56069d5f2b8a6b80a1bd7d5c268a194dd941bc0fbbd"
+            "line_end": 340,
+            "quoted_text": "% Revisión para la entrega final, 24nov2026. Geometría de la plantilla conservada.\n\\documentclass[11pt]{article}\n\\usepackage[utf8]{inputenc}\n\\usepackage[T1]{fontenc}\n\\usepackage[spanish,es-nodecimaldot,es-noquoting]{babel}\n\\usepackage[margin=1in]{geometry}\n\\usepackage{lmodern,amsmath,amssymb,amsthm,booktabs,graphicx,array,xcolor}\n\\usepackage[round]{natbib}\n\\usepackage[colorlinks=true,allcolors=blue!50!black]{hyperref}\n\\input{../code/output/final_numbers.tex}\n\\input{../code/output/paper_numbers.tex}\n\\newtheorem{proposition}{Proposición}\n\\theoremstyle{definition}\n\\newtheorem{assumption}{Supuesto}\n\\newcommand{\\Va}{V_a}\n\\newcommand{\\Vaa}{V_{aa}}\n\\newcommand{\\sI}{s_I}\n\\title{Ahorro, flexibilidad de horas e informalidad en el Perú\\\\[3pt]\\large Un mecanismo laboral en un modelo macroeconómico de agentes heterogéneos}\n\\author{John Svante Barraza Ratachi\\\\ \\small Universidad del Pacífico, AI and Economic Modeling, Track B\\\\\n\\small\\url{https://github.com/johnbarraza/ai-project}}\n\\date{24 de noviembre de 2026. Revisión para la entrega final}\n\\setlength{\\emergencystretch}{2em}\n\\begin{document}\n\\maketitle\n\\begin{abstract}\nEstudio cuándo la riqueza modifica el reparto de horas formales e informales a productividad fija, dentro de una economía de agentes heterogéneos con dos sectores y precios endógenos. En una rama laboral interior con tiempo holgado, la derivada de la fracción informal depende de la diferencia de elasticidades y de la pendiente del valor marginal de los activos. Bajo concavidad local, una elasticidad informal mayor genera una fracción decreciente por activos; con elasticidad común se cancela ese canal directo. Un ejercicio parcial y dos protocolos de equilibrio general reproducen el mecanismo, pero muestran respuestas distintas de la brecha por activos y de la informalidad agregada. Los contrastes de tiempo delimitan la validez del resultado interior. No se identifican efectos causales ni elasticidades sectoriales para Perú. Tampoco se prueban concavidad global o existencia del equilibrio. La revisión oficial de Lean y el apéndice manuscrito completo permanecen abiertos.\n\\end{abstract}\n\n\\section{Introducción}\nEl marco es una economía de equilibrio general con hogares heterogéneos, producción formal e informal y una distribución de activos. La pregunta individual importa para macro porque sus políticas se agregan mediante esa distribución, determinan oferta de trabajo y ahorro y deben ser compatibles con los precios de los mercados. La proposición estudia una pieza de ese circuito; los contrastes numéricos de equilibrio general muestran cómo la especificación se transmite también a precios y capital.\n\nEl marco y el motor original proceden del trabajo académico coautorado con Enzo Nevado, \\citet{BarrazaNevado2026}. Ese antecedente y sus pruebas de bloques estáticos no se presentan como resultados nuevos de autoría individual. Este paper del curso estudia una pregunta más acotada: la cancelación del canal de composición por riqueza con elasticidad común y su sensibilidad a elasticidades distintas, dentro de la economía de dos sectores. El aporte se delimita mediante una proposición condicional y contrastes numéricos trazables.\n\nLa informalidad puede asociarse tanto con la productividad de la persona como con los recursos que tiene disponibles. Esa asociación no dice por sí sola qué decisión cambiaría si dos hogares con igual productividad dispusieran de activos diferentes. La pregunta de este trabajo es más acotada: ¿cuándo influye la riqueza en el reparto de horas entre trabajo formal e informal, manteniendo la productividad laboral individual fija? La decisión considerada es una cantidad de horas en cada actividad. Ambos trabajos pueden coexistir; no se modela aquí la llegada de una oferta ni una elección discreta de sector.\n\nLa motivación descriptiva proviene de los agregados de ENAHO 2023 conservados en el proyecto. La tasa de empleo informal de personas ocupadas es \\MotivationQOne\\% en el quintil de menor gasto per cápita y \\MotivationQFive\\% en el de mayor gasto. Estos números fueron recuperados del archivo público de agregados y no se volvieron a estimar desde microdatos en esta revisión. Además, el gasto no es patrimonio y una tasa de personas no es una fracción de horas. El patrón sirve para formular la pregunta, pero no se usará como una meta directamente comparable con la brecha de horas por activos del modelo.\n\nLa respuesta es condicional. En el bloque de trabajo del hogar, ambas actividades reciben la misma valoración marginal de una unidad adicional de activos, \\(\\Va\\). Si las dos desutilidades tienen la misma elasticidad, ese término aparece con el mismo exponente en ambas horas y desaparece al tomar su cociente. La riqueza puede modificar el trabajo total sin modificar directamente su composición a un mismo estado de productividad. Si las elasticidades difieren, el cociente hereda una potencia de \\(\\Va\\). El signo por activos depende entonces de la diferencia de elasticidades y de la derivada de \\(\\Va\\) respecto a la riqueza.\n\nEl resultado aporta un diagnóstico del mecanismo dentro del modelo de dos sectores. No se presenta como una demostración de prioridad frente a toda la literatura de oferta laboral. Permite identificar qué supuesto impide un canal directo de composición y qué condición lo recupera. También ayuda a distinguir ese canal del gradiente por productividad generado por la barrera formal y por el rendimiento de la productividad en el sector informal. Una relación agregada entre activos e informalidad puede existir incluso con elasticidad común si la distribución de productividad difiere entre grupos de riqueza.\n\nEl trabajo separa tres tareas. La primera es la demostración analítica de la proposición local. La segunda es una reproducción del ejercicio parcial de octubre, con precios, distribución y valor marginal fijos. La tercera utiliza los contrastes de cuñas de noviembre, en los que se resolvieron de nuevo precios y distribución en equilibrio general. Esa separación evita interpretar una sensibilidad parcial como un nuevo equilibrio y evita llamar identificación empírica al reajuste de dos momentos internos.\n\n\\section{Antecedentes y alcance}\nEl punto de partida es el ahorro bajo riesgo idiosincrático de \\citet{Aiyagari1994}. La extensión relevante para este proyecto conserva activos y productividad heterogéneos, pero incorpora dos firmas, dos bienes y horas elegidas en ambas actividades. \\citet{Achdou2022} desarrolla la formulación continua mediante una HJB para valor y políticas y una ecuación de Kolmogorov para la distribución. Su sección 2.1 presenta el entorno básico y su sección 7 discute extensiones. Esa referencia justifica el marco y el método; no identifica las elasticidades laborales de este proyecto.\n\nEl antecedente cercano para Perú es el Documento de Trabajo 2024-005 del BCRP, \\citet{Galindo2024}. Su objeto es la relación entre informalidad y distribución de riqueza en un modelo de agentes heterogéneos. El documento se cita como trabajo de investigación del banco central; no se afirma aquí una publicación posterior arbitrada. En el manuscrito local revisado, el estado formal o informal es exógeno y el hogar elige consumo y ahorro. Aquí se estudia el reparto simultáneo de horas. Endogeneizar ese reparto intensivo no equivale a endogeneizar transiciones entre empleos excluyentes.\n\nLa revisión previa de supuestos también consideró \\citet{Kaplan2018}. El tratamiento de una prima crediticia como costo de intermediación resulta útil para la contabilidad. No ofrece respaldo automático para imponer a la barrera laboral y a la prima de deuda una misma función decreciente de productividad. La coincidencia de letras entre artículos tampoco establece equivalencia económica. Por ello, los perfiles de cuñas se mantienen como elecciones del proyecto que requieren contraste.\n\nEl antecedente empírico de \\citet{CespedesRendon2012} requiere distinguir versión y cuadro. El Cuadro 2 del documento BCRP, con ingreso total por hora, reporta elasticidades puntuales de \\EmpiricalPhiFormal{} para trabajadores formales y \\EmpiricalPhiInformal{} para informales. Ese orden es contrario al rango ilustrativo con elasticidad informal mayor. Los intervalos reportados se superponen y aquí no se realiza una prueba de diferencia entre estimaciones. Además, categorías de trabajadores no identifican automáticamente dos elasticidades de actividades simultáneas dentro de un mismo hogar. La versión inglesa IZA tiene una tabla de heterogeneidad distinta; no se le atribuyen esas filas sectoriales.\n\nLa revisión de literatura es focalizada y conserva límites de acceso y de lectura. No se declara exhaustiva la búsqueda de citantes ni se afirma prioridad frente a toda la literatura. La desigualdad de elasticidades es una sensibilidad del bloque de horas, no una estimación sectorial para Perú. La versión de trabajo de cada antecedente se identifica en la bibliografía; no se presupone una publicación posterior arbitrada.\n\n\\section{Modelo y supuestos}\n\\subsection{Estados, información y decisiones}\nEl estado individual es \\((a,z)\\), donde \\(a\\) son activos y \\(z>0\\) es productividad laboral. Los activos evolucionan mediante el ahorro; la productividad sigue un proceso exógeno conocido por el hogar. En tiempo continuo el hogar elige consumos \\(c_F,c_I\\) y horas \\(\\ell_F,\\ell_I\\). Con una canasta CES \\(C(c_F,c_I)\\), sus preferencias son\n\\begin{equation}\\label{eq:preferences}\n\\mathbb E_0\\int_0^\\infty e^{-\\rho t}\n\\left[\\ln C(c_F,c_I)-\n\\sum_{s\\in\\{F,I\\}}\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right]dt.\n\\end{equation}\nLa canasta distingue los dos bienes. El argumento de composición laboral usa la separabilidad del bloque de horas y su vínculo con la restricción de recursos; no requiere estimar aquí un nuevo parámetro de sustitución de consumo.\n\nEl precio formal se normaliza a uno y \\(p_I\\) es el precio relativo del bien informal. La ley de movimiento de activos es\n\\begin{equation}\\label{eq:budget}\n\\dot a=R_F(z)\\ell_F+R_I(z)\\ell_I+ra-\\chi(z)(-a)_+\n+T-c_F-p_Ic_I,\n\\end{equation}\ncon \\(a\\geq\\underline a\\), \\(\\ell_s\\geq0\\) y\n\\(\\ell_F+\\ell_I\\leq\\bar H\\). El hogar observa su estado actual y conoce la ley del riesgo, pero no su realización futura. Toma precios, remuneraciones efectivas y transferencias como dados al resolver su problema individual.\n\nLos retornos por hora que recibe son\n\\begin{equation}\\label{eq:returns}\nR_F(z)=(1-\\tau)w_Fz-\\kappa(z),\\qquad\nR_I(z)=\\widetilde w_Iz^{\\nu_I}.\n\\end{equation}\nLa barrera se paga por hora formal, \\(\\kappa(z)\\ell_F\\). La prima se paga sobre deuda, \\(\\chi(z)(-a)_+\\). Son objetos distintos: la primera no es un costo fijo de aceptación de empleo y la segunda no resuelve un problema endógeno de default.\n\n\\subsection{Producción, distribución y mercados}\nLa firma formal produce \\(Y_F=A_FK_F^\\alpha L_F^{1-\\alpha}\\) y elige capital y trabajo para maximizar \\(Y_F-w_FL_F-(r+\\delta)K_F\\). La firma informal produce \\(Y_I=A_IK_I^{\\alpha_I}L_I^{\\beta_I}\\) y maximiza \\(p_IY_I-w_IL_I-(r+\\delta)K_I\\). Se mantiene \\(0<\\alpha<1\\), \\(\\alpha_I,\\beta_I>0\\) y \\(\\alpha_I+\\beta_I<1\\). Las FOC igualan productos marginales valorados a costos de factores. Los beneficios formales son cero y los informales son\n\\[\n\\Pi_I=(1-\\alpha_I-\\beta_I)p_IY_I,\\qquad\n\\widetilde w_I=w_I+\\Pi_I/L_I.\n\\]\nEl reparto de beneficios por trabajo efectivo es una convención del modelo. El retorno informal del hogar no debe confundirse con el salario que paga la firma.\n\nSi \\(\\mu\\) es la distribución de hogares, los agregados relevantes son\n\\[\nS=\\int a\\,d\\mu,\\quad\nL_F=\\int z\\ell_F\\,d\\mu,\\quad\nL_I=\\int z^{\\nu_I}\\ell_I\\,d\\mu,\\quad\nC_s=\\int c_s\\,d\\mu .\n\\]\nLos mercados de activos y del bien informal exigen \\(S=K_F+K_I\\) y \\(C_I=Y_I\\). El gobierno devuelve la recaudación formal mediante \\(T=\\tau w_FL_F\\). El cierre de recursos formales incluye ambos pagos de cuñas:\n\\begin{equation}\\label{eq:formal_resources}\nY_F=C_F+\\delta(K_F+K_I)+\\mathcal K+\\mathcal D,\\quad\n\\mathcal K=\\int\\kappa(z)\\ell_F\\,d\\mu,\\quad\n\\mathcal D=\\int\\chi(z)(-a)_+\\,d\\mu .\n\\end{equation}\nLa ecuación de Kolmogorov determina la distribución estacionaria compatible con las políticas. En GE los precios y esa distribución vuelven a resolverse. La proposición siguiente mantiene la remuneración del problema individual fija.\n\n\\subsection{Condiciones del resultado local}\nEscribo \\(v(a,z)\\) para el valor del hogar y \\(\\Va(a,z)=\\partial_av(a,z)\\). Cuando la solución es regular, el bloque laboral de la HJB es\n\\begin{equation}\\label{eq:hoursblock}\n\\max_{\\ell_F,\\ell_I}\n\\left\\{\\Va(R_F\\ell_F+R_I\\ell_I)-\n\\sum_s\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right\\}.\n\\end{equation}\nLa derivación no constituye una prueba de regularidad de la HJB. Se explicitan las condiciones bajo las que puede usarse.\n\n\\begin{assumption}[Comparación individual]\\label{ass:fixed}\nSe fija \\(z\\) y se considera un entorno abierto de un punto \\(a_0>\\underline a\\). Los retornos \\(R_F,R_I>0\\), los precios y las remuneraciones efectivas se mantienen fijos y no dependen directamente de los activos en esa comparación.\n\\end{assumption}\n\\begin{assumption}[Preferencias laborales]\\label{ass:parameters}\nPara \\(s\\in\\{F,I\\}\\), \\(\\psi_s>0\\) y \\(\\phi_s>0\\). El costo de horas es el de \\eqref{eq:preferences}, separable entre actividades.\n\\end{assumption}\n\\begin{assumption}[Rama interior regular]\\label{ass:regular}\nLa función \\(a\\mapsto\\Va(a,z)\\) es positiva y diferenciable en \\(a_0\\). Las horas de la rama considerada satisfacen las FOC de \\eqref{eq:hoursblock}, son positivas y su suma es estrictamente menor que \\(\\bar H\\).\n\\end{assumption}\n\\begin{assumption}[Concavidad local para la interpretación]\\label{ass:concavity}\nCuando se interpreta el signo por riqueza se mantiene \\(\\Vaa(a_0,z)<0\\).\n\\end{assumption}\n\nLos tres primeros supuestos permiten derivar la identidad. El cuarto solo se usa para ordenar sus signos. Su cumplimiento en una grilla no implica una demostración global. Si el tope de tiempo se activa, aparece un multiplicador común y la fórmula interior deja de ser la política correspondiente. Si se evalúa el límite de endeudamiento, se requieren derivadas unilaterales y un enunciado adaptado; ese caso no queda cubierto por el entorno abierto utilizado aquí.\n\n\\section{Resultado y prueba}\nDefina la fracción de horas informales como\n\\(\\sI=\\ell_I/(\\ell_F+\\ell_I)\\). Esta definición cuenta horas y no clasifica ex ante a una persona como informal. Bajo los retornos positivos y la rama interior, \\(0<\\sI<1\\).\n\n\\begin{proposition}[Composición condicional de horas]\\label{prop:composition}\nBajo los supuestos \\ref{ass:fixed}--\\ref{ass:regular}, la política interior satisface\n\\begin{equation}\\label{eq:main}\n\\frac{\\partial\\sI(a_0,z)}{\\partial a}\n=\\sI(a_0,z)\\bigl(1-\\sI(a_0,z)\\bigr)\n(\\phi_I-\\phi_F)\\frac{\\Vaa(a_0,z)}{\\Va(a_0,z)} .\n\\end{equation}\nSi además se cumple el supuesto \\ref{ass:concavity}, la derivada es negativa cuando \\(\\phi_I>\\phi_F\\), cero cuando \\(\\phi_I=\\phi_F\\) y positiva cuando \\(\\phi_I<\\phi_F\\).\n\\end{proposition}\n\n\\begin{proof}\nDerivar \\eqref{eq:hoursblock} respecto a una hora positiva de la actividad \\(s\\), con el tiempo holgado, da\n\\[\n\\Va R_s-\\psi_s\\ell_s^{1/\\phi_s}=0.\n\\]\nLa derivada del costo divide y multiplica por el mismo exponente \\(1+1/\\phi_s\\); por eso no queda ese factor en la FOC. La segunda derivada de la función objetivo respecto a \\(\\ell_s>0\\) es\n\\(-(\\psi_s/\\phi_s)\\ell_s^{1/\\phi_s-1}<0\\). La rama interior tiene, por tanto, las políticas explícitas\n\\begin{equation}\\label{eq:explicit}\n\\ell_s=\\left(\\frac{\\Va R_s}{\\psi_s}\\right)^{\\phi_s}.\n\\end{equation}\nTodos los argumentos de las potencias son positivos. La composición considerada es la obtenida de estas políticas.\n\nSea \\(q=\\ell_I/\\ell_F>0\\). Al dividir \\eqref{eq:explicit} se obtiene\n\\[\nq=\\frac{(R_I/\\psi_I)^{\\phi_I}}{(R_F/\\psi_F)^{\\phi_F}}\n\\Va^{\\phi_I-\\phi_F}.\n\\]\nEl coeficiente de la derecha no depende de \\(a\\), por el supuesto \\ref{ass:fixed}. Tomar logaritmos y diferenciar da\n\\[\n\\frac{\\partial\\ln q}{\\partial a}\n=(\\phi_I-\\phi_F)\\frac{\\Vaa}{\\Va},\n\\qquad\n\\frac{\\partial q}{\\partial a}\n=q(\\phi_I-\\phi_F)\\frac{\\Vaa}{\\Va}.\n\\]\nLa división por \\(\\Va\\) es válida porque es positiva. Como\n\\(\\sI=q/(1+q)\\), la regla del cociente implica\n\\[\n\\frac{\\partial\\sI}{\\partial a}\n=\\frac{\\partial_aq}{(1+q)^2}\n=\\frac{q}{(1+q)^2}(\\phi_I-\\phi_F)\\frac{\\Vaa}{\\Va}.\n\\]\nFinalmente, \\(q/(1+q)^2=\\sI(1-\\sI)\\), lo que prueba \\eqref{eq:main}. El factor \\(\\sI(1-\\sI)/\\Va\\) es positivo. Si \\(\\Vaa<0\\), multiplicarlo por \\(\\phi_I-\\phi_F\\) produce los tres signos indicados. En la igualdad de elasticidades, la diferencia es exactamente cero y la identidad se anula.\n\\end{proof}\n\nEl resultado no afirma que riqueza e informalidad sean independientes en toda la distribución cuando las elasticidades coinciden. Afirma que la composición individual interior no responde directamente a los activos a un mismo \\(z\\). Las distribuciones de productividad por grupos de activos pueden ser distintas, y ello puede generar una brecha agregada positiva. Tampoco se compara aquí una economía con otra: un cambio de parámetros que modifica precios, políticas y distribución requiere resolver el equilibrio y agregar nuevamente.\n\nLa igualdad de elasticidades es, por tanto, una frontera útil de sensibilidad. Por encima de la diagonal \\(\\phi_I=\\phi_F\\), el signo local es negativo bajo concavidad; por debajo es positivo. El mapa no representa regiones de existencia de un equilibrio ni probabilidades estimadas. Resume la álgebra de una proposición condicional.\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.76\\linewidth]{../code/figures/final/sign_map.pdf}\n\\caption{Signo de la derivada por activos bajo \\(\\Vaa<0\\) y los demás supuestos de la proposición. Rango ilustrativo de elasticidades. Fuente: \\texttt{code/verify.py}.}\n\\label{fig:sign}\n\\end{figure}\n\n\\section{Comprobaciones y ejercicios numéricos}\n\\subsection{Qué se reproduce}\nEl punto de entrada es \\texttt{python code/verify.py}. El script comprueba las FOC por diferenciación simbólica y compara políticas explícitas con optimizaciones escalares independientes del objetivo. También verifica la derivada de la fracción y la regla de la cadena utilizada en \\eqref{eq:main}. El procedimiento falla si una identidad o tolerancia declarada no se cumple. Estas comprobaciones detectan errores de implementación; una colección finita de casos no sustituye la demostración.\n\nSe conservan tres bloques numéricos. El primero es la exportación pública del cierre histórico, de \\(200\\times40\\) nodos, desde la que se reconstruye el valor marginal compatible con las FOC. El segundo contiene los contrastes de cuñas D73 del 9 de noviembre y su repetición de dos GE el 12 de noviembre. El tercero incorpora los \\GEPaperCount{} GE resueltos en MATLAB el 13 de noviembre, con elasticidades distintas y restricciones de tiempo. Los MAT de este último bloque se reanalizaron el 23 de noviembre. Python reproduce el PE, valida las exportaciones y genera las figuras; la verificación en CI no resuelve de nuevo las HJB/KFE. Procedencia, hashes y alcance distinguen estas operaciones.\n\nEsta distinción también determina el significado de la palabra verificación. La identidad de composición tiene una prueba algebraica y una comprobación simbólica. El ejercicio parcial tiene una reproducción numérica. Las corridas D73 conservan una auditoría independiente realizada sobre sus MAT y sus diagnósticos exportados, pero no se les atribuye una nueva ejecución en esta sesión. Finalmente, la estabilidad frente a grilla y dominio es un problema separado del cierre de una corrida individual.\n\n\\subsection{Sensibilidad parcial de las elasticidades}\nEl experimento mantiene precios, \\(V_a\\) y distribución de la exportación histórica. Para cada elasticidad informal se reajustan \\(\\psi_I\\) y el nivel de la barrera de modo que se recuperen los momentos internos M1 y M3 de esa misma referencia. M1 es la razón de horas informales agregadas a horas totales. M3 es la diferencia de fracciones formales entre extremos de productividad. No son, respectivamente, una tasa de personas ni una estimación directa por educación.\n\nLa figura \\ref{fig:assets} muestra la fracción informal por activos en un mismo nodo de productividad. Con elasticidad común, la curva es plana. Con elasticidad informal mayor, desciende. El reajuste puede alterar niveles e intersecciones; la proposición fija el signo local, no exige que todas las curvas pasen por el mismo punto.\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.85\\linewidth]{../code/figures/final/assets.pdf}\n\\caption{Fracción de horas informales por activos, con \\(z=\\FixedZFinal\\) y \\(\\phi_F=\\PhiFormalFinal\\). PE con distribución, precios y \\(V_a\\) fijos; reajuste a M1/M3 internos. Fuente: \\texttt{code/verify.py}.}\n\\label{fig:assets}\n\\end{figure}\n\n\\begin{table}[htbp]\n\\centering\n\\caption{Sensibilidad parcial con M1/M3 internos mantenidos}\n\\label{tab:pe}\n\\begin{tabular}{rrrr}\\toprule\n\\(\\phi_I\\)&\\(\\psi_I\\)&Nivel de barrera&V3 D17 (pp)\\\\\\midrule\n\\FinalPERows\\bottomrule\n\\end{tabular}\n\\par\\smallskip\\footnotesize V3 es la diferencia Q1--Q5 de fracciones de horas informales por activos. M1 = \\PEMOne\\%, M3 = \\PEMThree\\ pp. No es una recalibración a datos nuevos.\n\\end{table}\n\nLa brecha V3 aumenta de \\PEGapLow\\ a \\PEGapHigh\\ puntos en el rango considerado. La tabla utiliza la convención D17, que incorpora el nodo que cruza el corte de Q1. El código histórico también conserva la convención antigua de MATLAB, que produce cifras próximas, pero distintas. No se intercambian esas definiciones dentro de una comparación. La magnitud no se interpreta como reducción de una brecha empírica: los descriptivos de personas por gasto y el resultado de horas por activos no comparten denominador ni variable de clasificación.\n\n\\subsection{Elasticidades distintas en equilibrio general}\nLa extensión cuantitativa resuelve de nuevo HJB, distribución y mercados con \\(400\\times40\\) nodos, activos entre \\(-1\\) y \\(40\\), y elasticidad formal de \\(0,38\\). La elasticidad informal recorre \\GEFixedCount{} valores entre \\(0,38\\) y \\(0,70\\). Cada equilibrio sirve como inicializador del siguiente. Es continuación numérica entre estados estacionarios, no una trayectoria temporal de la economía.\n\nSe comparan dos protocolos. El primero conserva los niveles de desutilidad y la barrera de referencia. El segundo reajusta \\(\\psi_I\\) y el nivel de la barrera lineal para recuperar M1/M3 del GE de referencia de igual grilla; contiene los \\GERefitCount{} valores distintos de esa referencia. Son metas internas, no una nueva estimación con microdatos. En ambos protocolos se permiten los ajustes de precios y distribución que exige el GE.\n\nEn estos reajustes se mantienen \\(\\psi_F\\) y la productividad informal agregada \\(A_I\\) en sus valores de referencia. No se estiman libremente cuatro parámetros a partir de tres momentos, problema identificado en la auditoría del paquete coautorado. Recuperar dos metas con dos instrumentos tampoco demuestra identificación única ni validez de las normalizaciones mantenidas.\n\nSin reajuste, V3 pasa de \\GEBaseVThree{} a \\GEFixedHighVThree{} puntos porcentuales, mientras la participación agregada de horas informales baja de \\GEBaseMOne\\% a \\GEFixedHighMOne\\%. Una brecha por activos mayor puede coexistir con menor informalidad agregada. La elasticidad modifica la curvatura, pero sus efectos de nivel también dependen del valor marginal, los retornos y los parámetros mantenidos.\n\nCon reajuste, M1/M3 recuperan los valores internos de referencia y V3 llega a \\GERefitHighVThree{} puntos. Al final del rango, \\(\\psi_I=\\GERefitPsi\\) y el nivel de la barrera es \\(\\GERefitKappa\\). La similitud con la brecha del PE es un resultado de este contraste; no demuestra que un cálculo parcial reproduzca cualquier efecto de equilibrio general.\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.88\\linewidth]{../code/figures/final/paper_ge_sensitivity.pdf}\n\\caption{GE con elasticidades distintas: brecha Q1--Q5 de razones de horas informales (izquierda) y participación agregada de horas informales (derecha). Reajuste a M1/M3 internos frente a parámetros fijos. Quintiles fraccionales de activos. Fuente: \\texttt{code/verify.py}.}\n\\label{fig:ge_phi}\n\\end{figure}\n\n\\begin{table}[htbp]\n\\centering\\small\n\\caption{GE con elasticidad informal variable, selección de casos}\n\\begin{tabular}{lrrrrrr}\\toprule\nProtocolo&\\(\\phi_I\\)&M1 (\\%)&M3 (pp)&V3 (pp)&\\(r\\) (\\%)&\\(K\\)\\\\\\midrule\n\\PaperGERows\\bottomrule\n\\end{tabular}\n\\par\\smallskip\\footnotesize M1/M3 del reajuste son los de la referencia de igual grilla. V3 usa corte fraccional, distinto del PE D17. Capital en unidades del modelo.\n\\label{tab:ge_phi}\n\\end{table}\n\nLos precios y agregados también distinguen los protocolos. Con reajuste y \\(\\phi_I=0,70\\), la tasa cambia \\(\\GERefitRChangeBP\\) puntos básicos y el capital aumenta \\GERefitKChange\\% respecto de la referencia. Sin reajuste, el cambio de interés es pequeño y positivo y el capital disminuye \\GEFixedKDecline\\%. Son diferencias estacionarias entre especificaciones y protocolos, no efectos causales de una reforma ni medidas de bienestar.\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.88\\linewidth]{../code/figures/final/paper_ge_aggregates.pdf}\n\\caption{Interés y capital en los dos protocolos de elasticidades. Cambios respecto de la misma referencia: puntos básicos de interés y variación porcentual del capital. Fuente: \\texttt{code/verify.py}.}\n\\label{fig:ge_phi_macro}\n\\end{figure}\n\n\\subsection{Cuñas en equilibrio general}\nLos contrastes D73 utilizan el modelo simultáneo original con elasticidad común. Comparan la referencia con prima constante, barrera constante y ambas constantes. Los niveles constantes iniciales igualan pagos agregados evaluados con las políticas de referencia. Esa igualdad inicial no garantiza pagos iguales después de resolver el GE. En cada contraste se ajustan precios, políticas y distribución y se comprueban mercados, HJB, KFE y condiciones laborales.\n\nEl bloque amplio utiliza \\(400\\times40\\) nodos y dominio de activos de \\(-1\\) a \\(40\\). La figura \\ref{fig:wedges} y la tabla \\ref{tab:ge} muestran que hacer constante la prima cambia poco los momentos mostrados. Hacer constante la barrera reduce M3 de \\WedgeMThreeRef\\ a \\WedgeMThreeConst\\ puntos, con los otros parámetros mantenidos. El gradiente por productividad depende, por tanto, de una forma que el modelo impone. Este es un diagnóstico de sensibilidad, no una estimación del costo de acceder al sector formal.\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.85\\linewidth]{../code/figures/final/wedges.pdf}\n\\caption{M3 en contrastes GE de forma a otros parámetros fijos. Constantes iniciales igualan pagos de referencia. Los precios se resuelven de nuevo. Fuente: exportaciones D73 verificadas por \\texttt{code/verify.py}.}\n\\label{fig:wedges}\n\\end{figure}\n\n\\begin{table}[htbp]\n\\centering\n\\caption{Cuñas y reajuste en GE, dominio amplio}\n\\label{tab:ge}\n\\begin{tabular}{lrrrr}\\toprule\nCaso&M1 (\\%)&M3 (pp)&V3 (pp)&Gasto F/I\\\\\\midrule\n\\FinalWedgeRows\\bottomrule\n\\end{tabular}\n\\par\\smallskip\\footnotesize V3 usa quintiles de activos con reparto fraccional del nodo de corte. El gasto clasifica hogares por sector dominante en horas. No mezclar V3 con la convención D17.\n\\end{table}\n\nUn contraste adicional reajusta \\(\\psi_I\\) y el nivel constante de \\(\\kappa\\) para recuperar M1/M3 del GE de referencia de la misma grilla. Ambas formas recuperan esas metas internas, pero producen V3 de \\WedgeVThreeRef\\ y \\WedgeVThreeRefit\\ puntos. La razón de gasto tampoco mejora frente a la meta registrada de 1,913; esa meta se conserva como dato del paquete, sin nueva revalidación de microdatos. Ajustar dos momentos puede disciplinar parámetros dentro de una familia sin identificar cuál forma funcional es la correcta entre familias.\n\n\\subsection{Transmisión a precios y capital}\nLa distribución estacionaria es el puente entre las políticas del hogar y los agregados. La exportación histórica permite reconstruir la distribución marginal de activos y sumar horas con sus ponderaciones. El ahorro agregado es $S=\\MeanAssetsFinal$ en unidades de ese modelo, mientras que la participación informal de horas es \\PEMOne\\%. La razón de horas agregadas no equivale al promedio simple de las fracciones individuales: hogares que trabajan cantidades distintas tienen pesos distintos en el denominador.\n\nEn los GE D73 el capital debe ser consistente con los activos agregados. Se agregó a la reproducción la identidad entre el exceso de activos guardado y la diferencia de ahorro y demanda de capital. La figura \\ref{fig:macro_ge} muestra los cambios de la tasa de interés y del capital respecto al GE de referencia de la misma grilla. La escala de interés está en puntos básicos y la de capital en cambio porcentual. No se trata de una trayectoria temporal. Estos resultados describen diferencias estacionarias entre especificaciones; no se interpretan como una intervención identificada ni como efectos de bienestar.\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.85\\linewidth]{../code/figures/final/macro_ge.pdf}\n\\caption{Ajuste de precios y capital en los GE D73 amplios. Referencia: $r=\\InterestRefFinal\\%$ y $K=\\CapitalRefFinal$ unidades del modelo. Fuente: exportaciones de las mismas corridas auditadas, reproducidas por \\texttt{code/verify.py}.}\n\\label{fig:macro_ge}\n\\end{figure}\n\n\\subsection{Tope e igualdad de tiempo como contrastes}\nLa holgura es una condición sustantiva de la proposición. Al reducir el tope de horas con elasticidad común, algunos hogares alcanzan la restricción. Con \\(\\bar H=0,55\\), la masa en el tope es \\CapMassAtLow\\%. La brecha media entre quintiles condicionales de activos, ponderada por la masa de cada \\(z\\), es \\(\\CapWithinGapLow\\) puntos. Este indicador compara fracciones individuales dentro de cada productividad; no es V3 agregado y no comparte automáticamente su signo.\n\nLa igualdad impone otro conjunto factible. Todos trabajan una cantidad fija, aun si preferirían trabajar menos; desaparece el ajuste de horas totales. Los casos \\(\\bar H=0,49\\) y \\(0,60\\), con elasticidades comunes, muestran pendientes por activos cuyo signo varía con los retornos relativos. La brecha dentro de \\(z\\) es \\(\\EqWithinLow\\) y \\(\\EqWithinHigh\\) puntos, respectivamente. V3 agregado sigue siendo positivo: \\EqLowVThree{} y \\EqHighVThree{} puntos. Una comparación a productividad fija y una comparación de quintiles de toda la población responden preguntas distintas.\n\n\\begin{table}[htbp]\n\\centering\\small\n\\caption{Restricciones de tiempo con elasticidad común}\n\\begin{tabular}{lrrrr}\\toprule\nRégimen&\\(\\bar H\\)&M1 (\\%)&V3 (pp)&Brecha dentro de \\(z\\) (pp)\\\\\\midrule\n\\PaperTimeRows\\bottomrule\n\\end{tabular}\n\\par\\smallskip\\footnotesize La última columna usa quintiles condicionales de activos con corte fraccional y promedia por masa de \\(z\\); compara fracciones individuales. V3 usa razones agregadas de horas por quintiles incondicionales de activos.\n\\label{tab:time}\n\\end{table}\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.88\\linewidth]{../code/figures/final/paper_time_constraints.pdf}\n\\caption{Masa en el tope y brecha de composición dentro de productividad. La igualdad se grafica como régimen distinto, no como una restricción con holgura. Fuente: \\texttt{code/verify.py}.}\n\\label{fig:time}\n\\end{figure}\n\n\\begin{figure}[htbp]\n\\centering\\includegraphics[width=.88\\linewidth]{../code/figures/final/paper_equality_profiles.pdf}\n\\caption{Fracción informal por activos a productividad fija, con elasticidad común. Comparación de la referencia con dos igualdades de tiempo; eje de activos acotado para facilitar lectura. Fuente: \\texttt{code/verify.py}.}\n\\label{fig:equality}\n\\end{figure}\n\nLa igualdad no contradice la Proposición~\\ref{prop:composition}: incumple su condición de holgura. Sus resultados tampoco justifican imponer horas fijas como política sin estudiar bienestar y plausibilidad económica. Para el tope, el multiplicador es no negativo y satisface complementariedad; para la igualdad es libre de signo. No se aplica la política interior original a esos regímenes como si sus condiciones se conservaran.\n\n\\subsection{Diagnósticos y límites de precisión}\nEl registro D73 conserva \\CountMATFinal\\ MAT auditados, de los cuales \\CountGEFinal\\ son GE. Los controles distinguen masa, generador, HJB, KFE, unicidad de clase cerrada, factibilidad, FOC y mercados. Un indicador agregado pequeño no basta si su fórmula omite un costo real. La revisión previa encontró un indicador histórico que excluía la prima de deuda; los contrastes nuevos verifican los dos pagos de \\eqref{eq:formal_resources}. El fallo histórico no se borra ni se reutiliza como certificación de los nuevos resultados.\n\nLa ampliación del dominio reduce masa en la frontera superior, pero faltan dos pares finos comparables en el mismo dominio amplio y una revisión de resolución o truncamiento de \\(z\\). No se declara certificación global de precisión. Cambiar los extremos de productividad puede modificar el perfil normalizado de una cuña y no solo su resolución; por eso las anclas económicas deben mantenerse al hacer comparaciones de grilla. Tampoco se cambia silenciosamente el límite de endeudamiento para que converja un caso.\n\nLos \\GEPaperCount{} GE de noviembre incorporados al paper se reanalizaron desde sus MAT. Además de los controles anteriores, se verificaron condiciones laborales por nodo, incluidas esquinas y multiplicadores. Con utilidad logarítmica e impuesto al consumo nulo, la FOC de consumo recupera \\(\\Va=1/(c_F+p_Ic_I)\\). Las bitácoras confirman ese impuesto y el régimen de tiempo de cada corrida. Así se evita sustituir la derivada utilizada por el control laboral por diferencias centrales de \\(V\\). Pasar esas comprobaciones sigue siendo distinto de certificar precisión global.\n\n\\section{Discusión y limitaciones}\nLa proposición identifica el papel de la igualdad de elasticidades y de la concavidad local. Su fuerza consiste en aislar ese canal; su límite consiste en las condiciones que requiere. Un hogar en una esquina sectorial, en el tope de tiempo o en un punto sin derivabilidad exige otro enunciado. Esos casos no pueden incorporarse mediante la misma fórmula solo porque el solver entregue un número. La extensión a un cambio de precios también añade términos que aquí se mantienen constantes.\n\nEl resultado agregado requiere integrar políticas con una distribución. Una brecha positiva entre quintiles de activos no contradice la cancelación a \\(z\\) fijo, porque la productividad puede estar distribuida de manera distinta entre quintiles. Los GE con elasticidades distintas permiten observar la respuesta del cierre completo, pero sus resultados dependen de qué parámetros se mantienen y qué momentos se recuperan. La coincidencia aproximada entre una brecha parcial y otra de GE en este rango no constituye una equivalencia general entre protocolos.\n\nLa interpretación empírica sigue siendo una limitación sustantiva. Las referencias revisadas no estiman automáticamente \\(\\phi_I-\\phi_F\\), \\(\\nu_I\\) o el perfil compartido de cuñas del proyecto. La medición por personas, horas, ingreso, gasto y patrimonio debe reconciliarse antes de juzgar ajuste. Para distinguir especificaciones después de un reajuste, hacen falta momentos externos que no se hayan utilizado para igualarlas. Comparar solo el tamaño de V3 favorecería una forma por el resultado deseado, sin identificar su mecanismo.\n\nLean comprueba la derivada y los signos de las políticas explícitas, con la condición de concavidad declarada. No prueba regularidad o concavidad de la HJB ni existencia del GE. Quedan pendientes el flujo oficial sobre un commit publicado, el manuscrito personal y la revisión semántica del autor.\n\n\\section{Conclusión}\nA igual productividad y dentro de una rama interior con tiempo holgado, la composición de horas responde al valor marginal de los activos mediante la diferencia de elasticidades. Con valor marginal decreciente, una elasticidad informal mayor produce una fracción decreciente por activos; con elasticidad común se cancela ese canal directo. Los GE muestran que ampliar una brecha por activos no equivale a aumentar la informalidad agregada y que el reajuste de momentos modifica esa comparación. Los contrastes de tiempo delimitan la validez del resultado interior. La conclusión es condicional y no causal. Quedan por disciplinar empíricamente los parámetros, mejorar la comparabilidad de indicadores, certificar precisión y completar la evidencia formal y manuscrita con su procedencia.\n\\label{body:end}\n\\clearpage\n\\bibliographystyle{plainnat}\n\\bibliography{references}",
+            "quoted_text_sha256": "ff0c157356a32f6e8c61cfeb92e9f646924ed583022370e7929b595b7fb68496"
           }
         },
         {
@@ -700,10 +722,10 @@
           "kind": "appendix",
           "source_anchor": {
             "path": "papers/Barraza26LaborComposition/source-audited.tex",
-            "line_start": 270,
-            "line_end": 297,
-            "quoted_text": "\\section{Correspondencia con Lean}\\label{app:lean}\nLa fuente propia es \\texttt{lean/LaborComposition.lean}. La comprobación local se ejecutó con Lean 4.30.0-rc2 y Mathlib fijado en el commit indicado por \\texttt{lean/lakefile.toml}. La salida y el hash de fuente están en \\texttt{lean/verification/local\\_check.json}. Los únicos axiomas reportados son los estándar de Mathlib: \\texttt{propext}, \\texttt{Classical.choice} y \\texttt{Quot.sound}; no aparece \\texttt{sorryAx}.\n\n\\begin{center}\\small\n\\begin{tabular}{p{2.6cm}p{7.3cm}p{4cm}}\\toprule\nResultado&Declaraciones, prefijo \\texttt{Barraza26LaborComposition}&Estado\\\\\\midrule\nProposición \\ref{prop:composition}, identidad&\\texttt{composition\\_hasDerivAt}&Probada para políticas explícitas, comprobación local\\\\\nProposición \\ref{prop:composition}, signos&\\texttt{composition\\_sign}&Probados bajo \\(\\Vaa<0\\), ya declarada en el paper\\\\\\bottomrule\n\\end{tabular}\n\\end{center}\n\nEl código define \\texttt{labor v R psi phi = (v*R/psi)\\^{}phi} y \\texttt{share} como la fracción de horas de \\eqref{eq:explicit}. La función \\texttt{V} representa \\(a\\mapsto\\Va(a,z)\\), mientras \\texttt{d} representa su derivada. \\texttt{HasDerivAt V d a} es una hipótesis sobre esa función, no la conclusión de la proposición. La derivación de las FOC desde una HJB regular sigue en la prueba ordinaria; Lean comprueba el resultado de la rama explícita y no todo el problema dinámico.\n\nEl commit fuente y el recibo oficial de \\texttt{paper\\_contribution.py check} deben registrarse al ejecutar ese flujo. La correspondencia local no se presenta como cierre de contribución. Tampoco se ha registrado una revisión semántica humana de este nuevo archivo. Si se modifica un enunciado, debe revisarse la correspondencia y repetir la comprobación pertinente.\n\n\\section{Colaboración con IA y veredictos}\nLos intercambios crudos relevantes están en \\texttt{prompts.md}; el registro de decisiones conserva los contrastes. En el caso del tope de tiempo, se consideró un mecanismo que dependía de una restricción activa. Las condiciones correctas para horas positivas son\n\\[\n\\Va R_s=\\psi_s\\ell_s^{1/\\phi_s}+\\lambda_H,\\qquad\n\\lambda_H(\\bar H-\\ell_F-\\ell_I)=0,\\quad\\lambda_H\\geq0.\n\\]\nEl diagnóstico histórico reproducido da masa en el tope igual a \\PENoCap\\ y horas máximas de \\PEMaxHours\\ con \\(\\bar H=1\\). El veredicto es que el mecanismo vinculante no explica esa calibración, aunque su álgebra pueda ser válida en otro régimen. No se atribuye una cita literal nueva a la IA.\n\nOtro punto revisado fue el reajuste de una sola desutilidad al variar \\(\\phi_I\\). Mantener M1 no preserva automáticamente M3. El proyecto pasó a reajustar conjuntamente dos niveles en el ejercicio parcial. La comprobación numérica conserva el contraste de un solo parámetro y falla si se lo confunde con la recuperación de ambas metas. Finalmente, se corrigió la pretensión de comparar directamente una brecha empírica de personas por gasto con una brecha del modelo de horas por activos.\n\n\\section{Apéndice manuscrito y autoría}\nEl apéndice exigido por el curso debe contener derivaciones escritas por el estudiante y digitalizadas de forma legible. La guía de \\texttt{hand/guia\\_derivacion.md} organiza los pasos, las reglas de cálculo y las condiciones que debe revisar. No es evidencia manuscrita ni sustituye la revisión personal. No se declara que existan fotos, una firma o una aceptación del autor que no se hayan proporcionado.\n\\end{document}",
-            "quoted_text_sha256": "d00d99bf7dab723f09a568c0b5d2e145258d429cde6524393d9c0bd104542b6b"
+            "line_start": 341,
+            "line_end": 373,
+            "quoted_text": "\\appendix\n\n\\section{Correspondencia con Lean}\\label{app:lean}\nLa fuente propia es \\texttt{lean/LaborComposition.lean}. La comprobación local se ejecutó con Lean 4.30.0-rc2 y Mathlib fijado en el commit indicado por \\texttt{lean/lakefile.toml}. La salida y el hash de fuente están en \\texttt{lean/verification/local\\_check.json}. Los únicos axiomas reportados son los estándar de Mathlib: \\texttt{propext}, \\texttt{Classical.choice} y \\texttt{Quot.sound}; no aparece \\texttt{sorryAx}.\n\n\\begin{center}\\small\n\\begin{tabular}{p{2.6cm}p{7.3cm}p{4cm}}\\toprule\nResultado&Declaraciones, prefijo \\texttt{Barraza26LaborComposition}&Estado\\\\\\midrule\nProposición \\ref{prop:composition}, identidad y signos&\\texttt{composition\\_hasDerivAt} y \\texttt{composition\\_sign}, en \\texttt{lean/LaborComposition.lean}&Comprobación local del bloque explícito. Proposición completa abierta en el flujo oficial\\\\\\bottomrule\n\\end{tabular}\n\\end{center}\n\nEl código define \\texttt{labor v R psi phi = (v*R/psi)\\^{}phi} y \\texttt{share} como la fracción de horas de \\eqref{eq:explicit}. La función \\texttt{V} representa \\(a\\mapsto\\Va(a,z)\\), mientras \\texttt{d} representa su derivada. \\texttt{HasDerivAt V d a} es una hipótesis sobre esa función, no la conclusión de la proposición. La derivación de las FOC desde una HJB regular sigue en la prueba ordinaria; Lean comprueba el resultado de la rama explícita y no todo el problema dinámico.\n\nEl commit fuente y el recibo oficial de \\texttt{paper\\_contribution.py check} deben registrarse al ejecutar ese flujo. La correspondencia local no se presenta como cierre de contribución. Tampoco se ha registrado una revisión semántica humana de este nuevo archivo. Si se modifica un enunciado, debe revisarse la correspondencia y repetir la comprobación pertinente.\n\nLa carpeta de trabajo de AppliedModelingLib ya contiene el puente de FOC a políticas y el endpoint \\texttt{compositionConditionalHours}, pero su revisión independiente, documentación y traslado íntegro al repositorio siguen en curso. La tabla describe la evidencia actualmente incorporada; no otorga crédito de cierre a archivos que aún no están en la entrega. Las pruebas históricas del modelo coautorado tampoco sustituyen la formalización de esta proposición.\n\n\\section{Colaboración con IA y veredictos}\nLos intercambios crudos relevantes están en \\texttt{prompts.md}; el registro de decisiones conserva los contrastes. En el caso del tope de tiempo, se consideró un mecanismo que dependía de una restricción activa. Las condiciones correctas para horas positivas son\n\\[\n\\Va R_s=\\psi_s\\ell_s^{1/\\phi_s}+\\lambda_H,\\qquad\n\\lambda_H(\\bar H-\\ell_F-\\ell_I)=0,\\quad\\lambda_H\\geq0.\n\\]\nEl diagnóstico histórico reproducido da masa en el tope igual a \\PENoCap\\ y horas máximas de \\PEMaxHours\\ con \\(\\bar H=1\\). El veredicto es que el mecanismo vinculante no explica esa calibración, aunque su álgebra pueda ser válida en otro régimen. No se atribuye una cita literal nueva a la IA.\n\nOtro punto revisado fue el reajuste de una sola desutilidad al variar \\(\\phi_I\\). Mantener M1 no preserva automáticamente M3. El proyecto pasó a reajustar conjuntamente dos niveles en el ejercicio parcial. La comprobación numérica conserva el contraste de un solo parámetro y falla si se lo confunde con la recuperación de ambas metas. Finalmente, se corrigió la pretensión de comparar directamente una brecha empírica de personas por gasto con una brecha del modelo de horas por activos.\n\n\\section{Apéndice manuscrito y autoría}\nEn \\texttt{hand/01-derivacion-tope-tiempo.pdf} existe una hoja original del autor, mostrada en la presentación. Se conserva intacta. La nota \\texttt{hand/errata-01.md} identifica un subíndice y el paso incorrecto del cociente: tras imponer \\(\\lambda_H=0\\), se debe conservar el cociente de niveles \\((R_s/\\psi_s)^{\\phi_s}\\) y contar una sola vez la potencia de \\(\\Va\\). La errata tipografiada no se atribuye al manuscrito personal.\n\nEl apéndice completo sigue pendiente: debe contener cada derivación, paso a paso, con reglas y condiciones verificadas por el estudiante. La guía disponible organiza la preparación y no la sustituye. \\texttt{hand/README.md} registra qué evidencia existe y qué hojas faltan; no se inventa una firma, comprensión o aprobación personal.\n\\end{document}",
+            "quoted_text_sha256": "955bcedad1481379fc38cd7e1a332f053ab7784c5b3372251bb0d166913ff99b"
           }
         }
       ],
@@ -716,16 +738,16 @@
         "localConcavityCondition": "main_text"
       },
       "candidate_presentation_regions": {
-        "candidate_abstract_summary": "main_text",
-        "candidate_conclusion_restatement": "main_text",
-        "candidate_lean_correspondence": "appendix",
-        "candidate_result_interpretation": "main_text",
-        "candidate_scope_boundary": "main_text"
+        "candidate_appendix_lean_table": "appendix",
+        "candidate_cap_kkt": "appendix",
+        "candidate_diagnostic_identity": "main_text",
+        "candidate_quotient_power_correction": "appendix"
       },
       "prose_definition_presentation_regions": {
-        "504b3c837a2d26541c8cf6311c0da7b12516dd6587a29d472bee5c9f7068fa5e": "main_text"
+        "fed7a206227b2111a4ca8d21d2ef86575623efedb8788efaf55df7567f8d563c": "main_text"
       },
       "promoted_source_items": []
     }
-  }
+  },
+  "source_claim_atoms_schema": 1
 }

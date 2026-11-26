@@ -7,7 +7,7 @@
   "source_inventory_review_required": true,
   "repository_visibility": "private_only",
   "build_target": "lake build +Barraza26LaborComposition",
-  "status": "not started",
+  "status": "formalized",
   "main_caveat": "Replace with the public caveat or state that no caveat is known.",
   "human_summary": "Replace with a concise public-facing note; leave empty for formalized papers unless a source-version or proof-route note matters.",
   "human_summary_review": {
@@ -17,14 +17,14 @@
   "review_entrypoint": "papers/Barraza26LaborComposition/FINAL_VALIDATION_REPORT.md",
   "human_review": {
     "reviewed_rows": 0,
-    "total_rows": 0,
+    "total_rows": 1,
     "stale_rows": 0,
     "mismatch_rows": 0,
     "source": "paper-local status.json review_surface; human entries come from dashboard logs"
   },
   "paper_interface": {
     "path": "papers/Barraza26LaborComposition/PaperInterface.lean",
-    "line_count": 0,
+    "line_count": 131,
     "declaration_rows": 1,
     "review_rows": 1,
     "oversized": false,

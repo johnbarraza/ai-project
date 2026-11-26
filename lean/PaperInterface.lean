@@ -66,7 +66,7 @@ Each entry has one semantic-review target (`Spec`) and one proof endpoint (the
 paired theorem/lemma). The human dashboard and review packet present that pair
 once rather than treating the two declarations as duplicate paper claims.
 
-- `compositionConditionalHoursSpec` -> `compositionConditionalHours`: Proposición 1 (Composición condicional de horas), paper.pdf p. 4, sección 4, Proposición 1; canonical paper.tex lines 126-134.
+- `compositionConditionalHoursSpec` -> `compositionConditionalHours`: Proposición 1 (Composición condicional de horas), canonical source-audited.tex lines 131-139.
 -/
 
 namespace Barraza26LaborComposition
@@ -75,9 +75,14 @@ namespace Barraza26LaborComposition
 def comparisonIndividualCondition (a aLower RF RI : ℝ) : Prop :=
   aLower < a ∧ 0 < RF ∧ 0 < RI
 
-/-- Positivity of the sector-specific labor-disutility parameters. -/
-def laborPreferencesCondition (psiF psiI phiF phiI : ℝ) : Prop :=
-  0 < psiF ∧ 0 < psiI ∧ 0 < phiF ∧ 0 < phiI
+/-- Positive parameters and the source's exact separable two-sector labor cost. -/
+def laborPreferencesCondition
+    (laborCost : ℝ → ℝ → ℝ) (psiF psiI phiF phiI : ℝ) : Prop :=
+  0 < psiF ∧ 0 < psiI ∧ 0 < phiF ∧ 0 < phiI ∧
+    ∀ ellF ellI, 0 ≤ ellF → 0 ≤ ellI →
+      laborCost ellF ellI =
+        psiF * ellF ^ (1 + 1 / phiF) / (1 + 1 / phiF) +
+          psiI * ellI ^ (1 + 1 / phiI) / (1 + 1 / phiI)
 
 /-- Local regular interior branch, including slackness and both sector FOCs. -/
 def interiorRegularBranchCondition
@@ -100,7 +105,7 @@ Proposición 1 (Composición condicional de horas)
 
 Paper statement: Proposición 1 (Composición condicional de horas). Bajo los supuestos 1–3, la política interior satisface ∂s_I(a_0,z)/∂a = s_I(a_0,z)(1-s_I(a_0,z))(φ_I-φ_F)V_aa(a_0,z)/V_a(a_0,z). Si además se cumple el supuesto 4, la derivada es negativa cuando φ_I>φ_F, cero cuando φ_I=φ_F y positiva cuando φ_I<φ_F.
 
-Source location: paper.pdf p. 4, sección 4, Proposición 1; canonical paper.tex lines 126-134
+Source location: canonical source-audited.tex lines 131-139.
 Source status: pinned statement-spec transcription; independent source audit pending
 
 This transparent proposition is the exact statement-audit target. It is not
@@ -111,9 +116,10 @@ from pinned source quote bytes and bound to this elaborated proposition rather
 than inferred from identifiers.
 -/
 def compositionConditionalHoursSpec : Prop :=
-  ∀ (V ellF ellI : ℝ → ℝ) (a d aLower Hbar RF RI psiF psiI phiF phiI : ℝ),
+  ∀ (laborCost : ℝ → ℝ → ℝ) (V ellF ellI : ℝ → ℝ)
+      (a d aLower Hbar RF RI psiF psiI phiF phiI : ℝ),
     comparisonIndividualCondition a aLower RF RI →
-    laborPreferencesCondition psiF psiI phiF phiI →
+    laborPreferencesCondition laborCost psiF psiI phiF phiI →
     interiorRegularBranchCondition V ellF ellI a d Hbar RF RI psiF psiI phiF phiI →
     let sI := informalHoursShare ellF ellI
     HasDerivAt sI (sI a * (1 - sI a) * (phiI - phiF) * d / V a) a ∧

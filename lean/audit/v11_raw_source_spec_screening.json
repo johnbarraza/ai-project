@@ -1,10 +1,26 @@
 {
-  "schema": 3,
-  "paper": "Barraza26LaborComposition",
   "audit_kind": "raw_source_to_expanded_spec_screening",
+  "comment": "Each listed verdict compares the exact byte-pinned source-anchor bundle and explicitly pinned semantic context with Lean's fully expanded paper-local semantic target and Lean-elaborated parameter, premise, and conclusion roles. The paired proof endpoint is reviewed separately.",
+  "items": {
+    "Barraza26LaborComposition.compositionConditionalHoursSpec": {
+      "judgment": "matches",
+      "lean_expanded_statement_sha256": "7d203cf98bd212132cc578417a1c05acefa1cef8d3503fbee3eb617316bc8879",
+      "lean_target_protocol": "lean_transparent_paper_expansion_with_claim_atoms_v2",
+      "paper_interface_sha256": "555fa73c6de2d458a8405589e11f034c77c4f0e163e4c30b108a383378c1da1a",
+      "paper_statement_sha256": "a4b7520782f1a1bd5d3672ff8edc6380fd7f367d6341a454f5601b5af999e5f8",
+      "reason": "The source proposition and its displayed Assumptions 1--3 were compared with the complete expanded target and all five displayed prerequisites. comparisonIndividualCondition preserves the interior asset point and positive fixed returns; the approved fixed-z and fixed-return conventions justify unary V, ellF, and ellI and scalar RF and RI. laborPreferencesCondition now expressly preserves every positivity restriction and the exact two-sector separable labor-cost formula for nonnegative hours. interiorRegularBranchCondition preserves differentiability and positivity of V at a, and, on the approved nhds representation of the source open neighborhood, positive formal and informal hours, slack Hbar, and both source FOCs. informalHoursShare is exactly ellI/(ellF+ellI). With d the derivative of V, the conclusion states the source derivative sI(a)(1-sI(a))(phiI-phiF)d/V(a); localConcavityCondition is exactly d<0 and yields the source's negative, zero, and positive cases for phiI>phiF, equality, and phiI<phiF. No source premise, admissible source case, formula, or conclusion is changed by the explicit labor-cost/separability premise.",
+      "review_claim_atoms_sha256": "5091069af71c0ea8cb797edec301a056a86ba3877130d73bcad556df53a1e292",
+      "review_claim_manifest_sha256": "cefc68999a6383dad5c203bbc42dfcd9715da43ef27b2be780fad01bb1801d5e",
+      "semantic_target_declaration": "Barraza26LaborComposition.compositionConditionalHoursSpec",
+      "source_input_bundle_sha256": "50d21427afece196e16aaee3e8855535aad35f5c13eb643e207bd89eb290f914",
+      "source_input_protocol": "verbatim_source_anchor_bundle_v1",
+      "source_item": "compositionConditionalHours",
+      "source_review_target_sha256": "29b553ffcdc6d0656203cce1c77a2cba4a57988813d3226c1ef998445ef5662a"
+    }
+  },
+  "paper": "Barraza26LaborComposition",
   "prompt_version": "statement-match-v11-verbatim-source-anchor-lean-expanded-spec-claim-atoms-supporting-declarations-v4",
-  "validator": "",
-  "validated_at": "",
-  "comment": "Each row must compare only the exact byte-pinned source-anchor bundle and required source context with one direct expanded PaperInterface Spec plus Lean-emitted parameter, assumption, and terminal-conclusion atoms. The paired proof endpoint is separate Lean evidence. Reissue with scripts/reissue_v11_raw_source_spec_screening.py after an explicit reviewer decision; do not enter a map summary, theorem name, wrapper, or Lean-to-TeX paraphrase as semantic input.",
-  "items": {}
+  "schema": 3,
+  "validated_at": "2026-11-26T02:13:25+00:00",
+  "validator": "f01-result-review-20261126-session-01"
 }

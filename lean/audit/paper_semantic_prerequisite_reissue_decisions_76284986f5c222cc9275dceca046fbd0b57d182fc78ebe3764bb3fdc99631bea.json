@@ -1,0 +1,55 @@
+{
+  "comment": "Non-evidence review work queue. Inspect the exact deduplicated source inputs, expanded Lean semantic targets, declaration code, and every graph-bound semantic prerequisite below; then select one typed source item and fill judgment and reason. The selected source key and declaration key bind that decision to the canonical material in this file; the receipt writer will reject it if the source text, source bundle, Lean target, or exact declaration source has changed before issuance.",
+  "items": {
+    "Barraza26LaborComposition.laborPreferencesCondition": {
+      "candidate_source_items": [
+        "laborPreferencesCondition"
+      ],
+      "judgment": "matches",
+      "reason": "The source assumption requires psi_F, psi_I, phi_F, and phi_I to be positive and identifies the hours cost with the separable F/I sum in equation (preferences). The expanded target imposes exactly those four inequalities and the same two-term formula on the admissible nonnegative labor-hours domain. The displayed composition use consumes this condition as a premise without changing the preference formula or introducing a consumption-substitution parameter.",
+      "source_item": "laborPreferencesCondition",
+      "supporting_declarations": [
+        "Barraza26LaborComposition.laborPreferencesCondition",
+        "source_claim_use:Barraza26LaborComposition.compositionConditionalHoursSpec"
+      ]
+    }
+  },
+  "paper": "Barraza26LaborComposition",
+  "review_context_protocol": "identity-bound-semantic-review-work-queue-v3",
+  "review_material": {
+    "declarations": {
+      "Barraza26LaborComposition.laborPreferencesCondition": {
+        "declaration_source": "/-- Positive parameters and the source's exact separable two-sector labor cost. -/\ndef laborPreferencesCondition\n    (laborCost : \u211d \u2192 \u211d \u2192 \u211d) (psiF psiI phiF phiI : \u211d) : Prop :=\n  0 < psiF \u2227 0 < psiI \u2227 0 < phiF \u2227 0 < phiI \u2227\n    \u2200 ellF ellI, 0 \u2264 ellF \u2192 0 \u2264 ellI \u2192\n      laborCost ellF ellI =\n        psiF * ellF ^ (1 + 1 / phiF) / (1 + 1 / phiF) +\n          psiI * ellI ^ (1 + 1 / phiI) / (1 + 1 / phiI)",
+        "declaration_source_sha256": "f99dc9177c0b670e52e2213058f84eb6c0071f89f350bfb01639690698771ff7",
+        "semantic_target": "type:\n(\u211d \u2192 \u211d \u2192 \u211d) \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 Prop\n\nvalue:\nfun (laborCost : \u211d \u2192 \u211d \u2192 \u211d) (psiF psiI phiF phiI : \u211d) =>\n  0 < psiF \u2227\n    0 < psiI \u2227\n      0 < phiF \u2227\n        0 < phiI \u2227\n          \u2200 (ellF ellI : \u211d),\n            0 \u2264 ellF \u2192\n              0 \u2264 ellI \u2192\n                laborCost ellF ellI =\n                  psiF * ellF ^ (1 + 1 / phiF) / (1 + 1 / phiF) + psiI * ellI ^ (1 + 1 / phiI) / (1 + 1 / phiI)",
+        "semantic_target_sha256": "d263f407a01b0a8f87eed0c7cf86245b05f3c61ada7f0b1cc6c1de8e3aae7c57"
+      }
+    },
+    "source_items": {
+      "laborPreferencesCondition": {
+        "source_input_bundle_sha256": "7967a16b77d4b6342ff82e35ba36ba1ab3ab57bcae6ad50ed1619e559a5242b5",
+        "source_locator": "source-audited.tex:115-117",
+        "verbatim_source_input": "\\begin{assumption}[Preferencias laborales]\\label{ass:parameters}\nPara \\(s\\in\\{F,I\\}\\), \\(\\psi_s>0\\) y \\(\\phi_s>0\\). El costo de horas es el de \\eqref{eq:preferences}, separable entre actividades.\n\\end{assumption}\n\n[Next verbatim source excerpt]\n\n\\begin{equation}\\label{eq:preferences}\n\\mathbb E_0\\int_0^\\infty e^{-\\rho t}\n\\left[\\ln C(c_F,c_I)-\n\\sum_{s\\in\\{F,I\\}}\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right]dt.\n\\end{equation}\nLa canasta distingue los dos bienes. El argumento de composici\u00f3n laboral usa la separabilidad del bloque de horas y su v\u00ednculo con la restricci\u00f3n de recursos; no requiere estimar aqu\u00ed un nuevo par\u00e1metro de sustituci\u00f3n de consumo.",
+        "verbatim_source_input_sha256": "75d26b0e7f75f4b6833c3815ba5ec95e0bc87803ef71cc25c748850466a2c85e"
+      }
+    },
+    "supporting_declarations": {
+      "Barraza26LaborComposition.laborPreferencesCondition": {
+        "declaration_source": "/-- Positive parameters and the source's exact separable two-sector labor cost. -/\ndef laborPreferencesCondition\n    (laborCost : \u211d \u2192 \u211d \u2192 \u211d) (psiF psiI phiF phiI : \u211d) : Prop :=\n  0 < psiF \u2227 0 < psiI \u2227 0 < phiF \u2227 0 < phiI \u2227\n    \u2200 ellF ellI, 0 \u2264 ellF \u2192 0 \u2264 ellI \u2192\n      laborCost ellF ellI =\n        psiF * ellF ^ (1 + 1 / phiF) / (1 + 1 / phiF) +\n          psiI * ellI ^ (1 + 1 / phiI) / (1 + 1 / phiI)",
+        "declaration_source_sha256": "f99dc9177c0b670e52e2213058f84eb6c0071f89f350bfb01639690698771ff7",
+        "scope": "paper_prerequisite",
+        "semantic_target": "type:\n(\u211d \u2192 \u211d \u2192 \u211d) \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 Prop\n\nvalue:\nfun (laborCost : \u211d \u2192 \u211d \u2192 \u211d) (psiF psiI phiF phiI : \u211d) =>\n  0 < psiF \u2227\n    0 < psiI \u2227\n      0 < phiF \u2227\n        0 < phiI \u2227\n          \u2200 (ellF ellI : \u211d),\n            0 \u2264 ellF \u2192\n              0 \u2264 ellI \u2192\n                laborCost ellF ellI =\n                  psiF * ellF ^ (1 + 1 / phiF) / (1 + 1 / phiF) + psiI * ellI ^ (1 + 1 / phiI) / (1 + 1 / phiI)",
+        "semantic_target_sha256": "d263f407a01b0a8f87eed0c7cf86245b05f3c61ada7f0b1cc6c1de8e3aae7c57"
+      },
+      "source_claim_use:Barraza26LaborComposition.compositionConditionalHoursSpec": {
+        "lean_name": "Barraza26LaborComposition.compositionConditionalHoursSpec",
+        "scope": "source_claim_use",
+        "semantic_target": "\u2200 (laborCost : \u211d \u2192 \u211d \u2192 \u211d) (V ellF ellI : \u211d \u2192 \u211d) (a d aLower Hbar RF RI psiF psiI phiF phiI : \u211d),\n  Barraza26LaborComposition.comparisonIndividualCondition a aLower RF RI \u2192\n    Barraza26LaborComposition.laborPreferencesCondition laborCost psiF psiI phiF phiI \u2192\n      Barraza26LaborComposition.interiorRegularBranchCondition V ellF ellI a d Hbar RF RI psiF psiI phiF phiI \u2192\n        have sI : \u211d \u2192 \u211d := Barraza26LaborComposition.informalHoursShare ellF ellI;\n        HasDerivAt sI (sI a * (1 - sI a) * (phiI - phiF) * d / V a) a \u2227\n          (Barraza26LaborComposition.localConcavityCondition d \u2192\n            (phiF < phiI \u2192 deriv sI a < 0) \u2227 (phiI = phiF \u2192 deriv sI a = 0) \u2227 (phiI < phiF \u2192 0 < deriv sI a))",
+        "semantic_target_sha256": "7d203cf98bd212132cc578417a1c05acefa1cef8d3503fbee3eb617316bc8879"
+      }
+    }
+  },
+  "review_material_sha256": "76284986f5c222cc9275dceca046fbd0b57d182fc78ebe3764bb3fdc99631bea",
+  "schema": 3,
+  "unrouted_declarations": []
+}

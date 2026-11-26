@@ -1,0 +1,10 @@
+{
+  "command": "lake build +Barraza26LaborComposition",
+  "commit": "1331260b62dc7158215e9f2364ed0ba68af4dde7",
+  "lean_entrypoint": "papers/Barraza26LaborComposition.lean",
+  "lean_import_closure_sha256": "a9c5bcc5fdda2a8da6efc24a4c032e785de6f1374f7f09d805708226cfbb8edf",
+  "paper": "Barraza26LaborComposition",
+  "result": "passed",
+  "schema": 3,
+  "target": "Barraza26LaborComposition"
+}

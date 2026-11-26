@@ -1,0 +1,8 @@
+Command:
+python3 scripts/final_closure_receipt.py --paper Barraza26LaborComposition --check
+
+Output:
+final closure receipt is current: Barraza26LaborComposition
+
+Exit code: 0
+Run date: 2026-11-26

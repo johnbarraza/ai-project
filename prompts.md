@@ -1455,3 +1455,23 @@ El último control encontró una omisión en Lean: el paper exige un costo labor
 ## 222. Codex (commentary)
 
 Voy a publicar ahora la guía macro, la aclaración de activos y sus comprobaciones simbólicas, para que puedas avanzar con tus hojas mientras se corrige Lean. Así tendrás esos materiales disponibles en el repositorio. El cierre formal se incorporará cuando termine de validarse.
+
+## 223. Usuario, 26 de noviembre de 2026
+
+retoma
+
+## 224. Codex (commentary)
+
+Retomo el cierre de la entrega final. El paper y la guía macro ya están publicados; voy a comprobar el resultado de la auditoría de Lean e integrar lo que haya quedado validado. También revisaré qué falta para entregar hoy.
+
+## 225. Codex (commentary)
+
+Volví a comprobar las instrucciones: hoy vence el repositorio completo, a las 22:00 de Lima. El paper cumple la extensión y el formato pedidos. Siguen pendientes el cierre validado de Lean y tus derivaciones manuscritas completas; la guía para prepararlas ya está en el repositorio.
+
+## 226. Codex (commentary)
+
+El cierre técnico de Lean quedó validado: pasaron las diez etapas, el check exigido por el curso y la validación del recibo. Hay un fallo del comando adicional «full» al encontrar el flujo ya cerrado; conservaré esa salida y lo explicaré. Ahora integro la carpeta y recompilo el paper.
+
+## 227. Codex (commentary)
+
+La carpeta Lean ya está integrada y sus archivos coinciden con el original. El código pasó las comprobaciones y los controles del PDF confirman que los cuatro supuestos, la proposición y la prueba siguen intactos. Estoy ajustando la legibilidad del apéndice antes de publicar por PR.

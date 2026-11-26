@@ -1,0 +1,514 @@
+% Generated human-review packet template.  Source records, Lean statements,
+% and raw-source-to-Spec screening fields are substituted by
+% scripts/review_dashboard_packet.py.
+% Do not hand-edit generated packets; annotate the PDF or reconcile notes into
+% the paper-local human-review log.
+\documentclass[10pt]{article}
+\usepackage[margin=0.43in,footskip=0.2in]{geometry}
+\usepackage{fontspec}
+% Use a Unicode-complete main face as well as a Unicode-complete code face.
+% Reviewer reasons and source labels can contain exact Greek symbols outside
+% verbatim blocks; silently dropping one would corrupt the review packet.
+\setmainfont{DejaVu Serif}
+% The broad DejaVu Sans Unicode coverage preserves Lean's mathematical glyphs
+% (including U+2216 set difference and superscript identifiers) in verbatim
+% review blocks.  Its proportional metrics are preferable to silently missing
+% exact semantic text from a narrower monospace font.
+\setmonofont{DejaVu Sans}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{fvextra}
+\usepackage{enumitem}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.15em}
+\linespread{0.92}
+\hypersetup{colorlinks=true,linkcolor=blue,urlcolor=blue,breaklinks=true}
+\DefineVerbatimEnvironment{ReviewVerbatim}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=\scriptsize}
+\newcommand{\reviewerbox}{%
+  \par\noindent\fbox{\parbox{0.96\linewidth}{\rule{0pt}{0.38in}}}\par
+}
+\newcommand{\reviewmatch}[1]{%
+  \par\noindent\textbf{Reviewer check:} $\square$\; #1\par
+  \noindent\emph{If left unchecked, explain the discrepancy or uncertainty below.}\par
+}
+
+\begin{document}
+\fontsize{9}{10}\selectfont
+
+\begin{center}
+{\LARGE Human review packet: Barraza26LaborComposition}\\[0.35em]
+\small Generated from byte-pinned source excerpts, the expanded PaperInterface
+specifications, and hash-bound raw-source-to-Spec screening records.
+\end{center}
+
+\noindent\textbf{Paper:} Barraza26LaborComposition\\
+\textbf{Paper id:} \texttt{Barraza26LaborComposition}\\
+\textbf{Source version:} \parbox[t]{0.76\linewidth}{\raggedright unpublished working manuscript, 2026-11-24, merged-main source commit 6777134ba22670ebd53b65d21a48d719c09b3fbd}\\
+\textbf{Source record:} \texttt{audit/paper\_statement\_map.json}\\
+\textbf{Rows:} 1\\
+\textbf{Generated:} 2026-11-25\\
+\textbf{Source URL:} \href{https://github.com/johnbarraza/ai-project/blob/6777134ba22670ebd53b65d21a48d719c09b3fbd/paper/paper.pdf}{official source}
+
+
+
+
+
+\section*{How to use this packet}
+For each source claim, compare the exact source excerpts with the expanded
+PaperInterface specification. Mark up this PDF or fill the blank reviewer box in the TeX source;
+return the annotated file for reconciliation into the paper-local human-review
+log.
+
+\section*{Open the interactive dashboard}
+The interactive dashboard is an optional alternative to using this PDF; it
+presents the same review surface rather than an additional review requirement.
+After forking and cloning (or pulling) AppliedModelingLib, run the following from the
+repository root. The cache command is needed only the first time in a new clone.
+\begin{ReviewVerbatim}
+cd <your-repository-checkout>
+lake exe cache get
+python3 scripts/review_dashboard.py --paper Barraza26LaborComposition --serve
+\end{ReviewVerbatim}
+Open \url{http://127.0.0.1:8765/} in a browser and keep that terminal running
+while reviewing. The dashboard records saved annotations in this paper's local
+reviewer-owned review record.
+
+\section*{Contents}
+\begin{itemize}[leftmargin=1.2em]
+\item \hyperlink{paper-prerequisite-section-5ef5ef0364b6939c}{Paper-specific semantic prerequisites (5; not paper claims)}
+\begin{itemize}[leftmargin=1.2em]
+\item \hyperlink{paper-prerequisite-58beaf7552967aba}{Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}comparison\allowbreak{}Individual\allowbreak{}Condition}
+\item \hyperlink{paper-prerequisite-2d2c170b2398bfe9}{Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}informal\allowbreak{}Hours\allowbreak{}Share}
+\item \hyperlink{paper-prerequisite-d20c04fcbad99299}{Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}interior\allowbreak{}Regular\allowbreak{}Branch\allowbreak{}Condition}
+\item \hyperlink{paper-prerequisite-552e4781bba8ea77}{Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}labor\allowbreak{}Preferences\allowbreak{}Condition}
+\item \hyperlink{paper-prerequisite-254a7cb2686ab65e}{Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}local\allowbreak{}Concavity\allowbreak{}Condition}
+\end{itemize}
+\item \hyperlink{source-section-f10b5f68e4acf3dc}{Source claims (1)}
+\begin{itemize}[leftmargin=1.2em]
+\item \hyperlink{source-claim-5daf04b3ba9ef8c8}{Proposición 1 (Composición condicional de horas)}
+\end{itemize}
+\end{itemize}
+
+\clearpage
+\hypertarget{paper-prerequisite-section-5ef5ef0364b6939c}{}
+\section*{Paper-specific semantic prerequisites}
+\hypertarget{paper-prerequisite-58beaf7552967aba}{}
+\subsection*{\small\ttfamily\raggedright Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}comparison\allowbreak{}Individual\allowbreak{}Condition}
+\noindent\textbf{Paper-local declaration:}\par
+{\footnotesize\ttfamily\raggedright Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}comparison\allowbreak{}Individual\allowbreak{}Condition\par}
+\textbf{Source locator:} {\footnotesize\raggedright cited publication, lines 112-\allowbreak{}114\par}
+\paragraph{Verbatim paper-source connection}
+\begin{ReviewVerbatim}
+\begin{assumption}[Comparación individual]\label{ass:fixed}
+Se fija \(z\) y se considera un entorno abierto de un punto \(a_0>\underline a\). Los retornos \(R_F,R_I>0\), los precios y las remuneraciones efectivas se mantienen fijos y no dependen directamente de los activos en esa comparación.
+\end{assumption}
+
+[Next verbatim source excerpt]
+
+El estado individual es \((a,z)\), donde \(a\) son activos y \(z>0\) es productividad laboral. Los activos evolucionan mediante el ahorro; la productividad sigue un proceso exógeno conocido por el hogar. En tiempo continuo el hogar elige consumos \(c_F,c_I\) y horas \(\ell_F,\ell_I\). Con una canasta CES \(C(c_F,c_I)\), sus preferencias son
+
+[Next verbatim source excerpt]
+
+Los retornos por hora que recibe son
+\begin{equation}\label{eq:returns}
+R_F(z)=(1-\tau)w_Fz-\kappa(z),\qquad
+R_I(z)=\widetilde w_Iz^{\nu_I}.
+\end{equation}
+\end{ReviewVerbatim}
+
+% report-context-presentation-sha256: a9ea7d541025151583640fe5d056851f71ff83fd10eb91339d21049754f8d0af
+\paragraph{Settled source reading}
+\begin{sloppypar}
+The positive returns held fixed in the comparison are represented by scalar constants RF and RI.\allowbreak{}
+\end{sloppypar}
+\paragraph{Settled source reading}
+\begin{sloppypar}
+After fixing z, V, ellF, and ellI are represented as unary real functions of the asset coordinate a.\allowbreak{}
+\end{sloppypar}
+\paragraph{Settled source reading}
+\begin{sloppypar}
+A property holding on the source's open neighborhood of a0 is represented by eventual truth in the neighborhood filter nhds a.\allowbreak{}
+\end{sloppypar}
+
+\paragraph{Lean-expanded paper semantic target}
+\begin{ReviewVerbatim}
+type:
+ℝ → ℝ → ℝ → ℝ → Prop
+
+value:
+fun (a aLower RF RI : ℝ) => aLower < a ∧ 0 < RF ∧ 0 < RI
+\end{ReviewVerbatim}
+
+
+\paragraph{Recorded source-to-declaration screening}
+\textbf{Verdict:} \texttt{matches}
+\\
+{\raggedright
+\textbf{Reason:} Compared the selected source row's a0 > aLower and RF, RI > 0 clauses with the target aLower < a ∧ 0 < RF ∧ 0 < RI, and checked the displayed theorem use.\allowbreak{} Under the approved fixed-\allowbreak{}z and fixed-\allowbreak{}return readings, V, ellF, and ellI are unary asset slices, RF and RI remain scalar constants in both local FOCs, and the required open-\allowbreak{}neighborhood branch is supplied by interiorRegularBranchCondition.\allowbreak{} Fixed prices and remunerations affect the displayed claim only through the fixed RF and RI, so every source-\allowbreak{}admissible comparison specializes to this target without changing its formula or conclusion.\allowbreak{}
+\par}
+\reviewmatch{Matches source input}
+\noindent\textbf{Reviewer annotation}\par
+\reviewerbox
+\clearpage
+\hypertarget{paper-prerequisite-2d2c170b2398bfe9}{}
+\subsection*{\small\ttfamily\raggedright Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}informal\allowbreak{}Hours\allowbreak{}Share}
+\noindent\textbf{Paper-local declaration:}\par
+{\footnotesize\ttfamily\raggedright Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}informal\allowbreak{}Hours\allowbreak{}Share\par}
+\textbf{Source locator:} {\footnotesize\raggedright cited publication, lines 128-\allowbreak{}129\par}
+\paragraph{Verbatim paper-source connection}
+\begin{ReviewVerbatim}
+Defina la fracción de horas informales como
+\(\sI=\ell_I/(\ell_F+\ell_I)\). Esta definición cuenta horas y no clasifica ex ante a una persona como informal. Bajo los retornos positivos y la rama interior, \(0<\sI<1\).
+\end{ReviewVerbatim}
+
+% report-context-presentation-sha256: a311d796cf64f92ad5196422190f5da150837471766a00187103a2b33b8039ca
+\paragraph{Settled source reading}
+\begin{sloppypar}
+After fixing z, V, ellF, and ellI are represented as unary real functions of the asset coordinate a.\allowbreak{}
+\end{sloppypar}
+
+\paragraph{Lean-expanded paper semantic target}
+\begin{ReviewVerbatim}
+type:
+(ℝ → ℝ) → (ℝ → ℝ) → ℝ → ℝ
+
+value:
+fun (ellF ellI : ℝ → ℝ) (a : ℝ) => ellI a / (ellF a + ellI a)
+\end{ReviewVerbatim}
+
+
+\paragraph{Recorded source-to-declaration screening}
+\textbf{Verdict:} \texttt{matches}
+\\
+{\raggedright
+\textbf{Reason:} Compared the selected source formula sI = ellI /\allowbreak{} (ellF + ellI) with the expanded target fun a => ellI a /\allowbreak{} (ellF a + ellI a);\allowbreak{} they are identical on the approved fixed-\allowbreak{}z asset slice.\allowbreak{} In the displayed theorem use, interiorRegularBranchCondition gives ellF and ellI strictly positive locally, so the denominator is positive and the source's interior-\allowbreak{}branch consequence 0 < sI < 1 follows there.\allowbreak{} The definition's total behavior outside that branch is only a harmless generalization and does not exclude or alter any source-\allowbreak{}admissible case.\allowbreak{}
+\par}
+\reviewmatch{Matches source input}
+\noindent\textbf{Reviewer annotation}\par
+\reviewerbox
+\clearpage
+\hypertarget{paper-prerequisite-d20c04fcbad99299}{}
+\subsection*{\small\ttfamily\raggedright Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}interior\allowbreak{}Regular\allowbreak{}Branch\allowbreak{}Condition}
+\noindent\textbf{Paper-local declaration:}\par
+{\footnotesize\ttfamily\raggedright Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}interior\allowbreak{}Regular\allowbreak{}Branch\allowbreak{}Condition\par}
+\textbf{Source locator:} {\footnotesize\raggedright cited publication, lines 118-\allowbreak{}120\par}
+\paragraph{Verbatim paper-source connection}
+\begin{ReviewVerbatim}
+\begin{assumption}[Rama interior regular]\label{ass:regular}
+La función \(a\mapsto\Va(a,z)\) es positiva y diferenciable en \(a_0\). Las horas de la rama considerada satisfacen las FOC de \eqref{eq:hoursblock}, son positivas y su suma es estrictamente menor que \(\bar H\).
+\end{assumption}
+
+[Next verbatim source excerpt]
+
+Escribo \(v(a,z)\) para el valor del hogar y \(\Va(a,z)=\partial_av(a,z)\). Cuando la solución es regular, el bloque laboral de la HJB es
+\begin{equation}\label{eq:hoursblock}
+\max_{\ell_F,\ell_I}
+\left\{\Va(R_F\ell_F+R_I\ell_I)-
+\sum_s\frac{\psi_s\ell_s^{1+1/\phi_s}}{1+1/\phi_s}\right\}.
+\end{equation}
+La derivación no constituye una prueba de regularidad de la HJB. Se explicitan las condiciones bajo las que puede usarse.
+
+[Next verbatim source excerpt]
+
+Los tres primeros supuestos permiten derivar la identidad. El cuarto solo se usa para ordenar sus signos. Su cumplimiento en una grilla no implica una demostración global. Si el tope de tiempo se activa, aparece un multiplicador común y la fórmula interior deja de ser la política correspondiente. Si se evalúa el límite de endeudamiento, se requieren derivadas unilaterales y un enunciado adaptado; ese caso no queda cubierto por el entorno abierto utilizado aquí.
+\end{ReviewVerbatim}
+
+% report-context-presentation-sha256: a9ea7d541025151583640fe5d056851f71ff83fd10eb91339d21049754f8d0af
+\paragraph{Settled source reading}
+\begin{sloppypar}
+The positive returns held fixed in the comparison are represented by scalar constants RF and RI.\allowbreak{}
+\end{sloppypar}
+\paragraph{Settled source reading}
+\begin{sloppypar}
+After fixing z, V, ellF, and ellI are represented as unary real functions of the asset coordinate a.\allowbreak{}
+\end{sloppypar}
+\paragraph{Settled source reading}
+\begin{sloppypar}
+A property holding on the source's open neighborhood of a0 is represented by eventual truth in the neighborhood filter nhds a.\allowbreak{}
+\end{sloppypar}
+
+\paragraph{Lean-expanded paper semantic target}
+\begin{ReviewVerbatim}
+type:
+(ℝ → ℝ) → (ℝ → ℝ) → (ℝ → ℝ) → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop
+
+value:
+fun (V ellF ellI : ℝ → ℝ) (a d Hbar RF RI psiF psiI phiF phiI : ℝ) =>
+  HasDerivAt V d a ∧
+    0 < V a ∧
+      ∀ᶠ (x : ℝ) in nhds a,
+        0 < ellF x ∧
+          0 < ellI x ∧
+            ellF x + ellI x < Hbar ∧
+              V x * RF - psiF * ellF x ^ (1 / phiF) = 0 ∧ V x * RI - psiI * ellI x ^ (1 / phiI) = 0
+\end{ReviewVerbatim}
+
+
+\paragraph{Recorded source-to-declaration screening}
+\textbf{Verdict:} \texttt{matches}
+\\
+{\raggedright
+\textbf{Reason:} Compared every clause of the selected regular-\allowbreak{}branch source row with the expanded target and its displayed use.\allowbreak{} HasDerivAt V d a records differentiability of the fixed-\allowbreak{}z marginal-\allowbreak{}value slice at a with derivative d, 0 < V a records its positivity, and the eventual nhds conjunction records local positive hours, ellF + ellI < Hbar, and the two exact sector FOCs V*RF -\allowbreak{} psiF*ellF\textasciicircum{}(1/\allowbreak{}phiF) = 0 and V*RI -\allowbreak{} psiI*ellI\textasciicircum{}(1/\allowbreak{}phiI) = 0.\allowbreak{} The approved fixed-\allowbreak{}z, scalar-\allowbreak{}return, and open-\allowbreak{}neighborhood records account exactly for the representation, and the theorem uses the same arguments without adding a source-\allowbreak{}excluding restriction or changing a formula.\allowbreak{}
+\par}
+\reviewmatch{Matches source input}
+\noindent\textbf{Reviewer annotation}\par
+\reviewerbox
+\clearpage
+\hypertarget{paper-prerequisite-552e4781bba8ea77}{}
+\subsection*{\small\ttfamily\raggedright Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}labor\allowbreak{}Preferences\allowbreak{}Condition}
+\noindent\textbf{Paper-local declaration:}\par
+{\footnotesize\ttfamily\raggedright Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}labor\allowbreak{}Preferences\allowbreak{}Condition\par}
+\textbf{Source locator:} {\footnotesize\raggedright cited publication, lines 115-\allowbreak{}117\par}
+\paragraph{Verbatim paper-source connection}
+\begin{ReviewVerbatim}
+\begin{assumption}[Preferencias laborales]\label{ass:parameters}
+Para \(s\in\{F,I\}\), \(\psi_s>0\) y \(\phi_s>0\). El costo de horas es el de \eqref{eq:preferences}, separable entre actividades.
+\end{assumption}
+
+[Next verbatim source excerpt]
+
+\begin{equation}\label{eq:preferences}
+\mathbb E_0\int_0^\infty e^{-\rho t}
+\left[\ln C(c_F,c_I)-
+\sum_{s\in\{F,I\}}\frac{\psi_s\ell_s^{1+1/\phi_s}}{1+1/\phi_s}\right]dt.
+\end{equation}
+La canasta distingue los dos bienes. El argumento de composición laboral usa la separabilidad del bloque de horas y su vínculo con la restricción de recursos; no requiere estimar aquí un nuevo parámetro de sustitución de consumo.
+\end{ReviewVerbatim}
+
+
+
+\paragraph{Lean-expanded paper semantic target}
+\begin{ReviewVerbatim}
+type:
+(ℝ → ℝ → ℝ) → ℝ → ℝ → ℝ → ℝ → Prop
+
+value:
+fun (laborCost : ℝ → ℝ → ℝ) (psiF psiI phiF phiI : ℝ) =>
+  0 < psiF ∧
+    0 < psiI ∧
+      0 < phiF ∧
+        0 < phiI ∧
+          ∀ (ellF ellI : ℝ),
+            0 ≤ ellF →
+              0 ≤ ellI →
+                laborCost ellF ellI =
+                  psiF * ellF ^ (1 + 1 / phiF) / (1 + 1 / phiF) + psiI * ellI ^ (1 + 1 / phiI) / (1 + 1 / phiI)
+\end{ReviewVerbatim}
+
+
+\paragraph{Recorded source-to-declaration screening}
+\textbf{Verdict:} \texttt{matches}
+\\
+{\raggedright
+\textbf{Reason:} The source assumption requires psi\_\allowbreak{}F, psi\_\allowbreak{}I, phi\_\allowbreak{}F, and phi\_\allowbreak{}I to be positive and identifies the hours cost with the separable F/\allowbreak{}I sum in equation (preferences).\allowbreak{} The expanded target imposes exactly those four inequalities and the same two-\allowbreak{}term formula on the admissible nonnegative labor-\allowbreak{}hours domain.\allowbreak{} The displayed composition use consumes this condition as a premise without changing the preference formula or introducing a consumption-\allowbreak{}substitution parameter.\allowbreak{}
+\par}
+\reviewmatch{Matches source input}
+\noindent\textbf{Reviewer annotation}\par
+\reviewerbox
+\clearpage
+\hypertarget{paper-prerequisite-254a7cb2686ab65e}{}
+\subsection*{\small\ttfamily\raggedright Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}local\allowbreak{}Concavity\allowbreak{}Condition}
+\noindent\textbf{Paper-local declaration:}\par
+{\footnotesize\ttfamily\raggedright Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}local\allowbreak{}Concavity\allowbreak{}Condition\par}
+\textbf{Source locator:} {\footnotesize\raggedright cited publication, lines 121-\allowbreak{}123\par}
+\paragraph{Verbatim paper-source connection}
+\begin{ReviewVerbatim}
+\begin{assumption}[Concavidad local para la interpretación]\label{ass:concavity}
+Cuando se interpreta el signo por riqueza se mantiene \(\Vaa(a_0,z)<0\).
+\end{assumption}
+
+[Next verbatim source excerpt]
+
+Los tres primeros supuestos permiten derivar la identidad. El cuarto solo se usa para ordenar sus signos. Su cumplimiento en una grilla no implica una demostración global. Si el tope de tiempo se activa, aparece un multiplicador común y la fórmula interior deja de ser la política correspondiente. Si se evalúa el límite de endeudamiento, se requieren derivadas unilaterales y un enunciado adaptado; ese caso no queda cubierto por el entorno abierto utilizado aquí.
+\end{ReviewVerbatim}
+
+
+
+\paragraph{Lean-expanded paper semantic target}
+\begin{ReviewVerbatim}
+type:
+ℝ → Prop
+
+value:
+fun (d : ℝ) => d < 0
+\end{ReviewVerbatim}
+
+
+\paragraph{Recorded source-to-declaration screening}
+\textbf{Verdict:} \texttt{matches}
+\\
+{\raggedright
+\textbf{Reason:} Compared the selected source condition Vaa(a0,z) < 0 with the target d < 0 and checked its complete displayed dependency chain.\allowbreak{} interiorRegularBranchCondition supplies HasDerivAt V d a for the fixed-\allowbreak{}z slice V = Va, so d is precisely the asset derivative of marginal value at a, namely the source's Vaa(a0,z).\allowbreak{} The theorem uses localConcavityCondition only as the antecedent for the three sign-\allowbreak{}ordering conclusions, matching the source statement that this fourth assumption is used only to order signs and not to derive the identity.\allowbreak{}
+\par}
+\reviewmatch{Matches source input}
+\noindent\textbf{Reviewer annotation}\par
+\reviewerbox
+
+\clearpage
+\hypertarget{source-claim-5daf04b3ba9ef8c8}{}
+\hypertarget{source-section-f10b5f68e4acf3dc}{}
+\section*{Source claims}
+\subsection*{Review row 1}
+\textbf{Source locator:} {\footnotesize\raggedright cited publication, lines 131-\allowbreak{}139\par}
+\paragraph{Verbatim source input}
+\begin{ReviewVerbatim}
+\begin{proposition}[Composición condicional de horas]\label{prop:composition}
+Bajo los supuestos \ref{ass:fixed}--\ref{ass:regular}, la política interior satisface
+\begin{equation}\label{eq:main}
+\frac{\partial\sI(a_0,z)}{\partial a}
+=\sI(a_0,z)\bigl(1-\sI(a_0,z)\bigr)
+(\phi_I-\phi_F)\frac{\Vaa(a_0,z)}{\Va(a_0,z)} .
+\end{equation}
+Si además se cumple el supuesto \ref{ass:concavity}, la derivada es negativa cuando \(\phi_I>\phi_F\), cero cuando \(\phi_I=\phi_F\) y positiva cuando \(\phi_I<\phi_F\).
+\end{proposition}
+
+[Next verbatim source excerpt]
+
+\begin{equation}\label{eq:preferences}
+\mathbb E_0\int_0^\infty e^{-\rho t}
+\left[\ln C(c_F,c_I)-
+\sum_{s\in\{F,I\}}\frac{\psi_s\ell_s^{1+1/\phi_s}}{1+1/\phi_s}\right]dt.
+\end{equation}
+La canasta distingue los dos bienes. El argumento de composición laboral usa la separabilidad del bloque de horas y su vínculo con la restricción de recursos; no requiere estimar aquí un nuevo parámetro de sustitución de consumo.
+
+[Next verbatim source excerpt]
+
+\begin{equation}\label{eq:budget}
+\dot a=R_F(z)\ell_F+R_I(z)\ell_I+ra-\chi(z)(-a)_+
++T-c_F-p_Ic_I,
+\end{equation}
+con \(a\geq\underline a\), \(\ell_s\geq0\) y
+\(\ell_F+\ell_I\leq\bar H\). El hogar observa su estado actual y conoce la ley del riesgo, pero no su realización futura. Toma precios, remuneraciones efectivas y transferencias como dados al resolver su problema individual.
+
+[Next verbatim source excerpt]
+
+Los retornos por hora que recibe son
+\begin{equation}\label{eq:returns}
+R_F(z)=(1-\tau)w_Fz-\kappa(z),\qquad
+R_I(z)=\widetilde w_Iz^{\nu_I}.
+\end{equation}
+
+[Next verbatim source excerpt]
+
+Escribo \(v(a,z)\) para el valor del hogar y \(\Va(a,z)=\partial_av(a,z)\). Cuando la solución es regular, el bloque laboral de la HJB es
+\begin{equation}\label{eq:hoursblock}
+\max_{\ell_F,\ell_I}
+\left\{\Va(R_F\ell_F+R_I\ell_I)-
+\sum_s\frac{\psi_s\ell_s^{1+1/\phi_s}}{1+1/\phi_s}\right\}.
+\end{equation}
+La derivación no constituye una prueba de regularidad de la HJB. Se explicitan las condiciones bajo las que puede usarse.
+
+[Next verbatim source excerpt]
+
+\begin{assumption}[Comparación individual]\label{ass:fixed}
+Se fija \(z\) y se considera un entorno abierto de un punto \(a_0>\underline a\). Los retornos \(R_F,R_I>0\), los precios y las remuneraciones efectivas se mantienen fijos y no dependen directamente de los activos en esa comparación.
+\end{assumption}
+
+[Next verbatim source excerpt]
+
+\begin{assumption}[Preferencias laborales]\label{ass:parameters}
+Para \(s\in\{F,I\}\), \(\psi_s>0\) y \(\phi_s>0\). El costo de horas es el de \eqref{eq:preferences}, separable entre actividades.
+\end{assumption}
+
+[Next verbatim source excerpt]
+
+\begin{assumption}[Rama interior regular]\label{ass:regular}
+La función \(a\mapsto\Va(a,z)\) es positiva y diferenciable en \(a_0\). Las horas de la rama considerada satisfacen las FOC de \eqref{eq:hoursblock}, son positivas y su suma es estrictamente menor que \(\bar H\).
+\end{assumption}
+
+[Next verbatim source excerpt]
+
+\begin{assumption}[Concavidad local para la interpretación]\label{ass:concavity}
+Cuando se interpreta el signo por riqueza se mantiene \(\Vaa(a_0,z)<0\).
+\end{assumption}
+
+[Next verbatim source excerpt]
+
+Los tres primeros supuestos permiten derivar la identidad. El cuarto solo se usa para ordenar sus signos. Su cumplimiento en una grilla no implica una demostración global. Si el tope de tiempo se activa, aparece un multiplicador común y la fórmula interior deja de ser la política correspondiente. Si se evalúa el límite de endeudamiento, se requieren derivadas unilaterales y un enunciado adaptado; ese caso no queda cubierto por el entorno abierto utilizado aquí.
+
+[Next verbatim source excerpt]
+
+Defina la fracción de horas informales como
+\(\sI=\ell_I/(\ell_F+\ell_I)\). Esta definición cuenta horas y no clasifica ex ante a una persona como informal. Bajo los retornos positivos y la rama interior, \(0<\sI<1\).
+\end{ReviewVerbatim}
+
+% report-context-presentation-sha256: a9ea7d541025151583640fe5d056851f71ff83fd10eb91339d21049754f8d0af
+\paragraph{Settled source reading}
+\begin{sloppypar}
+The positive returns held fixed in the comparison are represented by scalar constants RF and RI.\allowbreak{}
+\end{sloppypar}
+\paragraph{Settled source reading}
+\begin{sloppypar}
+After fixing z, V, ellF, and ellI are represented as unary real functions of the asset coordinate a.\allowbreak{}
+\end{sloppypar}
+\paragraph{Settled source reading}
+\begin{sloppypar}
+A property holding on the source's open neighborhood of a0 is represented by eventual truth in the neighborhood filter nhds a.\allowbreak{}
+\end{sloppypar}
+
+\paragraph{Expanded PaperInterface specification}
+\begin{ReviewVerbatim}
+∀ (laborCost : ℝ → ℝ → ℝ) (V ellF ellI : ℝ → ℝ) (a d aLower Hbar RF RI psiF psiI phiF phiI : ℝ),
+  Barraza26LaborComposition.comparisonIndividualCondition a aLower RF RI →
+    Barraza26LaborComposition.laborPreferencesCondition laborCost psiF psiI phiF phiI →
+      Barraza26LaborComposition.interiorRegularBranchCondition V ellF ellI a d Hbar RF RI psiF psiI phiF phiI →
+        have sI : ℝ → ℝ := Barraza26LaborComposition.informalHoursShare ellF ellI;
+        HasDerivAt sI (sI a * (1 - sI a) * (phiI - phiF) * d / V a) a ∧
+          (Barraza26LaborComposition.localConcavityCondition d →
+            (phiF < phiI → deriv sI a < 0) ∧ (phiI = phiF → deriv sI a = 0) ∧ (phiI < phiF → 0 < deriv sI a))
+\end{ReviewVerbatim}
+
+\paragraph{Retained governing declarations}
+\begin{itemize}\raggedright
+\item \hyperlink{paper-prerequisite-58beaf7552967aba}{Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}comparison\allowbreak{}Individual\allowbreak{}Condition}
+\item \hyperlink{paper-prerequisite-2d2c170b2398bfe9}{Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}informal\allowbreak{}Hours\allowbreak{}Share}
+\item \hyperlink{paper-prerequisite-d20c04fcbad99299}{Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}interior\allowbreak{}Regular\allowbreak{}Branch\allowbreak{}Condition}
+\item \hyperlink{paper-prerequisite-552e4781bba8ea77}{Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}labor\allowbreak{}Preferences\allowbreak{}Condition}
+\item \hyperlink{paper-prerequisite-254a7cb2686ab65e}{Barraza26\allowbreak{}Labor\allowbreak{}Composition.\allowbreak{}local\allowbreak{}Concavity\allowbreak{}Condition}
+\end{itemize}
+\paragraph{Lean-elaborated claim roles}\begin{ReviewVerbatim}
+1. parameter: ℝ → ℝ → ℝ
+2. parameter: ℝ → ℝ
+3. parameter: ℝ → ℝ
+4. parameter: ℝ → ℝ
+5. parameter: ℝ
+6. parameter: ℝ
+7. parameter: ℝ
+8. parameter: ℝ
+9. parameter: ℝ
+10. parameter: ℝ
+11. parameter: ℝ
+12. parameter: ℝ
+13. parameter: ℝ
+14. parameter: ℝ
+15. assumption: Barraza26LaborComposition.comparisonIndividualCondition a aLower RF RI
+16. assumption: Barraza26LaborComposition.laborPreferencesCondition laborCost psiF psiI phiF phiI
+17. assumption: Barraza26LaborComposition.interiorRegularBranchCondition V ellF ellI a d Hbar RF RI psiF psiI phiF phiI
+18. conclusion: HasDerivAt (Barraza26LaborComposition.informalHoursShare ellF ellI)
+    (Barraza26LaborComposition.informalHoursShare ellF ellI a *
+            (1 - Barraza26LaborComposition.informalHoursShare ellF ellI a) *
+          (phiI - phiF) *
+        d /
+      V a)
+    a ∧
+  (Barraza26LaborComposition.localConcavityCondition d →
+    (phiF < phiI → deriv (Barraza26LaborComposition.informalHoursShare ellF ellI) a < 0) ∧
+      (phiI = phiF → deriv (Barraza26LaborComposition.informalHoursShare ellF ellI) a = 0) ∧
+        (phiI < phiF → 0 < deriv (Barraza26LaborComposition.informalHoursShare ellF ellI) a))
+\end{ReviewVerbatim}
+
+\paragraph{Lean proof endpoint (built separately)}\begin{ReviewVerbatim}
+Barraza26LaborComposition.compositionConditionalHours
+\end{ReviewVerbatim}
+
+\paragraph{Recorded source-to-Spec screening}
+\textbf{Verdict:} \texttt{matches}
+\\
+{\raggedright
+\textbf{Reason:} The source proposition and its displayed Assumptions 1-\allowbreak{}-\allowbreak{}3 were compared with the complete expanded target and all five displayed prerequisites.\allowbreak{} comparisonIndividualCondition preserves the interior asset point and positive fixed returns;\allowbreak{} the approved fixed-\allowbreak{}z and fixed-\allowbreak{}return conventions justify unary V, ellF, and ellI and scalar RF and RI.\allowbreak{} laborPreferencesCondition now expressly preserves every positivity restriction and the exact two-\allowbreak{}sector separable labor-\allowbreak{}cost formula for nonnegative hours.\allowbreak{} interiorRegularBranchCondition preserves differentiability and positivity of V at a, and, on the approved nhds representation of the source open neighborhood, positive formal and informal hours, slack Hbar, and both source FOCs.\allowbreak{} informalHoursShare is exactly ellI/\allowbreak{}(ellF+ellI).\allowbreak{} With d the derivative of V, the conclusion states the source derivative sI(a)(1-\allowbreak{}sI(a))(phiI-\allowbreak{}phiF)d/\allowbreak{}V(a);\allowbreak{} localConcavityCondition is exactly d<0 and yields the source's negative, zero, and positive cases for phiI>phiF, equality, and phiI<phiF.\allowbreak{} No source premise, admissible source case, formula, or conclusion is changed by the explicit labor-\allowbreak{}cost/\allowbreak{}separability premise.\allowbreak{}
+\par}
+\reviewmatch{Matches source input}
+\noindent\textbf{Reviewer annotation}\par
+\reviewerbox
+
+\end{document}

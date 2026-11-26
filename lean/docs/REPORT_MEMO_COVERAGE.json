@@ -1,0 +1,71 @@
+{
+  "schema": 2,
+  "paper": "Barraza26LaborComposition",
+  "report_sha256": "b8635f4f365c0b4b5e1bc27ed95000393a6eba6bf0634ddf8fdc7e088289d54d",
+  "source_items_sha256": "2c329c09666ec6fbe5cb6a0140dfd5fe15669351f2ef6b39970a38369ea3f681",
+  "all_selected_semantic_review_sha256": "f7d9035d2962e44635a8ddd293850874ffcb4938223157613dda7432c1047e03",
+  "report_inventory_complete": true,
+  "items": {
+    "convention/B26-FIXED-Z-UNARY-SLICE": {
+      "disposition": "not_material",
+      "reason": "Fixing productivity and representing value and hours as unary functions of assets is exactly the source's partial comparison and adds no theorem premise."
+    },
+    "convention/B26-OPEN-NEIGHBORHOOD-NHDS": {
+      "disposition": "not_material",
+      "reason": "Eventual truth in nhds a is the standard local encoding of the source's open neighborhood and neither globalizes nor narrows the claim."
+    },
+    "convention/B26-FIXED-RETURNS-SCALARS": {
+      "disposition": "not_material",
+      "reason": "Positive scalar returns express the source's requirement that returns are fixed and asset-independent in this comparison, so no additional restriction is introduced."
+    }
+  },
+  "result_table": {
+    "schema": 1,
+    "complete": true,
+    "source_inventory": {
+      "schema": 1,
+      "source_artifact_sha256": "3bfd0418b0b7a74c6cf459e09e623f73d30ce1ccd132bb4449b9b379dafcaaa6",
+      "discovered_named_result_sha256": "fdbbc3fa75770682de95969e4d2cab9c95bd47fc4c68e5b82ec1cc46972cca70",
+      "source_format": "tex",
+      "results": {
+        "compositionConditionalHours": {
+          "kind": "proposition",
+          "presentations": [
+            {
+              "kind": "proposition",
+              "line_end": 139,
+              "line_start": 131,
+              "presentation": "tex_environment",
+              "presentation_sha256": "c854ab6119c163e5137af5132b756d2ff0c1d4b6c7afc2b16746b8dbd6c68306",
+              "source_item_id": "compositionConditionalHours",
+              "source_label": "prop:composition"
+            }
+          ],
+          "source_item_ids": [
+            "compositionConditionalHours"
+          ]
+        }
+      }
+    },
+    "source_inventory_sha256": "ca96dc19ffa06b168d62d77cf01173fd87e08de71322a7a541fdab790edfdc85",
+    "results": {
+      "compositionConditionalHours": {
+        "numbering": "numbered",
+        "printed_label": "Proposition 1, Composición condicional de horas",
+        "printed_label_basis": "reviewed_rendered_source",
+        "row_mappings": [
+          {
+            "report_label": "Proposition 1, Composición condicional de horas",
+            "row_sha256": "d0a2a8a24c96521c3f336feb4e40eb7e6eb162c8a2c0fe5621a65ae3748c963d"
+          }
+        ]
+      }
+    },
+    "rows": {
+      "d0a2a8a24c96521c3f336feb4e40eb7e6eb162c8a2c0fe5621a65ae3748c963d": {
+        "explanation_keys": [],
+        "supplemental_reason": ""
+      }
+    }
+  }
+}
