@@ -1,0 +1,68 @@
+{
+  "review_date": "2026-11-26",
+  "article": "https://doi.org/10.1093/restud/rdab002",
+  "publisher_supplement_sha256": "ee80c0124310dafbe004405a9a44ee0bd6b1ecedc920dc6c806ec363f45a10ef",
+  "publisher_supplement_pages": 65,
+  "read_source_regions": [
+    {
+      "section": "A.1, concavity argument",
+      "pdf_pages": [
+        1
+      ]
+    },
+    {
+      "section": "A.7, existence",
+      "pdf_pages": [
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "section": "A.8, uniqueness",
+      "pdf_pages": [
+        16,
+        17,
+        18,
+        19,
+        20
+      ]
+    },
+    {
+      "section": "G.1, diffusion setup",
+      "pdf_pages": [
+        47
+      ]
+    },
+    {
+      "section": "G.2, production",
+      "pdf_pages": [
+        52,
+        53
+      ]
+    },
+    {
+      "section": "G.3, borrowing spread",
+      "pdf_pages": [
+        53,
+        54,
+        55
+      ]
+    }
+  ],
+  "unchanged_saved_mat_files_checked": 23,
+  "model_conditions": {
+    "log_consumption_utility": true,
+    "r_below_rho": true,
+    "nonnegative_spreads": true,
+    "convex_labor_costs": true,
+    "no_borrowing_limit": false
+  },
+  "symbolic_mixture_branch_identities_checked": true,
+  "strict_concavity_counterexample_checked": true,
+  "conditional_weak_concavity_argument_added": true,
+  "new_lean_theorem": false,
+  "global_ge_existence_or_uniqueness_proved": false,
+  "paper_proposition_changed": false
+}

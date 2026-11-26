@@ -33,6 +33,8 @@ Esto respalda los 23 candidatos de equilibrio discretizado con las tolerancias d
 
 ## Qué faltaría para una demostración global
 
+Después de esta auditoría se revisaron las pruebas originales del suplemento editorial de Achdou et al.: A.1, A.7, A.8, G.2 y G.3. El [cotejo detallado](revision-pruebas-achdou.md) identifica un argumento adaptable de concavidad débil a precios dados y explica por qué no basta para la curvatura estricta o para existencia y unicidad de nuestro GE. El resultado del paper conserva sus condiciones.
+
 **Concavidad teórica.** A precios dados se puede investigar un argumento de concavidad del problema dinámico. Habría que justificar la convexidad de las trayectorias y controles admisibles, la concavidad de las preferencias, el tratamiento de la prima de deuda, la finitud del valor y las fronteras. La concavidad débil no garantiza por sí sola `Vaa < 0` ni que esa derivada exista en todos los puntos. La segunda derivada negativa del objetivo laboral tampoco demuestra la concavidad de todo el valor dinámico. El Supuesto 4 del paper se mantiene y no se modifica la proposición ya formalizada.
 
 **Existencia teórica del GE.** Sería necesario establecer existencia de la solución individual y de la distribución estacionaria para los precios relevantes, continuidad o las propiedades adecuadas de la correspondencia de agregados, y condiciones que garanticen un precio de equilibrio. El resultado de un buscador de raíces y los residuos pequeños no constituyen ese teorema.
