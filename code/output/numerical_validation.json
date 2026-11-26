@@ -1,0 +1,37 @@
+{
+  "audit_date": "2026-11-26",
+  "matlab_version": "25.2.0.3055257 (R2025b) Update 2",
+  "cases": 23,
+  "all_checks_passed": true,
+  "computed_value_concavity_violations": 0,
+  "maximum_computed_value_curvature": -0.005565192583172787,
+  "maximum_marginal_value_increase": -0.00042136240320367335,
+  "maximum_absolute_residuals": {
+    "capital": 4.517564722306133e-07,
+    "informal_good": 3.9494530867933975e-08,
+    "formal_resources": 1.1512151467025535e-08,
+    "government": 0,
+    "hjb": 7.074829611042333e-11,
+    "kfe": 7.424616477180734e-16,
+    "generator_row_sum": 5.329070518200751e-15
+  },
+  "declared_residual_tolerances": {
+    "capital": 0.003,
+    "informal_good": 0.0002,
+    "formal_resources": 0.002,
+    "government": 2e-06,
+    "hjb": 1e-06,
+    "kfe": 1e-08,
+    "generator_row_sum": 1e-10
+  },
+  "maximum_curvature_by_family": {
+    "fixed_parameters": -0.005867676574651113,
+    "refit": -0.005879188679915005,
+    "time_cap": -0.005867676574819661,
+    "time_equality": -0.005565192583172787
+  },
+  "source_sha256": "a6039be17e4b99d0ad4c46562176a8280748f5cdd4cca757fe3e7b9621af3726",
+  "continuous_global_theorems_proved": false,
+  "global_precision_certified": false,
+  "ci_scope": "Verify retained native output, source identities and numerical inequalities; no MATLAB run in CI."
+}

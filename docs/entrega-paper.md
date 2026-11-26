@@ -2,6 +2,8 @@
 
 La regla vigente es el [issue #7, secciones 5–7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7), consultado nuevamente el 26 de noviembre: repositorio completo en `main` el **26 de noviembre a las 22:00, Lima**. El paper requiere entre 8 y 20 páginas de cuerpo, 11pt, una columna y márgenes de una pulgada. La presentación fue otra entrega y se conserva.
 
+La [revisión completa](revision-requisitos-final.md) desglosa cada requisito. La [auditoría MATLAB del 26nov](concavidad-equilibrio.md) añade comprobaciones de concavidad del valor calculado y de equilibrio para los mismos 23 MAT, cotejadas con Python. Pasaron; no se resolvieron nuevos GE ni se certificaron teoremas globales.
+
 | Requisito | Situación observada | Trabajo de cierre |
 |---|---|---|
 | Paper `.tex`, `.bib`, `.pdf` | Versión de cierre: 13 páginas de cuerpo, 15 totales; GE con/sin reajuste, contrastes de tiempo y bibliografía incorporados; tabla y evidencia Lean validadas | Completar y cotejar las hojas personales |

@@ -503,6 +503,8 @@ def main():
     build_final(baseline, scenarios, summary, moments_data)
     from paper_results import build_paper_results
     build_paper_results()
+    from numerical_validation import build_numerical_validation
+    build_numerical_validation()
     print("OK: SymPy, baseline, quintile conventions, joint calibration and independent maxima")
     print(f"V_a relative gap: {baseline['va_relative_gap']:.12g}")
     print("phi_I   psi_I       kappa_z1    V3 D17 (pp)   V3 MATLAB (pp)")
