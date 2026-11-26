@@ -4,7 +4,7 @@ La regla vigente es el [issue #7, secciones 5–7](https://github.com/alexanderq
 
 | Requisito | Situación observada | Trabajo de cierre |
 |---|---|---|
-| Paper `.tex`, `.bib`, `.pdf` | Versión de cierre: 13 páginas de cuerpo, 15 totales; GE con/sin reajuste, contrastes de tiempo y bibliografía incorporados | Cerrar la tabla y evidencia Lean; completar y cotejar las hojas personales |
+| Paper `.tex`, `.bib`, `.pdf` | Versión de cierre: 13 páginas de cuerpo, 15 totales; GE con/sin reajuste, contrastes de tiempo y bibliografía incorporados; tabla y evidencia Lean validadas | Completar y cotejar las hojas personales |
 | Fuentes y literatura | Seis referencias, incluido el modelo coautorado y el cotejo BCRP de elasticidades | Conservar límites de acceso/paginación y evitar afirmar novedad o elasticidades identificadas para Perú |
 | Código y figuras reproducibles | `code/verify.py` pasa; corregido el recibo Lean frente a LF/CRLF | Se integraron 23 GE auditados y cuatro figuras nuevas para el paper |
 | Formalización propia | Carpeta oficial íntegra, revisión de los enunciados y fidelidad de prueba aprobadas | Cierre canónico validado; revisión humana pendiente y [estado detallado](estado-lean.md) |
@@ -12,7 +12,7 @@ La regla vigente es el [issue #7, secciones 5–7](https://github.com/alexanderq
 | Colaboración con IA | Registro actualizado, veredictos en el paper y enlace a la versión cruda | Corrección ortográfica autorizada aplicada solo a erratas inequívocas del usuario; respuestas de IA y textos copiados preservados |
 | README de una página | Actualizado al estado real del paper y de sus componentes | Mantener abiertos los requisitos que aún no están completos |
 | Propuesta y ambos decks | Versionados en `main` | Conservar fuentes/PDF históricos |
-| CI y publicación | Avances publicados por PR #14, #15 y #16; esta integración se publica mediante su propio PR y checks | Workflow conservado; el estado del último commit y PR documenta la publicación |
+| CI y publicación | Avances publicados por PR #14, #15 y #16; cierre integrado mediante [PR #17](https://github.com/johnbarraza/ai-project/pull/17) | Workflow conservado; el estado del último commit y PR documenta sus checks y publicación |
 
 ## Nuevos resultados preparados
 
