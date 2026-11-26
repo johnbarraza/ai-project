@@ -38,3 +38,5 @@ La transcripción disponible de la exposición del 16 de octubre pide aclarar el
 El archivo público de [notas de presentaciones](https://github.com/alexanderquispe/AI-Econ-Modeling/blob/main/NOTAS-PRESENTACIONES.md), consultado hoy, sigue fechado el 4 de noviembre. No contiene la devolución de John del 13 de noviembre. Esa devolución específica no pudo comprobarse con los materiales disponibles; no se atribuyen nuevas indicaciones al profesor.
 
 Los manuscritos y la revisión personal siguen pendientes. La comprobación numérica adicional respalda las soluciones calculadas; no convierte los límites teóricos del paper en teoremas probados.
+
+La revisión posterior del [suplemento editorial de Achdou et al.](revision-pruebas-achdou.md) coteja las pruebas de existencia y unicidad, las extensiones con producción y deuda y un argumento complementario de concavidad débil. El paper y la formalización se mantienen; no se atribuyen a la economía propia resultados cuyas condiciones aún no se han demostrado.

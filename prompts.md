@@ -1538,3 +1538,37 @@ olvida eso contiua con lo de modelling
 ## 241. Codex (commentary)
 
 Continúo con `modeling`. La auditoría nueva de MATLAB ya pasó en los 23 casos, y Python confirmó los cálculos. Estoy cerrando la revisión de requisitos y la publicación de esa evidencia, con las comprobaciones numéricas y los límites teóricos claramente separados.
+
+## 242. Usuario
+
+https://github.com/johnbarraza/aiyagari-2firms-peru toamte este doc o paper en edviednica?
+
+## 243. Codex (fragmento literal de la respuesta)
+
+**Sí. Ese documento y repositorio son la base del modelo que usamos.** Quedó incorporado así:
+
+## 244. Usuario
+
+el mio? reviaste paepr origianles de aiygari o lo ed moll sobre eso?
+
+## 245. Codex (fragmentos literales de la respuesta)
+
+**Sí, revisé originales de Aiyagari y de Achdou–Moll, además de tu documento, pero la lectura anterior fue parcial.** Ahora amplié el cotejo sobre existencia:
+
+No he revisado íntegramente todas las pruebas de los apéndices. La validación MATLAB que hicimos respalda tus soluciones numéricas; la aplicación de esos teoremas requiere ese cotejo adicional.
+
+## 246. Usuario
+
+revisa eso.
+
+## 247. Codex (commentary)
+
+Voy a revisar las pruebas de existencia y unicidad y los apéndices pertinentes de Achdou–Moll, y cotejarlos con tus ecuaciones. Dejaré identificadas las condiciones que cumple tu modelo, las que faltan justificar y el alcance de cualquier resultado que pueda trasladarse.
+
+## 248. Codex (commentary)
+
+El apéndice aclara dos puntos. La concavidad débil se apoya en un objetivo cóncavo y restricciones convexas, un argumento que parece adaptable a tu hogar a precios dados. En cambio, la prueba de unicidad usa el no endeudamiento en un paso concreto sobre la respuesta del ahorro a la tasa; ese paso pierde su signo cuando los activos son negativos.
+
+## 249. Codex (commentary)
+
+También obtuve el suplemento de la editorial y cotejé sus pruebas con la copia del autor. Para tu modelo hay una distinción clave: el argumento adaptable respalda concavidad débil, pero eso no garantiza \(V_{aa}<0\) en cada punto. La existencia del GE completo requiere además justificar el cierre conjunto de \(r\) y \(p_I\).
