@@ -1,10 +1,46 @@
 {
-  "schema": 1,
+  "schema": 2,
   "paper": "Barraza26LaborComposition",
   "source_artifact_path": "papers/Barraza26LaborComposition/source-audited.tex",
   "source_artifact_sha256": "3bfd0418b0b7a74c6cf459e09e623f73d30ce1ccd132bb4449b9b379dafcaaa6",
-  "review_status": "not_started",
-  "reviewed_proof_scopes": [],
+  "review_status": "reviewed_no_defects",
+  "reviewed_proof_scopes": [
+    {
+      "source_locator": "source-audited.tex:57-77",
+      "semantic_scope": "States, asset law, positive fixed-productivity sectoral returns; correctly represented by unary asset functions and positive scalar RF/RI, no defect.",
+      "outcome": "no_defect"
+    },
+    {
+      "source_locator": "source-audited.tex:104-125",
+      "semantic_scope": "Local labor block, Assumptions 1-4, open-neighborhood branch, positivity, differentiability, slack cap and boundary exclusions; matched locally, not globalized, no defect.",
+      "outcome": "no_defect"
+    },
+    {
+      "source_locator": "source-audited.tex:127-174",
+      "semantic_scope": "Informal-hours share, proposition, displayed identity, proof, optional local-concavity implication and all three signs; matched and proved, no defect.",
+      "outcome": "no_defect"
+    },
+    {
+      "source_locator": "source-audited.tex:26-26",
+      "semantic_scope": "Global HJB regularity/concavity, boundary/aggregation and GE limitations are preserved; formal theorem is conditional/local, no defect.",
+      "outcome": "no_defect"
+    },
+    {
+      "source_locator": "source-audited.tex:101-101",
+      "semantic_scope": "Global HJB regularity/concavity, boundary/aggregation and GE limitations are preserved; formal theorem is conditional/local, no defect.",
+      "outcome": "no_defect"
+    },
+    {
+      "source_locator": "source-audited.tex:125-125",
+      "semantic_scope": "Global HJB regularity/concavity, boundary/aggregation and GE limitations are preserved; formal theorem is conditional/local, no defect.",
+      "outcome": "no_defect"
+    },
+    {
+      "source_locator": "source-audited.tex:176-178",
+      "semantic_scope": "Global HJB regularity/concavity, boundary/aggregation and GE limitations are preserved; formal theorem is conditional/local, no defect.",
+      "outcome": "no_defect"
+    }
+  ],
   "model_conventions": [
     {
       "id": "B26-FIXED-Z-UNARY-SLICE",
@@ -31,7 +67,78 @@
       "checked_scope": "Assumption 1, Assumption 3, and Proposition 1 only."
     }
   ],
-  "checked_proof_steps": [],
+  "checked_proof_steps": [
+    {
+      "id": "SPF-01",
+      "source_locator": "source-audited.tex:141-147",
+      "source_step": "Differentiate separable labor objective at positive interior hours/slack cap to FOC Va Rs - psi_s ell_s^(1/phi_s)=0 and negative own-hour second derivative.",
+      "checked_conclusion": "Source calculus correct under psi_s>0, phi_s>0, ell_s>0; slack removes cap multiplier; Lean retains positivity/slack/FOCs eventually and legitimately starts from source-assumed FOCs, without weakening proposition.",
+      "scope": "Local interior branch."
+    },
+    {
+      "id": "SPF-02",
+      "source_locator": "source-audited.tex:147-151",
+      "source_step": "Solve FOC for ell_s=(Va Rs/psi_s)^phi_s.",
+      "checked_conclusion": "labor_of_foc proves bridge using positive psi, phi, ell and real-power identities, then applies both hours locally.",
+      "scope": "Positive FOC hours."
+    },
+    {
+      "id": "SPF-03",
+      "source_locator": "source-audited.tex:112-125",
+      "source_step": "Fixed productivity/returns, interior point, positive labor params, positive differentiable Va, positive slack branch.",
+      "checked_conclusion": "Lean retains aLower<a, positive scalar returns and parameters, HasDerivAt V d a, V a>0 and eventual positive/slack FOCs; unary/scalar conventions respected.",
+      "scope": "One interior point and neighborhood."
+    },
+    {
+      "id": "SPF-04",
+      "source_locator": "source-audited.tex:153-164",
+      "source_step": "q=ellI/ellF, factor positive coefficient, differentiate log/power to q'=q(phiI-phiF)Vaa/Va.",
+      "checked_conclusion": "Source algebra valid under positivity and asset-independent returns/parameters; Lean equivalent route differentiates each real-power labor policy directly.",
+      "scope": "Same local branch; no explicit q is route difference only."
+    },
+    {
+      "id": "SPF-05",
+      "source_locator": "source-audited.tex:166-172",
+      "source_step": "sI=q/(1+q), quotient rule.",
+      "checked_conclusion": "Valid; Lean directly differentiates quotient of explicit policies with nonzero denominator from positive hours.",
+      "scope": "Positive formal/informal hours."
+    },
+    {
+      "id": "SPF-06",
+      "source_locator": "source-audited.tex:169-173",
+      "source_step": "q/(1+q)^2=sI(1-sI), displayed identity.",
+      "checked_conclusion": "composition_hasDerivAt gives exact sI(1-sI)(phiI-phiF)d/Va and ProofInterface transfers through eventual equality.",
+      "scope": "Derivative at fixed a."
+    },
+    {
+      "id": "SPF-07",
+      "source_locator": "source-audited.tex:121-123",
+      "source_step": "Local concavity only for interpretation.",
+      "checked_conclusion": "d<0 appears only as implication antecedent for signs, not identity.",
+      "scope": "Optional signs."
+    },
+    {
+      "id": "SPF-08",
+      "source_locator": "source-audited.tex:138-138",
+      "source_step": "Three branches negative for phiI>phiF, zero equality, positive phiI<phiF.",
+      "checked_conclusion": "All follow from 0<sI<1, Va>0, d<0; composition_sign proves and ProofInterface transfers.",
+      "scope": "Fixed point derivative."
+    },
+    {
+      "id": "SPF-09",
+      "source_locator": "source-audited.tex:125-125",
+      "source_step": "Domain/denominator/boundary conditions.",
+      "checked_conclusion": "Positive hours/values justify denominators and real powers; aLower<a and nhds preserve interior neighborhood; no endpoint/active cap conclusion.",
+      "scope": "Strict interior branch."
+    },
+    {
+      "id": "SPF-10",
+      "source_locator": "source-audited.tex:131-139",
+      "source_step": "Full proposition.",
+      "checked_conclusion": "Frozen graph expands exact assumptions/identity/optional concavity/three signs; semantic contract pairs endpoint and transparent Spec in proves mode, exact match, no sorry/unsafe, standard axiom closure only.",
+      "scope": "Exact theorem endpoint."
+    }
+  ],
   "model_convention_entry_schema": {
     "required": [
       "id",

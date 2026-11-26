@@ -1,0 +1,10 @@
+Command:
+python3 scripts/paper_contribution.py check Barraza26LaborComposition --fast
+
+Output:
++ lake build +Barraza26LaborComposition.PaperInterface
+Build completed successfully (8315 jobs).
++ git diff --check -- papers/Barraza26LaborComposition papers/Barraza26LaborComposition.lean lakefile.toml ':(exclude)papers/Barraza26LaborComposition/source/'
+
+Exit code: 0
+Run date: 2026-11-26

@@ -1,0 +1,69 @@
+\documentclass[tikz,border=8pt]{standalone}
+\input{../../../docs/tikz/dag_preamble.tex}
+
+\begin{document}
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  every node/.append style={outer sep=3pt,font=\sffamily\scriptsize},
+  every path/.append style={font=\sffamily\scriptsize}
+]
+
+\node[align=left,text width=28cm,font=\sffamily\small,anchor=north west]
+  at (0,0) {\textbf{Paper:} Ahorro, flexibilidad de horas e informalidad en el Perú\\
+  \textbf{Subtitle:} Un mecanismo laboral en un modelo macroeconómico de agentes heterogéneos\\
+  \textbf{Author:} John Svante Barraza Ratachi\\
+  \textbf{Source:} merged manuscript, 24 November 2026\\
+  \textbf{Scope:} the four stated local assumptions, the informal-hours-share
+  definition, and Proposition 1.};
+
+\node[dag_model,text width=5.2cm] (Fixed) at (0,-4.2) {
+  \textbf{Assumption 1}\\
+  Individual comparison\\
+  fixed productivity and returns
+};
+\node[dag_model,text width=5.2cm] (Preferences) at (7.5,-4.2) {
+  \textbf{Assumption 2}\\
+  Labor preferences\\
+  positive parameters, separable costs
+};
+\node[dag_model,text width=5.2cm] (Interior) at (15,-4.2) {
+  \textbf{Assumption 3}\\
+  Regular interior branch\\
+  positive, differentiable, slack FOCs
+};
+\node[dag_model,text width=5.2cm] (Concavity) at (22.5,-4.2) {
+  \textbf{Assumption 4}\\
+  Local concavity\\
+  used only for sign interpretation
+};
+
+\node[dag_model,text width=6cm] (Share) at (4.5,-8.6) {
+  \textbf{Definition}\\
+  Informal-hours share\\
+  $s_I=\ell_I/(\ell_F+\ell_I)$
+};
+
+\node[dag_result,text width=9cm] (Proposition) at (16.5,-8.6) {
+  \textbf{Proposition 1}\\
+  Conditional composition of hours\\
+  derivative identity and the negative, zero,
+  and positive elasticity-order cases
+};
+
+\draw[dag_arrow] (Fixed.south) -- ++(0,-1.0) -| ([xshift=-3.3cm]Proposition.north);
+\draw[dag_arrow] (Preferences.south) -- ++(0,-1.6) -| ([xshift=-1.2cm]Proposition.north);
+\draw[dag_arrow] (Interior.south) -- ([xshift=0.8cm]Proposition.north);
+\draw[dag_arrow] (Concavity.south) -- ++(0,-1.0) -| ([xshift=3.3cm]Proposition.north);
+\draw[dag_arrow] (Share.east) -- (Proposition.west);
+
+\node[align=left,text width=28cm,font=\sffamily\scriptsize,anchor=north west]
+  at (0,-11.8) {\textit{Reading guide:} arrows run from each source condition
+  or definition to the result that uses it. Assumptions 1--3 establish the
+  identity; Assumption 4 is used only inside the proposition's conditional
+  sign clause. The result is local and conditional: no node asserts global HJB
+  regularity or concavity, boundary or active-cap behavior, aggregation, or
+  general-equilibrium existence.};
+
+\end{tikzpicture}
+\end{document}

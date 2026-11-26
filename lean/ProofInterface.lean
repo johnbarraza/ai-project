@@ -19,10 +19,10 @@ review compares the raw source bundle only to that Spec.
 -/
 theorem compositionConditionalHours :
   compositionConditionalHoursSpec := by
-  intro V ellF ellI a d aLower Hbar RF RI psiF psiI phiF phiI hcomparison
+  intro laborCost V ellF ellI a d aLower Hbar RF RI psiF psiI phiF phiI hcomparison
     hpreferences hbranch
   rcases hcomparison with ⟨_, hRF, hRI⟩
-  rcases hpreferences with ⟨hpF, hpI, hphiF, hphiI⟩
+  rcases hpreferences with ⟨hpF, hpI, hphiF, hphiI, _⟩
   rcases hbranch with ⟨hV, hVa, hev⟩
   have hkey := share_eventuallyEq_of_foc (V := V) (RF := RF) (RI := RI) hpF hpI hphiF hphiI hev
   have hD := (composition_hasDerivAt (phiF := phiF) (phiI := phiI) hV hVa hRF hRI hpF hpI)

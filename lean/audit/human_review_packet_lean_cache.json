@@ -1,0 +1,3565 @@
+{
+  "schema": 5,
+  "paper": "Barraza26LaborComposition",
+  "paper_lean_tree_sha256": "b472716274c03e18079645eb37ae95816a6cdf2817e0ba58d992711788c37085",
+  "library_lean_tree_sha256": "c797c162b383948166d1eed716192bd0d91d8638016123250654b8000741dad2",
+  "lean_display_engine_sha256": "9d6abcd545bcee8824ae8a03507e6e38fcae2f59e8ffda3ab26864df6e9e2b9f",
+  "display_protocols": {
+    "spec_proposition": "lean_transparent_paper_expansion_with_claim_atoms_v2",
+    "definition_declaration": "lean_paper_definition_declaration_display_v1",
+    "paper_prerequisite": "lean_paper_declaration_display_v1",
+    "library_prerequisite": "lean-library-display-plus-exact-code-v1"
+  },
+  "specifications": [
+    "Barraza26LaborComposition.compositionConditionalHoursSpec"
+  ],
+  "semantic_targets": {
+    "Barraza26LaborComposition.compositionConditionalHoursSpec": {
+      "display": "∀ (laborCost : ℝ → ℝ → ℝ) (V ellF ellI : ℝ → ℝ) (a d aLower Hbar RF RI psiF psiI phiF phiI : ℝ),\n  Barraza26LaborComposition.comparisonIndividualCondition a aLower RF RI →\n    Barraza26LaborComposition.laborPreferencesCondition laborCost psiF psiI phiF phiI →\n      Barraza26LaborComposition.interiorRegularBranchCondition V ellF ellI a d Hbar RF RI psiF psiI phiF phiI →\n        have sI : ℝ → ℝ := Barraza26LaborComposition.informalHoursShare ellF ellI;\n        HasDerivAt sI (sI a * (1 - sI a) * (phiI - phiF) * d / V a) a ∧\n          (Barraza26LaborComposition.localConcavityCondition d →\n            (phiF < phiI → deriv sI a < 0) ∧ (phiI = phiF → deriv sI a = 0) ∧ (phiI < phiF → 0 < deriv sI a))",
+      "display_sha256": "7d203cf98bd212132cc578417a1c05acefa1cef8d3503fbee3eb617316bc8879",
+      "expansion_count": 1,
+      "expanded_declarations": [
+        "Barraza26LaborComposition.compositionConditionalHoursSpec"
+      ],
+      "prerequisite_declarations": [
+        "Barraza26LaborComposition.comparisonIndividualCondition",
+        "Barraza26LaborComposition.informalHoursShare",
+        "Barraza26LaborComposition.interiorRegularBranchCondition",
+        "Barraza26LaborComposition.laborPreferencesCondition",
+        "Barraza26LaborComposition.localConcavityCondition"
+      ],
+      "library_declarations": [],
+      "erased_proof_declarations": [
+        "Barraza26LaborComposition.interiorRegularBranchCondition._proof_1"
+      ],
+      "elaborated_signature_sha256": "cefc68999a6383dad5c203bbc42dfcd9715da43ef27b2be780fad01bb1801d5e",
+      "semantic_target_kind": "spec_proposition",
+      "semantic_review_declaration": "Barraza26LaborComposition.compositionConditionalHoursSpec",
+      "lean_target_protocol": "lean_transparent_paper_expansion_with_claim_atoms_v2",
+      "paper_interface_sha256": "555fa73c6de2d458a8405589e11f034c77c4f0e163e4c30b108a383378c1da1a",
+      "lean_expansion_protocol": "lean_transparent_paper_expansion_with_claim_atoms_v2",
+      "review_claim_manifest_sha256": "cefc68999a6383dad5c203bbc42dfcd9715da43ef27b2be780fad01bb1801d5e",
+      "review_claim_atoms_sha256": "5091069af71c0ea8cb797edec301a056a86ba3877130d73bcad556df53a1e292",
+      "review_claim_atoms": [
+        {
+          "ref": "b/0",
+          "role": "parameter",
+          "canonical": {
+            "binder_info": "explicit",
+            "body": {
+              "binder_info": "explicit",
+              "body": {
+                "levels": [],
+                "name": "Real",
+                "tag": "const"
+              },
+              "domain": {
+                "levels": [],
+                "name": "Real",
+                "tag": "const"
+              },
+              "domain_is_proposition": false,
+              "tag": "forall"
+            },
+            "domain": {
+              "levels": [],
+              "name": "Real",
+              "tag": "const"
+            },
+            "domain_is_proposition": false,
+            "tag": "forall"
+          },
+          "display": "ℝ → ℝ → ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/1",
+          "role": "parameter",
+          "canonical": {
+            "binder_info": "explicit",
+            "body": {
+              "levels": [],
+              "name": "Real",
+              "tag": "const"
+            },
+            "domain": {
+              "levels": [],
+              "name": "Real",
+              "tag": "const"
+            },
+            "domain_is_proposition": false,
+            "tag": "forall"
+          },
+          "display": "ℝ → ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/2",
+          "role": "parameter",
+          "canonical": {
+            "binder_info": "explicit",
+            "body": {
+              "levels": [],
+              "name": "Real",
+              "tag": "const"
+            },
+            "domain": {
+              "levels": [],
+              "name": "Real",
+              "tag": "const"
+            },
+            "domain_is_proposition": false,
+            "tag": "forall"
+          },
+          "display": "ℝ → ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/3",
+          "role": "parameter",
+          "canonical": {
+            "binder_info": "explicit",
+            "body": {
+              "levels": [],
+              "name": "Real",
+              "tag": "const"
+            },
+            "domain": {
+              "levels": [],
+              "name": "Real",
+              "tag": "const"
+            },
+            "domain_is_proposition": false,
+            "tag": "forall"
+          },
+          "display": "ℝ → ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/4",
+          "role": "parameter",
+          "canonical": {
+            "levels": [],
+            "name": "Real",
+            "tag": "const"
+          },
+          "display": "ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/5",
+          "role": "parameter",
+          "canonical": {
+            "levels": [],
+            "name": "Real",
+            "tag": "const"
+          },
+          "display": "ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/6",
+          "role": "parameter",
+          "canonical": {
+            "levels": [],
+            "name": "Real",
+            "tag": "const"
+          },
+          "display": "ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/7",
+          "role": "parameter",
+          "canonical": {
+            "levels": [],
+            "name": "Real",
+            "tag": "const"
+          },
+          "display": "ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/8",
+          "role": "parameter",
+          "canonical": {
+            "levels": [],
+            "name": "Real",
+            "tag": "const"
+          },
+          "display": "ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/9",
+          "role": "parameter",
+          "canonical": {
+            "levels": [],
+            "name": "Real",
+            "tag": "const"
+          },
+          "display": "ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/10",
+          "role": "parameter",
+          "canonical": {
+            "levels": [],
+            "name": "Real",
+            "tag": "const"
+          },
+          "display": "ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/11",
+          "role": "parameter",
+          "canonical": {
+            "levels": [],
+            "name": "Real",
+            "tag": "const"
+          },
+          "display": "ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/12",
+          "role": "parameter",
+          "canonical": {
+            "levels": [],
+            "name": "Real",
+            "tag": "const"
+          },
+          "display": "ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/13",
+          "role": "parameter",
+          "canonical": {
+            "levels": [],
+            "name": "Real",
+            "tag": "const"
+          },
+          "display": "ℝ",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/14",
+          "role": "assumption",
+          "canonical": {
+            "arg": {
+              "index": "9",
+              "tag": "fvar"
+            },
+            "arg_binder_info": "explicit",
+            "fn": {
+              "arg": {
+                "index": "8",
+                "tag": "fvar"
+              },
+              "arg_binder_info": "explicit",
+              "fn": {
+                "arg": {
+                  "index": "6",
+                  "tag": "fvar"
+                },
+                "arg_binder_info": "explicit",
+                "fn": {
+                  "arg": {
+                    "index": "4",
+                    "tag": "fvar"
+                  },
+                  "arg_binder_info": "explicit",
+                  "fn": {
+                    "sha256": "3bd391ecce150375942ca3829fe5d64e9c517c15ab81a63b694ec6621782c889",
+                    "tag": "inlined_definition"
+                  },
+                  "tag": "app"
+                },
+                "tag": "app"
+              },
+              "tag": "app"
+            },
+            "tag": "app"
+          },
+          "display": "Barraza26LaborComposition.comparisonIndividualCondition a aLower RF RI",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/15",
+          "role": "assumption",
+          "canonical": {
+            "arg": {
+              "index": "13",
+              "tag": "fvar"
+            },
+            "arg_binder_info": "explicit",
+            "fn": {
+              "arg": {
+                "index": "12",
+                "tag": "fvar"
+              },
+              "arg_binder_info": "explicit",
+              "fn": {
+                "arg": {
+                  "index": "11",
+                  "tag": "fvar"
+                },
+                "arg_binder_info": "explicit",
+                "fn": {
+                  "arg": {
+                    "index": "10",
+                    "tag": "fvar"
+                  },
+                  "arg_binder_info": "explicit",
+                  "fn": {
+                    "arg": {
+                      "index": "0",
+                      "tag": "fvar"
+                    },
+                    "arg_binder_info": "explicit",
+                    "fn": {
+                      "sha256": "74b9b89a2d37b406c42f692755e761c94c6f4f6adcec16ee0c1c763ebf554dbf",
+                      "tag": "inlined_definition"
+                    },
+                    "tag": "app"
+                  },
+                  "tag": "app"
+                },
+                "tag": "app"
+              },
+              "tag": "app"
+            },
+            "tag": "app"
+          },
+          "display": "Barraza26LaborComposition.laborPreferencesCondition laborCost psiF psiI phiF phiI",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "b/16",
+          "role": "assumption",
+          "canonical": {
+            "arg": {
+              "index": "13",
+              "tag": "fvar"
+            },
+            "arg_binder_info": "explicit",
+            "fn": {
+              "arg": {
+                "index": "12",
+                "tag": "fvar"
+              },
+              "arg_binder_info": "explicit",
+              "fn": {
+                "arg": {
+                  "index": "11",
+                  "tag": "fvar"
+                },
+                "arg_binder_info": "explicit",
+                "fn": {
+                  "arg": {
+                    "index": "10",
+                    "tag": "fvar"
+                  },
+                  "arg_binder_info": "explicit",
+                  "fn": {
+                    "arg": {
+                      "index": "9",
+                      "tag": "fvar"
+                    },
+                    "arg_binder_info": "explicit",
+                    "fn": {
+                      "arg": {
+                        "index": "8",
+                        "tag": "fvar"
+                      },
+                      "arg_binder_info": "explicit",
+                      "fn": {
+                        "arg": {
+                          "index": "7",
+                          "tag": "fvar"
+                        },
+                        "arg_binder_info": "explicit",
+                        "fn": {
+                          "arg": {
+                            "index": "5",
+                            "tag": "fvar"
+                          },
+                          "arg_binder_info": "explicit",
+                          "fn": {
+                            "arg": {
+                              "index": "4",
+                              "tag": "fvar"
+                            },
+                            "arg_binder_info": "explicit",
+                            "fn": {
+                              "arg": {
+                                "index": "3",
+                                "tag": "fvar"
+                              },
+                              "arg_binder_info": "explicit",
+                              "fn": {
+                                "arg": {
+                                  "index": "2",
+                                  "tag": "fvar"
+                                },
+                                "arg_binder_info": "explicit",
+                                "fn": {
+                                  "arg": {
+                                    "index": "1",
+                                    "tag": "fvar"
+                                  },
+                                  "arg_binder_info": "explicit",
+                                  "fn": {
+                                    "sha256": "b6870dce2a8d5ec4c253e7e686c2f0ec1b7c062d4eed32dd2b7a72607b50ceed",
+                                    "tag": "inlined_definition"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "tag": "app"
+                    },
+                    "tag": "app"
+                  },
+                  "tag": "app"
+                },
+                "tag": "app"
+              },
+              "tag": "app"
+            },
+            "tag": "app"
+          },
+          "display": "Barraza26LaborComposition.interiorRegularBranchCondition V ellF ellI a d Hbar RF RI psiF psiI phiF phiI",
+          "binder_info": "explicit"
+        },
+        {
+          "ref": "result",
+          "role": "conclusion",
+          "canonical": {
+            "arg": {
+              "binder_info": "explicit",
+              "body": {
+                "arg": {
+                  "arg": {
+                    "binder_info": "explicit",
+                    "body": {
+                      "arg": {
+                        "arg": {
+                          "index": "4",
+                          "tag": "fvar"
+                        },
+                        "arg_binder_info": "explicit",
+                        "fn": {
+                          "arg": {
+                            "arg": {
+                              "index": "3",
+                              "tag": "fvar"
+                            },
+                            "arg_binder_info": "explicit",
+                            "fn": {
+                              "arg": {
+                                "index": "2",
+                                "tag": "fvar"
+                              },
+                              "arg_binder_info": "explicit",
+                              "fn": {
+                                "sha256": "1ae07f7bf33fbb6e32c5fa3811d09643206ba43465bbf4166b44e7b6313ba07c",
+                                "tag": "inlined_definition"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "arg_binder_info": "explicit",
+                          "fn": {
+                            "arg": {
+                              "arg": {
+                                "arg": {
+                                  "levels": [],
+                                  "name": "Real.pseudoMetricSpace",
+                                  "tag": "const"
+                                },
+                                "arg_binder_info": "instImplicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "levels": [
+                                      {
+                                        "tag": "zero"
+                                      }
+                                    ],
+                                    "name": "PseudoMetricSpace.toUniformSpace",
+                                    "tag": "const"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "arg_binder_info": "instImplicit",
+                              "fn": {
+                                "arg": {
+                                  "levels": [],
+                                  "name": "Real",
+                                  "tag": "const"
+                                },
+                                "arg_binder_info": "implicit",
+                                "fn": {
+                                  "levels": [
+                                    {
+                                      "tag": "zero"
+                                    }
+                                  ],
+                                  "name": "UniformSpace.toTopologicalSpace",
+                                  "tag": "const"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "arg_binder_info": "instImplicit",
+                            "fn": {
+                              "arg": {
+                                "arg": {
+                                  "arg": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real.instRCLike",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "levels": [
+                                          {
+                                            "tag": "zero"
+                                          }
+                                        ],
+                                        "name": "RCLike.toInnerProductSpaceReal",
+                                        "tag": "const"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "arg": {
+                                        "arg": {
+                                          "arg": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real.normedCommRing",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "instImplicit",
+                                            "fn": {
+                                              "arg": {
+                                                "levels": [],
+                                                "name": "Real",
+                                                "tag": "const"
+                                              },
+                                              "arg_binder_info": "implicit",
+                                              "fn": {
+                                                "levels": [
+                                                  {
+                                                    "tag": "zero"
+                                                  }
+                                                ],
+                                                "name": "NormedCommRing.toSeminormedCommRing",
+                                                "tag": "const"
+                                              },
+                                              "tag": "app"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "arg_binder_info": "instImplicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "levels": [
+                                                {
+                                                  "tag": "zero"
+                                                }
+                                              ],
+                                              "name": "SeminormedCommRing.toNonUnitalSeminormedCommRing",
+                                              "tag": "const"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "NonUnitalSeminormedRing.toSeminormedAddCommGroup",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real.instRCLike",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              },
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "InnerProductSpace.toNormedSpace",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "arg_binder_info": "instImplicit",
+                                "fn": {
+                                  "arg": {
+                                    "arg": {
+                                      "arg": {
+                                        "arg": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real.normedCommRing",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "instImplicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "levels": [
+                                                {
+                                                  "tag": "zero"
+                                                }
+                                              ],
+                                              "name": "NormedCommRing.toSeminormedCommRing",
+                                              "tag": "const"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "SeminormedCommRing.toNonUnitalSeminormedCommRing",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "levels": [
+                                          {
+                                            "tag": "zero"
+                                          }
+                                        ],
+                                        "name": "NonUnitalSeminormedRing.toSeminormedAddCommGroup",
+                                        "tag": "const"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real.normedField",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            },
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "NormedSpace.toModule",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "arg_binder_info": "instImplicit",
+                              "fn": {
+                                "arg": {
+                                  "levels": [],
+                                  "name": "Real.instAddCommGroup",
+                                  "tag": "const"
+                                },
+                                "arg_binder_info": "instImplicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "arg": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real.denselyNormedField",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "DenselyNormedField.toNontriviallyNormedField",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "levels": [
+                                          {
+                                            "tag": "zero"
+                                          },
+                                          {
+                                            "tag": "zero"
+                                          }
+                                        ],
+                                        "name": "deriv",
+                                        "tag": "const"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "arg_binder_info": "explicit",
+                      "fn": {
+                        "arg": {
+                          "arg": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real.instZero",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "instImplicit",
+                            "fn": {
+                              "arg": {
+                                "levels": [],
+                                "name": "Real",
+                                "tag": "const"
+                              },
+                              "arg_binder_info": "implicit",
+                              "fn": {
+                                "levels": [
+                                  {
+                                    "tag": "zero"
+                                  }
+                                ],
+                                "name": "Zero.toOfNat0",
+                                "tag": "const"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "arg_binder_info": "instImplicit",
+                          "fn": {
+                            "arg": {
+                              "tag": "lit",
+                              "value": "Lean.Literal.natVal 0"
+                            },
+                            "arg_binder_info": "explicit",
+                            "fn": {
+                              "arg": {
+                                "levels": [],
+                                "name": "Real",
+                                "tag": "const"
+                              },
+                              "arg_binder_info": "implicit",
+                              "fn": {
+                                "levels": [
+                                  {
+                                    "tag": "zero"
+                                  }
+                                ],
+                                "name": "OfNat.ofNat",
+                                "tag": "const"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "arg_binder_info": "explicit",
+                        "fn": {
+                          "arg": {
+                            "levels": [],
+                            "name": "Real.instLT",
+                            "tag": "const"
+                          },
+                          "arg_binder_info": "instImplicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "levels": [
+                                {
+                                  "tag": "zero"
+                                }
+                              ],
+                              "name": "LT.lt",
+                              "tag": "const"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "tag": "app"
+                    },
+                    "domain": {
+                      "arg": {
+                        "index": "12",
+                        "tag": "fvar"
+                      },
+                      "arg_binder_info": "explicit",
+                      "fn": {
+                        "arg": {
+                          "index": "13",
+                          "tag": "fvar"
+                        },
+                        "arg_binder_info": "explicit",
+                        "fn": {
+                          "arg": {
+                            "levels": [],
+                            "name": "Real.instLT",
+                            "tag": "const"
+                          },
+                          "arg_binder_info": "instImplicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "levels": [
+                                {
+                                  "tag": "zero"
+                                }
+                              ],
+                              "name": "LT.lt",
+                              "tag": "const"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "tag": "app"
+                    },
+                    "domain_is_proposition": true,
+                    "tag": "forall"
+                  },
+                  "arg_binder_info": "explicit",
+                  "fn": {
+                    "arg": {
+                      "binder_info": "explicit",
+                      "body": {
+                        "arg": {
+                          "arg": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real.instZero",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "instImplicit",
+                            "fn": {
+                              "arg": {
+                                "levels": [],
+                                "name": "Real",
+                                "tag": "const"
+                              },
+                              "arg_binder_info": "implicit",
+                              "fn": {
+                                "levels": [
+                                  {
+                                    "tag": "zero"
+                                  }
+                                ],
+                                "name": "Zero.toOfNat0",
+                                "tag": "const"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "arg_binder_info": "instImplicit",
+                          "fn": {
+                            "arg": {
+                              "tag": "lit",
+                              "value": "Lean.Literal.natVal 0"
+                            },
+                            "arg_binder_info": "explicit",
+                            "fn": {
+                              "arg": {
+                                "levels": [],
+                                "name": "Real",
+                                "tag": "const"
+                              },
+                              "arg_binder_info": "implicit",
+                              "fn": {
+                                "levels": [
+                                  {
+                                    "tag": "zero"
+                                  }
+                                ],
+                                "name": "OfNat.ofNat",
+                                "tag": "const"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "arg_binder_info": "explicit",
+                        "fn": {
+                          "arg": {
+                            "arg": {
+                              "index": "4",
+                              "tag": "fvar"
+                            },
+                            "arg_binder_info": "explicit",
+                            "fn": {
+                              "arg": {
+                                "arg": {
+                                  "index": "3",
+                                  "tag": "fvar"
+                                },
+                                "arg_binder_info": "explicit",
+                                "fn": {
+                                  "arg": {
+                                    "index": "2",
+                                    "tag": "fvar"
+                                  },
+                                  "arg_binder_info": "explicit",
+                                  "fn": {
+                                    "sha256": "1ae07f7bf33fbb6e32c5fa3811d09643206ba43465bbf4166b44e7b6313ba07c",
+                                    "tag": "inlined_definition"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "arg_binder_info": "explicit",
+                              "fn": {
+                                "arg": {
+                                  "arg": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real.pseudoMetricSpace",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "levels": [
+                                          {
+                                            "tag": "zero"
+                                          }
+                                        ],
+                                        "name": "PseudoMetricSpace.toUniformSpace",
+                                        "tag": "const"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "levels": [
+                                        {
+                                          "tag": "zero"
+                                        }
+                                      ],
+                                      "name": "UniformSpace.toTopologicalSpace",
+                                      "tag": "const"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "arg_binder_info": "instImplicit",
+                                "fn": {
+                                  "arg": {
+                                    "arg": {
+                                      "arg": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real.instRCLike",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "RCLike.toInnerProductSpaceReal",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "arg": {
+                                            "arg": {
+                                              "arg": {
+                                                "arg": {
+                                                  "levels": [],
+                                                  "name": "Real.normedCommRing",
+                                                  "tag": "const"
+                                                },
+                                                "arg_binder_info": "instImplicit",
+                                                "fn": {
+                                                  "arg": {
+                                                    "levels": [],
+                                                    "name": "Real",
+                                                    "tag": "const"
+                                                  },
+                                                  "arg_binder_info": "implicit",
+                                                  "fn": {
+                                                    "levels": [
+                                                      {
+                                                        "tag": "zero"
+                                                      }
+                                                    ],
+                                                    "name": "NormedCommRing.toSeminormedCommRing",
+                                                    "tag": "const"
+                                                  },
+                                                  "tag": "app"
+                                                },
+                                                "tag": "app"
+                                              },
+                                              "arg_binder_info": "instImplicit",
+                                              "fn": {
+                                                "arg": {
+                                                  "levels": [],
+                                                  "name": "Real",
+                                                  "tag": "const"
+                                                },
+                                                "arg_binder_info": "implicit",
+                                                "fn": {
+                                                  "levels": [
+                                                    {
+                                                      "tag": "zero"
+                                                    }
+                                                  ],
+                                                  "name": "SeminormedCommRing.toNonUnitalSeminormedCommRing",
+                                                  "tag": "const"
+                                                },
+                                                "tag": "app"
+                                              },
+                                              "tag": "app"
+                                            },
+                                            "arg_binder_info": "instImplicit",
+                                            "fn": {
+                                              "arg": {
+                                                "levels": [],
+                                                "name": "Real",
+                                                "tag": "const"
+                                              },
+                                              "arg_binder_info": "implicit",
+                                              "fn": {
+                                                "levels": [
+                                                  {
+                                                    "tag": "zero"
+                                                  }
+                                                ],
+                                                "name": "NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing",
+                                                "tag": "const"
+                                              },
+                                              "tag": "app"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "arg_binder_info": "instImplicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "levels": [
+                                                {
+                                                  "tag": "zero"
+                                                }
+                                              ],
+                                              "name": "NonUnitalSeminormedRing.toSeminormedAddCommGroup",
+                                              "tag": "const"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real.instRCLike",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "arg": {
+                                                "levels": [],
+                                                "name": "Real",
+                                                "tag": "const"
+                                              },
+                                              "arg_binder_info": "implicit",
+                                              "fn": {
+                                                "levels": [
+                                                  {
+                                                    "tag": "zero"
+                                                  },
+                                                  {
+                                                    "tag": "zero"
+                                                  }
+                                                ],
+                                                "name": "InnerProductSpace.toNormedSpace",
+                                                "tag": "const"
+                                              },
+                                              "tag": "app"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "arg": {
+                                          "arg": {
+                                            "arg": {
+                                              "arg": {
+                                                "levels": [],
+                                                "name": "Real.normedCommRing",
+                                                "tag": "const"
+                                              },
+                                              "arg_binder_info": "instImplicit",
+                                              "fn": {
+                                                "arg": {
+                                                  "levels": [],
+                                                  "name": "Real",
+                                                  "tag": "const"
+                                                },
+                                                "arg_binder_info": "implicit",
+                                                "fn": {
+                                                  "levels": [
+                                                    {
+                                                      "tag": "zero"
+                                                    }
+                                                  ],
+                                                  "name": "NormedCommRing.toSeminormedCommRing",
+                                                  "tag": "const"
+                                                },
+                                                "tag": "app"
+                                              },
+                                              "tag": "app"
+                                            },
+                                            "arg_binder_info": "instImplicit",
+                                            "fn": {
+                                              "arg": {
+                                                "levels": [],
+                                                "name": "Real",
+                                                "tag": "const"
+                                              },
+                                              "arg_binder_info": "implicit",
+                                              "fn": {
+                                                "levels": [
+                                                  {
+                                                    "tag": "zero"
+                                                  }
+                                                ],
+                                                "name": "SeminormedCommRing.toNonUnitalSeminormedCommRing",
+                                                "tag": "const"
+                                              },
+                                              "tag": "app"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "arg_binder_info": "instImplicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "levels": [
+                                                {
+                                                  "tag": "zero"
+                                                }
+                                              ],
+                                              "name": "NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing",
+                                              "tag": "const"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "NonUnitalSeminormedRing.toSeminormedAddCommGroup",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real.normedField",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "levels": [
+                                                {
+                                                  "tag": "zero"
+                                                },
+                                                {
+                                                  "tag": "zero"
+                                                }
+                                              ],
+                                              "name": "NormedSpace.toModule",
+                                              "tag": "const"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real.instAddCommGroup",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "arg": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real.denselyNormedField",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "instImplicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "levels": [
+                                                {
+                                                  "tag": "zero"
+                                                }
+                                              ],
+                                              "name": "DenselyNormedField.toNontriviallyNormedField",
+                                              "tag": "const"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              },
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "deriv",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "arg_binder_info": "explicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "levels": [
+                                {
+                                  "of": {
+                                    "tag": "zero"
+                                  },
+                                  "tag": "succ"
+                                }
+                              ],
+                              "name": "Eq",
+                              "tag": "const"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "domain": {
+                        "arg": {
+                          "index": "12",
+                          "tag": "fvar"
+                        },
+                        "arg_binder_info": "explicit",
+                        "fn": {
+                          "arg": {
+                            "index": "13",
+                            "tag": "fvar"
+                          },
+                          "arg_binder_info": "explicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "levels": [
+                                {
+                                  "of": {
+                                    "tag": "zero"
+                                  },
+                                  "tag": "succ"
+                                }
+                              ],
+                              "name": "Eq",
+                              "tag": "const"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "domain_is_proposition": true,
+                      "tag": "forall"
+                    },
+                    "arg_binder_info": "explicit",
+                    "fn": {
+                      "levels": [],
+                      "name": "And",
+                      "tag": "const"
+                    },
+                    "tag": "app"
+                  },
+                  "tag": "app"
+                },
+                "arg_binder_info": "explicit",
+                "fn": {
+                  "arg": {
+                    "binder_info": "explicit",
+                    "body": {
+                      "arg": {
+                        "arg": {
+                          "arg": {
+                            "levels": [],
+                            "name": "Real.instZero",
+                            "tag": "const"
+                          },
+                          "arg_binder_info": "instImplicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "levels": [
+                                {
+                                  "tag": "zero"
+                                }
+                              ],
+                              "name": "Zero.toOfNat0",
+                              "tag": "const"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "arg_binder_info": "instImplicit",
+                        "fn": {
+                          "arg": {
+                            "tag": "lit",
+                            "value": "Lean.Literal.natVal 0"
+                          },
+                          "arg_binder_info": "explicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "levels": [
+                                {
+                                  "tag": "zero"
+                                }
+                              ],
+                              "name": "OfNat.ofNat",
+                              "tag": "const"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "arg_binder_info": "explicit",
+                      "fn": {
+                        "arg": {
+                          "arg": {
+                            "index": "4",
+                            "tag": "fvar"
+                          },
+                          "arg_binder_info": "explicit",
+                          "fn": {
+                            "arg": {
+                              "arg": {
+                                "index": "3",
+                                "tag": "fvar"
+                              },
+                              "arg_binder_info": "explicit",
+                              "fn": {
+                                "arg": {
+                                  "index": "2",
+                                  "tag": "fvar"
+                                },
+                                "arg_binder_info": "explicit",
+                                "fn": {
+                                  "sha256": "1ae07f7bf33fbb6e32c5fa3811d09643206ba43465bbf4166b44e7b6313ba07c",
+                                  "tag": "inlined_definition"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "arg_binder_info": "explicit",
+                            "fn": {
+                              "arg": {
+                                "arg": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real.pseudoMetricSpace",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "levels": [
+                                        {
+                                          "tag": "zero"
+                                        }
+                                      ],
+                                      "name": "PseudoMetricSpace.toUniformSpace",
+                                      "tag": "const"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "arg_binder_info": "instImplicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "levels": [
+                                      {
+                                        "tag": "zero"
+                                      }
+                                    ],
+                                    "name": "UniformSpace.toTopologicalSpace",
+                                    "tag": "const"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "arg_binder_info": "instImplicit",
+                              "fn": {
+                                "arg": {
+                                  "arg": {
+                                    "arg": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real.instRCLike",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "RCLike.toInnerProductSpaceReal",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "arg": {
+                                          "arg": {
+                                            "arg": {
+                                              "arg": {
+                                                "levels": [],
+                                                "name": "Real.normedCommRing",
+                                                "tag": "const"
+                                              },
+                                              "arg_binder_info": "instImplicit",
+                                              "fn": {
+                                                "arg": {
+                                                  "levels": [],
+                                                  "name": "Real",
+                                                  "tag": "const"
+                                                },
+                                                "arg_binder_info": "implicit",
+                                                "fn": {
+                                                  "levels": [
+                                                    {
+                                                      "tag": "zero"
+                                                    }
+                                                  ],
+                                                  "name": "NormedCommRing.toSeminormedCommRing",
+                                                  "tag": "const"
+                                                },
+                                                "tag": "app"
+                                              },
+                                              "tag": "app"
+                                            },
+                                            "arg_binder_info": "instImplicit",
+                                            "fn": {
+                                              "arg": {
+                                                "levels": [],
+                                                "name": "Real",
+                                                "tag": "const"
+                                              },
+                                              "arg_binder_info": "implicit",
+                                              "fn": {
+                                                "levels": [
+                                                  {
+                                                    "tag": "zero"
+                                                  }
+                                                ],
+                                                "name": "SeminormedCommRing.toNonUnitalSeminormedCommRing",
+                                                "tag": "const"
+                                              },
+                                              "tag": "app"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "arg_binder_info": "instImplicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "levels": [
+                                                {
+                                                  "tag": "zero"
+                                                }
+                                              ],
+                                              "name": "NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing",
+                                              "tag": "const"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "NonUnitalSeminormedRing.toSeminormedAddCommGroup",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real.instRCLike",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "levels": [
+                                                {
+                                                  "tag": "zero"
+                                                },
+                                                {
+                                                  "tag": "zero"
+                                                }
+                                              ],
+                                              "name": "InnerProductSpace.toNormedSpace",
+                                              "tag": "const"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "arg": {
+                                        "arg": {
+                                          "arg": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real.normedCommRing",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "instImplicit",
+                                            "fn": {
+                                              "arg": {
+                                                "levels": [],
+                                                "name": "Real",
+                                                "tag": "const"
+                                              },
+                                              "arg_binder_info": "implicit",
+                                              "fn": {
+                                                "levels": [
+                                                  {
+                                                    "tag": "zero"
+                                                  }
+                                                ],
+                                                "name": "NormedCommRing.toSeminormedCommRing",
+                                                "tag": "const"
+                                              },
+                                              "tag": "app"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "arg_binder_info": "instImplicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "levels": [
+                                                {
+                                                  "tag": "zero"
+                                                }
+                                              ],
+                                              "name": "SeminormedCommRing.toNonUnitalSeminormedCommRing",
+                                              "tag": "const"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "NonUnitalSeminormedRing.toSeminormedAddCommGroup",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real.normedField",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              },
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "NormedSpace.toModule",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "arg_binder_info": "instImplicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real.instAddCommGroup",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "arg": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real.denselyNormedField",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "DenselyNormedField.toNontriviallyNormedField",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            },
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "deriv",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "arg_binder_info": "explicit",
+                        "fn": {
+                          "arg": {
+                            "levels": [],
+                            "name": "Real.instLT",
+                            "tag": "const"
+                          },
+                          "arg_binder_info": "instImplicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "levels": [
+                                {
+                                  "tag": "zero"
+                                }
+                              ],
+                              "name": "LT.lt",
+                              "tag": "const"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "tag": "app"
+                    },
+                    "domain": {
+                      "arg": {
+                        "index": "13",
+                        "tag": "fvar"
+                      },
+                      "arg_binder_info": "explicit",
+                      "fn": {
+                        "arg": {
+                          "index": "12",
+                          "tag": "fvar"
+                        },
+                        "arg_binder_info": "explicit",
+                        "fn": {
+                          "arg": {
+                            "levels": [],
+                            "name": "Real.instLT",
+                            "tag": "const"
+                          },
+                          "arg_binder_info": "instImplicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "levels": [
+                                {
+                                  "tag": "zero"
+                                }
+                              ],
+                              "name": "LT.lt",
+                              "tag": "const"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "tag": "app"
+                    },
+                    "domain_is_proposition": true,
+                    "tag": "forall"
+                  },
+                  "arg_binder_info": "explicit",
+                  "fn": {
+                    "levels": [],
+                    "name": "And",
+                    "tag": "const"
+                  },
+                  "tag": "app"
+                },
+                "tag": "app"
+              },
+              "domain": {
+                "arg": {
+                  "index": "5",
+                  "tag": "fvar"
+                },
+                "arg_binder_info": "explicit",
+                "fn": {
+                  "sha256": "71c9d18a4f67cc32fb3b220d9a1ef51759dceeea202b3cfaa07f63d9e548fa0b",
+                  "tag": "inlined_definition"
+                },
+                "tag": "app"
+              },
+              "domain_is_proposition": true,
+              "tag": "forall"
+            },
+            "arg_binder_info": "explicit",
+            "fn": {
+              "arg": {
+                "arg": {
+                  "index": "4",
+                  "tag": "fvar"
+                },
+                "arg_binder_info": "explicit",
+                "fn": {
+                  "arg": {
+                    "arg": {
+                      "arg": {
+                        "index": "4",
+                        "tag": "fvar"
+                      },
+                      "arg_binder_info": "explicit",
+                      "fn": {
+                        "index": "1",
+                        "tag": "fvar"
+                      },
+                      "tag": "app"
+                    },
+                    "arg_binder_info": "explicit",
+                    "fn": {
+                      "arg": {
+                        "arg": {
+                          "index": "5",
+                          "tag": "fvar"
+                        },
+                        "arg_binder_info": "explicit",
+                        "fn": {
+                          "arg": {
+                            "arg": {
+                              "arg": {
+                                "index": "12",
+                                "tag": "fvar"
+                              },
+                              "arg_binder_info": "explicit",
+                              "fn": {
+                                "arg": {
+                                  "index": "13",
+                                  "tag": "fvar"
+                                },
+                                "arg_binder_info": "explicit",
+                                "fn": {
+                                  "arg": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real.instSub",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "levels": [
+                                          {
+                                            "tag": "zero"
+                                          }
+                                        ],
+                                        "name": "instHSub",
+                                        "tag": "const"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            },
+                                            {
+                                              "tag": "zero"
+                                            },
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "HSub.hSub",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "arg_binder_info": "explicit",
+                            "fn": {
+                              "arg": {
+                                "arg": {
+                                  "arg": {
+                                    "arg": {
+                                      "index": "4",
+                                      "tag": "fvar"
+                                    },
+                                    "arg_binder_info": "explicit",
+                                    "fn": {
+                                      "arg": {
+                                        "index": "3",
+                                        "tag": "fvar"
+                                      },
+                                      "arg_binder_info": "explicit",
+                                      "fn": {
+                                        "arg": {
+                                          "index": "2",
+                                          "tag": "fvar"
+                                        },
+                                        "arg_binder_info": "explicit",
+                                        "fn": {
+                                          "sha256": "1ae07f7bf33fbb6e32c5fa3811d09643206ba43465bbf4166b44e7b6313ba07c",
+                                          "tag": "inlined_definition"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "arg_binder_info": "explicit",
+                                  "fn": {
+                                    "arg": {
+                                      "arg": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real.instOne",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "One.toOfNat1",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "tag": "lit",
+                                          "value": "Lean.Literal.natVal 1"
+                                        },
+                                        "arg_binder_info": "explicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "OfNat.ofNat",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "arg_binder_info": "explicit",
+                                    "fn": {
+                                      "arg": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real.instSub",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "instHSub",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "arg": {
+                                              "levels": [],
+                                              "name": "Real",
+                                              "tag": "const"
+                                            },
+                                            "arg_binder_info": "implicit",
+                                            "fn": {
+                                              "levels": [
+                                                {
+                                                  "tag": "zero"
+                                                },
+                                                {
+                                                  "tag": "zero"
+                                                },
+                                                {
+                                                  "tag": "zero"
+                                                }
+                                              ],
+                                              "name": "HSub.hSub",
+                                              "tag": "const"
+                                            },
+                                            "tag": "app"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "arg_binder_info": "explicit",
+                                "fn": {
+                                  "arg": {
+                                    "arg": {
+                                      "index": "4",
+                                      "tag": "fvar"
+                                    },
+                                    "arg_binder_info": "explicit",
+                                    "fn": {
+                                      "arg": {
+                                        "index": "3",
+                                        "tag": "fvar"
+                                      },
+                                      "arg_binder_info": "explicit",
+                                      "fn": {
+                                        "arg": {
+                                          "index": "2",
+                                          "tag": "fvar"
+                                        },
+                                        "arg_binder_info": "explicit",
+                                        "fn": {
+                                          "sha256": "1ae07f7bf33fbb6e32c5fa3811d09643206ba43465bbf4166b44e7b6313ba07c",
+                                          "tag": "inlined_definition"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "arg_binder_info": "explicit",
+                                  "fn": {
+                                    "arg": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real.instMul",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "instHMul",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              },
+                                              {
+                                                "tag": "zero"
+                                              },
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "HMul.hMul",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "arg_binder_info": "explicit",
+                              "fn": {
+                                "arg": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real.instMul",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "levels": [
+                                        {
+                                          "tag": "zero"
+                                        }
+                                      ],
+                                      "name": "instHMul",
+                                      "tag": "const"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "arg_binder_info": "instImplicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "levels": [
+                                          {
+                                            "tag": "zero"
+                                          },
+                                          {
+                                            "tag": "zero"
+                                          },
+                                          {
+                                            "tag": "zero"
+                                          }
+                                        ],
+                                        "name": "HMul.hMul",
+                                        "tag": "const"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "arg_binder_info": "explicit",
+                          "fn": {
+                            "arg": {
+                              "arg": {
+                                "levels": [],
+                                "name": "Real.instMul",
+                                "tag": "const"
+                              },
+                              "arg_binder_info": "instImplicit",
+                              "fn": {
+                                "arg": {
+                                  "levels": [],
+                                  "name": "Real",
+                                  "tag": "const"
+                                },
+                                "arg_binder_info": "implicit",
+                                "fn": {
+                                  "levels": [
+                                    {
+                                      "tag": "zero"
+                                    }
+                                  ],
+                                  "name": "instHMul",
+                                  "tag": "const"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "arg_binder_info": "instImplicit",
+                            "fn": {
+                              "arg": {
+                                "levels": [],
+                                "name": "Real",
+                                "tag": "const"
+                              },
+                              "arg_binder_info": "implicit",
+                              "fn": {
+                                "arg": {
+                                  "levels": [],
+                                  "name": "Real",
+                                  "tag": "const"
+                                },
+                                "arg_binder_info": "implicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "levels": [
+                                      {
+                                        "tag": "zero"
+                                      },
+                                      {
+                                        "tag": "zero"
+                                      },
+                                      {
+                                        "tag": "zero"
+                                      }
+                                    ],
+                                    "name": "HMul.hMul",
+                                    "tag": "const"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "arg_binder_info": "explicit",
+                      "fn": {
+                        "arg": {
+                          "arg": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real.instDivInvMonoid",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "instImplicit",
+                            "fn": {
+                              "arg": {
+                                "levels": [],
+                                "name": "Real",
+                                "tag": "const"
+                              },
+                              "arg_binder_info": "implicit",
+                              "fn": {
+                                "levels": [
+                                  {
+                                    "tag": "zero"
+                                  }
+                                ],
+                                "name": "DivInvMonoid.toDiv",
+                                "tag": "const"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "arg_binder_info": "instImplicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "levels": [
+                                {
+                                  "tag": "zero"
+                                }
+                              ],
+                              "name": "instHDiv",
+                              "tag": "const"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "arg_binder_info": "instImplicit",
+                        "fn": {
+                          "arg": {
+                            "levels": [],
+                            "name": "Real",
+                            "tag": "const"
+                          },
+                          "arg_binder_info": "implicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "arg": {
+                                "levels": [],
+                                "name": "Real",
+                                "tag": "const"
+                              },
+                              "arg_binder_info": "implicit",
+                              "fn": {
+                                "levels": [
+                                  {
+                                    "tag": "zero"
+                                  },
+                                  {
+                                    "tag": "zero"
+                                  },
+                                  {
+                                    "tag": "zero"
+                                  }
+                                ],
+                                "name": "HDiv.hDiv",
+                                "tag": "const"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "tag": "app"
+                    },
+                    "tag": "app"
+                  },
+                  "arg_binder_info": "explicit",
+                  "fn": {
+                    "arg": {
+                      "arg": {
+                        "index": "3",
+                        "tag": "fvar"
+                      },
+                      "arg_binder_info": "explicit",
+                      "fn": {
+                        "arg": {
+                          "index": "2",
+                          "tag": "fvar"
+                        },
+                        "arg_binder_info": "explicit",
+                        "fn": {
+                          "sha256": "1ae07f7bf33fbb6e32c5fa3811d09643206ba43465bbf4166b44e7b6313ba07c",
+                          "tag": "inlined_definition"
+                        },
+                        "tag": "app"
+                      },
+                      "tag": "app"
+                    },
+                    "arg_binder_info": "explicit",
+                    "fn": {
+                      "arg": {
+                        "sha256": "57ad948b02a5f2bb5e66b714b33523335b0b65cb8c1271711bd6ef75bac804ad",
+                        "tag": "internal_proof"
+                      },
+                      "arg_binder_info": "instImplicit",
+                      "fn": {
+                        "arg": {
+                          "arg": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real.pseudoMetricSpace",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "instImplicit",
+                            "fn": {
+                              "arg": {
+                                "levels": [],
+                                "name": "Real",
+                                "tag": "const"
+                              },
+                              "arg_binder_info": "implicit",
+                              "fn": {
+                                "levels": [
+                                  {
+                                    "tag": "zero"
+                                  }
+                                ],
+                                "name": "PseudoMetricSpace.toUniformSpace",
+                                "tag": "const"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "arg_binder_info": "instImplicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "implicit",
+                            "fn": {
+                              "levels": [
+                                {
+                                  "tag": "zero"
+                                }
+                              ],
+                              "name": "UniformSpace.toTopologicalSpace",
+                              "tag": "const"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "arg_binder_info": "instImplicit",
+                        "fn": {
+                          "arg": {
+                            "arg": {
+                              "arg": {
+                                "arg": {
+                                  "levels": [],
+                                  "name": "Real.instRCLike",
+                                  "tag": "const"
+                                },
+                                "arg_binder_info": "instImplicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "levels": [
+                                      {
+                                        "tag": "zero"
+                                      }
+                                    ],
+                                    "name": "RCLike.toInnerProductSpaceReal",
+                                    "tag": "const"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "arg_binder_info": "instImplicit",
+                              "fn": {
+                                "arg": {
+                                  "arg": {
+                                    "arg": {
+                                      "arg": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real.normedCommRing",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "instImplicit",
+                                        "fn": {
+                                          "arg": {
+                                            "levels": [],
+                                            "name": "Real",
+                                            "tag": "const"
+                                          },
+                                          "arg_binder_info": "implicit",
+                                          "fn": {
+                                            "levels": [
+                                              {
+                                                "tag": "zero"
+                                              }
+                                            ],
+                                            "name": "NormedCommRing.toSeminormedCommRing",
+                                            "tag": "const"
+                                          },
+                                          "tag": "app"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "SeminormedCommRing.toNonUnitalSeminormedCommRing",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "levels": [
+                                          {
+                                            "tag": "zero"
+                                          }
+                                        ],
+                                        "name": "NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing",
+                                        "tag": "const"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "levels": [
+                                        {
+                                          "tag": "zero"
+                                        }
+                                      ],
+                                      "name": "NonUnitalSeminormedRing.toSeminormedAddCommGroup",
+                                      "tag": "const"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "arg_binder_info": "implicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real.instRCLike",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "levels": [
+                                          {
+                                            "tag": "zero"
+                                          },
+                                          {
+                                            "tag": "zero"
+                                          }
+                                        ],
+                                        "name": "InnerProductSpace.toNormedSpace",
+                                        "tag": "const"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "arg_binder_info": "instImplicit",
+                            "fn": {
+                              "arg": {
+                                "arg": {
+                                  "arg": {
+                                    "arg": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real.normedCommRing",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "instImplicit",
+                                      "fn": {
+                                        "arg": {
+                                          "levels": [],
+                                          "name": "Real",
+                                          "tag": "const"
+                                        },
+                                        "arg_binder_info": "implicit",
+                                        "fn": {
+                                          "levels": [
+                                            {
+                                              "tag": "zero"
+                                            }
+                                          ],
+                                          "name": "NormedCommRing.toSeminormedCommRing",
+                                          "tag": "const"
+                                        },
+                                        "tag": "app"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "arg_binder_info": "instImplicit",
+                                    "fn": {
+                                      "arg": {
+                                        "levels": [],
+                                        "name": "Real",
+                                        "tag": "const"
+                                      },
+                                      "arg_binder_info": "implicit",
+                                      "fn": {
+                                        "levels": [
+                                          {
+                                            "tag": "zero"
+                                          }
+                                        ],
+                                        "name": "SeminormedCommRing.toNonUnitalSeminormedCommRing",
+                                        "tag": "const"
+                                      },
+                                      "tag": "app"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "levels": [
+                                        {
+                                          "tag": "zero"
+                                        }
+                                      ],
+                                      "name": "NonUnitalSeminormedCommRing.toNonUnitalSeminormedRing",
+                                      "tag": "const"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "arg_binder_info": "instImplicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "levels": [
+                                      {
+                                        "tag": "zero"
+                                      }
+                                    ],
+                                    "name": "NonUnitalSeminormedRing.toSeminormedAddCommGroup",
+                                    "tag": "const"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "arg_binder_info": "implicit",
+                              "fn": {
+                                "arg": {
+                                  "levels": [],
+                                  "name": "Real.normedField",
+                                  "tag": "const"
+                                },
+                                "arg_binder_info": "implicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "levels": [
+                                        {
+                                          "tag": "zero"
+                                        },
+                                        {
+                                          "tag": "zero"
+                                        }
+                                      ],
+                                      "name": "NormedSpace.toModule",
+                                      "tag": "const"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "arg_binder_info": "instImplicit",
+                          "fn": {
+                            "arg": {
+                              "levels": [],
+                              "name": "Real.instAddCommGroup",
+                              "tag": "const"
+                            },
+                            "arg_binder_info": "instImplicit",
+                            "fn": {
+                              "arg": {
+                                "levels": [],
+                                "name": "Real",
+                                "tag": "const"
+                              },
+                              "arg_binder_info": "implicit",
+                              "fn": {
+                                "arg": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real.denselyNormedField",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "instImplicit",
+                                  "fn": {
+                                    "arg": {
+                                      "levels": [],
+                                      "name": "Real",
+                                      "tag": "const"
+                                    },
+                                    "arg_binder_info": "implicit",
+                                    "fn": {
+                                      "levels": [
+                                        {
+                                          "tag": "zero"
+                                        }
+                                      ],
+                                      "name": "DenselyNormedField.toNontriviallyNormedField",
+                                      "tag": "const"
+                                    },
+                                    "tag": "app"
+                                  },
+                                  "tag": "app"
+                                },
+                                "arg_binder_info": "instImplicit",
+                                "fn": {
+                                  "arg": {
+                                    "levels": [],
+                                    "name": "Real",
+                                    "tag": "const"
+                                  },
+                                  "arg_binder_info": "implicit",
+                                  "fn": {
+                                    "levels": [
+                                      {
+                                        "tag": "zero"
+                                      },
+                                      {
+                                        "tag": "zero"
+                                      }
+                                    ],
+                                    "name": "HasDerivAt",
+                                    "tag": "const"
+                                  },
+                                  "tag": "app"
+                                },
+                                "tag": "app"
+                              },
+                              "tag": "app"
+                            },
+                            "tag": "app"
+                          },
+                          "tag": "app"
+                        },
+                        "tag": "app"
+                      },
+                      "tag": "app"
+                    },
+                    "tag": "app"
+                  },
+                  "tag": "app"
+                },
+                "tag": "app"
+              },
+              "arg_binder_info": "explicit",
+              "fn": {
+                "levels": [],
+                "name": "And",
+                "tag": "const"
+              },
+              "tag": "app"
+            },
+            "tag": "app"
+          },
+          "display": "HasDerivAt (Barraza26LaborComposition.informalHoursShare ellF ellI)\n    (Barraza26LaborComposition.informalHoursShare ellF ellI a *\n            (1 - Barraza26LaborComposition.informalHoursShare ellF ellI a) *\n          (phiI - phiF) *\n        d /\n      V a)\n    a ∧\n  (Barraza26LaborComposition.localConcavityCondition d →\n    (phiF < phiI → deriv (Barraza26LaborComposition.informalHoursShare ellF ellI) a < 0) ∧\n      (phiI = phiF → deriv (Barraza26LaborComposition.informalHoursShare ellF ellI) a = 0) ∧\n        (phiI < phiF → 0 < deriv (Barraza26LaborComposition.informalHoursShare ellF ellI) a))"
+        }
+      ]
+    }
+  },
+  "paper_prerequisite_targets": {
+    "Barraza26LaborComposition.comparisonIndividualCondition": {
+      "display": "type:\nℝ → ℝ → ℝ → ℝ → Prop\n\nvalue:\nfun (a aLower RF RI : ℝ) => aLower < a ∧ 0 < RF ∧ 0 < RI",
+      "display_sha256": "525b7b81551c4a1c0153067d0c9eb4da8e8ccc724e8424a8690075f6ffcbb2ac",
+      "declaration_kind": "definition",
+      "root_expanded": true,
+      "direct_paper_declarations": [],
+      "direct_library_declarations": [],
+      "erased_proof_declarations": [],
+      "elaborated_signature_sha256": "63d93de363659d20b8d4aee25e19c692c85917f29e90204b953eae2d48c83812"
+    },
+    "Barraza26LaborComposition.informalHoursShare": {
+      "display": "type:\n(ℝ → ℝ) → (ℝ → ℝ) → ℝ → ℝ\n\nvalue:\nfun (ellF ellI : ℝ → ℝ) (a : ℝ) => ellI a / (ellF a + ellI a)",
+      "display_sha256": "50e6781bb3a24191bc7b9ae0b4c06de0a14c283bb1611ca7d859f38010bb4ea8",
+      "declaration_kind": "definition",
+      "root_expanded": true,
+      "direct_paper_declarations": [],
+      "direct_library_declarations": [],
+      "erased_proof_declarations": [],
+      "elaborated_signature_sha256": "9b098c2cb6a5382642969633c59e1466df365d3b34611049a6ce7716c26ea6b3"
+    },
+    "Barraza26LaborComposition.interiorRegularBranchCondition": {
+      "display": "type:\n(ℝ → ℝ) → (ℝ → ℝ) → (ℝ → ℝ) → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop\n\nvalue:\nfun (V ellF ellI : ℝ → ℝ) (a d Hbar RF RI psiF psiI phiF phiI : ℝ) =>\n  HasDerivAt V d a ∧\n    0 < V a ∧\n      ∀ᶠ (x : ℝ) in nhds a,\n        0 < ellF x ∧\n          0 < ellI x ∧\n            ellF x + ellI x < Hbar ∧\n              V x * RF - psiF * ellF x ^ (1 / phiF) = 0 ∧ V x * RI - psiI * ellI x ^ (1 / phiI) = 0",
+      "display_sha256": "93310a8d402f994bd3a8a7cf0866f54baeff44a03db27bd2616bbbeb78a9ff8f",
+      "declaration_kind": "definition",
+      "root_expanded": true,
+      "direct_paper_declarations": [],
+      "direct_library_declarations": [],
+      "erased_proof_declarations": [
+        "Barraza26LaborComposition.interiorRegularBranchCondition._proof_1"
+      ],
+      "elaborated_signature_sha256": "5fa856fc2d4183976d18a4d3eb977361b7b8b8d9da65cca1d2b303b0120ea0a2"
+    },
+    "Barraza26LaborComposition.laborPreferencesCondition": {
+      "display": "type:\n(ℝ → ℝ → ℝ) → ℝ → ℝ → ℝ → ℝ → Prop\n\nvalue:\nfun (laborCost : ℝ → ℝ → ℝ) (psiF psiI phiF phiI : ℝ) =>\n  0 < psiF ∧\n    0 < psiI ∧\n      0 < phiF ∧\n        0 < phiI ∧\n          ∀ (ellF ellI : ℝ),\n            0 ≤ ellF →\n              0 ≤ ellI →\n                laborCost ellF ellI =\n                  psiF * ellF ^ (1 + 1 / phiF) / (1 + 1 / phiF) + psiI * ellI ^ (1 + 1 / phiI) / (1 + 1 / phiI)",
+      "display_sha256": "d263f407a01b0a8f87eed0c7cf86245b05f3c61ada7f0b1cc6c1de8e3aae7c57",
+      "declaration_kind": "definition",
+      "root_expanded": true,
+      "direct_paper_declarations": [],
+      "direct_library_declarations": [],
+      "erased_proof_declarations": [],
+      "elaborated_signature_sha256": "ea0b4c270603471a451d2c843b3e1f9fece1857321ee662c63b8b14e574748de"
+    },
+    "Barraza26LaborComposition.localConcavityCondition": {
+      "display": "type:\nℝ → Prop\n\nvalue:\nfun (d : ℝ) => d < 0",
+      "display_sha256": "376bffbaac56bc3a448ffc99197239576bda6d1be6c7f1d975dda6a58d937d24",
+      "declaration_kind": "definition",
+      "root_expanded": true,
+      "direct_paper_declarations": [],
+      "direct_library_declarations": [],
+      "erased_proof_declarations": [],
+      "elaborated_signature_sha256": "6915017ed37191169f5cafb22d254546bceb50de77b38238a04b1e60be16b783"
+    }
+  },
+  "paper_prerequisite_supporting_declarations_sha256": {
+    "Barraza26LaborComposition.comparisonIndividualCondition": "25bbed3ff956b90416491c383bbbc9fef742a055999ed55fcf88f1dc006018da",
+    "Barraza26LaborComposition.informalHoursShare": "3462e8fc79d9e9f08da24bfeb714764b4bfd485c18947931cf77b1c6fa69bd3e",
+    "Barraza26LaborComposition.interiorRegularBranchCondition": "c8f0a9b3f2da4086835409faa6bafb1048221592c764971f0d6f5347674a3a38",
+    "Barraza26LaborComposition.laborPreferencesCondition": "1bcbb27da537526fc3448d69f2fdb9e5ec1ca286f326f63709bd1c27428695bc",
+    "Barraza26LaborComposition.localConcavityCondition": "8b7422080de8b363c4ed6af52ad4ebc25bf7a64e256709d21661399b5143c8ec"
+  },
+  "paper_semantic_review_targets": {
+    "Barraza26LaborComposition.comparisonIndividualCondition": {
+      "display": "type:\nℝ → ℝ → ℝ → ℝ → Prop\n\nvalue:\nfun (a aLower RF RI : ℝ) => aLower < a ∧ 0 < RF ∧ 0 < RI",
+      "display_sha256": "525b7b81551c4a1c0153067d0c9eb4da8e8ccc724e8424a8690075f6ffcbb2ac",
+      "declaration_kind": "definition",
+      "root_expanded": true,
+      "direct_paper_declarations": [],
+      "direct_library_declarations": [],
+      "erased_proof_declarations": [],
+      "elaborated_signature_sha256": "63d93de363659d20b8d4aee25e19c692c85917f29e90204b953eae2d48c83812"
+    },
+    "Barraza26LaborComposition.informalHoursShare": {
+      "display": "type:\n(ℝ → ℝ) → (ℝ → ℝ) → ℝ → ℝ\n\nvalue:\nfun (ellF ellI : ℝ → ℝ) (a : ℝ) => ellI a / (ellF a + ellI a)",
+      "display_sha256": "50e6781bb3a24191bc7b9ae0b4c06de0a14c283bb1611ca7d859f38010bb4ea8",
+      "declaration_kind": "definition",
+      "root_expanded": true,
+      "direct_paper_declarations": [],
+      "direct_library_declarations": [],
+      "erased_proof_declarations": [],
+      "elaborated_signature_sha256": "9b098c2cb6a5382642969633c59e1466df365d3b34611049a6ce7716c26ea6b3"
+    },
+    "Barraza26LaborComposition.interiorRegularBranchCondition": {
+      "display": "type:\n(ℝ → ℝ) → (ℝ → ℝ) → (ℝ → ℝ) → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → ℝ → Prop\n\nvalue:\nfun (V ellF ellI : ℝ → ℝ) (a d Hbar RF RI psiF psiI phiF phiI : ℝ) =>\n  HasDerivAt V d a ∧\n    0 < V a ∧\n      ∀ᶠ (x : ℝ) in nhds a,\n        0 < ellF x ∧\n          0 < ellI x ∧\n            ellF x + ellI x < Hbar ∧\n              V x * RF - psiF * ellF x ^ (1 / phiF) = 0 ∧ V x * RI - psiI * ellI x ^ (1 / phiI) = 0",
+      "display_sha256": "93310a8d402f994bd3a8a7cf0866f54baeff44a03db27bd2616bbbeb78a9ff8f",
+      "declaration_kind": "definition",
+      "root_expanded": true,
+      "direct_paper_declarations": [],
+      "direct_library_declarations": [],
+      "erased_proof_declarations": [
+        "Barraza26LaborComposition.interiorRegularBranchCondition._proof_1"
+      ],
+      "elaborated_signature_sha256": "5fa856fc2d4183976d18a4d3eb977361b7b8b8d9da65cca1d2b303b0120ea0a2"
+    },
+    "Barraza26LaborComposition.laborPreferencesCondition": {
+      "display": "type:\n(ℝ → ℝ → ℝ) → ℝ → ℝ → ℝ → ℝ → Prop\n\nvalue:\nfun (laborCost : ℝ → ℝ → ℝ) (psiF psiI phiF phiI : ℝ) =>\n  0 < psiF ∧\n    0 < psiI ∧\n      0 < phiF ∧\n        0 < phiI ∧\n          ∀ (ellF ellI : ℝ),\n            0 ≤ ellF →\n              0 ≤ ellI →\n                laborCost ellF ellI =\n                  psiF * ellF ^ (1 + 1 / phiF) / (1 + 1 / phiF) + psiI * ellI ^ (1 + 1 / phiI) / (1 + 1 / phiI)",
+      "display_sha256": "d263f407a01b0a8f87eed0c7cf86245b05f3c61ada7f0b1cc6c1de8e3aae7c57",
+      "declaration_kind": "definition",
+      "root_expanded": true,
+      "direct_paper_declarations": [],
+      "direct_library_declarations": [],
+      "erased_proof_declarations": [],
+      "elaborated_signature_sha256": "ea0b4c270603471a451d2c843b3e1f9fece1857321ee662c63b8b14e574748de"
+    },
+    "Barraza26LaborComposition.localConcavityCondition": {
+      "display": "type:\nℝ → Prop\n\nvalue:\nfun (d : ℝ) => d < 0",
+      "display_sha256": "376bffbaac56bc3a448ffc99197239576bda6d1be6c7f1d975dda6a58d937d24",
+      "declaration_kind": "definition",
+      "root_expanded": true,
+      "direct_paper_declarations": [],
+      "direct_library_declarations": [],
+      "erased_proof_declarations": [],
+      "elaborated_signature_sha256": "6915017ed37191169f5cafb22d254546bceb50de77b38238a04b1e60be16b783"
+    }
+  },
+  "paper_semantic_review_supporting_declarations_sha256": {
+    "Barraza26LaborComposition.comparisonIndividualCondition": "25bbed3ff956b90416491c383bbbc9fef742a055999ed55fcf88f1dc006018da",
+    "Barraza26LaborComposition.informalHoursShare": "3462e8fc79d9e9f08da24bfeb714764b4bfd485c18947931cf77b1c6fa69bd3e",
+    "Barraza26LaborComposition.interiorRegularBranchCondition": "c8f0a9b3f2da4086835409faa6bafb1048221592c764971f0d6f5347674a3a38",
+    "Barraza26LaborComposition.laborPreferencesCondition": "1bcbb27da537526fc3448d69f2fdb9e5ec1ca286f326f63709bd1c27428695bc",
+    "Barraza26LaborComposition.localConcavityCondition": "8b7422080de8b363c4ed6af52ad4ebc25bf7a64e256709d21661399b5143c8ec"
+  },
+  "library_semantic_targets": {},
+  "library_declaration_sources": {},
+  "library_semantic_target_errors": {},
+  "library_semantic_source_modules_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

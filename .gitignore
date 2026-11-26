@@ -29,3 +29,14 @@ DNI*
 
 # Contexto local del proyecto de tesis (copias de HA-IE2025): no se sube
 _contexto/
+
+# Preserve AppliedModelingLib's paper-local exclusions in the copied folder.
+lean/**/.review_traces/*
+!lean/**/.review_traces/
+!lean/**/.review_traces/paper_theorem_validations.jsonl
+lean/*.txt
+!lean/citation_source.txt
+!lean/*PLAN*.txt
+!lean/HANDOFF*.txt
+!lean/*AUDIT*.txt
+!lean/PAPER_NOTES.txt

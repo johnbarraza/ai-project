@@ -62,12 +62,11 @@
   "precision_certified": false,
   "ready_for_submission": false,
   "local_lean_checked": true,
-  "official_applied_modeling_workflow": false,
+  "official_applied_modeling_workflow": true,
   "official_workflow_started": true,
   "official_snapshot_identity_checked": true,
   "official_fast_check_retained": true,
   "remaining_requirements": [
-    "Cierre oficial de la formalización cotejada con el paper",
     "Derivaciones manuscritas completas y corrección de la hoja 01"
   ]
 }

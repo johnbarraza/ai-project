@@ -144,24 +144,53 @@
       "B26-FIXED-RETURNS-SCALARS"
     ]
   },
+  "initialize_selected_source_claim_atoms": true,
+  "explicit_source_claim_atoms": {
+    "compositionConditionalHours": [
+      {
+        "id": "identity",
+        "source_locator": "source-audited.tex:131-139",
+        "semantic_claim": "Interior informal-hours share derivative identity under Assumptions 1-3.",
+        "verbatim_source_clause": "Bajo los supuestos \\ref{ass:fixed}--\\ref{ass:regular}, la política interior satisface\n\\begin{equation}\\label{eq:main}\n\\frac{\\partial\\sI(a_0,z)}{\\partial a}\n=\\sI(a_0,z)\\bigl(1-\\sI(a_0,z)\\bigr)\n(\\phi_I-\\phi_F)\\frac{\\Vaa(a_0,z)}{\\Va(a_0,z)} .\n\\end{equation}"
+      },
+      {
+        "id": "negative_sign",
+        "source_locator": "source-audited.tex:131-139",
+        "semantic_claim": "Negative derivative sign case under local concavity when phi_I exceeds phi_F.",
+        "verbatim_source_clause": "la derivada es negativa cuando \\(\\phi_I>\\phi_F\\)"
+      },
+      {
+        "id": "zero_sign",
+        "source_locator": "source-audited.tex:131-139",
+        "semantic_claim": "Zero derivative sign case under local concavity when phi_I equals phi_F.",
+        "verbatim_source_clause": "cero cuando \\(\\phi_I=\\phi_F\\)"
+      },
+      {
+        "id": "positive_sign",
+        "source_locator": "source-audited.tex:131-139",
+        "semantic_claim": "Positive derivative sign case under local concavity when phi_I is below phi_F.",
+        "verbatim_source_clause": "positiva cuando \\(\\phi_I<\\phi_F\\)"
+      }
+    ]
+  },
   "prose_definition_reconciliations": {
     "informalHoursShare": {
       "presentation_id": "informal_hours_share_definition",
-      "semantic_basis": "The proposed item defines the same object, s_I=ell_I/(ell_F+ell_I), and captures both adjoining scope statements: it counts hours rather than classifying a person ex ante, and 0<s_I<1 holds under positive returns and the interior branch.",
+      "semantic_basis": "The proposed item reproduces s_I=ell_I/(ell_F+ell_I), the hours-not-person classification scope, and the conditional range 0<s_I<1; presentation informal_hours_share_definition identifies the same object at the exact source locator.",
       "validator": "/root/formalizacion_final/definition_reconciler",
       "validator_type": "agent",
-      "validated_at": "2026-11-24T15:00:00Z"
+      "validated_at": "2026-11-24T22:45:00Z"
     }
   },
   "source_named_result_inventory_review": {
     "complete": true,
-    "validator": "/root/formalizacion_final/source_inventory",
-    "method": "complete source-only read of all 297 TeX lines and all 549 cached PDF-extraction lines before consulting Lean",
-    "validated_at": "2026-11-23T00:00:00Z",
+    "validator": "/root/formalizacion_final/source_inventory_repin",
+    "method": "complete source-only read of all 373 TeX lines and all 15 PDF pages before consulting Lean; classified the four recorded holistic candidates and all 8 figures, 4 captioned tables, and numerical prose as deep-only",
+    "validated_at": "2026-11-24T15:20:00Z",
     "prose_definition_presentations": [
       {
         "id": "informal_hours_share_definition",
-        "source_locator": "papers/Barraza26LaborComposition/source-audited.tex:123-124",
+        "source_locator": "papers/Barraza26LaborComposition/source-audited.tex:128-129",
         "defined_entity_kind": "object",
         "defined_object": "\\sI",
         "scope_disposition": "normal_named_theory_definition"
@@ -169,56 +198,49 @@
     ],
     "candidate_presentations": [
       {
-        "id": "candidate_abstract_summary",
-        "source_locator": "source-audited.tex:24-26",
-        "presentation_label": "abstract mechanism summary",
+        "id": "candidate_diagnostic_identity",
+        "source_locator": "source-audited.tex:319-324",
+        "presentation_label": "diagnostic identity and precision limits",
         "scope_disposition": "deep_audit_material",
-        "semantic_basis": "The abstract summarizes the selected proposition and its limits; it is not a second independent named result."
+        "semantic_basis": "This diagnostic discussion reports numerical checks and precision limits; it is not an independent named theoretical result."
       },
       {
-        "id": "candidate_scope_boundary",
-        "source_locator": "source-audited.tex:120-120",
-        "presentation_label": "local-result scope boundary",
+        "id": "candidate_appendix_lean_table",
+        "source_locator": "source-audited.tex:346-351",
+        "presentation_label": "appendix Lean correspondence table",
         "scope_disposition": "deep_audit_material",
-        "semantic_basis": "This paragraph states the local and boundary scope of the selected assumptions and proposition rather than an independent result."
+        "semantic_basis": "The appendix table records implementation correspondence and open review status rather than a separate paper theorem."
       },
       {
-        "id": "candidate_result_interpretation",
-        "source_locator": "source-audited.tex:171-173",
-        "presentation_label": "post-proposition interpretation",
+        "id": "candidate_cap_kkt",
+        "source_locator": "source-audited.tex:359-365",
+        "presentation_label": "cap KKT collaboration note",
         "scope_disposition": "deep_audit_material",
-        "semantic_basis": "These paragraphs interpret and restate consequences of Proposition 1 without presenting another independent result."
+        "semantic_basis": "This collaboration note records the cap KKT equations and a numerical diagnostic verdict; it is not an independent named result."
       },
       {
-        "id": "candidate_conclusion_restatement",
-        "source_locator": "source-audited.tex:262-263",
-        "presentation_label": "conclusion restatement",
+        "id": "candidate_quotient_power_correction",
+        "source_locator": "source-audited.tex:369-372",
+        "presentation_label": "quotient and power correction note",
         "scope_disposition": "deep_audit_material",
-        "semantic_basis": "The conclusion restates the selected conditional mechanism and numerical discussion; it is not another independent result."
-      },
-      {
-        "id": "candidate_lean_correspondence",
-        "source_locator": "source-audited.tex:270-283",
-        "presentation_label": "appendix Lean correspondence",
-        "scope_disposition": "deep_audit_material",
-        "semantic_basis": "The appendix records implementation correspondence and pending review status rather than a separate paper theorem."
+        "semantic_basis": "This appendix authorship note records a manuscript correction and remaining work; it is not an independent source result."
       }
     ],
     "source_region_partition": {
       "complete": true,
-      "validator": "/root/formalizacion_final/source_inventory",
-      "method": "complete source-only read of all 297 TeX lines and all 549 cached PDF-extraction lines before consulting Lean",
-      "validated_at": "2026-11-23T00:00:00Z",
+      "validator": "/root/formalizacion_final/source_inventory_repin",
+      "method": "complete source-only read of all 373 TeX lines and all 15 PDF pages before consulting Lean; classified the four recorded holistic candidates and all 8 figures, 4 captioned tables, and numerical prose as deep-only",
+      "validated_at": "2026-11-24T15:20:00Z",
       "regions": [
         {
           "id": "main_text",
           "kind": "main_text",
-          "source_locator": "source-audited.tex:1-269"
+          "source_locator": "source-audited.tex:1-340"
         },
         {
           "id": "appendix",
           "kind": "appendix",
-          "source_locator": "source-audited.tex:270-297"
+          "source_locator": "source-audited.tex:341-373"
         }
       ],
       "source_item_regions": {
@@ -230,11 +252,10 @@
         "compositionConditionalHours": "main_text"
       },
       "candidate_presentation_regions": {
-        "candidate_abstract_summary": "main_text",
-        "candidate_scope_boundary": "main_text",
-        "candidate_result_interpretation": "main_text",
-        "candidate_conclusion_restatement": "main_text",
-        "candidate_lean_correspondence": "appendix"
+        "candidate_diagnostic_identity": "main_text",
+        "candidate_appendix_lean_table": "appendix",
+        "candidate_cap_kkt": "appendix",
+        "candidate_quotient_power_correction": "appendix"
       },
       "prose_definition_presentation_regions": {
         "informal_hours_share_definition": "main_text"

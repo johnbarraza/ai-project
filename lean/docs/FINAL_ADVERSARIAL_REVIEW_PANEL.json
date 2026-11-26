@@ -1,0 +1,21 @@
+{
+  "schema": 1,
+  "paper": "Barraza26LaborComposition",
+  "review_material_sha256": "b67c5bbbdbc90dcc0062538e3536e0cb00b7afdaea8e73a57cd32c36e7cb95bb",
+  "required_reviewer_count": 1,
+  "reviews": [
+    {
+      "reviewer_identity": "barraza26-final-adversary-20261126-session-02",
+      "audit_artifact_path": "docs/AGENT_SOURCE_AUDIT.md",
+      "audit_artifact_sha256": "6171ab9a7adcfa762257a1730baac8040f872026b374cf348e42950133bebf85",
+      "reviewed_surface_sha256": "b67c5bbbdbc90dcc0062538e3536e0cb00b7afdaea8e73a57cd32c36e7cb95bb",
+      "judgment": "PASS",
+      "scope": "complete_current_surface",
+      "reviewed_at": "2026-11-26T13:51:37Z",
+      "independence": {
+        "did_not_author_or_repair": true,
+        "did_not_issue_semantic_judgments": true
+      }
+    }
+  ]
+}

@@ -1,18 +1,18 @@
-# Entrega del paper: revisión del 24nov2026
+# Entrega del paper: revisión del 2026-11-26
 
-La regla vigente es el [issue #7, secciones 5–7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7), consultado nuevamente el 24 de noviembre: repositorio completo en `main` el **26 de noviembre a las 22:00, Lima**. El paper requiere entre 8 y 20 páginas de cuerpo, 11pt, una columna y márgenes de una pulgada. La presentación fue otra entrega y se conserva.
+La regla vigente es el [issue #7, secciones 5–7](https://github.com/alexanderquispe/AI-Econ-Modeling/issues/7), consultado nuevamente el 26 de noviembre: repositorio completo en `main` el **26 de noviembre a las 22:00, Lima**. El paper requiere entre 8 y 20 páginas de cuerpo, 11pt, una columna y márgenes de una pulgada. La presentación fue otra entrega y se conserva.
 
 | Requisito | Situación observada | Trabajo de cierre |
 |---|---|---|
-| Paper `.tex`, `.bib`, `.pdf` | Versión24nov: 13 páginas de cuerpo, 15 totales; GE con/sin reajuste, contrastes de tiempo y bibliografía incorporados | Cerrar la tabla y evidencia Lean; completar y cotejar las hojas personales |
+| Paper `.tex`, `.bib`, `.pdf` | Versión de cierre: 13 páginas de cuerpo, 15 totales; GE con/sin reajuste, contrastes de tiempo y bibliografía incorporados; tabla y evidencia Lean validadas | Completar y cotejar las hojas personales |
 | Fuentes y literatura | Seis referencias, incluido el modelo coautorado y el cotejo BCRP de elasticidades | Conservar límites de acceso/paginación y evitar afirmar novedad o elasticidades identificadas para Perú |
 | Código y figuras reproducibles | `code/verify.py` pasa; corregido el recibo Lean frente a LF/CRLF | Se integraron 23 GE auditados y cuatro figuras nuevas para el paper |
-| Formalización propia | Carpeta oficial copiada íntegra en `lean/`, prototipo preservado en `lean-prototype/`; check rápido y prueba compilados | [Revisión semántica y cierre abiertos](estado-lean.md), con bloqueo por límite de uso; tabla de una fila actualizada |
-| Hojas personales | Una hoja original con errata; guías laboral y macro disponibles, con comprobaciones simbólicas en `code/verify.py` | Corregir a mano y completar todas las derivaciones personales; ver `hand/README.md` |
+| Formalización propia | Carpeta oficial íntegra, revisión de los enunciados y fidelidad de prueba aprobadas | Cierre canónico validado; revisión humana pendiente y [estado detallado](estado-lean.md) |
+| Hojas personales | Una hoja original con errata; guía laboral y guía macro de preparación disponibles | Corregir a mano y completar todas las derivaciones personales |
 | Colaboración con IA | Registro actualizado, veredictos en el paper y enlace a la versión cruda | Corrección ortográfica autorizada aplicada solo a erratas inequívocas del usuario; respuestas de IA y textos copiados preservados |
 | README de una página | Actualizado al estado real del paper y de sus componentes | Mantener abiertos los requisitos que aún no están completos |
 | Propuesta y ambos decks | Versionados en `main` | Conservar fuentes/PDF históricos |
-| CI y publicación | [PR#14](https://github.com/johnbarraza/ai-project/pull/14) fusionado el24nov con código/LaTeX aprobados; fuente6777134 fijada | Incorporar el cierre Lean y los archivos personales faltantes por PR; workflow conservado |
+| CI y publicación | Avances publicados por PR #14, #15 y #16; cierre integrado mediante [PR #17](https://github.com/johnbarraza/ai-project/pull/17) | Workflow conservado; el estado del último commit y PR documenta sus checks y publicación |
 
 ## Nuevos resultados preparados
 

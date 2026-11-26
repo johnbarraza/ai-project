@@ -1,23 +1,28 @@
-# Formalización del paper, 24 de noviembre de 2026
+# Formalización del paper, 2026-11-26
 
-**Continuación del 25 de noviembre.** En el worktree de ejecución se repararon las anclas y pasaron las revisiones previas. La primera auditoría final detectó F-01: la condición Lean de preferencias recogía positividad, pero omitía codificar el costo laboral separable exacto del paper. Se está reparando esa interfaz y se volverán a revisar los elementos afectados. El modelo y los enunciados del paper se conservan. La carpeta incorporada abajo es el snapshot anterior; todavía no se declara aceptación canónica. Las guías y sus comprobaciones macro pueden utilizarse mientras termina ese proceso.
+**Cierre aceptado:** el validador canónico terminó con salida 0.
 
-La carpeta [lean/](../lean/) copia íntegramente el directorio generado `papers/Barraza26LaborComposition/` de AppliedModelingLib. Se respetó su `.gitignore`, sin forzar fuentes PDF ni archivos ignorados. El prototipo anterior se conserva en [lean-prototype/](../lean-prototype/). El [manifiesto](lean-workflow.json) fija los hashes publicables y los comandos realmente ejecutados.
+La fuente matemática es el [paper publicado en 6777134](https://github.com/johnbarraza/ai-project/blob/6777134ba22670ebd53b65d21a48d719c09b3fbd/paper/paper.pdf). Los cuatro supuestos, la Proposición 1 y su prueba ordinaria se conservan por hash. Las aclaraciones editoriales y la tabla de evidencia se actualizaron después.
 
-La fuente vigente es el [paper publicado en 6777134](https://github.com/johnbarraza/ai-project/blob/6777134ba22670ebd53b65d21a48d719c09b3fbd/paper/paper.pdf). El flujo se inició con GPT-5.6 Sol, esfuerzo `xhigh`, como pide el curso. La reparación de interfaz y el inventario independiente de esa fuente avanzaron; el autor y coordinador se detuvieron después por un límite de uso. No se sustituyó esa revisión por una aceptación inventada.
+La carpeta `lean/` es una copia completa y exacta del directorio generado, con su `.gitignore` respetado. Los archivos ignorados se mantienen fuera del índice de Git, sin force-add. El prototipo histórico está en `lean-prototype/`. El [manifiesto](lean-workflow.json) vincula los archivos de texto mediante LF y los binarios mediante sus bytes exactos.
 
-| Evidencia | Resultado y alcance |
+| Componente | Evidencia y alcance |
 |---|---|
-| [Check del curso](../lean/contribution-check-fast.txt), `python3 scripts/paper_contribution.py check Barraza26LaborComposition --fast` | Salida 0 el 24 de noviembre. Compilación forzada de `PaperInterface` y control de espacios del diff. No es una credencial de aceptación semántica. |
-| [Build adicional](../lean/proof-interface-build.txt), `lake build +Barraza26LaborComposition.ProofInterface` | Salida 0. Incluye el endpoint `Barraza26LaborComposition.compositionConditionalHours`, de tipo `compositionConditionalHoursSpec`, y sus dependencias. |
-| [Interfaz](../lean/PaperInterface.lean) y [prueba](../lean/ProofInterface.lean) | Un solo Spec y un endpoint para la Proposición 1. Se parte de las FOC de una rama interior, se recuperan las políticas y se prueba la identidad y los signos. No se prueba existencia del GE ni concavidad global. |
-| Inventario independiente del paper | Una Proposición y cuatro Supuestos. Los supuestos y la definición de la fracción son prerrequisitos; no añaden resultados numerados. |
-| Revisión semántica y cierre | **Abiertos.** Falta completar la migración del mapa, revisar independientemente la expansión exacta del Spec y los prerrequisitos, y ejecutar el cierre del protocolo. No existe `FINAL_CLOSURE_RECEIPT.md`. |
+| Enunciados | Un resultado y sus prerrequisitos, con los juicios independientes retenidos en la carpeta. El cierre valida su vigencia. |
+| Prueba | FOC a políticas explícitas, derivada, regla de la cadena y tres signos. Endpoint `compositionConditionalHours`, tipo `compositionConditionalHoursSpec`. |
+| Fidelidad a la prueba ordinaria | Revisión independiente y sus registros en la carpeta generada. |
+| Check del curso | [Salida real](lean-course-check.txt), exit 0. La compilación por sí sola no establece aceptación semántica. |
+| Cierre canónico | [Salida real del validador](lean-closure-validation.txt). El manifiesto registra su código de salida efectivo. |
+| Revisión humana | Pendiente. No se inventa aprobación ni comprensión personal. |
 
-Los archivos generados conservan su estado de borrador: el README dice `Not started`, `status.json` contiene campos de plantilla y algunas notas mantienen el pin del 12 de noviembre o localizadores anteriores. No se editó la copia para aparentar un cierre. Esta página y el manifiesto explican el progreso posterior y esas limitaciones. El estado de la Proposición 1 en el apéndice del paper es **abierto**, aunque su endpoint compile.
+Las diez etapas del cierre estricto terminaron sin errores. El wrapper adicional `paper_contribution.py check Barraza26LaborComposition` terminó con exit 1: después del cierre y de sincronizar el README mediante la herramienta oficial, exige una acción ejecutable, pero el planificador devuelve `closeout_complete: true` y `next_action: null`. Se conserva la [salida completa](../lean/docs/generated/checks/paper-contribution-check-full.txt). Este wrapper no se presenta como aprobado; el check `--fast` exigido por el curso y el validador canónico sí pasaron.
 
-El preflight no certificante identificó primero dos referencias con el sufijo `Spec` duplicado; se corrigieron solo esas referencias del mapa. Después se detuvo con salida 2: `source anchor 0 quote does not equal the current declared source slice`. Este es el bloqueo técnico inmediato: materializar de nuevo las citas y anclas sobre la fuente del 24 de noviembre. No se emitió un juicio semántico sobre un paquete con citas desactualizadas.
+El flujo utilizó GPT-5.6 Sol, esfuerzo `xhigh`. Las interrupciones por cuota y los arreglos previos de anclas/esquemas son historia del proceso. Los juicios válidos se conservaron durante las continuaciones.
 
-Para continuar se usa el mismo clon de AppliedModelingLib que produjo la carpeta, con sus dependencias y el módulo raíz registrado. La copia en `lean/` no es un proyecto Lake independiente. El prototipo sí tiene instrucciones propias de compilación. `code/verify.py` comprueba la identidad de los archivos y los recibos retenidos; no ejecuta ni certifica una nueva revisión Lean.
+El primer adversario final emitió FAIL F-01: la interfaz no representaba el costo laboral separable exacto del Supuesto 2. Se corrigió la premisa en Lean, sin cambiar el paper fuente, y se repitieron las dos revisiones afectadas sobre la superficie sucesora. La carpeta conserva el hallazgo y sus registros; la aceptación indicada arriba requiere además la nueva auditoría final y el validador canónico, no solo esas dos revisiones.
 
-El siguiente paso es terminar el mapa y el preflight no certificante, obtener la revisión con contexto aislado y seguir la acción que indique el planificador del protocolo. Después debe reemplazarse íntegramente la copia de `lean/` y actualizarse la única fila del apéndice. Una compilación aprobada no elimina estos pendientes.
+El alcance es la proposición condicional local del paper. Regularidad y concavidad de toda la HJB, existencia del GE y precisión global de las simulaciones quedan fuera de esa prueba. Los supuestos sobre el valor marginal y el tiempo holgado se declaran donde se usan.
+
+Para reproducir Lean se necesita el proyecto AppliedModelingLib y sus dependencias, con el paper registrado. `lean/` conserva los nombres internos y rutas de esa contribución; no es un proyecto Lake independiente. `code/verify.py` comprueba la identidad de los archivos y recibos retenidos, no ejecuta una nueva auditoría Lean.
+
+Los campos de resumen humano en el estado generado pueden conservar instrucciones de borrador. No se editó esa copia para simular una aprobación: la credencial técnica es el grafo aceptado señalado por el recibo, y la revisión humana permanece pendiente.

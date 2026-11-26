@@ -292,4 +292,5 @@ def build_final(baseline, scenarios, summary, moments_data):
                                  +['Derivaciones manuscritas completas y corrección de la hoja 01'],
     }
     (HERE/'output'/'final_verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
-    print('OK: final figures, chain rule and D73 exported diagnostics. Official workflow/complete handwritten appendix remain open.')
+    status = 'accepted' if report['official_applied_modeling_workflow'] else 'open'
+    print(f'OK: final figures, chain rule and D73 exported diagnostics. Official workflow: {status}; complete handwritten appendix pending.')

@@ -1,0 +1,31 @@
+Command:
+python3 scripts/run_paper_closeout.py --paper Barraza26LaborComposition --plan-identity 175fd8502c9ec87847fce882eaec9ba34c70c97f86d5c4e25d34418caa70cbbe
+
+Worker launch:
+launch_id: 291909ac088545719cbb0ed0602e04ed
+worker_pid: 25422
+startup_acknowledged: true
+
+Worker result:
+Current closeout complete: 0 error(s), 4 warning(s); paper Barraza26LaborComposition
+semantic_closeout_passed: true
+operational_plan_identity: 175fd8502c9ec87847fce882eaec9ba34c70c97f86d5c4e25d34418caa70cbbe
+runtime_pass_bound_stage_count: 10
+paper_root_build elapsed_seconds: 115.472591
+total_seconds: 126.650593
+canonical_receipt: papers/Barraza26LaborComposition/FINAL_CLOSURE_RECEIPT.md
+accepted_graph_sha256: 24c84f3b245176ed4631bf3358b892f7d1dd07aed76ca2fe9c57f2730a68dcd9
+
+Completed stages:
+1. closeout_artifact_preflight
+2. acquire_exact_context
+3. route_schema_preflight
+4. acquire_lean_context
+5. current_evidence_transaction_preflight
+6. paper_root_build
+7. primary_paper_gate
+8. evidence_integrity
+9. conclusion_provenance
+10. final_input_check
+
+Run date: 2026-11-26

@@ -1,0 +1,123 @@
+{
+  "comment": "Non-evidence review work queue. Inspect the exact deduplicated source inputs, expanded Lean semantic targets, declaration code, and every graph-bound semantic prerequisite below; then select one typed source item and fill judgment and reason. The selected source key and declaration key bind that decision to the canonical material in this file; the receipt writer will reject it if the source text, source bundle, Lean target, or exact declaration source has changed before issuance.",
+  "items": {
+    "Barraza26LaborComposition.compositionConditionalHoursSpec": {
+      "candidate_source_items": [
+        "compositionConditionalHours"
+      ],
+      "judgment": "matches",
+      "reason": "Compared the full bundled proposition, Assumptions 1-4, and the hours-share definition with the expanded target and all five displayed prerequisites. comparisonIndividualCondition and laborPreferencesCondition impose aLower < a, RF, RI > 0, and psiF, psiI, phiF, phiI > 0; under the approved fixed-z and scalar-return conventions, interiorRegularBranchCondition makes d the derivative of positive V = V_a at a and locally enforces positive slack hours and both source FOCs; informalHoursShare is ellI / (ellF + ellI). Hence the HasDerivAt coefficient is exactly sI * (1 - sI) * (phiI - phiF) * V_aa / V_a, while d < 0 yields the source's negative, zero, and positive cases for phiI > phiF, equality, and phiI < phiF. The nhds condition is exactly the approved open-neighborhood reading.",
+      "source_item": "compositionConditionalHours",
+      "supporting_declarations": [
+        "Barraza26LaborComposition.comparisonIndividualCondition",
+        "Barraza26LaborComposition.informalHoursShare",
+        "Barraza26LaborComposition.interiorRegularBranchCondition",
+        "Barraza26LaborComposition.laborPreferencesCondition",
+        "Barraza26LaborComposition.localConcavityCondition"
+      ]
+    }
+  },
+  "paper": "Barraza26LaborComposition",
+  "review_context_protocol": "identity-bound-semantic-review-work-queue-v3",
+  "review_material": {
+    "declarations": {
+      "Barraza26LaborComposition.compositionConditionalHoursSpec": {
+        "declaration_identity": {
+          "corrected_target_sha256": "",
+          "coverage_status": "",
+          "lean_expanded_statement_sha256": "262484351558f0b83bc82d98fcf2a068f0ebc0af5178cf60b01efed17194d07b",
+          "lean_target_protocol": "lean_transparent_paper_expansion_with_claim_atoms_v2",
+          "review_claim_atoms_sha256": "762f860d2ad617b58a1154ccf56023aaaf6de88eb5c0364af13fed2192c29daa",
+          "review_claim_manifest_sha256": "9f8283fbd6a3726dc5b97b4611d9a0f87692a56f3f3320ae2fc3f8dbd221d95e",
+          "semantic_review_declaration": "Barraza26LaborComposition.compositionConditionalHoursSpec"
+        },
+        "declaration_source": "/--\nProposici\u00f3n 1 (Composici\u00f3n condicional de horas)\n\nPaper statement: Proposici\u00f3n 1 (Composici\u00f3n condicional de horas). Bajo los supuestos 1\u20133, la pol\u00edtica interior satisface \u2202s_I(a_0,z)/\u2202a = s_I(a_0,z)(1-s_I(a_0,z))(\u03c6_I-\u03c6_F)V_aa(a_0,z)/V_a(a_0,z). Si adem\u00e1s se cumple el supuesto 4, la derivada es negativa cuando \u03c6_I>\u03c6_F, cero cuando \u03c6_I=\u03c6_F y positiva cuando \u03c6_I<\u03c6_F.\n\nSource location: canonical source-audited.tex lines 131-139.\nSource status: pinned statement-spec transcription; independent source audit pending\n\nThis transparent proposition is the exact statement-audit target. It is not\nproof evidence. Its exact-type proof endpoint is declared in\n`ProofInterface.lean`, so this human-facing file presents the full semantic\nproposition once. At closeout, source atoms must be independently inventoried\nfrom pinned source quote bytes and bound to this elaborated proposition rather\nthan inferred from identifiers.\n-/\ndef compositionConditionalHoursSpec : Prop :=\n  \u2200 (V ellF ellI : \u211d \u2192 \u211d) (a d aLower Hbar RF RI psiF psiI phiF phiI : \u211d),\n    comparisonIndividualCondition a aLower RF RI \u2192\n    laborPreferencesCondition psiF psiI phiF phiI \u2192\n    interiorRegularBranchCondition V ellF ellI a d Hbar RF RI psiF psiI phiF phiI \u2192\n    let sI := informalHoursShare ellF ellI\n    HasDerivAt sI (sI a * (1 - sI a) * (phiI - phiF) * d / V a) a \u2227\n      (localConcavityCondition d \u2192\n        (phiF < phiI \u2192 deriv sI a < 0) \u2227\n        (phiI = phiF \u2192 deriv sI a = 0) \u2227\n        (phiI < phiF \u2192 0 < deriv sI a))",
+        "declaration_source_sha256": "edefc40a8cba3821535e9ae3e834d55b6a18f443a5b33003793675d59a6b0a98",
+        "semantic_target": "Expanded Lean semantic target:\n\u2200 (V ellF ellI : \u211d \u2192 \u211d) (a d aLower Hbar RF RI psiF psiI phiF phiI : \u211d),\n  Barraza26LaborComposition.comparisonIndividualCondition a aLower RF RI \u2192\n    Barraza26LaborComposition.laborPreferencesCondition psiF psiI phiF phiI \u2192\n      Barraza26LaborComposition.interiorRegularBranchCondition V ellF ellI a d Hbar RF RI psiF psiI phiF phiI \u2192\n        have sI : \u211d \u2192 \u211d := Barraza26LaborComposition.informalHoursShare ellF ellI;\n        HasDerivAt sI (sI a * (1 - sI a) * (phiI - phiF) * d / V a) a \u2227\n          (Barraza26LaborComposition.localConcavityCondition d \u2192\n            (phiF < phiI \u2192 deriv sI a < 0) \u2227 (phiI = phiF \u2192 deriv sI a = 0) \u2227 (phiI < phiF \u2192 0 < deriv sI a))\n\nLean-elaborated claim roles:\n1. parameter: \u211d \u2192 \u211d\n2. parameter: \u211d \u2192 \u211d\n3. parameter: \u211d \u2192 \u211d\n4. parameter: \u211d\n5. parameter: \u211d\n6. parameter: \u211d\n7. parameter: \u211d\n8. parameter: \u211d\n9. parameter: \u211d\n10. parameter: \u211d\n11. parameter: \u211d\n12. parameter: \u211d\n13. parameter: \u211d\n14. assumption: Barraza26LaborComposition.comparisonIndividualCondition a aLower RF RI\n15. assumption: Barraza26LaborComposition.laborPreferencesCondition psiF psiI phiF phiI\n16. assumption: Barraza26LaborComposition.interiorRegularBranchCondition V ellF ellI a d Hbar RF RI psiF psiI phiF phiI\n17. conclusion: HasDerivAt (Barraza26LaborComposition.informalHoursShare ellF ellI)\n    (Barraza26LaborComposition.informalHoursShare ellF ellI a *\n            (1 - Barraza26LaborComposition.informalHoursShare ellF ellI a) *\n          (phiI - phiF) *\n        d /\n      V a)\n    a \u2227\n  (Barraza26LaborComposition.localConcavityCondition d \u2192\n    (phiF < phiI \u2192 deriv (Barraza26LaborComposition.informalHoursShare ellF ellI) a < 0) \u2227\n      (phiI = phiF \u2192 deriv (Barraza26LaborComposition.informalHoursShare ellF ellI) a = 0) \u2227\n        (phiI < phiF \u2192 0 < deriv (Barraza26LaborComposition.informalHoursShare ellF ellI) a))",
+        "semantic_target_sha256": "81706f77fc642f7262ef1b09b792f6f81bfd5447d705159abd6484a0e7324a4b"
+      }
+    },
+    "source_items": {
+      "compositionConditionalHours": {
+        "approved_review_contexts": [
+          {
+            "checked_scope": "Assumption 1, Assumption 3, and Proposition 1 only.",
+            "classification": "source_representation_convention",
+            "formal_meaning": "The positive returns held fixed in the comparison are represented by scalar constants RF and RI.",
+            "id": "B26-FIXED-RETURNS-SCALARS",
+            "kind": "source_model_convention",
+            "protocol": "approved-source-review-context-v1",
+            "record_sha256": "1754a85a0137abe461f2bf12c4674c1f04cb1e27000dfc1f0d3709183068543c",
+            "source_locator": "source-audited.tex:112-114",
+            "why_needed": "This records that the formalization differentiates only with respect to assets and does not introduce asset-dependent returns."
+          },
+          {
+            "checked_scope": "Assumption 1, Assumption 3, the hours-share definition, and Proposition 1 only.",
+            "classification": "source_representation_convention",
+            "formal_meaning": "After fixing z, V, ellF, and ellI are represented as unary real functions of the asset coordinate a.",
+            "id": "B26-FIXED-Z-UNARY-SLICE",
+            "kind": "source_model_convention",
+            "protocol": "approved-source-review-context-v1",
+            "record_sha256": "6cdbbb177d6742f56081695fe169d35dd7f5a1764825f0c03d0ffffc14847e3c",
+            "source_locator": "source-audited.tex:112-114",
+            "why_needed": "Lean suppresses the fixed productivity argument so the local derivative is taken only along the source's asset comparison."
+          },
+          {
+            "checked_scope": "Assumption 1, Assumption 3, and the local derivative clause of Proposition 1 only.",
+            "classification": "source_representation_convention",
+            "formal_meaning": "A property holding on the source's open neighborhood of a0 is represented by eventual truth in the neighborhood filter nhds a.",
+            "id": "B26-OPEN-NEIGHBORHOOD-NHDS",
+            "kind": "source_model_convention",
+            "protocol": "approved-source-review-context-v1",
+            "record_sha256": "2771c84c3121ee577192cb8fa25e454d70cb2547dd0bd221db0e163562f48499",
+            "source_locator": "source-audited.tex:112-125",
+            "why_needed": "The FOC-to-explicit-policy bridge needs the positive interior and slack branch locally, without asserting global HJB regularity."
+          }
+        ],
+        "source_input_bundle_sha256": "50d21427afece196e16aaee3e8855535aad35f5c13eb643e207bd89eb290f914",
+        "source_locator": "source-audited.tex:131-139",
+        "verbatim_source_input": "\\begin{proposition}[Composici\u00f3n condicional de horas]\\label{prop:composition}\nBajo los supuestos \\ref{ass:fixed}--\\ref{ass:regular}, la pol\u00edtica interior satisface\n\\begin{equation}\\label{eq:main}\n\\frac{\\partial\\sI(a_0,z)}{\\partial a}\n=\\sI(a_0,z)\\bigl(1-\\sI(a_0,z)\\bigr)\n(\\phi_I-\\phi_F)\\frac{\\Vaa(a_0,z)}{\\Va(a_0,z)} .\n\\end{equation}\nSi adem\u00e1s se cumple el supuesto \\ref{ass:concavity}, la derivada es negativa cuando \\(\\phi_I>\\phi_F\\), cero cuando \\(\\phi_I=\\phi_F\\) y positiva cuando \\(\\phi_I<\\phi_F\\).\n\\end{proposition}\n\n[Next verbatim source excerpt]\n\n\\begin{equation}\\label{eq:preferences}\n\\mathbb E_0\\int_0^\\infty e^{-\\rho t}\n\\left[\\ln C(c_F,c_I)-\n\\sum_{s\\in\\{F,I\\}}\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right]dt.\n\\end{equation}\nLa canasta distingue los dos bienes. El argumento de composici\u00f3n laboral usa la separabilidad del bloque de horas y su v\u00ednculo con la restricci\u00f3n de recursos; no requiere estimar aqu\u00ed un nuevo par\u00e1metro de sustituci\u00f3n de consumo.\n\n[Next verbatim source excerpt]\n\n\\begin{equation}\\label{eq:budget}\n\\dot a=R_F(z)\\ell_F+R_I(z)\\ell_I+ra-\\chi(z)(-a)_+\n+T-c_F-p_Ic_I,\n\\end{equation}\ncon \\(a\\geq\\underline a\\), \\(\\ell_s\\geq0\\) y\n\\(\\ell_F+\\ell_I\\leq\\bar H\\). El hogar observa su estado actual y conoce la ley del riesgo, pero no su realizaci\u00f3n futura. Toma precios, remuneraciones efectivas y transferencias como dados al resolver su problema individual.\n\n[Next verbatim source excerpt]\n\nLos retornos por hora que recibe son\n\\begin{equation}\\label{eq:returns}\nR_F(z)=(1-\\tau)w_Fz-\\kappa(z),\\qquad\nR_I(z)=\\widetilde w_Iz^{\\nu_I}.\n\\end{equation}\n\n[Next verbatim source excerpt]\n\nEscribo \\(v(a,z)\\) para el valor del hogar y \\(\\Va(a,z)=\\partial_av(a,z)\\). Cuando la soluci\u00f3n es regular, el bloque laboral de la HJB es\n\\begin{equation}\\label{eq:hoursblock}\n\\max_{\\ell_F,\\ell_I}\n\\left\\{\\Va(R_F\\ell_F+R_I\\ell_I)-\n\\sum_s\\frac{\\psi_s\\ell_s^{1+1/\\phi_s}}{1+1/\\phi_s}\\right\\}.\n\\end{equation}\nLa derivaci\u00f3n no constituye una prueba de regularidad de la HJB. Se explicitan las condiciones bajo las que puede usarse.\n\n[Next verbatim source excerpt]\n\n\\begin{assumption}[Comparaci\u00f3n individual]\\label{ass:fixed}\nSe fija \\(z\\) y se considera un entorno abierto de un punto \\(a_0>\\underline a\\). Los retornos \\(R_F,R_I>0\\), los precios y las remuneraciones efectivas se mantienen fijos y no dependen directamente de los activos en esa comparaci\u00f3n.\n\\end{assumption}\n\n[Next verbatim source excerpt]\n\n\\begin{assumption}[Preferencias laborales]\\label{ass:parameters}\nPara \\(s\\in\\{F,I\\}\\), \\(\\psi_s>0\\) y \\(\\phi_s>0\\). El costo de horas es el de \\eqref{eq:preferences}, separable entre actividades.\n\\end{assumption}\n\n[Next verbatim source excerpt]\n\n\\begin{assumption}[Rama interior regular]\\label{ass:regular}\nLa funci\u00f3n \\(a\\mapsto\\Va(a,z)\\) es positiva y diferenciable en \\(a_0\\). Las horas de la rama considerada satisfacen las FOC de \\eqref{eq:hoursblock}, son positivas y su suma es estrictamente menor que \\(\\bar H\\).\n\\end{assumption}\n\n[Next verbatim source excerpt]\n\n\\begin{assumption}[Concavidad local para la interpretaci\u00f3n]\\label{ass:concavity}\nCuando se interpreta el signo por riqueza se mantiene \\(\\Vaa(a_0,z)<0\\).\n\\end{assumption}\n\n[Next verbatim source excerpt]\n\nLos tres primeros supuestos permiten derivar la identidad. El cuarto solo se usa para ordenar sus signos. Su cumplimiento en una grilla no implica una demostraci\u00f3n global. Si el tope de tiempo se activa, aparece un multiplicador com\u00fan y la f\u00f3rmula interior deja de ser la pol\u00edtica correspondiente. Si se eval\u00faa el l\u00edmite de endeudamiento, se requieren derivadas unilaterales y un enunciado adaptado; ese caso no queda cubierto por el entorno abierto utilizado aqu\u00ed.\n\n[Next verbatim source excerpt]\n\nDefina la fracci\u00f3n de horas informales como\n\\(\\sI=\\ell_I/(\\ell_F+\\ell_I)\\). Esta definici\u00f3n cuenta horas y no clasifica ex ante a una persona como informal. Bajo los retornos positivos y la rama interior, \\(0<\\sI<1\\).",
+        "verbatim_source_input_sha256": "a4cb00bdec54a36c5a4e03e5715a5c5eba6aa74f0fca038f57c97ceef632a3dc"
+      }
+    },
+    "supporting_declarations": {
+      "Barraza26LaborComposition.comparisonIndividualCondition": {
+        "declaration_source": "/-- Fixed-productivity, fixed-return comparison at an interior asset point. -/\ndef comparisonIndividualCondition (a aLower RF RI : \u211d) : Prop :=\n  aLower < a \u2227 0 < RF \u2227 0 < RI",
+        "declaration_source_sha256": "c0915bb6e7b84856177ceb8bb2b3ff199f98c6bf9efec1280f9617920210da2c",
+        "scope": "paper_prerequisite",
+        "semantic_target": "type:\n\u211d \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 Prop\n\nvalue:\nfun (a aLower RF RI : \u211d) => aLower < a \u2227 0 < RF \u2227 0 < RI",
+        "semantic_target_sha256": "525b7b81551c4a1c0153067d0c9eb4da8e8ccc724e8424a8690075f6ffcbb2ac"
+      },
+      "Barraza26LaborComposition.informalHoursShare": {
+        "declaration_source": "/-- Informal hours as a share of formal plus informal hours. -/\nnoncomputable def informalHoursShare (ellF ellI : \u211d \u2192 \u211d) : \u211d \u2192 \u211d :=\n  fun x => ellI x / (ellF x + ellI x)",
+        "declaration_source_sha256": "9c6df23f64fcd0bcbdf13b16c719c8e27323bdd15f58951a90ccd0a638e4fff1",
+        "scope": "paper_prerequisite",
+        "semantic_target": "type:\n(\u211d \u2192 \u211d) \u2192 (\u211d \u2192 \u211d) \u2192 \u211d \u2192 \u211d\n\nvalue:\nfun (ellF ellI : \u211d \u2192 \u211d) (a : \u211d) => ellI a / (ellF a + ellI a)",
+        "semantic_target_sha256": "50e6781bb3a24191bc7b9ae0b4c06de0a14c283bb1611ca7d859f38010bb4ea8"
+      },
+      "Barraza26LaborComposition.interiorRegularBranchCondition": {
+        "declaration_source": "/-- Local regular interior branch, including slackness and both sector FOCs. -/\ndef interiorRegularBranchCondition\n    (V ellF ellI : \u211d \u2192 \u211d) (a d Hbar RF RI psiF psiI phiF phiI : \u211d) : Prop :=\n  HasDerivAt V d a \u2227 0 < V a \u2227\n    \u2200\u1da0 x in nhds a,\n      0 < ellF x \u2227 0 < ellI x \u2227 ellF x + ellI x < Hbar \u2227\n        V x * RF - psiF * (ellF x) ^ (1 / phiF) = 0 \u2227\n        V x * RI - psiI * (ellI x) ^ (1 / phiI) = 0",
+        "declaration_source_sha256": "294aeba9027c244194b0bc89ecf077c7365adada581687f19680b181f9c29091",
+        "scope": "paper_prerequisite",
+        "semantic_target": "type:\n(\u211d \u2192 \u211d) \u2192 (\u211d \u2192 \u211d) \u2192 (\u211d \u2192 \u211d) \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 Prop\n\nvalue:\nfun (V ellF ellI : \u211d \u2192 \u211d) (a d Hbar RF RI psiF psiI phiF phiI : \u211d) =>\n  HasDerivAt V d a \u2227\n    0 < V a \u2227\n      \u2200\u1da0 (x : \u211d) in nhds a,\n        0 < ellF x \u2227\n          0 < ellI x \u2227\n            ellF x + ellI x < Hbar \u2227\n              V x * RF - psiF * ellF x ^ (1 / phiF) = 0 \u2227 V x * RI - psiI * ellI x ^ (1 / phiI) = 0",
+        "semantic_target_sha256": "93310a8d402f994bd3a8a7cf0866f54baeff44a03db27bd2616bbbeb78a9ff8f"
+      },
+      "Barraza26LaborComposition.laborPreferencesCondition": {
+        "declaration_source": "/-- Positivity of the sector-specific labor-disutility parameters. -/\ndef laborPreferencesCondition (psiF psiI phiF phiI : \u211d) : Prop :=\n  0 < psiF \u2227 0 < psiI \u2227 0 < phiF \u2227 0 < phiI",
+        "declaration_source_sha256": "b8b0582b15bd315361de989e2d39be6b8ca5c2a203ee047c32d15d46245da08a",
+        "scope": "paper_prerequisite",
+        "semantic_target": "type:\n\u211d \u2192 \u211d \u2192 \u211d \u2192 \u211d \u2192 Prop\n\nvalue:\nfun (psiF psiI phiF phiI : \u211d) => 0 < psiF \u2227 0 < psiI \u2227 0 < phiF \u2227 0 < phiI",
+        "semantic_target_sha256": "29c851eacbfbaa4c69a08bbdc208562c993597a471c499e5f6d6e8ee9b1c5d59"
+      },
+      "Barraza26LaborComposition.localConcavityCondition": {
+        "declaration_source": "/-- Local decreasing-marginal-value condition used only for sign conclusions. -/\ndef localConcavityCondition (d : \u211d) : Prop := d < 0",
+        "declaration_source_sha256": "588d54efff6ae2debfe78ac13fe331939cc484c12b216169c953d0b0b4a0af70",
+        "scope": "paper_prerequisite",
+        "semantic_target": "type:\n\u211d \u2192 Prop\n\nvalue:\nfun (d : \u211d) => d < 0",
+        "semantic_target_sha256": "376bffbaac56bc3a448ffc99197239576bda6d1be6c7f1d975dda6a58d937d24"
+      }
+    }
+  },
+  "review_material_sha256": "5883ac2c67106df76b37b3a8020b29e148ed4db2bb6f2727c464a1f212762dd7",
+  "schema": 3
+}

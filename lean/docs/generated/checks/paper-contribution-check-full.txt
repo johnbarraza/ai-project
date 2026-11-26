@@ -1,0 +1,33 @@
+Command:
+python3 scripts/paper_contribution.py check Barraza26LaborComposition
+
+First output:
++ /usr/bin/python3 scripts/sync_paper_status.py --paper Barraza26LaborComposition --check
+paper-local generated status is out of sync for `Barraza26LaborComposition`
+- papers/Barraza26LaborComposition/README.md is out of sync
+
+First exit code: 1
+
+The official paper-local synchronizer was then run:
+python3 scripts/sync_paper_status.py --paper Barraza26LaborComposition
+
+Synchronizer output:
+wrote papers/Barraza26LaborComposition/README.md from paper-local status
+paper-local status sync complete: 1 changed; aggregate status/docs/site deferred to integration or release
+
+Synchronizer exit code: 0
+
+Retry output:
++ /usr/bin/python3 scripts/sync_paper_status.py --paper Barraza26LaborComposition --check
+paper-local generated status check passed for `Barraza26LaborComposition`
++ /usr/bin/python3 scripts/closeout_reuse_plan.py --paper Barraza26LaborComposition
+error: closeout planner exposed no executable next action
+
+Retry exit code: 1
+Run date: 2026-11-26
+
+The retry occurred after the canonical receipt was current. The planner itself
+reported `closeout_complete: true`, `next_action: null`, and a current accepted
+graph, so the full wrapper stopped because it requires an executable planner
+action even on this terminal fast path. This file records the failure rather
+than presenting it as a passing check.
