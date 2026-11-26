@@ -85,6 +85,8 @@
     "docs/matlab-value-equilibrium-check.txt": "dd1d5786083b35b4798ace8ba0076c0a9124c23a28b524356cee54088778150e",
     "docs/concavidad-equilibrio.md": "a2a967e6136368da01830e828a18892fd3f8e9a70c706e67f20cf73e9ac15930",
     "docs/revision-requisitos-final.md": "08625377c2b0a70438d07505c83d85cffc234f36de381996e24bac7735a459e2",
+    "docs/revision-pruebas-achdou.md": "90390f953a4c1a7c6b1cd1af2cbbf828ed0cefc3ea7af1bcf4541d3eb97bd8f3",
+    "docs/achdou-source-review.json": "d0ab2082821ebd50ded54fa2456a0ddf4c4bea345f51366e31aa994d8d4493c2",
     "lean/.gitignore": "fd9f67c80e311a15f7b601ef4f38d84825424d2d3e2beae257f1f27c49096c76",
     "lean/Assumptions.lean": "1426475c502dbfb4f2c09a3a43f741067db048dc5874baf1f94b068a7ce5fdf9",
     "lean/FINAL_CLOSURE_RECEIPT.md": "04d7c31f305a27b5ac010c6587d52813173d0ef0ac2f96b5c400f71cd32c792c",
@@ -178,9 +180,7 @@
     "lean/docs/generated/checks/final-closure-receipt-check.txt": "e86d52359746d2baf615dcb25ded75d8eee1b82bebc191adbabf07df3633abab",
     "lean/docs/generated/checks/paper-contribution-check-fast.txt": "f56c5b5d5668653531a112c836a7cec563dbacd778e8ed46b9c311c5cb1f5cf7",
     "lean/docs/generated/checks/paper-contribution-check-full.txt": "76af9de05425a2bc2df330e801e9234e3c2d971cbda19ec434fce3842dffd5ca",
-    "lean/docs/generated/checks/strict-closeout-summary.txt": "76f41bc6f4a3938e69a1f46e78235f8ac74e21219a9010416716104e66d22d0f",
-    "docs/revision-pruebas-achdou.md": "9682add118e68f6cd9ea4bdfc40776148c351a77cb8cfec6b61a987a78395048",
-    "docs/achdou-source-review.json": "d0ab2082821ebd50ded54fa2456a0ddf4c4bea345f51366e31aa994d8d4493c2"
+    "lean/docs/generated/checks/strict-closeout-summary.txt": "76f41bc6f4a3938e69a1f46e78235f8ac74e21219a9010416716104e66d22d0f"
   },
   "artifact_hash_scope": "SHA256 of canonical Git blob bytes (LF text); files must be staged before refresh",
   "formalization_source_commit": "6777134ba22670ebd53b65d21a48d719c09b3fbd",

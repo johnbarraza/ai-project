@@ -20,9 +20,9 @@ La falta de una transferencia directa no demuestra inexistencia o multiplicidad 
 
 En A.8.2, PDF p. 19, el modelo de referencia escribe `s(a,y)=y+ra−c(a,y)` y obtiene
 
-\[
+$$
 \partial_rs(a,y)=a-\partial_rc(a,y).
-\]
+$$
 
 Una respuesta negativa del consumo a la tasa garantiza una respuesta positiva del ahorro si `a>0`. Cuando `a<0`, la expresión deja de tener signo asegurado. El propio suplemento señala este paso. En nuestro problema, además, al cambiar los precios pueden cambiar las horas, sus retornos y el reparto de beneficios; por ello la derivada del ahorro contiene otras respuestas.
 
@@ -44,44 +44,44 @@ Se fijan los precios, los retornos por hora, el reparto por trabajo efectivo y l
 
 Defina
 
-\[
+$$
 b_z(a)=ra-\chi(z)(-a)_+.
-\]
+$$
 
 Como `chi(z)>=0` y `(-a)_+` es convexa, `b_z` es cóncava en activos. Los ingresos por horas son lineales en las decisiones del hogar a precios dados. El conjunto `ell_F,ell_I>=0`, `ell_F+ell_I<=Hbar` es convexo, al igual que el límite de activos. Una igualdad de horas también es una restricción convexa, aunque queda fuera de la rama interior de la Proposición 1 del paper.
 
 Tome dos trayectorias admisibles con el mismo riesgo y un peso `theta` entre cero y uno. En las fórmulas de construcción se omite el índice temporal de activos y controles: se aplican en cada instante. Construya
 
-\[
+$$
 a_\theta=\theta a_1+(1-\theta)a_2,
 \qquad \ell_{s,\theta}=\theta\ell_{s,1}+(1-\theta)\ell_{s,2}.
-\]
+$$
 
 La mezcla respeta las restricciones de horas y activos. No basta mezclar los consumos sin más, porque la deriva por deuda no es lineal. La diferencia
 
-\[
+$$
 \Delta=b_z(a_\theta)-\theta b_z(a_1)-(1-\theta)b_z(a_2)
 =\chi(z)\{\theta(-a_1)_++(1-\theta)(-a_2)_+-(-a_\theta)_+\}\geq0
-\]
+$$
 
 puede consumirse en bien formal. Con su precio normalizado a uno y sin impuesto al consumo, establezca
 
-\[
+$$
 c_{F,\theta}=\theta c_{F,1}+(1-\theta)c_{F,2}+\Delta,
 \qquad c_{I,\theta}=\theta c_{I,1}+(1-\theta)c_{I,2}.
-\]
+$$
 
 Al sustituir en el presupuesto, la deriva resultante es exactamente `theta*dot a_1+(1−theta)*dot a_2`. Se obtiene una trayectoria factible cuya utilidad es al menos la utilidad de la mezcla de consumos: la utilidad aumenta al añadir consumo formal. Además, `ln C` es cóncava y el costo laboral es convexo. Por tanto, la utilidad esperada descontada de la trayectoria construida satisface
 
-\[
+$$
 J_\theta\geq\theta J_1+(1-\theta)J_2.
-\]
+$$
 
 Aplicando la construcción a controles arbitrariamente cercanos al valor supremo y haciendo tender su error a cero, se obtiene
 
-\[
+$$
 v(a_\theta,z)\geq\theta v(a_1,z)+(1-\theta)v(a_2,z).
-\]
+$$
 
 Es concavidad débil, condicional a la admisibilidad e integrabilidad descritas. La corrección `Delta` es lo que permite tratar la prima de deuda sin asumir que el presupuesto es afín en activos. Se verificaron simbólicamente sus identidades en los casos de activos con el mismo signo y con signos opuestos. Eso respalda la manipulación algebraica; no certifica por máquina todo el argumento de control estocástico.
 
