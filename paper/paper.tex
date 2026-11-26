@@ -54,7 +54,7 @@ La revisión de literatura es focalizada y conserva límites de acceso y de lect
 
 \section{Modelo y supuestos}
 \subsection{Estados, información y decisiones}
-El estado individual es \((a,z)\), donde \(a\) son activos y \(z>0\) es productividad laboral. Los activos evolucionan mediante el ahorro; la productividad sigue un proceso exógeno conocido por el hogar. En tiempo continuo el hogar elige consumos \(c_F,c_I\) y horas \(\ell_F,\ell_I\). Con una canasta CES \(C(c_F,c_I)\), sus preferencias son
+El estado individual es \((a,z)\), donde \(a\) son activos financieros netos, ahorro acumulado menos deuda, medidos en unidades del bien formal, y \(z>0\) es productividad laboral. Los activos evolucionan mediante el ahorro y pueden ser negativos dentro del límite de endeudamiento; la productividad sigue un proceso exógeno conocido por el hogar. En tiempo continuo el hogar elige consumos \(c_F,c_I\) y horas \(\ell_F,\ell_I\). Con una canasta CES \(C(c_F,c_I)\), sus preferencias son
 \begin{equation}\label{eq:preferences}
 \mathbb E_0\int_0^\infty e^{-\rho t}
 \left[\ln C(c_F,c_I)-
@@ -375,4 +375,5 @@ Otro punto revisado fue el reajuste de una sola desutilidad al variar \(\phi_I\)
 En \texttt{hand/01-derivacion-tope-tiempo.pdf} existe una hoja original del autor, mostrada en la presentación. Se conserva intacta. La nota \texttt{hand/errata-01.md} identifica un subíndice y el paso incorrecto del cociente: tras imponer \(\lambda_H=0\), se debe conservar el cociente de niveles \((R_s/\psi_s)^{\phi_s}\) y contar una sola vez la potencia de \(\Va\). La errata tipografiada no se atribuye al manuscrito personal.
 
 El apéndice completo sigue pendiente: debe contener cada derivación, paso a paso, con reglas y condiciones verificadas por el estudiante. La guía disponible organiza la preparación y no la sustituye. \texttt{hand/README.md} registra qué evidencia existe y qué hojas faltan; no se inventa una firma, comprensión o aprobación personal.
+La guía complementaria \path{hand/guia_complementaria_macro.md}, preparada con apoyo de IA, desarrolla consumo, firmas y cierre de recursos. Las identidades de pagos de factores, beneficios, homogeneidad CES y recursos se comprueban en \path{code/macro_checks.py}, llamado por el verificador general. Son comprobaciones algebraicas bajo condiciones declaradas; la revisión personal y las hojas escritas por el autor siguen pendientes.
 \end{document}

@@ -1,0 +1,17 @@
+{
+  "checks": "passed",
+  "sympy_version": "1.14.0",
+  "formal_factor_payments_and_zero_profit": "passed",
+  "informal_decreasing_returns_profit_identity": "passed",
+  "CES_and_Cobb_Douglas_Euler_identity": "passed",
+  "stationary_resource_accounting_with_both_wedges": "passed",
+  "conditions": [
+    "Interior positive factors; formal shares alpha and 1-alpha.",
+    "Informal exponents positive with sum below one for positive profits.",
+    "Positive consumption and normalized CES weights; positive differentiable basket.",
+    "Log consumption utility and zero consumption tax for Va=1/expenditure.",
+    "Stationary normalized population with integrable asset drift, S=K and CI=YI.",
+    "Formal labor tax rebated; barrier/debt-premium payments are not rebated in this specification."
+  ],
+  "scope": "Algebra conditional on the stated model; not GE existence, numerical precision or handwritten evidence."
+}

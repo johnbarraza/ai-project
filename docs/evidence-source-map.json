@@ -1,6 +1,6 @@
 {
   "document_type": "theoretical_macroeconomics_course_project",
-  "as_of": "2026-11-24",
+  "as_of": "2026-11-25",
   "human_semantic_review_recorded": false,
   "official_contribution_workflow_complete": false,
   "numeric_sources": {
@@ -44,14 +44,14 @@
     }
   ],
   "artifacts": {
-    "paper/paper.tex": "19f58e9b3d8d58770e81b04021419b398ccd579cf6143d2d2a2099e307d049ab",
-    "paper/paper.pdf": "354070b8eccbe9dbee2af5733835c28d2f4f02fd402a9a2eb5cb44051040845e",
+    "paper/paper.tex": "a908ad37daccbbc692fe821a1514a7f6a98c8defea20d0784ec7ecc4ab80eeff",
+    "paper/paper.pdf": "37f4f32897a7319a343a250136d72a368644ca43ac7c548f33464479753b138b",
     "paper/references.bib": "bd8fadca76dbc5041637567a52dc6b1a14d4f3a15a79ed6c7811e21620f502a9",
     "slides/final.tex": "9ea64731cc2f997a7dc56b663da9dd006db5d537ca9b96740014588e5dd456b5",
     "slides/final.pdf": "7eb12a77cea682a3c8ad7cf4167c0448773f9af8fc038914efcd2cddf14dce21",
     "code/data/baseline.csv": "7f81cecfa3cbb49d8d4fd8d0150e7236469775560ad73dbc4f6482c2ba78a95c",
     "code/data/final_wedges.json": "eb4bc507164e61244af2f39140a3614882fca14b3b916e61cc4bd3d349d0275a",
-    "code/output/final_verification.json": "ece4cbdf803332bdbe8169d00ddce5135f87405ab1bed6a82b58ed86e74b5a15",
+    "code/output/final_verification.json": "8d13c256ee465f5efbf397b98df9d2b58288d8b6dbcd04cbf5ec08ded2de02bf",
     "code/data/final_matlab_replication.json": "0401fe6fed12cbea98d818d4d713ecaf2c8f351cc584b2c770080245e4ab51a5",
     "code/data/frisch_evidence.json": "1ef65ba499f7c182ad0086aae77ad18e3582334bc7a175331b866c649992577c",
     "code/data/paper_ge_experiments.json": "7e2084e958e05e16ffd84f715900b4945e2afc4da417d141f5915e4dc2334155",
@@ -59,6 +59,9 @@
     "code/output/paper_numbers.tex": "55e052753c68e05cb87f28568264179a5734ee68169678a4a7e0743e345b450d",
     "lean-prototype/LaborComposition.lean": "e31e7fb3f9fec913d61ae558537ea5dcb8d8ac81a7ebcf8348909200a871a4a3",
     "lean-prototype/verification/local_check.json": "96cc47cf8086c338b14f9ed96dc906fedc09148f4eb4fb355e56e204b7ccbc4a",
+    "docs/lean-workflow.json": "04d7b824e03ab9f97a5ec119636dd5e5c1c6fe6c702302dd07e39604dd0f37c0",
+    "docs/estado-lean.md": "dabd1a70bd2f4183fa61324753fdfb02167505e690cbbc1082295ac7b0b14e7c",
+    "docs/prompts-ortografia.json": "239cc947c3fbd99da9db123f7681f89e7ca17788f49e739b4826f447133d0968",
     "lean/README.md": "36e849b66742497e11d319aa46dca973bf899a52749c62aa9d9c6d99662d2d1a",
     "lean/proof-interface-build.txt": "9a72b14d72c3761130c019044d34b730bc2703900d50e0cf247351235a491840",
     "lean/status.json": "1fb9fd98f8d1ce94d222e33e92bb42e02b116a44f283b036db1ea273263fa3da",
@@ -80,13 +83,13 @@
     "lean/docs/FORMALIZATION_NOTES.md": "4f447674d8a50c58685326304f29ae09fa1839c3e7c370e02d1b4145dac13bcf",
     "lean/docs/AGENT_SOURCE_AUDIT.md": "c247006d92aa40f8cf027b3814abe3b5798fa85e5388bc32ba2761ddb60c1e85",
     "lean/docs/FORMALIZATION_WORKING_MEMO.md": "2d0d25c85a66721a5b7049887a41d5d0cefd92f04daba31932ce53aa4fa2f504",
-    "docs/lean-workflow.json": "04d7b824e03ab9f97a5ec119636dd5e5c1c6fe6c702302dd07e39604dd0f37c0",
-    "docs/estado-lean.md": "752f9c9f0020d305f273d5f5f210ff87a32958d3f1e76f9769e2264449521243",
-    "docs/prompts-ortografia.json": "fea193ec759a8f24100109e4b8cfe9e99fa2632e9ad0a0dd369e5681e979b2fc"
+    "hand/guia_complementaria_macro.md": "a901d20072edec242ae8d6701bbfa876193dbafe2618e9b4ecd94ed1e76cb485",
+    "code/macro_checks.py": "a4bd61992738b453e82a75f3da08050cf69192195156d0a6ffb9c1c459964c02",
+    "code/output/macro_identities.json": "6d96441131ce55e8a05054bf660fbc471abde827bb27740d2f7a7f4c1dd9f25a"
   },
   "artifact_hash_scope": "SHA256 of canonical Git blob bytes (LF text); files must be staged before refresh",
   "formalization_source_commit": "6777134ba22670ebd53b65d21a48d719c09b3fbd",
-  "formalization_repin_required": true,
+  "formalization_repin_required": false,
   "unchanged_formal_claims": {
     "source_commit": "8e51a872c874f09079ce106068cc065b0a0efbee",
     "blocks_utf8_lf_sha256": [
@@ -98,9 +101,10 @@
       "e356e6bac6e3bce92806da69666cc894d228dbea790d0b8e1de06e604167d8b1"
     ]
   },
-  "formalization_source_pin_status": "Current PDF/TeX verified; source-map anchor migration and independent review remain open",
+  "formalization_source_pin_status": "Pinned mathematical source verified; numbered assumptions, proposition and ordinary proof unchanged in the submitted paper",
   "official_fast_check_exit_code": 0,
   "official_proof_interface_build_exit_code": 0,
   "official_generated_folder_copied": true,
-  "official_semantic_acceptance": false
+  "official_semantic_acceptance": false,
+  "official_snapshot_date": "2026-11-24"
 }

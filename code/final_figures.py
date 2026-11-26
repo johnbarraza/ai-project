@@ -283,11 +283,13 @@ def build_final(baseline, scenarios, summary, moments_data):
         'precision_certified':exported['full_precision_certification'],
         'ready_for_submission':False,
         'local_lean_checked':bool(lean_receipt),
-        'official_applied_modeling_workflow':False,
+        'official_applied_modeling_workflow':official_snapshot['official_contribution_workflow_complete'],
         'official_workflow_started':True,
         'official_snapshot_identity_checked':True,
         'official_fast_check_retained':official_snapshot['checks'][0]['exit_code']==0,
-        'remaining_requirements':(['Formalización oficial cotejada con el paper'] if lean_receipt else ['Formalización propia y fragmento Lean verificado'])+['Derivaciones manuscritas completas y corrección de la hoja 01'],
+        'remaining_requirements':([] if official_snapshot['official_contribution_workflow_complete']
+                                  else ['Cierre oficial de la formalización cotejada con el paper'])
+                                 +['Derivaciones manuscritas completas y corrección de la hoja 01'],
     }
     (HERE/'output'/'final_verification.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
     print('OK: final figures, chain rule and D73 exported diagnostics. Official workflow/complete handwritten appendix remain open.')

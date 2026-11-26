@@ -1,5 +1,7 @@
 # Formalización del paper, 24 de noviembre de 2026
 
+**Continuación del 25 de noviembre.** En el worktree de ejecución se repararon las anclas y pasaron las revisiones previas. La primera auditoría final detectó F-01: la condición Lean de preferencias recogía positividad, pero omitía codificar el costo laboral separable exacto del paper. Se está reparando esa interfaz y se volverán a revisar los elementos afectados. El modelo y los enunciados del paper se conservan. La carpeta incorporada abajo es el snapshot anterior; todavía no se declara aceptación canónica. Las guías y sus comprobaciones macro pueden utilizarse mientras termina ese proceso.
+
 La carpeta [lean/](../lean/) copia íntegramente el directorio generado `papers/Barraza26LaborComposition/` de AppliedModelingLib. Se respetó su `.gitignore`, sin forzar fuentes PDF ni archivos ignorados. El prototipo anterior se conserva en [lean-prototype/](../lean-prototype/). El [manifiesto](lean-workflow.json) fija los hashes publicables y los comandos realmente ejecutados.
 
 La fuente vigente es el [paper publicado en 6777134](https://github.com/johnbarraza/ai-project/blob/6777134ba22670ebd53b65d21a48d719c09b3fbd/paper/paper.pdf). El flujo se inició con GPT-5.6 Sol, esfuerzo `xhigh`, como pide el curso. La reparación de interfaz y el inventario independiente de esa fuente avanzaron; el autor y coordinador se detuvieron después por un límite de uso. No se sustituyó esa revisión por una aceptación inventada.
