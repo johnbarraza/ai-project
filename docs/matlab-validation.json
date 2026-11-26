@@ -1,0 +1,18 @@
+{
+  "audit_date": "2026-11-26",
+  "matlab_version": "25.2.0.3055257 (R2025b) Update 2",
+  "native_execution_completed": true,
+  "independent_python_comparison_passed": true,
+  "saved_mat_files_unchanged": true,
+  "new_ge_solve": false,
+  "cases": 23,
+  "hash_format": "sha256-utf8-lf",
+  "artifacts": {
+    "code/data/matlab_value_equilibrium_audit.json": "a6039be17e4b99d0ad4c46562176a8280748f5cdd4cca757fe3e7b9621af3726",
+    "code/matlab/audit_saved_ge.m": "0b0c20eeeb92cfb23b7c33ecb6f021845d2744706f1de04080286d5c59062d49",
+    "code/matlab/value_shape_checks.m": "c66c7a3d5af2656cd22097357af9f8709aab70cf4663a4fce586ac52b3945f8d",
+    "code/matlab/test_value_shape_checks.m": "18d73885dadc94bc10dd30c2baa5ec58cddfd725340a49c2de9df59188c7d5ea",
+    "docs/matlab-value-equilibrium-check.txt": "dd1d5786083b35b4798ace8ba0076c0a9124c23a28b524356cee54088778150e"
+  },
+  "ci_scope": "Checks retained evidence and inequalities; no MATLAB execution in CI."
+}

@@ -1,0 +1,25 @@
+PASS: value-shape checks reject convex/mixed cases and distinguish weak from strict concavity.
+phiI038_hbar049_heq_reference_ge_n400_amax40_20261113_071508: passed=1, max Vaa=-0.00585, max delta Va=-0.000455
+phiI038_hbar055_reference_ge_n400_amax40_20261113_004633: passed=1, max Vaa=-0.00594, max delta Va=-0.000445
+phiI038_hbar060_heq_reference_ge_n400_amax40_20261113_072758: passed=1, max Vaa=-0.00557, max delta Va=-0.000426
+phiI038_hbar060_reference_ge_n400_amax40_20261113_004509: passed=1, max Vaa=-0.00588, max delta Va=-0.000446
+phiI038_hbar065_reference_ge_n400_amax40_20261113_004359: passed=1, max Vaa=-0.00587, max delta Va=-0.000448
+phiI038_hbar070_reference_ge_n400_amax40_20261113_004320: passed=1, max Vaa=-0.00587, max delta Va=-0.000448
+phiI038_hbar080_reference_ge_n400_amax40_20261113_004304: passed=1, max Vaa=-0.00587, max delta Va=-0.000448
+phiI038_hbar090_reference_ge_n400_amax40_20261113_004246: passed=1, max Vaa=-0.00587, max delta Va=-0.000448
+phiI038_reference_ge_n400_amax40_20261113_001450: passed=1, max Vaa=-0.00587, max delta Va=-0.000448
+phiI042_hbar100_refit_linear_ge_n400_amax40_20261113_005359: passed=1, max Vaa=-0.00588, max delta Va=-0.000427
+phiI042_reference_ge_n400_amax40_20261113_001510: passed=1, max Vaa=-0.00592, max delta Va=-0.000425
+phiI046_hbar100_refit_linear_ge_n400_amax40_20261113_005535: passed=1, max Vaa=-0.00589, max delta Va=-0.000421
+phiI046_reference_ge_n400_amax40_20261113_001628: passed=1, max Vaa=-0.00597, max delta Va=-0.00043
+phiI050_hbar100_refit_linear_ge_n400_amax40_20261113_005708: passed=1, max Vaa=-0.0059, max delta Va=-0.000422
+phiI050_reference_ge_n400_amax40_20261113_001745: passed=1, max Vaa=-0.00602, max delta Va=-0.000434
+phiI055_hbar100_refit_linear_ge_n400_amax40_20261113_005837: passed=1, max Vaa=-0.00591, max delta Va=-0.000424
+phiI055_reference_ge_n400_amax40_20261113_001855: passed=1, max Vaa=-0.00607, max delta Va=-0.000472
+phiI060_hbar100_refit_linear_ge_n400_amax40_20261113_010009: passed=1, max Vaa=-0.00593, max delta Va=-0.000425
+phiI060_reference_ge_n400_amax40_20261113_002009: passed=1, max Vaa=-0.00611, max delta Va=-0.000477
+phiI065_hbar100_refit_linear_ge_n400_amax40_20261113_010143: passed=1, max Vaa=-0.00594, max delta Va=-0.000426
+phiI065_reference_ge_n400_amax40_20261113_002126: passed=1, max Vaa=-0.00615, max delta Va=-0.000482
+phiI070_hbar100_refit_linear_ge_n400_amax40_20261113_010317: passed=1, max Vaa=-0.00595, max delta Va=-0.000428
+phiI070_reference_ge_n400_amax40_20261113_002244: passed=1, max Vaa=-0.00619, max delta Va=-0.000488
+MATLAB audit complete; original path and working directory preserved.
