@@ -2,7 +2,9 @@
 
 La evidencia manuscrita disponible es [01-derivacion-tope-tiempo.pdf](01-derivacion-tope-tiempo.pdf), una página del autor ya mostrada en la presentación. Conserva su versión original. Tiene dos errores identificados en [la errata](errata-01.md); la errata tipografiada no se presenta como una corrección escrita por el estudiante.
 
-Para la entrega del 26 de noviembre faltan las hojas personales que completen la prueba y las demás derivaciones del paper. La guía existente [guia_derivacion.tex](guia_derivacion.tex) es material de preparación, no evidencia manuscrita. Los PDF locales llamados `guia_*` son guías y borradores; no se cuentan como hojas del autor ni se incorporan automáticamente al entregable.
+La continuación manuscrita del autor es [02-derivaciones-continuacion.pdf](02-derivaciones-continuacion.pdf), recibida el 26 de noviembre de 2026. Cubre: a) horas del hogar, CPO, despeje, KKT y casos de esquina; b) Proposición 1, cociente q, fracción informal s_I y sus tres signos; c) consumo y Va; d) firma formal; e) firma informal y beneficios; f) hogares, gobierno e ingresos agregados; g) equilibrio general y cierre de recursos. Se conserva tal como fue escrita. Las observaciones de revisión están en [errata-02.md](errata-02.md).
+
+Antes de esta continuación faltaban las hojas personales que completen la prueba y las demás derivaciones del paper. La guía existente [guia_derivacion.tex](guia_derivacion.tex) es material de preparación, no evidencia manuscrita. Los PDF locales llamados `guia_*` son guías y borradores; no se cuentan como hojas del autor ni se incorporan automáticamente al entregable.
 
 La [guía complementaria macro](guia_complementaria_macro.md) desarrolla consumo, las dos firmas, agregación y cierre de recursos, y precisa la diferencia entre tope e igualdad. También es material tipografiado de preparación; las derivaciones personales siguen pendientes.
 
