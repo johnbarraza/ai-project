@@ -36,7 +36,7 @@
 | Lean propio | [Estado y recibos](docs/estado-lean.md): carpeta oficial íntegra, proposición probada y cierre validado; revisión humana pendiente. Prototipo preservado aparte |
 | Derivación a mano | [Hojas y observaciones](hand/README.md): hoja original ([errata](hand/errata-01.md)) y continuación manuscrita a–g: horas, Proposición 1, consumo, ambas firmas, hogares/gobierno y equilibrio general ([observaciones](hand/errata-02.md)) |
 | Primera entrega | [Propuesta](proposal/proposal.pdf), [tema](slides/topic.pdf), conservados |
-| Colaboración con IA | [Registro](prompts.md), con enlace a la versión cruda; veredictos y límites en el paper |
+| Colaboración con IA | [Registro](prompts.md), con enlace a la versión cruda; veredictos y límites en el paper; [veredictos del autor](docs/veredictos-autor.md) |
 
 **Reproducir:** instalar `code/requirements.txt` y ejecutar `python code/verify.py`. Compilar desde `paper/` con `pdflatex paper.tex`, `bibtex paper`, dos pasadas de `pdflatex`; desde `slides/`, dos pasadas de `pdflatex final.tex`. Lean tiene instrucciones separadas en su README.
 
