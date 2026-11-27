@@ -19,13 +19,13 @@ Registro de la revisión personal de John Barraza. Solo se anota lo que el autor
 
 - **Qué afirmó la IA:** mi hoja original tenía dos errores: el subíndice del denominador y la potencia de Va contada dos veces sin los niveles psi.
 - **Mi veredicto:** acepto.
-- **Cómo lo comprobé:** rehice el cociente y me dio .
+- **Cómo lo comprobé:** rehice el cociente y me dio `h Va^(phi_I - phi_F)`.
 
 ## Signo estricto y alcance de Lean
 
-- **Qué afirmó la IA:** el signo estricto necesita  y ; Lean prueba la proposición bajo esos supuestos, pero no prueba que  se cumpla en el modelo.
+- **Qué afirmó la IA:** el signo estricto necesita `Vaa < 0` y `phi_I != phi_F`; Lean prueba la proposición bajo esos supuestos, pero no prueba que `Vaa < 0` se cumpla en el modelo.
 - **Mi veredicto:** acepto.
-- **Cómo lo comprobé:** leí la tabla de Lean en el apéndice;  es un supuesto.
+- **Cómo lo comprobé:** leí la tabla de Lean en el apéndice; `Vaa < 0` es un supuesto.
 
 ## Residuo, curvatura de grilla y existencia global
 
