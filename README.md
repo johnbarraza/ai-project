@@ -12,10 +12,10 @@ Revisión de cierre del paper final: 2026-11-26. [Estado de requisitos y pendien
 | Material | Estado y enlace |
 |---|---|
 | Presentación final | [PDF](slides/final.pdf), [LaTeX](slides/final.tex): modelo, proposición, simulaciones, Lean e IA, con anexos de consulta |
-| Manuscrito | [PDF](paper/paper.pdf), [LaTeX](paper/paper.tex), [bibliografía](paper/references.bib): 13 páginas de cuerpo; GE y contrastes de tiempo incorporados; derivaciones manuscritas completas pendientes |
+| Manuscrito | [PDF](paper/paper.pdf), [LaTeX](paper/paper.tex), [bibliografía](paper/references.bib): 13 páginas de cuerpo; GE y contrastes de tiempo incorporados; derivaciones manuscritas en [hand/](hand/README.md) |
 | Simulaciones | [Verificador](code/verify.py): PE, D73 y 23 GE guardados. [Auditoría MATLAB del26nov](docs/concavidad-equilibrio.md): curvatura negativa y mercados verificados; figura adicional y límites teóricos |
 | Lean propio | [Estado y recibos](docs/estado-lean.md): carpeta oficial íntegra, proposición probada y cierre validado; revisión humana pendiente. Prototipo preservado aparte |
-| Derivación a mano | [Hoja original y guías](hand/README.md): una página original con errata; guías laboral y macro disponibles; faltan las demás derivaciones personales |
+| Derivación a mano | [Hojas y observaciones](hand/README.md): hoja original ([errata](hand/errata-01.md)) y continuación manuscrita a–g: horas, Proposición 1, consumo, ambas firmas, hogares/gobierno y equilibrio general ([observaciones](hand/errata-02.md)) |
 | Primera entrega | [Propuesta](proposal/proposal.pdf), [tema](slides/topic.pdf), conservados |
 | Colaboración con IA | [Registro](prompts.md), con enlace a la versión cruda; veredictos y límites en el paper |
 
