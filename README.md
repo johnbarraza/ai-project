@@ -1,13 +1,32 @@
-# Ahorro, flexibilidad de horas e informalidad en el Perú
+<h1 align="center">Ahorro, flexibilidad de horas e informalidad en el Perú</h1>
 
-**John Svante Barraza Ratachi, AI and Economic Modeling, UP 2026-II, Track B**
-Revisión de cierre del paper final: 2026-11-26. [Estado de requisitos y pendientes](docs/entrega-paper.md).
+<p align="center">
+  <strong>John Svante Barraza Ratachi</strong><br>
+  Profesor Alexander Quispe, Universidad del Pacífico<br>
+  <sub>AI and Economic Modeling, Track B, paper final, 26 de noviembre de 2026</sub>
+</p>
 
-**Pregunta.** ¿Cuándo influye la riqueza en el reparto de horas entre formal e informal, a igual productividad?
+<p align="center">
+  <strong><a href="paper/paper.pdf">Leer el paper final</a></strong> &nbsp;|&nbsp; <a href="paper/paper.tex">LaTeX</a> &nbsp;|&nbsp; <a href="slides/final.pdf">Presentación final</a> &nbsp;|&nbsp; <a href="proposal/proposal.pdf">Propuesta</a> &nbsp;|&nbsp; <a href="slides/topic.pdf">Slides de tema</a>
+</p>
+
+<p align="center">
+  <a href="hand/README.md">Derivaciones a mano</a> &nbsp;|&nbsp; <a href="lean/">Lean</a> &nbsp;|&nbsp; <a href="code/verify.py">Verificador</a> &nbsp;|&nbsp; <a href="prompts.md">Prompts crudos</a> &nbsp;|&nbsp; <a href="docs/entrega-paper.md">Estado de requisitos</a>
+</p>
+
+---
+
+> **Pregunta.** ¿Cuándo influye la riqueza en el reparto de horas entre formal e informal, a igual productividad?
+
+<p align="center"><a href="code/figures/final/sign_map.png"><img src="code/figures/final/sign_map.png" width="600" alt="Mapa de signos de la derivada de la fracción informal según la diferencia de elasticidades."></a></p>
+
+## Modelo y resultado condicional
 
 **Modelo macroeconómico.** Hogares con activos y productividad heterogéneos eligen ahorro, consumo y horas. Dos firmas demandan capital y trabajo; la distribución estacionaria agrega esas decisiones. La tasa de interés y el precio informal deben cerrar activos y bienes. El baseline es Aiyagari; se estudia un modelo de dos sectores y su sensibilidad de elasticidades.
 
 **Resultado condicional.** Con retornos positivos, costos laborales separables y parámetros positivos, activos y horas interiores, tiempo holgado y valor marginal de activos positivo y diferenciable, la derivada de la fracción informal es `sI(1−sI)(phiI−phiF)Vaa/Va`. Si `Vaa<0`, más activos reducen esa fracción cuando `phiI>phiF`; con elasticidad común el canal directo se cancela. Una relación agregada también depende de la distribución de productividad.
+
+## Materiales y estado
 
 | Material | Estado y enlace |
 |---|---|
