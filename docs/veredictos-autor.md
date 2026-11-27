@@ -9,6 +9,26 @@ Registro de la revisión personal de John Barraza. Solo se anota lo que el autor
 - **Por qué:** en `l_s = 0` el costo marginal de horas es cero, así que la derivada del lagrangiano es `Va R_s - lambda_H`; si fuera positiva convendría trabajar algo, por eso debe ser `<= 0` (no estricta). Bajo el tope `l_F + l_I <= H` del paper, `lambda_H >= 0` también cuando el tope se alcanza; `lambda_H` libre en signo solo corresponde a un modelo que impone la igualdad.
 - **Cómo lo comprobé:** revisé la derivada en el extremo `l_s = 0` y las condiciones KKT (factibilidad, `lambda_H >= 0`, complementariedad) en el caso vinculante. Las correcciones están en [errata-02.md](../hand/errata-02.md), puntos 1 y 3; la hoja manuscrita aún no las incorpora.
 
-## Pendientes
+## Calibración histórica y tope de horas
 
-Veredictos personales sobre: calibración histórica del tope, correcciones de la hoja original y cociente con h, alcance de Lean y del signo estricto, y evidencia numérica frente a existencia global.
+- **Qué afirmó la IA:** el tope no explica la calibración histórica, porque la masa en el tope fue cero y las horas máximas fueron 0,749 con H = 1.
+- **Mi veredicto:** acepto.
+- **Cómo lo comprobé:** vi en la tabla de calibración que la masa en el tope es 0 y el máximo de horas es 0,749.
+
+## Correcciones de la hoja original y cociente con h
+
+- **Qué afirmó la IA:** mi hoja original tenía dos errores: el subíndice del denominador y la potencia de Va contada dos veces sin los niveles psi.
+- **Mi veredicto:** acepto.
+- **Cómo lo comprobé:** rehice el cociente y me dio .
+
+## Signo estricto y alcance de Lean
+
+- **Qué afirmó la IA:** el signo estricto necesita  y ; Lean prueba la proposición bajo esos supuestos, pero no prueba que  se cumpla en el modelo.
+- **Mi veredicto:** acepto.
+- **Cómo lo comprobé:** leí la tabla de Lean en el apéndice;  es un supuesto.
+
+## Residuo, curvatura de grilla y existencia global
+
+- **Qué afirmó la IA:** un residuo pequeño y la curvatura en la grilla no prueban existencia global.
+- **Mi veredicto:** acepto.
+- **Cómo lo comprobé:** la grilla solo revisa puntos discretos con precios dados.
